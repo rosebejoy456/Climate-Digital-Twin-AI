@@ -48,15 +48,59 @@ const loader = new THREE.TextureLoader();
 
 // Earth Textures
 const earthDay = loader.load("./assets/earth_day.jpg");
+const earthNight = loader.load("./assets/earth_night.jpg");
 const earthNormal = loader.load("./assets/earth_normal.jpg");
 const earthSpecular = loader.load("./assets/earth_specular.jpg");
 
 // Cloud Texture
 const cloudTexture = loader.load("./assets/earth_clouds.jpg");
 
+// Sun Texture
+const sunTexture = loader.load("./assets/sun.jpg");
+
+// Moon Texture
+const moonTexture = loader.load("./assets/moon.jpg");
+
 // Background
 const stars = loader.load("./assets/starsmilky.jpg");
+
 scene.background = stars;
+
+// ======================
+// Star Field
+// ======================
+
+const starGeometry = new THREE.BufferGeometry();
+
+const starVertices = [];
+
+for (let i = 0; i < 12000; i++) {
+
+    starVertices.push(
+        (Math.random() - 0.5) * 250,
+        (Math.random() - 0.5) * 250,
+        (Math.random() - 0.5) * 250
+    );
+
+}
+
+starGeometry.setAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(starVertices, 3)
+);
+
+const starMaterial = new THREE.PointsMaterial({
+    color: 0xffffff,
+    size: 0.06,
+    sizeAttenuation: true
+});
+
+const starField = new THREE.Points(
+    starGeometry,
+    starMaterial
+);
+
+scene.add(starField);
 
 // ======================
 // Earth
@@ -78,6 +122,23 @@ earth.receiveShadow = true;
 scene.add(earth);
 
 // ======================
+// Night Lights
+// ======================
+
+const nightLights = new THREE.Mesh(
+    new THREE.SphereGeometry(1.002, 64, 64),
+    new THREE.MeshBasicMaterial({
+        map: earthNight,
+        transparent: true,
+        blending: THREE.AdditiveBlending,
+        opacity: 0.95,
+        depthWrite: false
+    })
+);
+
+scene.add(nightLights);
+
+// ======================
 // Cloud Layer
 // ======================
 
@@ -86,7 +147,7 @@ const clouds = new THREE.Mesh(
     new THREE.MeshPhongMaterial({
         map: cloudTexture,
         transparent: true,
-        opacity: 0.25,
+        opacity: 0.18,
         depthWrite: false
     })
 );
@@ -101,9 +162,9 @@ scene.add(clouds);
 // ======================
 
 const atmosphere = new THREE.Mesh(
-    new THREE.SphereGeometry(1.06, 64, 64),
+    new THREE.SphereGeometry(1.08, 64, 64),
     new THREE.MeshBasicMaterial({
-        color: 0x4da6ff,
+        color: 0x66ccff,
         transparent: true,
         opacity: 0.05,
         side: THREE.BackSide
@@ -111,6 +172,34 @@ const atmosphere = new THREE.Mesh(
 );
 
 scene.add(atmosphere);
+
+// ======================
+// Sun Mesh
+// ======================
+
+const sunMesh = new THREE.Mesh(
+    new THREE.SphereGeometry(0.6, 64, 64),
+    new THREE.MeshBasicMaterial({
+        map: sunTexture,
+        color: 0xffffff
+    })
+);
+
+scene.add(sunMesh);
+
+// ======================
+// Moon
+// ======================
+
+const moon = new THREE.Mesh(
+    new THREE.SphereGeometry(0.27, 64, 64),
+    new THREE.MeshPhongMaterial({
+        map: moonTexture
+    })
+);
+
+scene.add(moon);
+
 
 // ======================
 // Lighting
@@ -161,26 +250,45 @@ controls.autoRotateSpeed = 0.3;
 // ======================
 
 let sunAngle = 0;
+let moonAngle = 0;
 
 function animate() {
 
     requestAnimationFrame(animate);
 
-    // Earth rotation
+    // Rotate Earth
     earth.rotation.y += 0.0015;
 
-    // Clouds rotate slower
+    nightLights.rotation.copy(earth.rotation);
+
+    starField.rotation.y += 0.00002;
+
+    // Rotate Clouds
     clouds.rotation.y += 0.0009;
 
     // Atmosphere follows Earth
-    atmosphere.rotation.y = earth.rotation.y;
+    atmosphere.rotation.copy(earth.rotation);
 
-    // Sun orbit
+    // Rotate the Sun
+    sunMesh.rotation.y += 0.002;
+
+    // Sun Orbit
     sunAngle += 0.0005;
 
-    sun.position.x = Math.cos(sunAngle) * 5;
-    sun.position.z = Math.sin(sunAngle) * 5;
+    sun.position.x = Math.cos(sunAngle) * 6;
+    sun.position.z = Math.sin(sunAngle) * 6;
     sun.position.y = 3;
+
+    // Keep the visible Sun with the light
+    sunMesh.position.copy(sun.position);
+
+    // Moon Orbit
+    moonAngle += 0.003;
+
+    moon.position.x = Math.cos(moonAngle) * 2.3;
+    moon.position.z = Math.sin(moonAngle) * 2.3;
+    moon.position.y = 0.25;
+    moon.rotation.y += 0.001;
 
     controls.update();
 
