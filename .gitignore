@@ -1,5 +1,1 @@
-__pycache__/
-*.pyc
-.venv/
-
-visualization/node_modules/
+node_modules/
