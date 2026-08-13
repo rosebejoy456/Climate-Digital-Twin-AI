@@ -7,3 +7,39 @@ body {
 canvas {
     display: block;
 }
+
+/* =========================
+   Location Panel
+   ========================= */
+
+#location-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    padding: 14px 18px;
+
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+
+    color: white;
+    font-family: Arial, sans-serif;
+
+    min-width: 180px;
+
+    backdrop-filter: blur(6px);
+
+    z-index: 10;
+}
+
+#location-panel .title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#location-panel .coordinate {
+    font-size: 13px;
+    margin-top: 4px;
+}
