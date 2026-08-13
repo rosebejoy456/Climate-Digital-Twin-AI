@@ -1,5 +1,8 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { createEarthGrid } from "./grid.js";
+import { addCountryBoundaries } from "./countries.js";
+import { setupInteraction } from "./interaction.js";
 
 // ======================
 // Scene
@@ -120,6 +123,15 @@ earth.castShadow = true;
 earth.receiveShadow = true;
 
 scene.add(earth);
+
+addCountryBoundaries(earth);
+
+setupInteraction(camera, renderer, earth);
+
+const earthGrid = createEarthGrid();
+
+scene.add(earthGrid);
+
 
 // ======================
 // Night Lights
@@ -258,6 +270,8 @@ function animate() {
 
     // Rotate Earth
     earth.rotation.y += 0.0015;
+
+    earthGrid.rotation.y = earth.rotation.y;    
 
     nightLights.rotation.copy(earth.rotation);
 
