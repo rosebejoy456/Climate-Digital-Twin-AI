@@ -3,7 +3,19 @@ __pycache__/
 *.pyc
 .venv/
 
-# Node.js
+# Node
 node_modules/
 visualization/node_modules/
 visualization/dist/
+
+# Climate raw data
+data/raw/
+
+# Intermediate processed climate data
+data/processed/*.csv
+
+# Keep final merged dataset
+!data/processed/Climate_Ernakulam_2015_2025.csv
+
+# Jupyter
+.ipynb_checkpoints/
