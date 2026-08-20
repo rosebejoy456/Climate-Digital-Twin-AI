@@ -43,3 +43,64 @@ canvas {
     font-size: 13px;
     margin-top: 4px;
 }
+#location-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 260px;
+
+    padding: 18px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    backdrop-filter: blur(10px);
+
+    z-index: 10;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.coordinate,
+.country,
+.climate-item {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.coordinate span,
+.country span,
+.climate-item span {
+    float: right;
+    font-weight: bold;
+}
+
+.divider {
+    height: 1px;
+
+    margin: 15px 0;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.climate-title {
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}

@@ -430,7 +430,14 @@ function distanceToRing(
  * Find the country containing
  * a latitude/longitude point.
  */
-export async function getCountryAt(
+/**
+ * Find the exact GeoJSON country feature
+ * containing a latitude/longitude point.
+ *
+ * Returns the actual feature instead of only
+ * returning the country name.
+ */
+export async function getCountryFeatureAt(
     latitude,
     longitude
 ) {
@@ -446,35 +453,35 @@ export async function getCountryAt(
             if (!countriesPromise) {
 
                 countriesPromise =
-                    fetch(
-                        "./data/countries.geojson"
-                    )
+                    fetch("./data/countries.geojson")
+                        .then(response => {
 
-                    .then(response => {
+                            if (!response.ok) {
 
-                        if (!response.ok) {
+                                throw new Error(
+                                    `Could not load countries.geojson: ${response.status}`
+                                );
 
-                            throw new Error(
-                                `Could not load countries.geojson: ${response.status}`
-                            );
-                        }
+                            }
 
-                        return response.json();
-                    })
+                            return response.json();
 
-                    .then(data => {
+                        })
+                        .then(data => {
 
-                        countriesData = data;
+                            countriesData = data;
 
-                        return data;
-                    });
+                            return data;
+
+                        });
+
             }
-
 
             await countriesPromise;
         }
 
 
+        // Keep longitude inside -180° to +180°
         longitude =
             normalizeLongitude(longitude);
 
@@ -513,10 +520,7 @@ export async function getCountryAt(
                     )
                 ) {
 
-                    return (
-                        feature.properties?.NAME ||
-                        "Unknown country"
-                    );
+                    return feature;
                 }
             }
 
@@ -542,10 +546,7 @@ export async function getCountryAt(
                         )
                     ) {
 
-                        return (
-                            feature.properties?.NAME ||
-                            "Unknown country"
-                        );
+                        return feature;
                     }
                 }
             }
@@ -557,18 +558,12 @@ export async function getCountryAt(
         // Small border tolerance
         // ========================================
 
-        let closestCountry = null;
+        let closestFeature = null;
 
         let closestDistance =
             Infinity;
 
 
-        /*
-         * Maximum distance from a country
-         * boundary for the fallback.
-         *
-         * 0.30° is intentionally small.
-         */
         const BORDER_TOLERANCE = 0.30;
 
 
@@ -617,12 +612,8 @@ export async function getCountryAt(
                         closestDistance =
                             distance;
 
-
-                        closestCountry =
-                            feature
-                                .properties
-                                ?.NAME ||
-                            "Unknown country";
+                        closestFeature =
+                            feature;
                     }
                 }
             }
@@ -664,12 +655,8 @@ export async function getCountryAt(
                             closestDistance =
                                 distance;
 
-
-                            closestCountry =
-                                feature
-                                    .properties
-                                    ?.NAME ||
-                                "Unknown country";
+                            closestFeature =
+                                feature;
                         }
                     }
                 }
@@ -677,21 +664,237 @@ export async function getCountryAt(
         }
 
 
-        // Return nearest country only
-        // when the click was close enough
-        // to its boundary.
-
-        return closestCountry;
+        // Return the exact closest feature
+        // when the click is close enough.
+        return closestFeature;
 
     }
 
     catch (error) {
 
         console.error(
-            "Failed to determine country:",
+            "Failed to determine country feature:",
             error
         );
 
         return null;
     }
-}   
+}
+
+
+/**
+ * Backwards-compatible country name lookup.
+ *
+ * Other parts of the application can still call
+ * getCountryAt() while the new system uses
+ * getCountryFeatureAt().
+ */
+export async function getCountryAt(
+    latitude,
+    longitude
+) {
+
+    const feature =
+        await getCountryFeatureAt(
+            latitude,
+            longitude
+        );
+
+
+    if (!feature) {
+        return null;
+    }
+
+
+    return (
+        feature.properties?.NAME ||
+        "Unknown country"
+    );
+}
+export function clearCountryHighlight(parent) {
+
+    const existing =
+        parent.getObjectByName("SelectedCountry");
+
+    if (existing) {
+        parent.remove(existing);
+    }
+}
+export async function highlightCountry(parent, countryFeature) {
+
+    try {
+
+        // Remove the previous highlight first
+        clearCountryHighlight(parent);
+
+        // Make sure we actually received a GeoJSON feature
+        if (
+            !countryFeature ||
+            countryFeature.type !== "Feature" ||
+            !countryFeature.geometry
+        ) {
+
+            console.log(
+                "Could not create highlight for:",
+                countryFeature
+            );
+
+            return null;
+        }
+
+        const positions = [];
+
+        const geometry =
+            countryFeature.geometry;
+
+
+        // ========================================
+        // Polygon
+        // ========================================
+
+        if (geometry.type === "Polygon") {
+
+            for (const ring of geometry.coordinates) {
+
+                addRing(
+                    ring,
+                    positions
+                );
+
+            }
+        }
+
+
+        // ========================================
+        // MultiPolygon
+        // ========================================
+
+        else if (geometry.type === "MultiPolygon") {
+
+            for (const polygon of geometry.coordinates) {
+
+                for (const ring of polygon) {
+
+                    addRing(
+                        ring,
+                        positions
+                    );
+
+                }
+
+            }
+        }
+
+
+        // ========================================
+        // Unsupported geometry
+        // ========================================
+
+        else {
+
+            console.log(
+                "Unsupported country geometry:",
+                geometry.type
+            );
+
+            return null;
+        }
+
+
+        // ========================================
+        // Make sure geometry was created
+        // ========================================
+
+        if (positions.length === 0) {
+
+            console.log(
+                "Could not create highlight for:",
+                countryFeature
+            );
+
+            return null;
+        }
+
+
+        // ========================================
+        // Highlight geometry
+        // ========================================
+
+        const highlightGeometry =
+            new THREE.BufferGeometry();
+
+        highlightGeometry.setAttribute(
+            "position",
+            new THREE.Float32BufferAttribute(
+                positions,
+                3
+            )
+        );
+
+
+        // ========================================
+        // Highlight material
+        // ========================================
+
+        const material =
+            new THREE.LineBasicMaterial({
+
+                color: 0x00ffff,
+
+                transparent: true,
+
+                opacity: 1.0
+
+            });
+
+
+        // ========================================
+        // Create highlight
+        // ========================================
+
+        const countryHighlight =
+            new THREE.LineSegments(
+                highlightGeometry,
+                material
+            );
+
+
+        countryHighlight.name =
+            "SelectedCountry";
+
+
+        // Put highlight slightly above Earth
+        countryHighlight.scale.setScalar(
+            1.001
+        );
+
+
+        parent.add(
+            countryHighlight
+        );
+
+
+        const countryName =
+            countryFeature.properties?.NAME ||
+            "Unknown country";
+
+
+        console.log(
+            "Highlighted country:",
+            countryName
+        );
+
+
+        return countryHighlight;
+
+
+    } catch (error) {
+
+        console.error(
+            "Failed to highlight country:",
+            error
+        );
+
+        return null;
+    }
+}

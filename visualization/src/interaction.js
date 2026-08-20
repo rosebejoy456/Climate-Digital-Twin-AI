@@ -1,5 +1,10 @@
 import * as THREE from "three";
-import { getCountryAt } from "./countries.js";
+import {
+    getCountryFeatureAt,
+    clearCountryHighlight,
+    highlightCountry
+} from "./countries.js";
+import { getClimateData } from "./climate.js";
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -53,16 +58,50 @@ export function setupInteraction(camera, renderer, earth) {
             document.getElementById("lon").textContent =
                 longitude.toFixed(2) + "°";
 
-            const country = await getCountryAt(
+            const countryFeature = await getCountryFeatureAt(
                 latitude,
                 longitude
-        );
+            );
 
-            console.log("Country:", country || "Ocean");
+            const country =
+                countryFeature?.properties?.NAME || null;
+
             document.getElementById("country").textContent =
                 country || "Ocean";
+
+            console.log("Country:", country || "Ocean");
+
+            if (country) {
+
+                   const climate =
+                    await getClimateData(
+                        latitude,
+                        longitude,
+                        country
+                    );
+
+                console.log(
+                "Climate data:",
+                climate
+            );
+
+            }
+
+            if (countryFeature) {
+
+                    await highlightCountry(
+                    earth,
+                    countryFeature
+                );
+
+            } else {
+
+                clearCountryHighlight(earth);
+
+            }   
+
         }
 
-        });
+    });
 
 }
