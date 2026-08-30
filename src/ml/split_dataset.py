@@ -6,7 +6,7 @@ from pathlib import Path
 # -----------------------------
 
 INPUT_FILE = Path(
-    "data/processed/Climate_Ernakulam_Training_2015_2025.csv"
+    "data/processed/Climate_Ernakulam_Features_2015_2025.csv"
 )
 
 TRAIN_FILE = Path(
