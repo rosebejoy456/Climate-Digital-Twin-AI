@@ -104,13 +104,52 @@ print("NDVI_7day_mean")
 # Prediction target
 # -----------------------------
 
-# Tomorrow's rainfall
+# -----------------------------
+# Prediction targets
+# -----------------------------
+
+# Next-day climate predictions
 df["target_rainfall_next_day"] = (
     df["imd_rainfall_mm"].shift(-1)
 )
 
-print("\nPrediction target created:")
+df["target_temperature_next_day"] = (
+    df["temperature_2m"].shift(-1)
+)
+
+df["target_pressure_next_day"] = (
+    df["surface_pressure"].shift(-1)
+)
+
+df["target_lst_next_day"] = (
+    df["LST_Celsius"].shift(-1)
+)
+
+df["target_ndvi_next_day"] = (
+    df["NDVI"].shift(-1)
+)
+
+print("\nPrediction targets created:")
+
 print("target_rainfall_next_day")
+print("target_temperature_next_day")
+print("target_pressure_next_day")
+print("target_lst_next_day")
+print("target_ndvi_next_day")
+
+# -----------------------------
+# Save
+# -----------------------------
+# Remove rows with missing target values
+df = df.dropna(
+    subset=[
+        "target_rainfall_next_day",
+        "target_temperature_next_day",
+        "target_pressure_next_day",
+        "target_lst_next_day",
+        "target_ndvi_next_day"
+    ]
+).reset_index(drop=True)
 
 # -----------------------------
 # Save
@@ -121,28 +160,3 @@ print("FEATURE ENGINEERING - STEP 1 COMPLETE")
 print("Rows:", len(df))
 print("Columns:", len(df.columns))
 print("Saved:", OUTPUT_FILE)
-
-print("\nNew features:")
-print([
-    "year",
-    "month",
-    "day",
-    "day_of_year",
-    "week_of_year",
-    "monsoon"
-])
-
-print("\nFirst 5 rows:")
-print(
-    df[
-        [
-            "date",
-            "year",
-            "month",
-            "day",
-            "day_of_year",
-            "week_of_year",
-            "monsoon"
-        ]
-    ].head().to_string(index=False)
-)

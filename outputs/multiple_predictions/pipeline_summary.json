@@ -1,0 +1,15 @@
+{
+    "model": "XGBoost",
+    "number_of_predictions": 5,
+    "predictions": [
+        "rainfall",
+        "temperature",
+        "pressure",
+        "lst",
+        "ndvi"
+    ],
+    "number_of_features": 67,
+    "training_rows": 3204,
+    "testing_rows": 801,
+    "shap_enabled": true
+}

@@ -1,7 +1,11 @@
 import os
+import json
 import pandas as pd
 import numpy as np
+import shap
+import matplotlib.pyplot as plt
 
+from pathlib import Path
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
@@ -10,248 +14,515 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 # CONFIGURATION
 # ============================================================
 
-TEST_FILE = "data/processed/Climate_Ernakulam_Test.csv"
-MODEL_FILE = "models/xgboost_rainfall_best.json"
-OUTPUT_FILE = "data/processed/xgboost_predictions.csv"
+DATA_FILE = Path(
+    "data/processed/Climate_Ernakulam_Features_2015_2025.csv"
+)
+
+MODEL_DIR = Path("models/multiple_xgboost")
+
+OUTPUT_DIR = Path("outputs/multiple_predictions")
+
+SHAP_DIR = Path("outputs/shap")
 
 
 # ============================================================
-# LOAD TEST DATA
+# PREDICTION TARGETS
 # ============================================================
 
-print("=" * 60)
-print("XGBOOST RAINFALL PREDICTION")
-print("=" * 60)
+TARGETS = {
+    "rainfall": "target_rainfall_next_day",
+    "temperature": "target_temperature_next_day",
+    "pressure": "target_pressure_next_day",
+    "lst": "target_lst_next_day",
+    "ndvi": "target_ndvi_next_day"
+}
 
-print("\nLoading test dataset...")
 
-if not os.path.exists(TEST_FILE):
+# ============================================================
+# LOAD DATA
+# ============================================================
+
+print("=" * 70)
+print("MULTI-VARIABLE XGBOOST + SHAP PREDICTION PIPELINE")
+print("=" * 70)
+
+print("\nLoading feature-engineered dataset...")
+
+if not DATA_FILE.exists():
     raise FileNotFoundError(
-        f"Test dataset not found: {TEST_FILE}"
+        f"Feature dataset not found: {DATA_FILE}"
     )
 
-if not os.path.exists(MODEL_FILE):
-    raise FileNotFoundError(
-        f"Model not found: {MODEL_FILE}"
-    )
+df = pd.read_csv(
+    DATA_FILE,
+    parse_dates=["date"]
+)
 
-df = pd.read_csv(TEST_FILE)
+df = df.sort_values("date").reset_index(drop=True)
 
-print(f"Test dataset shape: {df.shape}")
-
-
-# ============================================================
-# LOAD MODEL
-# ============================================================
-
-print("\nLoading tuned XGBoost model...")
-
-model = XGBRegressor()
-model.load_model(MODEL_FILE)
-
-print("Model loaded successfully.")
+print(f"Dataset shape: {df.shape}")
 
 
 # ============================================================
-# IDENTIFY TARGET COLUMN
+# CHECK TARGETS
 # ============================================================
 
-target_candidates = [
-    "chirps_rainfall_mm",
-    "imd_rainfall_mm",
-    "total_precipitation_sum",
-    "rainfall_mm",
-    "rainfall"
+print("\nChecking prediction targets...")
+
+for name, target in TARGETS.items():
+
+    if target not in df.columns:
+        raise ValueError(
+            f"Missing target column: {target}"
+        )
+
+    print(f"  {name:12} -> {target}")
+
+print("All five prediction targets are available.")
+
+
+# ============================================================
+# REMOVE ROWS WITHOUT TARGET VALUES
+# ============================================================
+
+df = df.dropna(
+    subset=list(TARGETS.values())
+).reset_index(drop=True)
+
+print(f"\nDataset after removing target NaN rows: {df.shape}")
+
+
+# ============================================================
+# IDENTIFY FEATURES
+# ============================================================
+
+# Columns that must NOT be used as input features
+exclude_columns = [
+    "date",
+    "target_rainfall_next_day",
+    "target_temperature_next_day",
+    "target_pressure_next_day",
+    "target_lst_next_day",
+    "target_ndvi_next_day"
 ]
 
-TARGET_COLUMN = None
 
-for column in target_candidates:
-    if column in df.columns:
-        TARGET_COLUMN = column
-        break
-
-if TARGET_COLUMN is None:
-    raise ValueError(
-        "Could not identify rainfall target column.\n"
-        f"Available columns: {list(df.columns)}"
-    )
-
-print(f"Target column identified: {TARGET_COLUMN}")
-
-
-# ============================================================
-# GET MODEL FEATURE NAMES
-# ============================================================
-
-booster = model.get_booster()
-
-model_features = booster.feature_names
-
-if model_features is None:
-    raise ValueError(
-        "The saved XGBoost model does not contain feature names."
-    )
-
-print(f"Number of model features: {len(model_features)}")
-
-
-# ============================================================
-# CHECK REQUIRED FEATURES
-# ============================================================
-
-missing_features = [
-    feature
-    for feature in model_features
-    if feature not in df.columns
+feature_columns = [
+    column
+    for column in df.columns
+    if column not in exclude_columns
 ]
 
-if missing_features:
-    print("\nERROR: Missing features in test dataset:")
 
-    for feature in missing_features:
-        print(f"  - {feature}")
+print("\nNumber of input features:", len(feature_columns))
 
-    raise ValueError(
-        "Test dataset does not contain all model features."
-    )
-
-
-print("All model features are available.")
+print("\nInput features:")
+for feature in feature_columns:
+    print("  -", feature)
 
 
 # ============================================================
-# PREPARE TEST DATA
+# PREPARE FEATURES
 # ============================================================
 
-X_test = df[model_features]
+X = df[feature_columns].copy()
 
-y_test = df[TARGET_COLUMN]
-
-print(f"\nX_test shape: {X_test.shape}")
-print(f"y_test shape: {y_test.shape}")
-
-
-# ============================================================
-# CHECK MISSING VALUES
-# ============================================================
-
-missing_values = X_test.isnull().sum().sum()
-
-print(f"\nMissing feature values: {missing_values}")
-
-if missing_values > 0:
-
-    print("Filling missing values using column medians...")
-
-    X_test = X_test.fillna(
-        X_test.median(numeric_only=True)
-    )
-
-
-# ============================================================
-# MAKE PREDICTIONS
-# ============================================================
-
-print("\nMaking rainfall predictions...")
-
-predictions = model.predict(X_test)
-
-print("Predictions completed.")
-
-
-# ============================================================
-# EVALUATE MODEL
-# ============================================================
-
-mae = mean_absolute_error(
-    y_test,
-    predictions
+# Convert everything to numeric
+X = X.apply(
+    pd.to_numeric,
+    errors="coerce"
 )
 
-rmse = np.sqrt(
-    mean_squared_error(
-        y_test,
-        predictions
-    )
+# Replace infinite values
+X = X.replace(
+    [np.inf, -np.inf],
+    np.nan
 )
 
-r2 = r2_score(
-    y_test,
-    predictions
+# Fill missing values
+X = X.fillna(
+    X.median(numeric_only=True)
 )
 
-
-# ============================================================
-# DISPLAY RESULTS
-# ============================================================
-
-print("\n" + "=" * 60)
-print("FINAL XGBOOST PREDICTION RESULTS")
-print("=" * 60)
-
-print(f"MAE  : {mae:.4f}")
-print(f"RMSE : {rmse:.4f}")
-print(f"R²   : {r2:.4f}")
+print("\nFeature matrix shape:", X.shape)
 
 
 # ============================================================
-# CREATE OUTPUT DATAFRAME
+# TIME-BASED TRAIN / TEST SPLIT
 # ============================================================
 
-results = pd.DataFrame()
+# Use first 80% for training
+# Last 20% for testing
 
-# Preserve date
-if "date" in df.columns:
-    results["date"] = df["date"]
-
-# Actual rainfall
-results["actual_rainfall_mm"] = y_test.values
-
-# Predicted rainfall
-results["predicted_rainfall_mm"] = predictions
-
-# Prediction error
-results["error_mm"] = (
-    results["actual_rainfall_mm"]
-    - results["predicted_rainfall_mm"]
+split_index = int(
+    len(df) * 0.80
 )
 
+X_train = X.iloc[:split_index].copy()
+X_test = X.iloc[split_index:].copy()
+
+print("\nTime-based split:")
+print("Training rows:", len(X_train))
+print("Testing rows :", len(X_test))
+
 
 # ============================================================
-# SAVE PREDICTIONS
+# CREATE DIRECTORIES
 # ============================================================
 
-os.makedirs(
-    os.path.dirname(OUTPUT_FILE),
+MODEL_DIR.mkdir(
+    parents=True,
     exist_ok=True
 )
 
-results.to_csv(
-    OUTPUT_FILE,
+OUTPUT_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+SHAP_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+
+# ============================================================
+# RESULTS STORAGE
+# ============================================================
+
+all_predictions = pd.DataFrame()
+
+if "date" in df.columns:
+
+    all_predictions["date"] = (
+        df.iloc[split_index:]["date"].values
+    )
+
+
+metrics = []
+
+
+# ============================================================
+# TRAIN FIVE XGBOOST MODELS
+# ============================================================
+
+for prediction_name, target_column in TARGETS.items():
+
+    print("\n" + "=" * 70)
+    print(f"TRAINING MODEL: {prediction_name.upper()}")
+    print("=" * 70)
+
+    y = pd.to_numeric(
+        df[target_column],
+        errors="coerce"
+    )
+
+    y_train = y.iloc[:split_index]
+    y_test = y.iloc[split_index:]
+
+    # --------------------------------------------------------
+    # XGBOOST MODEL
+    # --------------------------------------------------------
+
+    model = XGBRegressor(
+        n_estimators=500,
+        max_depth=6,
+        learning_rate=0.05,
+        subsample=0.8,
+        colsample_bytree=0.8,
+        objective="reg:squarederror",
+        random_state=42,
+        n_jobs=-1
+    )
+
+    print("Training XGBoost...")
+
+    model.fit(
+        X_train,
+        y_train,
+        verbose=False
+    )
+
+    print("Training completed.")
+
+    # --------------------------------------------------------
+    # PREDICTION
+    # --------------------------------------------------------
+
+    predictions = model.predict(X_test)
+
+    # --------------------------------------------------------
+    # METRICS
+    # --------------------------------------------------------
+
+    mae = mean_absolute_error(
+        y_test,
+        predictions
+    )
+
+    rmse = np.sqrt(
+        mean_squared_error(
+            y_test,
+            predictions
+        )
+    )
+
+    r2 = r2_score(
+        y_test,
+        predictions
+    )
+
+    print("\nModel performance:")
+    print(f"MAE  : {mae:.4f}")
+    print(f"RMSE : {rmse:.4f}")
+    print(f"R2   : {r2:.4f}")
+
+    # --------------------------------------------------------
+    # SAVE MODEL
+    # --------------------------------------------------------
+
+    model_file = (
+        MODEL_DIR /
+        f"xgboost_{prediction_name}.json"
+    )
+
+    model.save_model(
+        model_file
+    )
+
+    print("\nModel saved:")
+    print(model_file)
+
+    # --------------------------------------------------------
+    # SAVE PREDICTIONS
+    # --------------------------------------------------------
+
+    all_predictions[
+        f"actual_{prediction_name}"
+    ] = y_test.values
+
+    all_predictions[
+        f"predicted_{prediction_name}"
+    ] = predictions
+
+    all_predictions[
+        f"error_{prediction_name}"
+    ] = (
+        y_test.values - predictions
+    )
+
+    # --------------------------------------------------------
+    # STORE METRICS
+    # --------------------------------------------------------
+
+    metrics.append({
+        "prediction": prediction_name,
+        "target": target_column,
+        "MAE": mae,
+        "RMSE": rmse,
+        "R2": r2
+    })
+
+    # ========================================================
+    # SHAP EXPLANATION
+    # ========================================================
+
+    print("\nCalculating SHAP values...")
+
+    # Use a sample to keep SHAP computation manageable
+    shap_sample_size = min(
+        500,
+        len(X_test)
+    )
+
+    X_shap = X_test.iloc[
+        :shap_sample_size
+    ]
+
+    explainer = shap.TreeExplainer(
+        model
+    )
+
+    shap_values = explainer.shap_values(
+        X_shap
+    )
+
+    # --------------------------------------------------------
+    # SHAP SUMMARY PLOT
+    # --------------------------------------------------------
+
+    shap_plot_file = (
+        SHAP_DIR /
+        f"shap_{prediction_name}.png"
+    )
+
+    plt.figure()
+
+    shap.summary_plot(
+        shap_values,
+        X_shap,
+        show=False
+    )
+
+    plt.tight_layout()
+
+    plt.savefig(
+        shap_plot_file,
+        dpi=300,
+        bbox_inches="tight"
+    )
+
+    plt.close()
+
+    print("SHAP plot saved:")
+    print(shap_plot_file)
+
+    # --------------------------------------------------------
+    # SHAP FEATURE IMPORTANCE
+    # --------------------------------------------------------
+
+    mean_shap = np.abs(
+        shap_values
+    ).mean(axis=0)
+
+    shap_importance = pd.DataFrame({
+        "feature": X_shap.columns,
+        "mean_abs_shap": mean_shap
+    })
+
+    shap_importance = (
+        shap_importance
+        .sort_values(
+            "mean_abs_shap",
+            ascending=False
+        )
+        .reset_index(drop=True)
+    )
+
+    shap_csv_file = (
+        SHAP_DIR /
+        f"shap_{prediction_name}_importance.csv"
+    )
+
+    shap_importance.to_csv(
+        shap_csv_file,
+        index=False
+    )
+
+    print("SHAP importance saved:")
+    print(shap_csv_file)
+
+    # --------------------------------------------------------
+    # DISPLAY TOP SHAP FEATURES
+    # --------------------------------------------------------
+
+    print("\nTop 10 important features:")
+
+    print(
+        shap_importance
+        .head(10)
+        .to_string(index=False)
+    )
+
+
+# ============================================================
+# SAVE ALL PREDICTIONS
+# ============================================================
+
+prediction_file = (
+    OUTPUT_DIR /
+    "multi_xgboost_predictions.csv"
+)
+
+all_predictions.to_csv(
+    prediction_file,
     index=False
 )
 
-print("\nPredictions saved to:")
-print(OUTPUT_FILE)
+print("\n" + "=" * 70)
+print("ALL PREDICTIONS SAVED")
+print("=" * 70)
+
+print(prediction_file)
 
 
 # ============================================================
-# SHOW SAMPLE PREDICTIONS
+# SAVE MODEL METRICS
 # ============================================================
 
-print("\nSample predictions:")
-print("-" * 60)
-
-print(
-    results.head(10).to_string(index=False)
+metrics_df = pd.DataFrame(
+    metrics
 )
 
+metrics_file = (
+    OUTPUT_DIR /
+    "multi_xgboost_metrics.csv"
+)
+
+metrics_df.to_csv(
+    metrics_file,
+    index=False
+)
+
+print("\nModel metrics saved:")
+print(metrics_file)
+
 
 # ============================================================
-# COMPLETE
+# SAVE SUMMARY JSON
 # ============================================================
 
-print("\n" + "=" * 60)
-print("PREDICTION PIPELINE COMPLETE")
-print("=" * 60)
+summary = {
+    "model": "XGBoost",
+    "number_of_predictions": 5,
+    "predictions": [
+        "rainfall",
+        "temperature",
+        "pressure",
+        "lst",
+        "ndvi"
+    ],
+    "number_of_features": len(feature_columns),
+    "training_rows": len(X_train),
+    "testing_rows": len(X_test),
+    "shap_enabled": True
+}
+
+summary_file = (
+    OUTPUT_DIR /
+    "pipeline_summary.json"
+)
+
+with open(
+    summary_file,
+    "w"
+) as file:
+
+    json.dump(
+        summary,
+        file,
+        indent=4
+    )
+
+
+print("\nSummary saved:")
+print(summary_file)
+
+
+# ============================================================
+# FINAL RESULTS
+# ============================================================
+
+print("\n" + "=" * 70)
+print("FINAL MULTI-PREDICTION RESULTS")
+print("=" * 70)
+
+print(
+    metrics_df.to_string(
+        index=False
+    )
+)
+
+print("\n" + "=" * 70)
+print("MULTI-VARIABLE XGBOOST + SHAP PIPELINE COMPLETE")
+print("=" * 70)
