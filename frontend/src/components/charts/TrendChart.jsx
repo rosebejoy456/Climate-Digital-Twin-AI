@@ -31,8 +31,9 @@ export function TrendChart({
   const chartWidth = svgWidth - paddingLeft - paddingRight;
   const chartHeight = height - paddingTop - paddingBottom;
 
+  const divisor = data.length > 1 ? data.length - 1 : 1;
   const points = data.map((d, i) => {
-    const x = paddingLeft + (i / (data.length - 1)) * chartWidth;
+    const x = paddingLeft + (i / divisor) * chartWidth;
     const y = paddingTop + chartHeight - (((d[variable] ?? 0) - minVal) / range) * chartHeight;
     return { x, y, date: d.date, value: d[variable] };
   });
@@ -62,11 +63,12 @@ export function TrendChart({
     <div style={{ width: '100%', position: 'relative' }}>
       <svg
         viewBox={`0 0 ${svgWidth} ${height}`}
+        preserveAspectRatio="xMidYMid meet"
         style={{ width: '100%', height: 'auto', overflow: 'visible', display: 'block' }}
       >
         <defs>
           <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor={color} stopOpacity="0.3" />
+            <stop offset="0%" stopColor={color} stopOpacity="0.28" />
             <stop offset="100%" stopColor={color} stopOpacity="0.0" />
           </linearGradient>
         </defs>
@@ -79,7 +81,7 @@ export function TrendChart({
               y1={tick.y}
               x2={svgWidth - paddingRight}
               y2={tick.y}
-              stroke="rgba(255, 255, 255, 0.06)"
+              stroke="rgba(255, 255, 255, 0.07)"
               strokeDasharray="4 4"
             />
             <text
@@ -94,6 +96,20 @@ export function TrendChart({
             </text>
           </g>
         ))}
+
+        {/* Hover Crosshair Vertical Guideline */}
+        {hoveredPoint !== null && points[hoveredPoint] && (
+          <line
+            x1={points[hoveredPoint].x}
+            y1={paddingTop}
+            x2={points[hoveredPoint].x}
+            y2={height - paddingBottom}
+            stroke={color}
+            strokeWidth="1.2"
+            strokeDasharray="3 3"
+            opacity="0.75"
+          />
+        )}
 
         {/* Gradient Area */}
         <path d={areaD} fill={`url(#${gradientId})`} />
@@ -120,17 +136,17 @@ export function TrendChart({
                 fontSize="10"
                 fontFamily="var(--font-mono)"
                 textAnchor="middle"
-                style={{ transition: 'fill 0.15s' }}
+                style={{ transition: 'fill 0.15s', fontWeight: isHovered ? 600 : 400 }}
               >
-                {p.date.slice(5)}
+                {p.date ? p.date.slice(5) : `D${i + 1}`}
               </text>
               <circle
                 cx={p.x}
                 cy={p.y}
-                r={isHovered ? 5.5 : 3.5}
+                r={isHovered ? 6 : 3.5}
                 fill={isHovered ? '#ffffff' : color}
                 stroke="var(--bg-surface)"
-                strokeWidth="2"
+                strokeWidth={isHovered ? 2.5 : 2}
                 style={{ cursor: 'pointer', transition: 'all 0.15s' }}
                 onMouseEnter={() => setHoveredPoint(i)}
                 onMouseLeave={() => setHoveredPoint(null)}
@@ -140,18 +156,18 @@ export function TrendChart({
         })}
       </svg>
 
-      {/* Floating Tooltip */}
+      {/* Floating Tooltip with boundary-safe horizontal positioning */}
       {hoveredPoint !== null && points[hoveredPoint] && (
         <div
           style={{
             position: 'absolute',
-            top: `${(points[hoveredPoint].y / height) * 100}%`,
-            left: `${(points[hoveredPoint].x / svgWidth) * 100}%`,
+            top: `${Math.max(10, (points[hoveredPoint].y / height) * 100)}%`,
+            left: `${Math.min(92, Math.max(8, (points[hoveredPoint].x / svgWidth) * 100))}%`,
             transform: 'translate(-50%, -130%)',
             backgroundColor: 'var(--bg-surface-elevated)',
             border: `1px solid ${color}`,
             borderRadius: 'var(--border-radius-xs)',
-            padding: '0.35rem 0.65rem',
+            padding: '0.4rem 0.75rem',
             boxShadow: 'var(--shadow-md)',
             pointerEvents: 'none',
             zIndex: 10,
@@ -159,10 +175,10 @@ export function TrendChart({
           }}
         >
           <div style={{ fontSize: '0.6875rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-            {points[hoveredPoint].date}
+            {points[hoveredPoint].date || 'Record'}
           </div>
-          <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-            {points[hoveredPoint].value} <span style={{ fontSize: '0.6875rem', fontWeight: 500, color: 'var(--text-secondary)' }}>{unit}</span>
+          <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text-primary)', marginTop: '0.1rem' }}>
+            {points[hoveredPoint].value ?? '--'} <span style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text-secondary)' }}>{unit}</span>
           </div>
         </div>
       )}
