@@ -13,14 +13,26 @@ export function MetricCard({
   icon: IconComponent,
   trendPercent,
   sparkData,
-  color = 'var(--accent-cyan)'
+  color = 'var(--accent-cyan)',
+  isActive = false,
+  onClick
 }) {
   const isPositiveTrend = trendPercent && trendPercent > 0;
   const isNegativeTrend = trendPercent && trendPercent < 0;
 
   return (
     <div
-      className="card-panel interactive"
+      className={`card-panel ${onClick ? 'interactive' : ''} ${isActive ? 'active-telemetry' : ''}`}
+      onClick={onClick}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={onClick ? (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      } : undefined}
+      title={onClick ? `Click to view ${title} 7-day trajectory` : undefined}
       style={{
         display: 'flex',
         flexDirection: 'column',
