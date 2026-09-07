@@ -1,241 +1,358 @@
-import React, { useState } from 'react';
-import {
-  IconReports,
-  IconDownload,
-  IconCheck,
-  IconAI,
-  IconLayers
-} from '../../components/common/Icons';
+import React, { useState, useEffect } from 'react';
+import { IconReports, IconDownload, IconCheck, IconAI, IconLayers } from '../../components/common/Icons';
+import { MetricCard } from '../../components/cards/MetricCard';
+import { TrendChart } from '../../components/charts/TrendChart';
+import { getHistoricalClimate, getCurrentClimate } from '../../services/climateService';
+import { getPredictions, getMultiVariablePrediction } from '../../services/predictionService';
+
+// Utility to format dates as YYYY-MM-DD for input value
+const formatDate = (date) => date.toISOString().split('T')[0];
 
 export function ReportsPage() {
-  const [filterType, setFilterType] = useState('all');
-  const [isExporting, setIsExporting] = useState(false);
+  // Date range state – default to last 7 days
+  const today = new Date();
+  const defaultEnd = formatDate(today);
+  const defaultStart = formatDate(new Date(today.getTime() - 6 * 24 * 60 * 60 * 1000));
 
-  const datasets = [
-    {
-      name: 'Climate_Ernakulam_2015_2025.csv',
-      type: 'Observational Matrix',
-      source: 'IMD + ERA5 + MODIS (Cleaned & Standardized)',
-      size: '740 KB',
-      records: '3,652 Daily Records',
-      coverage: '2015-01-01 to 2025-01-01',
-      status: 'Processed & Verified'
-    },
-    {
-      name: 'Climate_Ernakulam_ML_Ready_2015_2025.csv',
-      type: 'Feature Engineered Matrix',
-      source: '7-Day Lags + 7-Day Rolling Averages + Monsoon Indicators',
-      size: '883 KB',
-      records: '3,645 Rows (7 Lags)',
-      coverage: '2015–2025 Features',
-      status: 'Ready for Inference'
-    },
-    {
-      name: 'LSTM_X_train.npy & LSTM_y_train.npy',
-      type: 'Tensor Arrays',
-      source: 'Sequential 7-Day sliding time-series tensors for Deep Learning',
-      size: '12.3 MB',
-      records: '2,916 Sequence Windows',
-      coverage: '2015–2024 (80/20 Split)',
-      status: 'Trained & Cached'
-    },
-    {
-      name: 'countries.geojson',
-      type: 'Geospatial Topologies',
-      source: 'Natural Earth Global Country Polygon Boundaries',
-      size: '839 KB',
-      records: '177 Country Polygons',
-      coverage: 'Global WGS84',
-      status: 'Visualizer Active'
-    }
-  ];
+  const [startDate, setStartDate] = useState(defaultStart);
+  const [endDate, setEndDate] = useState(defaultEnd);
+  const [historical, setHistorical] = useState([]);
+  const [forecast, setForecast] = useState(null);
+  const [multiForecast, setMultiForecast] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isGeneratingBrief, setIsGeneratingBrief] = useState(false);
+  const [briefText, setBriefText] = useState('');
+  const [showBrief, setShowBrief] = useState(false);
+  const [showDisclosure, setShowDisclosure] = useState(false);
+  const [dataSourceNotice, setDataSourceNotice] = useState('');
+  const [unavailable, setUnavailable] = useState(false);
 
-  const models = [
-    {
-      name: 'xgboost_rainfall_best.json',
-      type: 'Gradient Boosted Trees',
-      target: 'Next-Day Rainfall (mm)',
-      metrics: 'R² = 0.68 • MAE = 4.82 mm • RMSE = 8.14',
-      size: '3.3 MB',
-      status: 'Production Weights'
-    },
-    {
-      name: 'lstm_rainfall_scaled.keras',
-      type: 'Deep Sequential LSTM',
-      target: 'Temporal Rain Trajectory',
-      metrics: 'R² = 0.64 • MAE = 5.12 mm • Epochs = 50',
-      size: '603 KB',
-      status: 'Model Archive'
-    },
-    {
-      name: 'lstm_feature_scaler.pkl',
-      type: 'StandardScaler Pipeline',
-      target: 'Input Feature Normalization',
-      metrics: 'Zero Mean • Unit Variance',
-      size: '2.1 KB',
-      status: 'Serialized'
-    }
-  ];
-
-  const handleExport = () => {
-    setIsExporting(true);
-    setTimeout(() => {
-      setIsExporting(false);
-      alert('Climate Resilience Briefing generated successfully! Report summary prepared for Ernakulam District Disaster Management Authority.');
-    }, 900);
+  // Convert selected dates to number of days for service API
+  const computeDiffDays = () => {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    const diffMs = end - start + 24 * 60 * 60 * 1000; // inclusive
+    return Math.max(1, Math.round(diffMs / (1000 * 60 * 60 * 24)));
   };
 
+  // Load data whenever date range changes
+  useEffect(() => {
+    const loadData = async () => {
+      setIsLoading(true);
+      setUnavailable(false);
+      setDataSourceNotice('');
+      const days = computeDiffDays();
+      try {
+        const hist = await getHistoricalClimate(days);
+        if (Array.isArray(hist) && hist.length > 0) {
+          setHistorical(hist);
+        } else {
+          setHistorical([]);
+        }
+        const pred = await getPredictions();
+        setForecast(pred);
+        const multi = await getMultiVariablePrediction();
+        setMultiForecast(multi);
+        if (!hist || hist.length === 0) {
+          setUnavailable(true);
+        }
+      } catch (e) {
+        console.error(e);
+        setUnavailable(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    if (new Date(startDate) <= new Date(endDate)) {
+      loadData();
+    } else {
+      setUnavailable(true);
+    }
+  }, [startDate, endDate]);
+
+  // Derive metric aggregates from historical data (if available)
+  const aggregates = React.useMemo(() => {
+    if (!historical || historical.length === 0) return null;
+    const sum = (field) => historical.reduce((a, b) => a + (b.metrics?.[field]?.value || 0), 0);
+    const avg = (field) => sum(field) / historical.length;
+    const first = historical[0];
+    const last = historical[historical.length - 1];
+    return {
+      avgRainfall: avg('rainfall'),
+      totalRainfall: sum('rainfall'),
+      startMaxTemp: first.metrics?.maxTemp?.value,
+      endMaxTemp: last.metrics?.maxTemp?.value,
+      startMinTemp: first.metrics?.minTemp?.value,
+      endMinTemp: last.metrics?.minTemp?.value,
+      startLST: first.metrics?.lst?.value,
+      endLST: last.metrics?.lst?.value,
+      startSST: first.metrics?.sst?.value,
+      endSST: last.metrics?.sst?.value,
+    };
+  }, [historical]);
+
+  // Generate insights strings based on available aggregates
+  const insights = React.useMemo(() => {
+    if (!aggregates) return [];
+    const arr = [];
+    if (aggregates.totalRainfall !== undefined) {
+      arr.push(`Total rainfall over selected period: ${aggregates.totalRainfall.toFixed(1)} mm.`);
+    }
+    if (aggregates.avgRainfall !== undefined) {
+      arr.push(`Average daily rainfall: ${aggregates.avgRainfall.toFixed(1)} mm.`);
+    }
+    if (aggregates.startMaxTemp !== undefined && aggregates.endMaxTemp !== undefined) {
+      const diff = aggregates.endMaxTemp - aggregates.startMaxTemp;
+      arr.push(`Maximum temperature changed by ${diff.toFixed(1)}°C (${diff >= 0 ? 'increase' : 'decrease'}).`);
+    }
+    if (aggregates.startMinTemp !== undefined && aggregates.endMinTemp !== undefined) {
+      const diff = aggregates.endMinTemp - aggregates.startMinTemp;
+      arr.push(`Minimum temperature changed by ${diff.toFixed(1)}°C (${diff >= 0 ? 'increase' : 'decrease'}).`);
+    }
+    if (aggregates.startLST !== undefined && aggregates.endLST !== undefined) {
+      const diff = aggregates.endLST - aggregates.startLST;
+      arr.push(`Land‑surface temperature variation: ${diff.toFixed(1)}°C.`);
+    }
+    return arr;
+  }, [aggregates]);
+
+  const handleGenerateBrief = () => {
+    setIsGeneratingBrief(true);
+    setTimeout(() => {
+      const lines = [];
+      lines.push('--- Climate Intelligence Brief ---');
+      if (aggregates) {
+        lines.push(`Period: ${startDate} to ${endDate}`);
+        lines.push(`Average Rainfall: ${aggregates.avgRainfall?.toFixed(1)} mm/day`);
+        lines.push(`Total Rainfall: ${aggregates.totalRainfall?.toFixed(1)} mm`);
+        lines.push(`Max Temp Change: ${(aggregates.endMaxTemp - aggregates.startMaxTemp).toFixed(1)}°C`);
+        lines.push(`Min Temp Change: ${(aggregates.endMinTemp - aggregates.startMinTemp).toFixed(1)}°C`);
+      }
+      if (forecast) {
+        lines.push(`Model Forecast (rainfall): ${forecast?.value ?? '--'} mm/day`);
+      }
+      if (multiForecast) {
+        lines.push('Model Multi‑Variable Forecast:');
+        Object.entries(multiForecast).forEach(([k, v]) => {
+          lines.push(`  ${k}: ${v?.value ?? v} ${v?.unit ?? ''}`);
+        });
+      }
+      if (insights.length) {
+        lines.push('Key Insights:');
+        insights.forEach((i) => lines.push(`- ${i}`));
+      }
+      lines.push('--- End of Brief ---');
+      setBriefText(lines.join('\n'));
+      setIsGeneratingBrief(false);
+      setShowBrief(true);
+    }, 800);
+  };
+
+  const renderMetricCard = (label, value, unit, trend) => (
+    <MetricCard
+      title={label}
+      value={value !== undefined ? value.toFixed(1) : '--'}
+      unit={unit}
+      trendPercent={trend}
+      icon={IconLayers}
+      color='var(--accent-cyan)'
+    />
+  );
+
   return (
-    <div>
-      {/* Page Heading */}
-      <div className="page-header">
-        <h1 className="page-title">
-          <IconReports size={24} color="var(--accent-cyan)" />
-          Reports & Climate Data Catalog
+    <div style={{ padding: '1.5rem', backgroundColor: 'var(--bg-dark)', minHeight: '100vh', color: 'var(--text-primary)' }}>
+      {/* Header */}
+      <div className="page-header" style={{ marginBottom: '2rem' }}>
+        <h1 className="page-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-cyan)' }}>
+          <IconReports size={28} /> Climate Intelligence Reports & Decision Brief
         </h1>
-        <p className="page-description">
-          Archived observational climate states, AI model validation registry, and decision-support briefing generator.
+        <p className="page-description" style={{ color: 'var(--text-muted)' }}>
+          Verified observations, model forecasts and actionable insights.
         </p>
       </div>
 
-      {/* Top Action Bar */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
-        <div className="tab-group">
-          <button
-            className={`tab-btn ${filterType === 'all' ? 'active' : ''}`}
-            onClick={() => setFilterType('all')}
-          >
-            All Datasets & Models
-          </button>
-          <button
-            className={`tab-btn ${filterType === 'data' ? 'active' : ''}`}
-            onClick={() => setFilterType('data')}
-          >
-            Processed Datasets
-          </button>
-          <button
-            className={`tab-btn ${filterType === 'models' ? 'active' : ''}`}
-            onClick={() => setFilterType('models')}
-          >
-            AI Models
-          </button>
-        </div>
-
+      {/* Date Range Selector */}
+      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+        <label>
+          Start Date:{' '}
+          <input type="date" value={startDate} max={endDate} onChange={(e) => setStartDate(e.target.value)} style={{ marginLeft: '0.5rem' }} />
+        </label>
+        <label>
+          End Date:{' '}
+          <input type="date" value={endDate} min={startDate} max={defaultEnd} onChange={(e) => setEndDate(e.target.value)} style={{ marginLeft: '0.5rem' }} />
+        </label>
+        {unavailable && (
+          <span style={{ color: 'var(--status-warning)', fontWeight: 600 }}>
+            Data unavailable for selected dates.
+          </span>
+        )}
+        {dataSourceNotice && (
+          <span style={{ color: 'var(--text-muted)' }}>{dataSourceNotice}</span>
+        )}
         <button
-          onClick={handleExport}
-          className="telemetry-pill"
+          onClick={handleGenerateBrief}
+          disabled={isGeneratingBrief || unavailable}
           style={{
-            cursor: 'pointer',
+            marginLeft: 'auto',
             backgroundColor: 'var(--accent-cyan-soft)',
-            borderColor: 'rgba(6, 182, 212, 0.4)',
+            border: '1px solid rgba(6,182,212,0.4)',
             color: '#f8fafc',
+            padding: '0.45rem 1rem',
             fontWeight: 600,
-            padding: '0.45rem 1rem'
+            cursor: isGeneratingBrief ? 'wait' : 'pointer',
           }}
         >
-          <IconDownload size={15} color="var(--accent-cyan)" />
-          <span>{isExporting ? 'Generating Policy Briefing...' : 'Export Municipal Climate Briefing'}</span>
+          {isGeneratingBrief ? 'Generating Brief...' : 'Generate Climate Brief'}
         </button>
       </div>
 
-      {/* 1. DATASET REGISTRY TABLE */}
-      {(filterType === 'all' || filterType === 'data') && (
-        <div className="card-panel" style={{ marginBottom: '1.5rem' }}>
-          <div className="card-panel-header">
-            <div className="card-title-group">
-              <h2 className="card-title">
-                <IconLayers size={18} color="var(--accent-cyan)" />
-                Observational & Feature-Engineered Datasets
-              </h2>
-              <p className="card-subtitle">Stored in /data/processed directory for model training & evaluation</p>
-            </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>4 Files Verified</span>
-          </div>
-
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8125rem' }}>
-              <thead>
-                <tr style={{ borderBottom: '1px solid var(--border-subtle)', textAlign: 'left', color: 'var(--text-muted)' }}>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>File Identifier</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Type</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Source & Features</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Size</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Records</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {datasets.map((d, i) => (
-                  <tr key={i} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
-                    <td style={{ padding: '0.85rem 0.5rem', fontFamily: 'var(--font-mono)', fontWeight: 600, color: 'var(--text-primary)' }}>
-                      {d.name}
-                    </td>
-                    <td style={{ padding: '0.85rem 0.5rem', color: 'var(--text-secondary)' }}>{d.type}</td>
-                    <td style={{ padding: '0.85rem 0.5rem', color: 'var(--text-muted)', fontSize: '0.75rem' }}>{d.source}</td>
-                    <td style={{ padding: '0.85rem 0.5rem', fontFamily: 'var(--font-mono)', color: 'var(--text-dim)' }}>{d.size}</td>
-                    <td style={{ padding: '0.85rem 0.5rem', color: 'var(--text-secondary)' }}>{d.records}</td>
-                    <td style={{ padding: '0.85rem 0.5rem' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', color: 'var(--status-normal)', fontWeight: 600, fontSize: '0.75rem' }}>
-                        <IconCheck size={12} color="var(--status-normal)" />
-                        {d.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      {/* Metric Cards */}
+      {aggregates && (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          {renderMetricCard('Average Rainfall', aggregates.avgRainfall, 'mm/day')}
+          {renderMetricCard('Total Rainfall', aggregates.totalRainfall, 'mm')}
+          {renderMetricCard('Max Temp', aggregates.endMaxTemp, '°C', ((aggregates.endMaxTemp - aggregates.startMaxTemp) / (aggregates.startMaxTemp || 1)) * 100)}
+          {renderMetricCard('Min Temp', aggregates.endMinTemp, '°C', ((aggregates.endMinTemp - aggregates.startMinTemp) / (aggregates.startMinTemp || 1)) * 100)}
+          {renderMetricCard('LST', aggregates.endLST, '°C', ((aggregates.endLST - aggregates.startLST) / (aggregates.startLST || 1)) * 100)}
+          {renderMetricCard('SST', aggregates.endSST, '°C', ((aggregates.endSST - aggregates.startSST) / (aggregates.startSST || 1)) * 100)}
         </div>
       )}
 
-      {/* 2. AI MODEL REGISTRY TABLE */}
-      {(filterType === 'all' || filterType === 'models') && (
-        <div className="card-panel">
-          <div className="card-panel-header">
-            <div className="card-title-group">
-              <h2 className="card-title">
-                <IconAI size={18} color="var(--accent-magenta)" />
-                AI Model Weights & Serialized Artifacts
-              </h2>
-              <p className="card-subtitle">Stored in /models directory for live dashboard inference</p>
-            </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>3 Artifacts Available</span>
-          </div>
+      {/* Historical Chart */}
+      {historical && historical.length > 0 && (
+        <div style={{ marginBottom: '2rem' }}>
+          <TrendChart data={historical.map((d) => ({ date: d.date, rainfall: d.metrics?.rainfall?.value, maxTemp: d.metrics?.maxTemp?.value, minTemp: d.metrics?.minTemp?.value, lst: d.metrics?.lst?.value, sst: d.metrics?.sst?.value }))} variable="rainfall" title="Rainfall Trajectory" unit="mm/day" color="var(--accent-cyan)" height={260} />
+        </div>
+      )}
 
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8125rem' }}>
-              <thead>
-                <tr style={{ borderBottom: '1px solid var(--border-subtle)', textAlign: 'left', color: 'var(--text-muted)' }}>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Artifact Name</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Architecture</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Target Variable</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Validation Performance</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Size</th>
-                  <th style={{ padding: '0.65rem 0.5rem', fontWeight: 600 }}>Status</th>
+      {/* Model Forecast Section */}
+      {multiForecast && (
+        <div className="card-panel" style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(8px)', padding: '1rem', borderRadius: '8px', marginBottom: '2rem' }}>
+          <h2 style={{ color: 'var(--accent-magenta)', marginBottom: '0.5rem' }}>Model Forecast</h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Model output — not observed telemetry.</p>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-muted)' }}>
+                <th style={{ padding: '0.5rem', textAlign: 'left' }}>Variable</th>
+                <th style={{ padding: '0.5rem', textAlign: 'left' }}>Prediction</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.entries(multiForecast).map(([varName, val], idx) => (
+                <tr key={idx} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                  <td style={{ padding: '0.4rem' }}>{varName}</td>
+                  <td style={{ padding: '0.4rem' }}>{typeof val === 'object' ? `${val.value ?? '--'} ${val.unit ?? ''}` : val}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {models.map((m, i) => (
-                  <tr key={i} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
-                    <td style={{ padding: '0.85rem 0.5rem', fontFamily: 'var(--font-mono)', fontWeight: 600, color: 'var(--accent-cyan)' }}>
-                      {m.name}
-                    </td>
-                    <td style={{ padding: '0.85rem 0.5rem', color: 'var(--text-secondary)' }}>{m.type}</td>
-                    <td style={{ padding: '0.85rem 0.5rem', color: 'var(--text-primary)' }}>{m.target}</td>
-                    <td style={{ padding: '0.85rem 0.5rem', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{m.metrics}</td>
-                    <td style={{ padding: '0.85rem 0.5rem', fontFamily: 'var(--font-mono)', color: 'var(--text-dim)' }}>{m.size}</td>
-                    <td style={{ padding: '0.85rem 0.5rem' }}>
-                      <span style={{ display: 'inline-flex', padding: '0.2rem 0.5rem', backgroundColor: 'rgba(16, 185, 129, 0.1)', color: '#34d399', borderRadius: '4px', fontWeight: 600, fontSize: '0.6875rem' }}>
-                        {m.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* Insights Panel */}
+      {insights.length > 0 && (
+        <div style={{ background: 'rgba(255,255,255,0.04)', padding: '1rem', borderLeft: `4px solid var(--accent-cyan)`, marginBottom: '2rem' }}>
+          <h3 style={{ marginBottom: '0.5rem', color: 'var(--accent-cyan)' }}>Key Insights</h3>
+          <ul style={{ margin: 0, paddingLeft: '1.2rem', color: 'var(--text-primary)' }}>
+            {insights.map((txt, i) => (
+              <li key={i}>{txt}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Scientific Data Table */}
+      {historical && historical.length > 0 && (
+        <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8rem' }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-muted)' }}>
+                <th style={{ padding: '0.5rem' }}>Date</th>
+                <th style={{ padding: '0.5rem' }}>Rainfall (mm)</th>
+                <th style={{ padding: '0.5rem' }}>Max Temp (°C)</th>
+                <th style={{ padding: '0.5rem' }}>Min Temp (°C)</th>
+                <th style={{ padding: '0.5rem' }}>LST (°C)</th>
+                <th style={{ padding: '0.5rem' }}>SST (°C)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {historical.map((rec, idx) => (
+                <tr key={idx} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                  <td style={{ padding: '0.4rem' }}>{rec.date}</td>
+                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.rainfall?.value ?? '--'}</td>
+                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.maxTemp?.value ?? '--'}</td>
+                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.minTemp?.value ?? '--'}</td>
+                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.lst?.value ?? '--'}</td>
+                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.sst?.value ?? '--'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* Disclosure Panel */}
+      <div style={{ marginBottom: '2rem' }}>
+        <button onClick={() => setShowDisclosure(!showDisclosure)} style={{ background: 'none', border: 'none', color: 'var(--accent-cyan)', cursor: 'pointer', fontSize: '0.9rem' }}>
+          {showDisclosure ? 'Hide' : 'Show'} Data Provenance & Disclosure
+        </button>
+        {showDisclosure && (
+          <div style={{ marginTop: '0.5rem', padding: '0.75rem', background: 'rgba(255,255,255,0.04)', borderRadius: '4px', color: 'var(--text-muted)' }}>
+            <p>• Verified observations are district‑level where available.</p>
+            <p>• Satellite‑derived variables (LST, SST) may be unavailable on cloudy days – shown as ‘—’.</p>
+            <p>• Model forecasts are predictions, not observed telemetry.</p>
+            <p>• If the backend is unreachable, data shown may come from a development mock dataset – not verified observations.</p>
+          </div>
+        )}
+      </div>
+
+      {/* Brief Modal */}
+      {showBrief && (
+        <div
+          onClick={() => setShowBrief(false)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0,0,0,0.6)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: 'var(--bg-surface)',
+              padding: '1.5rem',
+              maxWidth: '90%',
+              maxHeight: '80%',
+              overflowY: 'auto',
+              borderRadius: '8px',
+              boxShadow: 'var(--shadow-lg)',
+              color: 'var(--text-primary)',
+            }}
+          >
+            <h2 style={{ marginTop: 0, color: 'var(--accent-cyan)' }}>Climate Brief</h2>
+            <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>{briefText}</pre>
+            <button
+              onClick={() => setShowBrief(false)}
+              style={{
+                marginTop: '1rem',
+                backgroundColor: 'var(--accent-cyan-soft)',
+                border: '1px solid rgba(6,182,212,0.4)',
+                color: '#f8fafc',
+                padding: '0.4rem 0.8rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+              }}
+            >
+              Close
+            </button>
           </div>
         </div>
       )}
     </div>
   );
 }
+
