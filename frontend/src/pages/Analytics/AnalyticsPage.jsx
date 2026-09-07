@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getShapExplanation } from '../../services/explainabilityService';
 import { getMultiVariablePrediction } from '../../services/predictionService';
+
+import { VERIFIED_OBSERVATION_DATES } from '../../services/mapService';
+import { MetricCard } from '../../components/cards/MetricCard';
+import InsightAlert from '../../components/analytics/InsightAlert';
+import { VARIABLES } from '../../constants/analyticsConstants';
+import '../../styles/analytics.css';
 import {
   IconAnalytics,
   IconAI,
@@ -15,8 +21,10 @@ import {
 export function AnalyticsPage() {
   const [shapData, setShapData] = useState(null);
   const [forecast, setForecast] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(VERIFIED_OBSERVATION_DATES[0]?.date || null);
   const [activeVar, setActiveVar] = useState('rainfall');
   const [loading, setLoading] = useState(true);
+  const [insight, setInsight] = useState(null);
 
   useEffect(() => {
     async function loadData() {
@@ -36,6 +44,24 @@ export function AnalyticsPage() {
     loadData();
   }, []);
 
+  // Derive simple insight from selected snapshot date using VERIFIED_OBSERVATION_DATES
+  useEffect(() => {
+    if (!selectedDate) return;
+    const record = VERIFIED_OBSERVATION_DATES.find(d => d.date === selectedDate);
+    if (record && record.rainfall_imd !== null && record.rainfall_imd !== undefined) {
+      // No baseline provided; illustrate value only
+      // varInfo removed – using VARIABLES constant
+      setInsight({
+        type: 'rainfall',
+        value: record.rainfall_imd,
+        baseline: null,
+        diffPct: null
+      });
+    } else {
+      setInsight(null);
+    }
+  }, [selectedDate]);
+
   if (loading) {
     return (
       <div style={{ color: 'var(--text-secondary)', padding: '3rem', textAlign: 'center' }}>
@@ -48,24 +74,27 @@ export function AnalyticsPage() {
   // Max absolute contribution for scaling bars
   const maxContribution = Math.max(...(shapData?.features?.map((f) => Math.abs(f.contribution)) || [5]));
 
-  const varInfo = {
-    rainfall: { name: 'Rainfall', unit: 'mm/day', color: '#06b6d4', icon: IconRainfall },
-    maxTemp: { name: 'Max Temp', unit: '°C', color: '#f59e0b', icon: IconTemperature },
-    lst: { name: 'Land Surface Temp', unit: '°C', color: '#f43f5e', icon: IconLST },
-    ndvi: { name: 'NDVI Vegetation', unit: 'Index', color: '#10b981', icon: IconNDVI }
-  };
-
   return (
     <div>
       {/* Page Heading */}
       <div className="page-header">
         <h1 className="page-title">
           <IconAnalytics size={24} color="var(--accent-cyan)" />
-          Climate Analytics & AI Forecast
+          Climate Intelligence Command Center
         </h1>
         <p className="page-description">
-          Multi-variable time-series forecasting models and SHAP-based Explainable AI attribution for Ernakulam District.
+          Verified district‑level climate observations and model forecasts for Ernakulam District.
         </p>
+      </div>
+
+      {/* Date Selector */}
+      <div className="date-selector" style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
+        <label htmlFor="obs-date" style={{ marginRight: '0.5rem', color: 'var(--text-secondary)' }}>Snapshot Date:</label>
+        <select id="obs-date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} style={{ backgroundColor: 'var(--bg-surface-elevated)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)', padding: '0.3rem 0.5rem', borderRadius: '4px' }}>
+          {VERIFIED_OBSERVATION_DATES.map(d => (
+            <option key={d.date} value={d.date}>{d.label}</option>
+          ))}
+        </select>
       </div>
 
       {/* 1. MULTI-VARIABLE 5-DAY HORIZON FORECAST */}
@@ -82,92 +111,39 @@ export function AnalyticsPage() {
           </div>
 
           <div className="tab-group">
-            <button
-              className={`tab-btn ${activeVar === 'rainfall' ? 'active' : ''}`}
-              onClick={() => setActiveVar('rainfall')}
-            >
-              Rainfall
-            </button>
-            <button
-              className={`tab-btn ${activeVar === 'maxTemp' ? 'active' : ''}`}
-              onClick={() => setActiveVar('maxTemp')}
-            >
-              Max Temp
-            </button>
-            <button
-              className={`tab-btn ${activeVar === 'lst' ? 'active' : ''}`}
-              onClick={() => setActiveVar('lst')}
-            >
-              LST
-            </button>
-            <button
-              className={`tab-btn ${activeVar === 'ndvi' ? 'active' : ''}`}
-              onClick={() => setActiveVar('ndvi')}
-            >
-              NDVI
-            </button>
+            {Object.entries(VARIABLES).map(([key, info]) => (
+              <button
+                key={key}
+                className={`tab-btn ${activeVar === key ? 'active' : ''}`}
+                onClick={() => setActiveVar(key)}
+              >
+                {info.name}
+              </button>
+            ))}
           </div>
         </div>
 
         {/* 5-Day Metric Cards Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
+        <div className="metric-cards-grid">
           {forecast.map((day, idx) => {
-            const isTomorrow = idx === 0;
-            const val = day[activeVar];
-            const info = varInfo[activeVar];
+            const isPrimary = idx === 0;
+            const value = day[activeVar];
+            const info = VARIABLES[activeVar];
+            const unavailable = value === null || value === undefined;
             return (
-              <div
+              <MetricCard
                 key={idx}
-                style={{
-                  backgroundColor: isTomorrow ? 'rgba(6, 182, 212, 0.08)' : 'var(--bg-surface-elevated)',
-                  border: isTomorrow ? '1px solid rgba(6, 182, 212, 0.35)' : '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--border-radius-sm)',
-                  padding: '1.15rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.4rem',
-                  position: 'relative'
-                }}
-              >
-                {isTomorrow && (
-                  <span
-                    style={{
-                      position: 'absolute',
-                      top: '8px',
-                      right: '8px',
-                      fontSize: '0.625rem',
-                      fontWeight: 700,
-                      backgroundColor: 'var(--accent-cyan)',
-                      color: '#080d1a',
-                      padding: '0.15rem 0.4rem',
-                      borderRadius: '3px',
-                      textTransform: 'uppercase'
-                    }}
-                  >
-                    Primary Focus
-                  </span>
-                )}
-                <div style={{ fontSize: '0.75rem', fontWeight: 600, color: isTomorrow ? 'var(--accent-cyan)' : 'var(--text-secondary)' }}>
-                  {day.day}
-                </div>
-                <div style={{ fontSize: '0.6875rem', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
-                  {day.date}
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.35rem', marginTop: '0.5rem' }}>
-                  <span style={{ fontSize: '1.625rem', fontWeight: 800, color: info.color }}>
-                    {val}
-                  </span>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                    {info.unit}
-                  </span>
-                </div>
-
-                <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem', marginTop: '0.25rem', display: 'flex', justifyContent: 'space-between', fontSize: '0.6875rem', color: 'var(--text-dim)' }}>
-                  <span>Press: {day.surfacePressure} hPa</span>
-                  <span>NDVI: {day.ndvi}</span>
-                </div>
-              </div>
+                title={info.name}
+                value={unavailable ? 'Unavailable' : value}
+                unit={info.unit}
+                source={info.source}
+                icon={info.icon}
+                color={info.color}
+                status={unavailable ? 'warning' : 'normal'}
+                statusLabel={unavailable ? 'Data Unavailable' : undefined}
+                disclaimer={unavailable ? 'District‑wide reference; live telemetry unavailable' : undefined}
+                isActive={isPrimary}
+              />
             );
           })}
         </div>
@@ -292,6 +268,18 @@ export function AnalyticsPage() {
           <div style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid var(--border-subtle)', fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
             <strong>Inference Insight:</strong> {shapData?.topFeaturesSummary}
           </div>
+
+          {insight && (
+            <InsightAlert
+              message={
+                insight.baseline !== null && insight.diffPct !== null
+                  ? `Rainfall ${insight.value} mm vs 7‑day baseline ${insight.baseline} mm (${insight.diffPct}% change)`
+                  : `Rainfall ${insight.value} mm (no baseline available)`
+              }
+              type="info"
+              disclaimer="Illustrative screening indicator; not a formal flood forecast."
+            />
+          )}
         </div>
 
         {/* Right Column: Model Architecture & XAI Explanation Card */}
