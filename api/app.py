@@ -6,6 +6,7 @@ import numpy as np
 import shap
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from xgboost import XGBRegressor
 
@@ -50,6 +51,13 @@ app = FastAPI(
         "explainability and What-If simulation."
     ),
     version="3.0.0"
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

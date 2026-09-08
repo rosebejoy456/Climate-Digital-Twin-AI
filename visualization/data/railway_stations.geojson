@@ -1,0 +1,1200 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-09-07T10:53:28Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/732425300",
+        "internet_access": "no",
+        "name": "Cochin Harbour Terminus",
+        "name:ml": "കൊച്ചിൻ ഹാർബർ ടെർമിനസ്",
+        "network": "IR",
+        "operator": "SR",
+        "railway": "station",
+        "ref": "CHTS",
+        "wikidata": "Q5139311",
+        "wikipedia": "en:Cochin Harbour Terminus railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2676188,
+          9.9602949
+        ]
+      },
+      "id": "node/732425300"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1190898883",
+        "internet_access": "no",
+        "name": "Tripunittura",
+        "name:ml": "തൃപ്പൂണിത്തുറ",
+        "network": "IR",
+        "operator": "SR",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "TRTR",
+        "wikidata": "Q18394844",
+        "wikipedia": "en:Tripunithura railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3526309,
+          9.9497664
+        ]
+      },
+      "id": "node/1190898883"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3290949290",
+        "internet_access": "no",
+        "name": "Kumbalam",
+        "name:ml": "കുമ്പളം",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "KUMM",
+        "wikidata": "Q63354887"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3113965,
+          9.9064186
+        ]
+      },
+      "id": "node/3290949290"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4753927424",
+        "internet_access": "wlan",
+        "name": "Aluva",
+        "name:ml": "ആലുവാ",
+        "network": "IR",
+        "old_name": "Alwaye",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "AWY",
+        "wikidata": "Q4737588",
+        "wikipedia": "en:Aluva railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3566989,
+          10.1082525
+        ]
+      },
+      "id": "node/4753927424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4760378946",
+        "internet_access": "no",
+        "name": "Angamali (Kaladi)",
+        "name:ml": "അങ്കമാലി",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "AFK",
+        "wheelchair": "yes",
+        "wikidata": "Q4761932",
+        "wikipedia": "en:Angamaly railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3780765,
+          10.1837793
+        ]
+      },
+      "id": "node/4760378946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4760378947",
+        "alt_name": "Idappilly",
+        "internet_access": "no",
+        "name": "Idappalli",
+        "name:ml": "ഇടപ്പള്ളി",
+        "network": "IR",
+        "operator": "SR",
+        "railway": "station",
+        "ref": "IPL",
+        "wikidata": "Q5335703",
+        "wikipedia": "en:Edappally railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.298762,
+          10.0345332
+        ]
+      },
+      "id": "node/4760378947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4760378948",
+        "addr:district": "Ernakulam",
+        "addr:state": "KL",
+        "addr:street": "Xavier Arakkal Road",
+        "alt_name": "Ernakulam North",
+        "internet_access": "wlan",
+        "name": "Ernakulam Town",
+        "name:hi": "एर्नाकुलम टाउन",
+        "name:ml": "എറണാകുളം ടൗൺ",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "ERN",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q5392597",
+        "wikipedia": "en:Ernakulam Town railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2863559,
+          9.9916561
+        ]
+      },
+      "id": "node/4760378948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4760378949",
+        "internet_access": "wlan",
+        "name": "Ernakulam Junction",
+        "name:ml": "എറണാകുളം ജംഗ്ഷൻ",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "ERS",
+        "wheelchair": "yes",
+        "wikidata": "Q5392599",
+        "wikipedia": "en:Ernakulam Junction railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2909524,
+          9.9690003
+        ]
+      },
+      "id": "node/4760378949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4760503121",
+        "internet_access": "no",
+        "name": "Kalamassery",
+        "name:hi": "कलमश्शेरि",
+        "name:ml": "കളമശ്ശേരി",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "KLMR",
+        "wikidata": "Q63354882"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3272102,
+          10.0623617
+        ]
+      },
+      "id": "node/4760503121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4824919682",
+        "internet_access": "no",
+        "name": "Tirunettur",
+        "name:ml": "തിരുനെട്ടുർ",
+        "network": "IR",
+        "operator": "SR",
+        "railway": "station",
+        "ref": "TNU",
+        "wikidata": "Q60182470"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3085098,
+          9.9342399
+        ]
+      },
+      "id": "node/4824919682"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4825023202",
+        "internet_access": "no",
+        "name": "Chovvara",
+        "name:ml": "ചൊവ്വര",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "CWR",
+        "wikidata": "Q24952180"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3722718,
+          10.1329777
+        ]
+      },
+      "id": "node/4825023202"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4825232028",
+        "addr:city": "Kureekkad",
+        "addr:postcode": "682305",
+        "internet_access": "no",
+        "name": "Chottanikkara Road",
+        "name:ml": "ചോറ്റാനിക്കര റോഡ്",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "KFE",
+        "train": "yes",
+        "wikidata": "Q20717384"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3759783,
+          9.9244744
+        ]
+      },
+      "id": "node/4825232028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4825232030",
+        "internet_access": "no",
+        "name": "Kanjiramattam",
+        "name:en": "Kanjiramattam",
+        "name:ml": "കാഞ്ഞിരമറ്റം",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "KPTM",
+        "train": "yes",
+        "wikidata": "Q63370117"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4123043,
+          9.8619389
+        ]
+      },
+      "id": "node/4825232030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755238",
+        "internet_access": "yes",
+        "name": "Aluva",
+        "name:hi": "आलुवा",
+        "name:ml": "ആലുവാ",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "ALVA",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38476609",
+        "wikipedia": "en:Aluva metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3495159,
+          10.1100952
+        ]
+      },
+      "id": "node/4903755238"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755239",
+        "internet_access": "yes",
+        "name": "Ambattukavu",
+        "name:hi": "अम्बाटुकाव्",
+        "name:ml": "അമ്പാട്ട്കാവ്",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "AATK",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38379892",
+        "wikipedia": "en:Ambattukavu metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3387004,
+          10.0794208
+        ]
+      },
+      "id": "node/4903755239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755240",
+        "internet_access": "yes",
+        "name": "Changampuzha Park",
+        "name:hi": "चंगमपुष़ा पार्क",
+        "name:ml": "ചങ്ങമ്പുഴ പാർക്ക്",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "CGPP",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38584315",
+        "wikipedia": "en:Changampuzha Park metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3024538,
+          10.0151019
+        ]
+      },
+      "id": "node/4903755240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755241",
+        "internet_access": "yes",
+        "name": "Cochin University",
+        "name:hi": "कोच्चिन यूनिवर्सिटी",
+        "name:ml": "കൊച്ചിൻ യൂണിവേഴ്സിറ്റി",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "CCUV",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38499541",
+        "wikipedia": "en:Cochin University metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3183086,
+          10.0466793
+        ]
+      },
+      "id": "node/4903755241"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755242",
+        "internet_access": "yes",
+        "name": "Companypady",
+        "name:ml": "കമ്പനിപ്പടി",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "CPPY",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38389562",
+        "wikipedia": "en:Companypady metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3425681,
+          10.0873039
+        ]
+      },
+      "id": "node/4903755242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755243",
+        "internet_access": "yes",
+        "name": "Edappally",
+        "name:hi": "इडप्पल्ली",
+        "name:ml": "ഇടപ്പള്ളി",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "EDAP",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38582577",
+        "wikipedia": "en:Edapally metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3079848,
+          10.025487
+        ]
+      },
+      "id": "node/4903755243"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755244",
+        "internet_access": "yes",
+        "name": "JLN Stadium",
+        "name:hi": "जे०एल०एन० स्टेडियम",
+        "name:ml": "ജെ. എൽ. എൻ സ്റ്റേഡിയം",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "JLSD",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q42306467",
+        "wikipedia": "en:J. L. N. Stadium metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2990841,
+          10.0002723
+        ]
+      },
+      "id": "node/4903755244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755245",
+        "internet_access": "yes",
+        "name": "Kalamassery Town",
+        "name:hi": "कलमशेरी टउन",
+        "name:ml": "കളമശ്ശേരി",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "KLMT",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38478898",
+        "wikipedia": "en:Kalamassery metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3221673,
+          10.0585393
+        ]
+      },
+      "id": "node/4903755245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755246",
+        "internet_access": "yes",
+        "name": "Kaloor",
+        "name:hi": "कलूर",
+        "name:ml": "കലൂർ",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "KALR",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q42308815",
+        "wikipedia": "en:Kaloor metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2916664,
+          9.9942991
+        ]
+      },
+      "id": "node/4903755246"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755247",
+        "internet_access": "yes",
+        "name": "Muttom",
+        "name:hi": "मुट्टम",
+        "name:ml": "മുട്ടം",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "MUTT",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38477696",
+        "wikipedia": "en:Muttom metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3337157,
+          10.0727253
+        ]
+      },
+      "id": "node/4903755247"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755248",
+        "internet_access": "yes",
+        "name": "Palarivattom",
+        "name:hi": "पालारिवट्टम",
+        "name:ml": "പാലാരിവട്ടം",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PARV",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38697682",
+        "wikipedia": "en:Palarivattom metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3049281,
+          10.00633
+        ]
+      },
+      "id": "node/4903755248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755249",
+        "internet_access": "yes",
+        "name": "Pathadipalam",
+        "name:hi": "पत्तडिप्पालम",
+        "name:ml": "പത്തടിപ്പാലം",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PDPM",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38566574",
+        "wikipedia": "en:Pathadipalam metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.314485,
+          10.0359805
+        ]
+      },
+      "id": "node/4903755249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755250",
+        "internet_access": "yes",
+        "name": "Pulinchodu",
+        "name:ml": "പു‍ളിഞ്ചോട്",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PNCU",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q38476797",
+        "wikipedia": "en:Pulinchodu metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3467836,
+          10.0950475
+        ]
+      },
+      "id": "node/4903755250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4903755539",
+        "internet_access": "yes",
+        "name": "M. G. Road",
+        "name:hi": "एम०जी० रोड",
+        "name:ml": "എം. ജി റോഡ്",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "MGRD",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q42328335",
+        "wikipedia": "en:M. G. Road metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2824385,
+          9.9833224
+        ]
+      },
+      "id": "node/4903755539"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5242586671",
+        "internet_access": "yes",
+        "name": "Maharaja's College",
+        "name:hi": "महाराजास् कॉलज",
+        "name:ml": "മഹാരാജാസ് കോളേജ്",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "MACE",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q42343250",
+        "wikipedia": "en:Maharaja's College metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2851082,
+          9.9733747
+        ]
+      },
+      "id": "node/5242586671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5242586672",
+        "internet_access": "yes",
+        "name": "Town Hall",
+        "name:ml": "ടൗണ്‍ ഹാൾ",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "old_name": "Lissie",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "LSSE",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q42308850",
+        "wikipedia": "en:Lissie metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2884381,
+          9.9912053
+        ]
+      },
+      "id": "node/5242586672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5253929167",
+        "internet_access": "no",
+        "name": "Mulanturutti",
+        "name:ml": "മുളന്തുരുത്തി",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "MNTT",
+        "train": "yes",
+        "wikidata": "Q63370115"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3906682,
+          9.8977739
+        ]
+      },
+      "id": "node/5253929167"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6036084320",
+        "internet_access": "no",
+        "name": "Mattancheri",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "MTNC",
+        "train": "yes",
+        "wikidata": "Q63422698"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2703326,
+          9.9398956
+        ]
+      },
+      "id": "node/6036084320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6777772107",
+        "internet_access": "yes",
+        "name": "Kadavanthra",
+        "name:hi": "कडवान्त्र",
+        "name:ml": "കടവന്ത്ര",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "KDV",
+        "ref:source": "kochimetro.org",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q67154725",
+        "wikipedia": "en:Kadavanthra metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2982044,
+          9.9666766
+        ]
+      },
+      "id": "node/6777772107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6777772108",
+        "fixme": "Name updated? incorrect? Ernakulam South on Wiki, Ernakulam on OSM",
+        "internet_access": "yes",
+        "name": "Elamkulam",
+        "name:hi": "एलमकुलम",
+        "name:ml": "എളംകുളം",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "ERS",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q67170983",
+        "wikipedia": "en:Elamkulam metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3084361,
+          9.9672669
+        ]
+      },
+      "id": "node/6777772108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6777772110",
+        "fixme": "Name updated? incorrect? Thaikoodam on Wiki, Thykoodam on OSM",
+        "internet_access": "yes",
+        "name": "Thykoodam",
+        "name:hi": "थाईकूडम",
+        "name:ml": "തൈക്കൂടം",
+        "network": "Kochi Metro",
+        "network:wikidata": "Q3522910",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "TKD",
+        "ref:source": "kochimetro.org",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q67171027",
+        "wikipedia": "en:Thaikoodam metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3237287,
+          9.9601104
+        ]
+      },
+      "id": "node/6777772110"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6777772111",
+        "internet_access": "yes",
+        "name": "Ernakulam South",
+        "name:hi": "एर्नाकुलम साउथ",
+        "name:ml": "എറണാകുളം തെക്ക്",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q20574885",
+        "wikipedia": "en:Ernakulam South metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2894579,
+          9.9686172
+        ]
+      },
+      "id": "node/6777772111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7376457360",
+        "name": "Valarpadam Railway Station",
+        "name:ml": "വല്ലാർപാടം റെയിൽവേ സ്റ്റേഷൻ",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "train": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2571486,
+          9.9876004
+        ]
+      },
+      "id": "node/7376457360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7883924233",
+        "internet_access": "yes",
+        "name": "Pettah",
+        "name:hi": "पेट्टा",
+        "name:ml": "പേട്ട",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q67172500",
+        "wikipedia": "en:Pettah metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3301852,
+          9.9524963
+        ]
+      },
+      "id": "node/7883924233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7944685628",
+        "internet_access": "yes",
+        "name": "Vadakkekotta",
+        "name:ml": "വടക്കേക്കോട്ട",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q113997246",
+        "wikipedia": "en:Vadakkekotta metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.339488,
+          9.9528098
+        ]
+      },
+      "id": "node/7944685628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7944686345",
+        "name": "InfoPark I Station",
+        "network": "Kochi Metro Pink Line",
+        "opening_date": "2026-12",
+        "proposed": "station",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.362724,
+          10.0083511
+        ]
+      },
+      "id": "node/7944686345"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7944686562",
+        "internet_access": "yes",
+        "name": "SN Junction",
+        "name:ml": "എസ്എൻ ജംഗ്ഷൻ",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q113997249",
+        "wikipedia": "en:SN Junction metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3460351,
+          9.9546771
+        ]
+      },
+      "id": "node/7944686562"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9924628170",
+        "addr:street": "Ponnurunni, Vyttila, Ernakulam, Kerala 682020, India",
+        "name": "Ernakulam D Cabin",
+        "network": "IR",
+        "operator": "SR",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "ERSD",
+        "train": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3022282,
+          9.9799466
+        ]
+      },
+      "id": "node/9924628170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10255800222",
+        "name": "Kaladi",
+        "network": "IR",
+        "operator": "SR",
+        "railway": "station",
+        "ref": "KLADI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4275746,
+          10.1653287
+        ]
+      },
+      "id": "node/10255800222"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11699277186",
+        "internet_access": "yes",
+        "name": "Thrippunithura Terminal",
+        "name:ml": "തൃപ്പൂണിത്തുറ ടെർമിനൽ",
+        "network": "Kochi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Kochi Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "start_date": "2024-03-06",
+        "station": "subway",
+        "subway": "yes",
+        "tactile_paving": "yes",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q124759251",
+        "wikipedia": "en:Thrippunithura Terminal metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3517236,
+          9.9505728
+        ]
+      },
+      "id": "node/11699277186"
+    }
+  ]
+}

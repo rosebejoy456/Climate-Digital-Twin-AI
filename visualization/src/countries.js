@@ -277,7 +277,45 @@ function pointInRing(
     return inside;
 }
 
+// ==========================================
+// Check whether a point is inside a country's
+// geographic bounding box
+// ==========================================
 
+function pointInBoundingBox(
+    longitude,
+    latitude,
+    bbox
+) {
+
+    if (!bbox || bbox.length < 4) {
+        return true;
+    }
+
+    const minLon = bbox[0];
+    const minLat = bbox[1];
+    const maxLon = bbox[2];
+    const maxLat = bbox[3];
+
+    // Normal country
+    if (minLon <= maxLon) {
+
+        return (
+            longitude >= minLon &&
+            longitude <= maxLon &&
+            latitude >= minLat &&
+            latitude <= maxLat
+        );
+    }
+
+    // Countries crossing the ±180° boundary
+    return (
+        longitude >= minLon ||
+        longitude <= maxLon
+    ) &&
+    latitude >= minLat &&
+    latitude <= maxLat;
+}
 /**
  * Check whether a point is inside
  * a GeoJSON polygon.
@@ -492,17 +530,28 @@ export async function getCountryFeatureAt(
         // ========================================
 
         for (
-            const feature of countriesData.features
-        ) {
+    const feature of countriesData.features
+) {
 
-            if (!feature.geometry) {
-                continue;
-            }
+    if (!feature.geometry) {
+        continue;
+    }
 
+    // First check the country's bounding box.
+    // This prevents a country such as Mexico
+    // from being considered for a point in India.
+    if (
+        !pointInBoundingBox(
+            longitude,
+            latitude,
+            feature.bbox
+        )
+    ) {
+        continue;
+    }
 
-            const geometry =
-                feature.geometry;
-
+    const geometry =
+        feature.geometry;
 
             // -----------------------------
             // Polygon
@@ -568,17 +617,27 @@ export async function getCountryFeatureAt(
 
 
         for (
-            const feature of countriesData.features
-        ) {
+    const feature of countriesData.features
+) {
 
-            if (!feature.geometry) {
-                continue;
-            }
+    if (!feature.geometry) {
+        continue;
+    }
 
+    // Ignore countries whose bounding box
+    // is nowhere near the clicked location.
+    if (
+        !pointInBoundingBox(
+            longitude,
+            latitude,
+            feature.bbox
+        )
+    ) {
+        continue;
+    }
 
-            const geometry =
-                feature.geometry;
-
+    const geometry =
+        feature.geometry;
 
             // -----------------------------
             // Polygon

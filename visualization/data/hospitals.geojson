@@ -1,0 +1,5776 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-09-07T10:45:21Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/343711683",
+        "addr:postcode": "682030",
+        "addr:street": "Kakkanad",
+        "amenity": "hospital",
+        "name": "Thrikkakara Municipal Co-operative Hospital",
+        "phone": "+91 9400904730;0484 2955310"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.34672,
+          10.01816
+        ]
+      },
+      "id": "node/343711683"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/343714970",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "vengola govt homoeo dispensary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4511132,
+          10.0971798
+        ]
+      },
+      "id": "node/343714970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/343719028",
+        "addr:district": "Ernakulam",
+        "addr:full": "Vii/528-B & Vii/528-C, Seaport - Airport Road, Kakkanad, Kochi",
+        "addr:postcode": "682030",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Sunrise Hospital, Ernakulam",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3388796,
+          10.0252315
+        ]
+      },
+      "id": "node/343719028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1190881322",
+        "amenity": "hospital",
+        "name": "Naliyath Medical Chamber"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3741513,
+          9.9432462
+        ]
+      },
+      "id": "node/1190881322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1471806291",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Nair's Hospital , Kochi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3179964,
+          9.9502203
+        ]
+      },
+      "id": "node/1471806291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1472112511",
+        "addr:district": "Ernakulam",
+        "addr:full": "Maradu, Cochin",
+        "addr:postcode": "682304",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "P.S. Mission Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3227155,
+          9.9377796
+        ]
+      },
+      "id": "node/1472112511"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1472148626",
+        "addr:district": "Ernakulam",
+        "addr:full": "N.H.47 Bypass, Thykoodam, Vyttila",
+        "addr:postcode": "682019",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr. Joys Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3192419,
+          9.9585788
+        ]
+      },
+      "id": "node/1472148626"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1474212725",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Varma Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3423588,
+          9.9538555
+        ]
+      },
+      "id": "node/1474212725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1474217343",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Ayurveda Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.349062,
+          9.9438728
+        ]
+      },
+      "id": "node/1474217343"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1474540727",
+        "addr:district": "Ernakulam",
+        "addr:full": "Madhava Pharmacy Jn, Kacherippady, Kochi",
+        "addr:postcode": "682018",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "PNVM Hospital and Research Centre",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2814393,
+          9.9859833
+        ]
+      },
+      "id": "node/1474540727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1474863244",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Al Shifa Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2867126,
+          9.9787245
+        ]
+      },
+      "id": "node/1474863244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1907858547",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kacheripady, Chittoor Road",
+        "addr:postcode": "682018",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Sree Sudheendra Medical Mission Hospital",
+        "source": "OpenGovernmentData",
+        "website": "https://ssmmhospital.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2832964,
+          9.9849328
+        ]
+      },
+      "id": "node/1907858547"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1913549463",
+        "CovidVaccineCenterId": "726714",
+        "amenity": "hospital",
+        "check_date": "2025-08-03",
+        "name": "MAJ Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3080439,
+          10.0213004
+        ]
+      },
+      "id": "node/1913549463"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2376840237",
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "name": "Nirmala Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3727576,
+          9.9446102
+        ]
+      },
+      "id": "node/2376840237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391343055",
+        "addr:district": "Ernakulam",
+        "addr:full": "P.B. No. 868, Panayapilly",
+        "addr:postcode": "682008",
+        "addr:state": "Kerala",
+        "addr:street": "Mons. Mathew Kothakathu Road",
+        "amenity": "hospital",
+        "name": "Gautham Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2560419,
+          9.9468667
+        ]
+      },
+      "id": "node/2391343055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391343056",
+        "addr:street": "Mons. Mathew Kothakathu Road",
+        "amenity": "hospital",
+        "name": "Laxmi Hospital",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2558553,
+          9.9478979
+        ]
+      },
+      "id": "node/2391343056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2885391175",
+        "addr:district": "Ernakulam",
+        "addr:full": "T. B. Junction",
+        "addr:postcode": "686661",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "fax": "2835557",
+        "healthcare": "hospital",
+        "name": "Ushus Hospital.",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5778883,
+          9.9832872
+        ]
+      },
+      "id": "node/2885391175"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2904730008",
+        "amenity": "hospital",
+        "name": "Nediyedath"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2119279,
+          10.1717099
+        ]
+      },
+      "id": "node/2904730008"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2965439529",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Topmost Medical Centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2454786,
+          10.148035
+        ]
+      },
+      "id": "node/2965439529"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3328239503",
+        "addr:city": "Ernakulam",
+        "addr:district": "Ernakulam",
+        "addr:full": "Mahatma Gandhi Rd, opp. Padma Theatre, Padma Junction, Shenoys, Ernakulam",
+        "addr:postcode": "682035",
+        "addr:state": "Kerala",
+        "addr:street": "Mahatma Gandhi Road",
+        "amenity": "hospital",
+        "name": "City Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2834857,
+          9.9812391
+        ]
+      },
+      "id": "node/3328239503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3405026005",
+        "addr:city": "Vyttila",
+        "addr:postcode": "682032",
+        "addr:street": "Off NH Bypass, Near Gold Souk, Service Road, Ponnurunni,",
+        "amenity": "hospital",
+        "designation": "Aesthetic Clinic",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "name": "The Touch Aesthetic Medical Clinic",
+        "note": "RP Arcade, 2 Floor",
+        "operator": "The Touch",
+        "phone": "+91-484 234 1117"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3170085,
+          9.9770906
+        ]
+      },
+      "id": "node/3405026005"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3675363214",
+        "addr:district": "Ernakulam",
+        "addr:full": "Canal Road, North Paravur",
+        "addr:postcode": "683513",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Santhi Clinic And Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2294297,
+          10.1470025
+        ]
+      },
+      "id": "node/3675363214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4118630490",
+        "amenity": "hospital",
+        "name": "priya hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3302812,
+          10.1751999
+        ]
+      },
+      "id": "node/4118630490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4293341748",
+        "addr:district": "Ernakulam",
+        "addr:full": "Near Varkeys Market, Kaloor - Kadavandara Road, Kadavandara",
+        "addr:postcode": "682020",
+        "addr:state": "Kerala",
+        "addr:street": "Kaloor-Kadavanthara Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Akshaya Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.299672,
+          9.9690057
+        ]
+      },
+      "id": "node/4293341748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4332240752",
+        "addr:district": "Ernakulam",
+        "addr:full": "Near Power House, Tripunithura Road, Vyttila, Kochi",
+        "addr:postcode": "682019",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr Raju's Eye Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3191089,
+          9.9647734
+        ]
+      },
+      "id": "node/4332240752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4349478584",
+        "addr:city": "Aluva",
+        "addr:postcode": "683101",
+        "addr:street": "Aluva - Munnar Road",
+        "amenity": "hospital",
+        "email": "carmelhospital@yahoo.co.in",
+        "emergency": "yes",
+        "fax": "+91 2625798",
+        "healthcare:speciality": "Multi-Speciality",
+        "name": "Carmel Hospital",
+        "phone": "+91 484 2625346, +91 484 2621314, +91 484 2627734, +91 484 2623594",
+        "website": "https://carmelhosp.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3620708,
+          10.090557
+        ]
+      },
+      "id": "node/4349478584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4353780104",
+        "addr:district": "Ernakulam",
+        "addr:full": "South Kuriyappilly, Moothakunnam P. O.",
+        "addr:postcode": "683516",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Bharath Rural Hospital and Training Centre",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2057125,
+          10.1807053
+        ]
+      },
+      "id": "node/4353780104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4649711590",
+        "amenity": "hospital",
+        "name:ar": "بونارنافا",
+        "name:en": "Punarnava Ayurveda Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2942771,
+          9.9879592
+        ]
+      },
+      "id": "node/4649711590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4711924443",
+        "addr:district": "Ernakulam",
+        "addr:full": "Bridge Road Aluva",
+        "addr:postcode": "683101",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Najath Hospital, Ernakulam",
+        "operator": "Najath Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3515701,
+          10.110983
+        ]
+      },
+      "id": "node/4711924443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4711925465",
+        "addr:city": "Aluva",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kurumassery",
+        "addr:postcode": "683579",
+        "addr:state": "Kerala",
+        "addr:street": "Aluva Mala Road",
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Dr. Pakkai Memorial Hospital",
+        "operator": "Dr Abdul Muhammed",
+        "operator:type": "private",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3300226,
+          10.178028
+        ]
+      },
+      "id": "node/4711925465"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4757701741",
+        "amenity": "hospital",
+        "healthcare": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2870091,
+          10.1753835
+        ]
+      },
+      "id": "node/4757701741"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4867912497",
+        "CovidVaccineCenterId": "155434",
+        "addr:city": "Ernakulam",
+        "addr:postcode": "682040",
+        "addr:street": "Nettoor PWD Road",
+        "alt_name": "Nettoor PHC",
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "name": "Nettoor Primary Health Center",
+        "operator": "Government of Kerala"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3128645,
+          9.9194425
+        ]
+      },
+      "id": "node/4867912497"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4916637688",
+        "addr:city": "Thuruth",
+        "addr:postcode": "983105",
+        "addr:street": "Aluva-Perumbavoor Road",
+        "amenity": "hospital",
+        "email": "pranatheayurvediccentre@gmail.com",
+        "emergency": "yes",
+        "healthcare": "alternative",
+        "healthcare:speciality": "ayurveda",
+        "name": "Prana Ayurvedic Centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3816906,
+          10.1188241
+        ]
+      },
+      "id": "node/4916637688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5138971690",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kacheripady, Chittoor Road, Near Vimalalayam",
+        "addr:postcode": "682018",
+        "addr:state": "Kerala",
+        "addr:street": "Chittoor Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Westend Eye Hospitals",
+        "phone": "+91 9288605411",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2827224,
+          9.9880943
+        ]
+      },
+      "id": "node/5138971690"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5301697938",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ayurveda",
+        "name": "Sarathy Ayurveda Clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3589857,
+          10.1093589
+        ]
+      },
+      "id": "node/5301697938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5428092029",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Govt Ayurveda Hospital ഗവൺമെന്റ് ആയൂർവേദ ആശുപത്രി",
+        "name:ml": "ഗവൺമെന്റ് ആയൂർവേദ ആശുപത്രി"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3475843,
+          10.1238777
+        ]
+      },
+      "id": "node/5428092029"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5518019510",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Govt Homeo Dispensary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2888545,
+          10.0160984
+        ]
+      },
+      "id": "node/5518019510"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5867421589",
+        "addr:city": "Kochi",
+        "addr:postcode": "682020",
+        "addr:street": "Ponneth Temple Road",
+        "amenity": "hospital",
+        "email": "info@giridhareye.org",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Giridhar Eye Institute",
+        "phone": "+91-484-4170000",
+        "website": "https://www.giridhareye.org/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3050675,
+          9.9641496
+        ]
+      },
+      "id": "node/5867421589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5909942850",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ephphatha Softech എഫഥാ സ്പീച്ച് ആന്റ് ഹിയറിങ് സെന്റർ",
+        "name:ml": "എഫഥാ സ്പീച്ച് ആന്റ് ഹിയറിങ് സെന്റർ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3052486,
+          10.006847
+        ]
+      },
+      "id": "node/5909942850"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6465137211",
+        "amenity": "hospital",
+        "name": "Government Ayurvedic Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3579443,
+          9.9242502
+        ]
+      },
+      "id": "node/6465137211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6483440785",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre Koonammavu",
+        "ref": "1497"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2659238,
+          10.1011548
+        ]
+      },
+      "id": "node/6483440785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6700659083",
+        "addr:city": "Aluva",
+        "addr:postcode": "683112",
+        "addr:street": "Rajagiri Hospital Emergengy Services Road",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Rajagiri Hospital Emergency Services Entrance",
+        "operator": "Rajagiri Hospital",
+        "operator:type": "private",
+        "phone": "+91 484 290 5100",
+        "website": "https://www.rajagirihospital.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3887934,
+          10.0876999
+        ]
+      },
+      "id": "node/6700659083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6700659084",
+        "addr:city": "Aluva",
+        "addr:postcode": "683112",
+        "addr:street": "Rajagiri Hospital Access Road",
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "healthcare:speciality": "multi_specialty",
+        "name": "Rajagiri Hospital Main Entrance",
+        "operator": "Rajagiri Hospital",
+        "operator:type": "private",
+        "phone": "+91 484 290 5111",
+        "website": "https://www.rajagirihospital.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.388261,
+          10.0878907
+        ]
+      },
+      "id": "node/6700659084"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950282037",
+        "addr:district": "Ernakulam",
+        "addr:full": "P P Road,Perumbavoor",
+        "addr:postcode": "683542",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vathiyayath Hospital, Perumbavoor",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4757764,
+          10.1102479
+        ]
+      },
+      "id": "node/6950282037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950305591",
+        "addr:district": "Ernakulam",
+        "addr:full": "Perumbavoor",
+        "addr:postcode": "683542",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Luke Memorial Eye Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4741792,
+          10.1145519
+        ]
+      },
+      "id": "node/6950305591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950320823",
+        "addr:district": "Ernakulam",
+        "addr:full": "Tripunithura, Ernakulam, Kerala",
+        "addr:postcode": "682306",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Cochin Ariya Vaidya Sala",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3380557,
+          9.9696286
+        ]
+      },
+      "id": "node/6950320823"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950440200",
+        "addr:district": "Alappuzha",
+        "addr:full": "Bye Pass Junction, Aroor",
+        "addr:postcode": "688534",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Lakshmi Hospital, Alappuzha",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3033573,
+          9.8781612
+        ]
+      },
+      "id": "node/6950440200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950469928",
+        "addr:district": "Ernakulam",
+        "addr:full": "Chowara Road, Kalady",
+        "addr:postcode": "683574",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "P.M.M. Hsopital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4363587,
+          10.1643998
+        ]
+      },
+      "id": "node/6950469928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950762961",
+        "addr:district": "Ernakulam",
+        "addr:full": "Hill Palace Road,Near Railway Over Bridge",
+        "addr:postcode": "682301",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "R C M Eye Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3522044,
+          9.9467902
+        ]
+      },
+      "id": "node/6950762961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950860223",
+        "addr:district": "Ernakulam",
+        "addr:full": "Opposite Government Hospital, Karuvelipady, Cochin",
+        "addr:postcode": "682005",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Jesus Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2606941,
+          9.9428842
+        ]
+      },
+      "id": "node/6950860223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950910799",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kadamdhenu Apartments,Kadavanthra-Kaloor Road Kadavanthra",
+        "addr:postcode": "682020",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vijaya Institute of Medical Sciences",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2991192,
+          9.9700978
+        ]
+      },
+      "id": "node/6950910799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6950951780",
+        "addr:district": "Ernakulam",
+        "addr:full": "Pottan Street, North Paravur",
+        "addr:postcode": "691301",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ahalia Foundation Eye Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2262081,
+          10.1446462
+        ]
+      },
+      "id": "node/6950951780"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6951097426",
+        "addr:district": "Ernakulam",
+        "addr:full": "Mundamveli Road, Mundamveli, Kochi",
+        "addr:postcode": "682507",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Jishy Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2558179,
+          9.9244655
+        ]
+      },
+      "id": "node/6951097426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6951412629",
+        "addr:district": "Ernakulam",
+        "addr:full": "A.M. Road, Perumbavoor, Kunnathunadu",
+        "addr:postcode": "683542",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "fax": "2590712",
+        "healthcare": "hospital",
+        "name": "Sanjoe Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4726996,
+          10.1142952
+        ]
+      },
+      "id": "node/6951412629"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6951506913",
+        "addr:district": "Ernakulam",
+        "addr:full": "Perumbavoor",
+        "addr:postcode": "683542",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "S. N. Mission Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4807714,
+          10.1125425
+        ]
+      },
+      "id": "node/6951506913"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6951516730",
+        "addr:district": "Ernakulam",
+        "addr:full": "353/307 A, KP Vallon Road, Kadavanthara P.O., Kochi",
+        "addr:postcode": "682020",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Silverline Hospital",
+        "source": "OpenGovernmentData",
+        "website": "https://silverlinehospital.in/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3003696,
+          9.9653574
+        ]
+      },
+      "id": "node/6951516730"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6951951212",
+        "addr:district": "Ernakulam",
+        "addr:full": "Cheranaloor Thykkavu Bus Stop, Tippu Sulthan Road, Cheranellore",
+        "addr:postcode": "682031",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Cimar Cochin Hospital",
+        "source": "OpenGovernmentData",
+        "website": "https://cimarindia.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.296743,
+          10.0515389
+        ]
+      },
+      "id": "node/6951951212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6951990436",
+        "addr:district": "Ernakulam",
+        "addr:full": "Varapuzha",
+        "addr:postcode": "683517",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "UB Trust Hospital and Diagnostic Centre",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2704929,
+          10.0803996
+        ]
+      },
+      "id": "node/6951990436"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6951990445",
+        "addr:district": "Ernakulam",
+        "addr:full": "No. 34 / 563, A - 1, Opp. India Vision, Palarivattom, NH Bypass Road, Cochin",
+        "addr:postcode": "682024",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Vasan Eye Care Hospital, Palarivattom",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3126431,
+          10.0099874
+        ]
+      },
+      "id": "node/6951990445"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6952059082",
+        "addr:district": "Ernakulam",
+        "addr:full": "Vattekkattu Road, Kaloor, Cochin",
+        "addr:postcode": "682017",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Paul's Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2957781,
+          9.9883115
+        ]
+      },
+      "id": "node/6952059082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6952104549",
+        "addr:district": "Ernakulam",
+        "addr:full": "Aluva",
+        "addr:postcode": "683101",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Dr. C. K. P Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.347245,
+          10.0999403
+        ]
+      },
+      "id": "node/6952104549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953070185",
+        "addr:district": "Ernakulam",
+        "addr:full": "Opposite K.S.R.T.C Bus Station, Perumbavoor",
+        "addr:postcode": "683542",
+        "addr:state": "Kerala",
+        "addr:street": "old muvattupuzha road",
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "name": "M.V. Joseph Memorial Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4815673,
+          10.1111694
+        ]
+      },
+      "id": "node/6953070185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953070190",
+        "addr:city": "kothamangalam",
+        "addr:district": "Ernakulam",
+        "addr:full": "Nellikuzhy P.O,Kothamangalam",
+        "addr:postcode": "686691",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Nangelil Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6023036,
+          10.0698012
+        ]
+      },
+      "id": "node/6953070190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953201125",
+        "addr:district": "Ernakulam",
+        "addr:full": "Bank Road, Aluva",
+        "addr:postcode": "683585",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Kerala Ayurveda Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.353815,
+          10.1120322
+        ]
+      },
+      "id": "node/6953201125"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953222340",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kakkanad P.O., Kochi",
+        "addr:postcode": "682030",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Thrikkakara Grama Panchayat Co-Operative Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3436562,
+          10.0190155
+        ]
+      },
+      "id": "node/6953222340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953285687",
+        "addr:district": "Ernakulam",
+        "addr:full": "Chottanikkara",
+        "addr:postcode": "682312",
+        "addr:state": "Kerala",
+        "alt_name": "Sir Dorabji Tata Trust Aided Hospital",
+        "amenity": "hospital",
+        "name": "SD Tata Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3912795,
+          9.9280376
+        ]
+      },
+      "id": "node/6953285687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953306602",
+        "addr:district": "Ernakulam",
+        "addr:full": "Azad Road, Kaloor",
+        "addr:postcode": "682017",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Focus Eye Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2954314,
+          9.9942959
+        ]
+      },
+      "id": "node/6953306602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953364227",
+        "addr:city": "Kothamangalam",
+        "addr:district": "Ernakulam",
+        "addr:full": "Dharmagiri Central, Kothamangalam",
+        "addr:housenumber": "Kochi - Madurai - Dhanushkodi Rd, Angady, Dharmagiri, Kothamangalam, Kerala",
+        "addr:postcode": "686691",
+        "addr:state": "Kerala",
+        "addr:street": "Kothamangalam Bypass Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "St. Joseph's Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.626817,
+          10.0649895
+        ]
+      },
+      "id": "node/6953364227"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953379458",
+        "addr:district": "Ernakulam",
+        "addr:full": "NH Byepass, AKG Vayanasala Road, Vysali Junction, Vytilla, Cochin",
+        "addr:postcode": "682032",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Dr. Noushad's ENT Hospital and Research Centre",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3167563,
+          9.9869551
+        ]
+      },
+      "id": "node/6953379458"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953819900",
+        "addr:district": "Ernakulam",
+        "addr:full": "Xii/229, Muttar - Eloor Road, Manjummel, Eloor",
+        "addr:postcode": "683501",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "St. Joseph's Hospital",
+        "source": "OpenGovernmentData",
+        "website": "https://www.stjosephhospital.in/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3014141,
+          10.0601909
+        ]
+      },
+      "id": "node/6953819900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953850950",
+        "addr:city": "Aluva, Kerala",
+        "addr:district": "Ernakulam",
+        "addr:full": "Bridge Road,Arogyalayam Junction",
+        "addr:housename": "Periyar Nagar",
+        "addr:postcode": "683101",
+        "addr:state": "Kerala",
+        "addr:street": "Aluva Bypass Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Arogyalayam Hospital",
+        "opening_hours": "24/7",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3503215,
+          10.1111192
+        ]
+      },
+      "id": "node/6953850950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953866717",
+        "addr:district": "Ernakulam",
+        "addr:full": "Keezhillam P.O., Perumbavoor",
+        "addr:postcode": "683541",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Parathuvayalil Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5204674,
+          10.0641061
+        ]
+      },
+      "id": "node/6953866717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6953998310",
+        "addr:district": "Ernakulam",
+        "addr:full": "Santhosh Lane,Poorna Nagar",
+        "addr:postcode": "683101",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Anwar Memorial Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3528917,
+          10.1083057
+        ]
+      },
+      "id": "node/6953998310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6954410394",
+        "addr:district": "Ernakulam",
+        "addr:full": "Opp. North Railway Station, Ernakulam North, Kochi",
+        "addr:postcode": "682018",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Specialists' Hospital",
+        "source": "OpenGovernmentData",
+        "website": "https://www.specialistshospital.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2860182,
+          9.9905344
+        ]
+      },
+      "id": "node/6954410394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6954410404",
+        "addr:district": "Ernakulam",
+        "addr:full": "Edappally North P.O",
+        "addr:postcode": "682024",
+        "addr:state": "Kerala",
+        "addr:subdistrict": "Kochi",
+        "amenity": "hospital",
+        "email": "mail@punarnava.net",
+        "health_facility:type": "Pizhichil, Njavarakzhi, Vasthi, Sirovasthi, Udvarthanam, Abhayangam",
+        "healthcare:speciality": "ayurveda",
+        "name": "Punarnava Ayurveda Hospital",
+        "operator:type": "private",
+        "source": "OpenGovernmentData",
+        "website": "http://www.punarnava.net"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2977904,
+          10.0441967
+        ]
+      },
+      "id": "node/6954410404"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6954916065",
+        "addr:district": "Ernakulam",
+        "addr:full": "#70, Mavelipuram, Airport Seaport Road,Opposite Olimugal Moique",
+        "addr:postcode": "682030",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Susruta Eye Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3410974,
+          10.0234595
+        ]
+      },
+      "id": "node/6954916065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6954933902",
+        "addr:district": "Ernakulam",
+        "addr:full": "International Airport Junction",
+        "addr:postcode": "683101",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Gyno Speciality Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3532773,
+          10.1551857
+        ]
+      },
+      "id": "node/6954933902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6956828002",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kadamakkudy",
+        "addr:postcode": "682027",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Ayurveda Hospital",
+        "operator:type": "government",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2478738,
+          10.0594005
+        ]
+      },
+      "id": "node/6956828002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957230459",
+        "addr:district": "Ernakulam",
+        "addr:full": "Elanjichuvadu, Elookkara, Muppathadam P.O., Aluva",
+        "addr:postcode": "683110",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Sarathy Ayurvedic Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3231815,
+          10.1007404
+        ]
+      },
+      "id": "node/6957230459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957345194",
+        "addr:district": "Ernakulam",
+        "addr:full": "Ernakulam",
+        "addr:postcode": "682011",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Chaitanya Eye Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2903858,
+          9.9599096
+        ]
+      },
+      "id": "node/6957345194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957446953",
+        "addr:district": "Ernakulam",
+        "addr:full": "Cultus Road, Perumpadappu",
+        "addr:postcode": "682006",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "contact:phone": "+91-9645909227",
+        "fax": "2238454",
+        "healthcare": "hospital",
+        "name": "Fatima Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.275571,
+          9.9014932
+        ]
+      },
+      "id": "node/6957446953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957498574",
+        "addr:district": "Ernakulam",
+        "addr:full": "Judge Mukku, Thrikkakara, Kochi",
+        "addr:postcode": "682021",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Aditya Eye Hospital, Ernakulam",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3331406,
+          10.0340046
+        ]
+      },
+      "id": "node/6957498574"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957624930",
+        "addr:district": "Ernakulam",
+        "addr:full": "Near St. Thomas School, Kalady - Malayattoor Road, Malayattoor",
+        "addr:postcode": "683574",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "fax": "2468966",
+        "name": "St. Thomas Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.499345,
+          10.1864757
+        ]
+      },
+      "id": "node/6957624930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957808443",
+        "addr:district": "Ernakulam",
+        "addr:full": "North Paravur",
+        "addr:postcode": "683516",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Shajy Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2309853,
+          10.1471931
+        ]
+      },
+      "id": "node/6957808443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957808459",
+        "addr:district": "Ernakulam",
+        "addr:full": "Near Edapally Post Office,Manimala Road,Edapally",
+        "addr:postcode": "682024",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Evershine Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3045053,
+          10.0192427
+        ]
+      },
+      "id": "node/6957808459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957927314",
+        "addr:district": "Ernakulam",
+        "addr:full": "Velloorkunnam, Muvattupuzha",
+        "addr:postcode": "686661",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ahalia Foundation Eye Hospital, Muvattupuzha",
+        "source": "OpenGovernmentData",
+        "survey:date": "2021-11-13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5726739,
+          9.9896838
+        ]
+      },
+      "id": "node/6957927314"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6957927331",
+        "addr:city": "മുവാറ്റുപുഴ",
+        "addr:district": "Ernakulam",
+        "addr:postcode": "686673",
+        "addr:state": "Kerala",
+        "addr:street": "വെള്ളൂർകുന്നം",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "കരുണ ആശുപത്രി",
+        "name:en": "Karuna Hospital",
+        "phone": "+914852812212"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5773519,
+          9.9898553
+        ]
+      },
+      "id": "node/6957927331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6958043970",
+        "addr:district": "Ernakulam",
+        "addr:full": "Ponnurunni,Vyttila,Kochi",
+        "addr:postcode": "682019",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Naivedya Ayurvedic Hospital and Research Centre",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.313999,
+          9.9809006
+        ]
+      },
+      "id": "node/6958043970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6958181260",
+        "addr:district": "Ernakulam",
+        "addr:full": "Opposite BSNL Microwave Station, Deshabhimani Road, Kaloor",
+        "addr:postcode": "682017",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Alpha ENT Head and Neck Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2953791,
+          10.0032624
+        ]
+      },
+      "id": "node/6958181260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6958204589",
+        "addr:district": "Ernakulam",
+        "addr:full": "Opposite Reliance Fresh, K.P. Vallon Road",
+        "addr:postcode": "682020",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Ayurvaid Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3010952,
+          9.9634535
+        ]
+      },
+      "id": "node/6958204589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6965828313",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kanjoor Grama Panchayat",
+        "addr:postcode": "683575",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vimala Hospital, Ernakulam",
+        "operator:type": "private",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4246723,
+          10.144605
+        ]
+      },
+      "id": "node/6965828313"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7106336922",
+        "amenity": "hospital",
+        "name": "Govt ayurveda hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2322152,
+          10.1366398
+        ]
+      },
+      "id": "node/7106336922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7213422481",
+        "addr:district": "Ernakulam",
+        "addr:full": "Ayyampilly, Vypin, Kerala",
+        "addr:postcode": "682501",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ayyamppilly Government Hospital",
+        "source": "OpenGovernmentData"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.1990261,
+          10.1209511
+        ]
+      },
+      "id": "node/7213422481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7227115095",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "DDC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3469619,
+          9.9417653
+        ]
+      },
+      "id": "node/7227115095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7319293101",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "St Thomas Clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3965886,
+          9.9000429
+        ]
+      },
+      "id": "node/7319293101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7319312331",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Mulanthuruthy Government Homoeo Dispensary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3874512,
+          9.9011502
+        ]
+      },
+      "id": "node/7319312331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7319337455",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "MMC Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3843557,
+          9.9010103
+        ]
+      },
+      "id": "node/7319337455"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7322347271",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "homeopathy",
+        "name": "Chettiyamkunnel Homeo Home"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4850303,
+          9.8730194
+        ]
+      },
+      "id": "node/7322347271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7331395380",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Veterinary Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5500144,
+          9.8882827
+        ]
+      },
+      "id": "node/7331395380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7331417960",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Familyy Health Centre, Thirumarady",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "1560"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5510551,
+          9.8885997
+        ]
+      },
+      "id": "node/7331417960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7331570350",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Amrutanjan Health Care Limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3301431,
+          9.938384
+        ]
+      },
+      "id": "node/7331570350"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7331612412",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Goverment Ayurveda Hospital Maradu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3273095,
+          9.9350137
+        ]
+      },
+      "id": "node/7331612412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7335032980",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "c a hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.34441,
+          10.1291763
+        ]
+      },
+      "id": "node/7335032980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7335140255",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Nature Life Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3276624,
+          9.9544308
+        ]
+      },
+      "id": "node/7335140255"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7335268606",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Jeevaniyam"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3091576,
+          9.9883939
+        ]
+      },
+      "id": "node/7335268606"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7335345047",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Jacob Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3173511,
+          10.0495861
+        ]
+      },
+      "id": "node/7335345047"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7349912377",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Rishi Ayurveda Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3502904,
+          10.1038825
+        ]
+      },
+      "id": "node/7349912377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7361765059",
+        "addr:city": "eranakulalm",
+        "addr:postcode": "686691",
+        "addr:street": "Nellikuzhi-Thankalam Bypass",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "dentist;dental;dental_oral_maxillo_facial_surgery;dentistry",
+        "name": "Mar Baselios Dental College, Thankalam",
+        "opening_hours": "Mo-Sa 08:00-16:00",
+        "operator": "kothamangalam church",
+        "operator:type": "private",
+        "website": "http://www.mbdc.edu.in"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6045268,
+          10.0734498
+        ]
+      },
+      "id": "node/7361765059"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7361765061",
+        "addr:city": "ereankulam",
+        "addr:postcode": "686691",
+        "addr:street": "Nellikuzhi-Thankalam Bypass",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "nurses",
+        "name": "Mar Baselios College Of Nursing",
+        "operator": "kothamangalam church",
+        "operator:type": "private",
+        "phone": "+91-485 2823982",
+        "website": "https://mbcn.edu.in/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6017423,
+          10.0727802
+        ]
+      },
+      "id": "node/7361765061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7362800641",
+        "amenity": "hospital",
+        "check_date": "2026-02-07",
+        "healthcare": "hospital",
+        "name": "Holycross Hospital",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4487527,
+          10.02605
+        ]
+      },
+      "id": "node/7362800641"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7388884440",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Ayurveda Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5088789,
+          9.8631711
+        ]
+      },
+      "id": "node/7388884440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7448284535",
+        "CovidVaccineCenterId": "155480",
+        "alt_name": "Pindimana PHC",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre Pindimana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6248141,
+          10.1058976
+        ]
+      },
+      "id": "node/7448284535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7458967931",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "skin and child clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3901726,
+          9.9233882
+        ]
+      },
+      "id": "node/7458967931"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7461830314",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "MCS Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5880031,
+          9.9923266
+        ]
+      },
+      "id": "node/7461830314"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7462511010",
+        "CovidVaccineCenterId": "155211",
+        "alt_name": "Edavanakad PHC",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "primary health centre",
+        "operator": "Government",
+        "operator:type": "public",
+        "ref": "1491",
+        "type": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2058893,
+          10.0982562
+        ]
+      },
+      "id": "node/7462511010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7462923349",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Kottakal Arya Vaidya Sala"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3879899,
+          9.9333953
+        ]
+      },
+      "id": "node/7462923349"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7465168716",
+        "addr:city": "മുവാറ്റുപുഴ",
+        "addr:postcode": "686673",
+        "addr:street": "ബിഓസി  ജംഗ്ഷൻ",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "നെടുംചാലിൽ ട്രസ്റ്റ് ആശുപത്രി",
+        "name:en": "Nedumchalil Trust Hospital",
+        "operator": "Nedumchalil Trust",
+        "operator:type": "private",
+        "phone": "+914852811230"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.577658,
+          9.9887939
+        ]
+      },
+      "id": "node/7465168716"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7465851542",
+        "addr:city": "MUVATTUPUZHA",
+        "addr:housenumber": "V111/104",
+        "addr:postcode": "686673",
+        "addr:street": "PERUMATTOM",
+        "amenity": "hospital",
+        "check_date": "2026-08-27",
+        "healthcare": "hospital",
+        "name": "V.M Hosiptal",
+        "phone": "+91-4852971500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5958762,
+          9.9966363
+        ]
+      },
+      "id": "node/7465851542"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7467923855",
+        "addr:city": "Muvattupuzha",
+        "addr:housenumber": "Government Homoeo Hospital",
+        "addr:postcode": "686673",
+        "addr:street": "Market P.O. , Everest Junction",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Homoeo Hospital Muvattupuzha"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5808379,
+          9.9881453
+        ]
+      },
+      "id": "node/7467923855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7471299053",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Roshan Eye Care"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3458182,
+          9.9517542
+        ]
+      },
+      "id": "node/7471299053"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7472842839",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Co-operative hospital,Koothattukulam"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5964085,
+          9.8616687
+        ]
+      },
+      "id": "node/7472842839"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7474938404",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Thejus Ayurveda, Angamaly"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.378584,
+          10.1786444
+        ]
+      },
+      "id": "node/7474938404"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7474956704",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "KB Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3562037,
+          10.1590075
+        ]
+      },
+      "id": "node/7474956704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7474983894",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Marian Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3692349,
+          10.161893
+        ]
+      },
+      "id": "node/7474983894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7475291099",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre,Kanjoor",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "2280",
+        "type": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4309998,
+          10.1386844
+        ]
+      },
+      "id": "node/7475291099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7480411525",
+        "amenity": "hospital",
+        "healthcare": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6261152,
+          10.0136636
+        ]
+      },
+      "id": "node/7480411525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7483958230",
+        "addr:city": "Aluva",
+        "addr:postcode": "683511",
+        "addr:street": "V C Ahammadunni Rd, Veliyathunadu, Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ayurveda",
+        "name": "Government Ayurveda Dispensary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3085503,
+          10.1428674
+        ]
+      },
+      "id": "node/7483958230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7496651789",
+        "addr:city": "azhikode",
+        "addr:street": "Eriyad-Azhikode road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Govt. Ayurveda Hospital,Azhikode"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.1687049,
+          10.1996724
+        ]
+      },
+      "id": "node/7496651789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7503498039",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "cimar mom's hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2962954,
+          10.0512687
+        ]
+      },
+      "id": "node/7503498039"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7503498257",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "cimar infertility hospital cheranalloor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2968834,
+          10.0517171
+        ]
+      },
+      "id": "node/7503498257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7507337998",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Bethseda mental health care center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4660951,
+          10.0837011
+        ]
+      },
+      "id": "node/7507337998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7517675886",
+        "CovidVaccineCenterId": "155181",
+        "alt_name": "Chengamanad CHC",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Hospital Chengamanad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3355533,
+          10.154961
+        ]
+      },
+      "id": "node/7517675886"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7526795166",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Namasthe ayurvedic treatment"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3502474,
+          10.1689749
+        ]
+      },
+      "id": "node/7526795166"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7551736403",
+        "addr:city": "Kothamangalam,Ernakulam,Kerala",
+        "addr:postcode": "686666",
+        "addr:street": "Revenue tower road",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "mar baselios medical mission hospital",
+        "operator": "private",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6223951,
+          10.0645781
+        ]
+      },
+      "id": "node/7551736403"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7724641639",
+        "addr:district": "Thrissur",
+        "addr:full": "Jetty, Kodungallur",
+        "addr:postcode": "680666",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Mar Thoma Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.1781232,
+          10.1908537
+        ]
+      },
+      "id": "node/7724641639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726160809",
+        "addr:district": "Idukki",
+        "addr:full": "Vazhithala",
+        "addr:postcode": "685583",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Mary Matha Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6419549,
+          9.8827732
+        ]
+      },
+      "id": "node/7726160809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206168",
+        "addr:district": "Ernakulam",
+        "addr:full": "Aluva - Paravoor Road, Aluva",
+        "addr:postcode": "683102",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Rural Medical Mission Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3324083,
+          10.1254188
+        ]
+      },
+      "id": "node/7726206168"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206248",
+        "addr:district": "Ernakulam",
+        "addr:full": "Thrikkariyoor",
+        "addr:postcode": "686692",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Ayurguham Ayurvendha Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6193506,
+          10.0806662
+        ]
+      },
+      "id": "node/7726206248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206250",
+        "addr:district": "Ernakulam",
+        "addr:full": "Aluva, Kochi",
+        "addr:postcode": "683101",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Janatha Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.350308,
+          10.10672
+        ]
+      },
+      "id": "node/7726206250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206256",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kuroor",
+        "addr:postcode": "686691",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Kalarickal Ayurveda Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6212908,
+          10.0685904
+        ]
+      },
+      "id": "node/7726206256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206257",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kadayirippu",
+        "addr:postcode": "682311",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Homeo Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4582398,
+          10.0029555
+        ]
+      },
+      "id": "node/7726206257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206260",
+        "addr:district": "Ernakulam",
+        "addr:full": "Perumbavoor",
+        "addr:postcode": "683542",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Nangelil Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.480546,
+          10.115837
+        ]
+      },
+      "id": "node/7726206260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206265",
+        "addr:district": "Ernakulam",
+        "addr:full": "Nellikuzhi-Cheruvattoor Road, Nellikuzhi",
+        "addr:postcode": "686691",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "NIMS Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5925286,
+          10.0758077
+        ]
+      },
+      "id": "node/7726206265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206273",
+        "addr:district": "Ernakulam",
+        "addr:full": "Vengola",
+        "addr:postcode": "683556",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Ideal Mind Care Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4682171,
+          10.0888995
+        ]
+      },
+      "id": "node/7726206273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206276",
+        "addr:district": "Ernakulam",
+        "addr:full": "Pazhamthottam",
+        "addr:postcode": "683565",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Payattuthara Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4283668,
+          10.0172719
+        ]
+      },
+      "id": "node/7726206276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206280",
+        "addr:district": "Ernakulam",
+        "addr:postcode": "683542",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Ayurgrace Ayurveda Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.480951,
+          10.110355
+        ]
+      },
+      "id": "node/7726206280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206286",
+        "addr:district": "Ernakulam",
+        "addr:full": "Thankalam, Kothamangalam",
+        "addr:postcode": "686691",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Tvj Eye Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.613934,
+          10.068056
+        ]
+      },
+      "id": "node/7726206286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206292",
+        "addr:district": "Ernakulam",
+        "addr:full": "Ponnirikkaparambu , Mulavoor",
+        "addr:postcode": "686673",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Life Care Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.590152,
+          10.0280343
+        ]
+      },
+      "id": "node/7726206292"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206293",
+        "addr:district": "Ernakulam",
+        "addr:full": "Pallikkavu Road, Arakuzha Road, Muvattupuzha",
+        "addr:postcode": "686661",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Samwarthika Ayurveda Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5857635,
+          9.9707114
+        ]
+      },
+      "id": "node/7726206293"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206298",
+        "addr:district": "Ernakulam",
+        "addr:full": "Peringala, Pallikkara",
+        "addr:postcode": "682303",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Nirmala Medical Mission Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3976039,
+          10.0037817
+        ]
+      },
+      "id": "node/7726206298"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206302",
+        "addr:district": "Ernakulam",
+        "addr:full": "Marampally, Perumbavoor",
+        "addr:postcode": "683547",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Badriya Holistic Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4611705,
+          10.1123147
+        ]
+      },
+      "id": "node/7726206302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206307",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kothamangalam",
+        "addr:postcode": "686666",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Kottakkal Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6208543,
+          10.0638222
+        ]
+      },
+      "id": "node/7726206307"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726206310",
+        "addr:district": "Ernakulam",
+        "addr:full": "Pallikkara, Kochi",
+        "addr:postcode": "683565",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Sanjeevanam Ayurveda Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.388979,
+          10.027905
+        ]
+      },
+      "id": "node/7726206310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235628",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kadavanthra, Kochi",
+        "addr:postcode": "682020",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Lotus Eye Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3012127,
+          9.9674326
+        ]
+      },
+      "id": "node/7726235628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235636",
+        "addr:district": "Ernakulam",
+        "addr:full": "North Kaloor, Kacheripady, Ernakulam",
+        "addr:postcode": "682018",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Vathakat Orthopaedic Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.285434,
+          9.986819
+        ]
+      },
+      "id": "node/7726235636"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235640",
+        "addr:district": "Ernakulam",
+        "addr:full": "Fort Kochi",
+        "addr:postcode": "682001",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr. Elzas Ayurveda Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.241904,
+          9.965001
+        ]
+      },
+      "id": "node/7726235640"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235650",
+        "addr:district": "Ernakulam",
+        "addr:full": "Thrikkakara, Edappally",
+        "addr:postcode": "682021",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "B & B Memorial Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3294623,
+          10.033897
+        ]
+      },
+      "id": "node/7726235650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235653",
+        "addr:district": "Ernakulam",
+        "addr:full": "Manimala Road, Edappally",
+        "addr:postcode": "682024",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Evershine Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3046442,
+          10.0196125
+        ]
+      },
+      "id": "node/7726235653"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235657",
+        "addr:district": "Ernakulam",
+        "addr:full": "Koothattukulam",
+        "addr:postcode": "686662",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Sentrum Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.594933,
+          9.862033
+        ]
+      },
+      "id": "node/7726235657"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235658",
+        "addr:district": "Ernakulam",
+        "addr:full": "Chalikkavattom, Vennala, Kochi",
+        "addr:postcode": "682028",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "description": "Public Health Centre",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Chalikkavattom",
+        "operator": "National Urban Health Mission",
+        "operator:type": "government",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3241707,
+          9.9824178
+        ]
+      },
+      "id": "node/7726235658"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235659",
+        "addr:city": "Ernakulam",
+        "addr:district": "Ernakulam",
+        "addr:full": "Pallipuram Road, Ochanthuruth",
+        "addr:postcode": "682508",
+        "addr:state": "Kerala",
+        "addr:street": "Vypin - Pallippuram Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vypeen Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2350221,
+          9.9997548
+        ]
+      },
+      "id": "node/7726235659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235660",
+        "addr:district": "Ernakulam",
+        "addr:full": "Rajaji Road, Shenoys",
+        "addr:postcode": "682035",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr. Hassan Ayurveda Brain and Spine Super Speciality Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.286691,
+          9.978757
+        ]
+      },
+      "id": "node/7726235660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235662",
+        "addr:district": "Ernakulam",
+        "addr:full": "Keerthi Nagar, Elamakkara",
+        "addr:postcode": "682026",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Alife Ayurvedam",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2933848,
+          10.0146072
+        ]
+      },
+      "id": "node/7726235662"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235663",
+        "addr:district": "Ernakulam",
+        "addr:full": "Nethaji Nagar, Edappally",
+        "addr:postcode": "682024",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Futureace Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.304213,
+          10.0320122
+        ]
+      },
+      "id": "node/7726235663"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235670",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kalamassery, Ernakulam",
+        "addr:postcode": "683104",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Appolo",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3187175,
+          10.0632087
+        ]
+      },
+      "id": "node/7726235670"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235672",
+        "addr:district": "Ernakulam",
+        "addr:full": "Chakkalakkal Junction, Kochi",
+        "addr:postcode": "682025",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Ahalia Foundation Eye Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3146743,
+          9.9932055
+        ]
+      },
+      "id": "node/7726235672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235674",
+        "addr:district": "Ernakulam",
+        "addr:full": "Ernakulam South, Kochi",
+        "addr:postcode": "682016",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Focus Eye Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2932547,
+          9.9689594
+        ]
+      },
+      "id": "node/7726235674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235678",
+        "addr:district": "Ernakulam",
+        "addr:full": "Munambam, Palliport",
+        "addr:postcode": "683515",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Navabharath Medical Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.178222,
+          10.171629
+        ]
+      },
+      "id": "node/7726235678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235679",
+        "addr:district": "Ernakulam",
+        "addr:full": "Iyyattil Junction, Karikkamuri, Ernakulam, Kochi",
+        "addr:postcode": "682018",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Santhigiri Ayurveda & Siddha Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2860427,
+          9.9730963
+        ]
+      },
+      "id": "node/7726235679"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235685",
+        "addr:district": "Ernakulam",
+        "addr:full": "Sambrikkal Road, Panayappilly, Thoppumpady",
+        "addr:postcode": "682005",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2557025,
+          9.9413298
+        ]
+      },
+      "id": "node/7726235685"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235686",
+        "addr:district": "Ernakulam",
+        "addr:full": "Kannamaly",
+        "addr:postcode": "682008",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "St. Joseph's Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.265615,
+          9.874805
+        ]
+      },
+      "id": "node/7726235686"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235688",
+        "addr:district": "Ernakulam",
+        "addr:full": "Janatha Nagar, Illath Nagar, Palluruthy, Kochi",
+        "addr:postcode": "682006",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Palluruthy Government Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2792219,
+          9.9172926
+        ]
+      },
+      "id": "node/7726235688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235689",
+        "addr:district": "Ernakulam",
+        "addr:full": "Rajagiri Road, Rajagiri, Kalamassery, Kochi",
+        "addr:postcode": "683104",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Metro Mind - Psychiatric Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.319607,
+          10.054538
+        ]
+      },
+      "id": "node/7726235689"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235692",
+        "addr:district": "Ernakulam",
+        "addr:full": "Vyttila",
+        "addr:postcode": "682019",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Medall Healthcare",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3156016,
+          9.9651653
+        ]
+      },
+      "id": "node/7726235692"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7726235693",
+        "addr:district": "Ernakulam",
+        "addr:full": "Mamangalam, Palarivattom, Kochi",
+        "addr:postcode": "682025",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Arc Fertility Hospitals",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3034525,
+          10.0090884
+        ]
+      },
+      "id": "node/7726235693"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7730161968",
+        "addr:district": "Alappuzha",
+        "addr:full": "Aroor, Kochi",
+        "addr:postcode": "688534",
+        "addr:state": "Kerala",
+        "amenity": "hospital",
+        "name": "Our Lady of Mercy Hospital",
+        "source": "Local Knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3033526,
+          9.8778836
+        ]
+      },
+      "id": "node/7730161968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7748298036",
+        "addr:city": "Ernakulam",
+        "addr:housenumber": "GHD Puthenvelikkara",
+        "addr:postcode": "683594",
+        "addr:street": "Kuthiyathode P.O;Cherukadappuram",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Government Homeo dispensary Puthenvelikkara",
+        "opening_hours": "Mo-Su 09:00-14:00",
+        "operator": "Medical Officer",
+        "operator:type": "government",
+        "phone": "+91-484 2573205"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2755433,
+          10.1730039
+        ]
+      },
+      "id": "node/7748298036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8093769076",
+        "addr:city": "ernakulam",
+        "addr:postcode": "682505",
+        "addr:street": "Vypin - Pallippuram Road",
+        "amenity": "hospital",
+        "email": "ghdnjarakkal@kerala.gov.in",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Njarakkal Govt. Homoeo Dispensary",
+        "operator": "Department of Homoeopathy, Govt of Kerala",
+        "operator:type": "government",
+        "phone": "+91 484 2497020"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.217612,
+          10.0438538
+        ]
+      },
+      "id": "node/8093769076"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8094646346",
+        "addr:city": "Edakoch, Ernakulam",
+        "addr:housenumber": "P.O.EDAKOCHI",
+        "addr:postcode": "682010",
+        "addr:street": "Old NH 47",
+        "amenity": "hospital",
+        "email": "edakochighd@gmail.com",
+        "healthcare": "hospital",
+        "name": "Government Homoeo Model Dispensary Edakochi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2950036,
+          9.9062493
+        ]
+      },
+      "id": "node/8094646346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8095587422",
+        "addr:city": "Ernakulam",
+        "addr:housenumber": "16/50",
+        "addr:postcode": "683550",
+        "addr:street": "Okkal",
+        "amenity": "hospital",
+        "description": "Govt Homoeo Dispensary, Okkal",
+        "email": "ghdokkal@kerala.gov.in",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general;Homoeopathy",
+        "image": "https://photos.app.goo.gl/fsLQoy6CB8DdjzPr5",
+        "name": "Govt Homoeo Dispensary Okkal",
+        "operator": "Government",
+        "operator:type": "government",
+        "phone": "+91-4842462526"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4438004,
+          10.1549387
+        ]
+      },
+      "id": "node/8095587422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8099914991",
+        "addr:city": "Ernakulam",
+        "addr:housenumber": "Kunnukara P O",
+        "addr:postcode": "683578",
+        "addr:street": "Manjaly Athani Road",
+        "amenity": "hospital",
+        "government": "healthcare",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Government Homoeo Dispensary Kunnukara",
+        "opening_hours": "Mo-Su 09:00-14:00",
+        "operator": "Medical Officer",
+        "operator:type": "government",
+        "phone": "+91-484 2479696"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2948487,
+          10.1561093
+        ]
+      },
+      "id": "node/8099914991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8104031076",
+        "addr:city": "n.paravoor",
+        "addr:housenumber": "Government homoeo dispensary chittattukara.sahitya poshini building.vadakkekara p.o",
+        "addr:postcode": "683522",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "GOVERNMENT HOMOEO DISPENSARY CHITTATTUKARA",
+        "operator": "MEDICAL OFFICER",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2106834,
+          10.1507992
+        ]
+      },
+      "id": "node/8104031076"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8106184884",
+        "addr:city": "Ernakulam",
+        "addr:housenumber": "kariyad junction",
+        "addr:postcode": "683589",
+        "addr:street": "Salem-Kochi-Kanyakumari Highway",
+        "amenity": "hospital",
+        "description": "Government Homoeo dispensary Nedumbassery",
+        "healthcare": "hospital",
+        "healthcare:speciality": "homoeopathy",
+        "name": "Government Homoeo dispensary Nedumbassery",
+        "operator": "Government homoeo dispensary Nedumbassery",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3689623,
+          10.1622239
+        ]
+      },
+      "id": "node/8106184884"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8110449703",
+        "addr:city": "Ernakulam",
+        "addr:housenumber": "kariyad junction",
+        "addr:postcode": "683589",
+        "addr:street": "Salem-Kochi-Kanyakumari Highway",
+        "amenity": "hospital",
+        "description": "homoeopathy",
+        "email": "ghdnedumbasseri@kerala.gov.in",
+        "healthcare": "hospital",
+        "healthcare:speciality": "homeopathy",
+        "name": "Government Homoeo dispensary Nedumbassery",
+        "operator": "Government Homoeo dispensary Nedumbassery",
+        "operator:type": "government",
+        "phone": "+91-4842474795"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3689857,
+          10.1621967
+        ]
+      },
+      "id": "node/8110449703"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8113939043",
+        "addr:city": "Near Perumbavoor",
+        "addr:postcode": "683547",
+        "addr:street": "M H Kavala",
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "yes",
+        "name": "govt homoeo dispensary vengola",
+        "operator": "Medical officer",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.449084,
+          10.0953279
+        ]
+      },
+      "id": "node/8113939043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8292457748",
+        "addr:street": "Kuruppampadi",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Maria Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5160764,
+          10.1126055
+        ]
+      },
+      "id": "node/8292457748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8356502481",
+        "addr:city": "Ernakulam",
+        "addr:housenumber": "chambakkara primary health centre",
+        "addr:postcode": "682308",
+        "addr:street": "chambakkara",
+        "amenity": "hospital",
+        "check_date": "2024-08-07",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "chambakkara primary health centre",
+        "source": "local knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3289044,
+          9.9542828
+        ]
+      },
+      "id": "node/8356502481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8385959138",
+        "addr:city": "Kochi",
+        "addr:housenumber": "Plot 75",
+        "addr:postcode": "682030",
+        "addr:street": "Palarivattom - Kakkanad Road",
+        "amenity": "hospital",
+        "email": "info@ayurvaidyanath.com",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ayurveda;gynaecology;orthopaedics;paediatrics",
+        "name": "Ayur Vaidyanath",
+        "phone": "+91-7558003331",
+        "website": "https://ayurvaidyanath.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3412942,
+          10.0238379
+        ]
+      },
+      "id": "node/8385959138"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8396357404",
+        "addr:city": "Puthencruz",
+        "addr:postcode": "682308",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "homeopathic",
+        "name": "Homeopathic Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4232657,
+          9.9690891
+        ]
+      },
+      "id": "node/8396357404"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8397147448",
+        "addr:city": "muvattupuzha",
+        "addr:postcode": "686673",
+        "addr:street": "randar p.o",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.606085,
+          9.9827432
+        ]
+      },
+      "id": "node/8397147448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8656093389",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Govt ayurvedic hospital,Kottappady"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5851063,
+          10.1157989
+        ]
+      },
+      "id": "node/8656093389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8707193489",
+        "addr:city": "Kalamassery",
+        "addr:postcode": "682022",
+        "addr:street": "Vidya Nagar Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Mitra Homoeopathy",
+        "operator": "Dr Asha A",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3232099,
+          10.0435109
+        ]
+      },
+      "id": "node/8707193489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8753099374",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vetinary Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3260994,
+          9.8622787
+        ]
+      },
+      "id": "node/8753099374"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8778367958",
+        "CovidVaccineCenterId": "155318",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Center, Ezhikkara",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "1495",
+        "type": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2342403,
+          10.095292
+        ]
+      },
+      "id": "node/8778367958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8780579331",
+        "CovidVaccineCenterId": "155216",
+        "alt_name": "24*7 primary health centre",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Center, Eloor",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "2285"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2895024,
+          10.0832761
+        ]
+      },
+      "id": "node/8780579331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8870953973",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Lifecare Hospital",
+        "operator": "Sadhic",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5846648,
+          10.0323661
+        ]
+      },
+      "id": "node/8870953973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8871569240",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre Kunnukara",
+        "ref": "1486"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2989421,
+          10.1566301
+        ]
+      },
+      "id": "node/8871569240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8871647989",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Family Health Centre Eroor",
+        "ref": "1528"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3340708,
+          9.9784164
+        ]
+      },
+      "id": "node/8871647989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8879118320",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ayurveda hospital varapuzha",
+        "survey:date": "2021-06-30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2708801,
+          10.0751413
+        ]
+      },
+      "id": "node/8879118320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8880492891",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ayurvedha Dispensary",
+        "operator": "Government",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2293049,
+          10.1125591
+        ]
+      },
+      "id": "node/8880492891"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8882347518",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Thripunithura Ramavarma Palace Dispensary",
+        "ref": "1527",
+        "type": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3532833,
+          9.9336989
+        ]
+      },
+      "id": "node/8882347518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8882455928",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Family Health Centre Chowara",
+        "ref": "1479",
+        "type": "75"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4036224,
+          10.1362873
+        ]
+      },
+      "id": "node/8882455928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8882500237",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre Palakuzha",
+        "ref": "1558",
+        "type": "11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4324751,
+          9.893069
+        ]
+      },
+      "id": "node/8882500237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889454169",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre Nedumbassery",
+        "ref": "1512",
+        "type": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3783499,
+          10.1621116
+        ]
+      },
+      "id": "node/8889454169"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889466576",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Family Health Centre Alangad",
+        "ref": "1477",
+        "type": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2780318,
+          10.1099055
+        ]
+      },
+      "id": "node/8889466576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889483535",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre Thrikakkara",
+        "ref": "1462",
+        "type": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3166833,
+          10.0222321
+        ]
+      },
+      "id": "node/8889483535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889495211",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Cochin Cancer Research Centre",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "1051",
+        "type": "23"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3543132,
+          10.0534587
+        ]
+      },
+      "id": "node/8889495211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889544551",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre, Varapuzha",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "1488",
+        "type": "17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3018712,
+          10.0566983
+        ]
+      },
+      "id": "node/8889544551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889639236",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre, Parakkadavu",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "1513",
+        "type": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3476571,
+          10.1950478
+        ]
+      },
+      "id": "node/8889639236"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889666729",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre, Vengola",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government",
+        "ref": "1570",
+        "type": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4614122,
+          10.0814849
+        ]
+      },
+      "id": "node/8889666729"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8889686729",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre Varapetty",
+        "ref": "1578",
+        "type": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6263478,
+          10.0489598
+        ]
+      },
+      "id": "node/8889686729"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8892286819",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Karunnya Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4815794,
+          10.1155687
+        ]
+      },
+      "id": "node/8892286819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8894659619",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Homeo dispensery",
+        "survey:date": "2021-07-04"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3655286,
+          10.1422509
+        ]
+      },
+      "id": "node/8894659619"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8897145783",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Dispensary High Court Ernakulam",
+        "ref": "1475",
+        "type": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2849195,
+          10.0061874
+        ]
+      },
+      "id": "node/8897145783"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8897163283",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre Pallipuram",
+        "ref": "2284",
+        "type": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.1861586,
+          10.1677492
+        ]
+      },
+      "id": "node/8897163283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8897215385",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Family Health centre  Chittattukara",
+        "ref": "1499",
+        "type": "11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2125866,
+          10.1886944
+        ]
+      },
+      "id": "node/8897215385"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8935976050",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dona s homeopathiclinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4624717,
+          9.8923814
+        ]
+      },
+      "id": "node/8935976050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8936177145",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sub Center Kovikathumkadavu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.1872162,
+          10.1623196
+        ]
+      },
+      "id": "node/8936177145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8938340549",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "East Block, Medical Trust Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.288373,
+          9.9642981
+        ]
+      },
+      "id": "node/8938340549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8945941302",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Homeo Dispensary Arikkuzha"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6444337,
+          9.9139387
+        ]
+      },
+      "id": "node/8945941302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8950254178",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ahalia Eye Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3144506,
+          9.9933803
+        ]
+      },
+      "id": "node/8950254178"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8980628065",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Nayarambalam Primary Health Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2181225,
+          10.0572971
+        ]
+      },
+      "id": "node/8980628065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8980628801",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Susrutha Eye Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2151066,
+          10.0558672
+        ]
+      },
+      "id": "node/8980628801"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8983880645",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "ESI Dispensary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2202664,
+          10.0479327
+        ]
+      },
+      "id": "node/8983880645"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8998310240",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre Malayidamthuruthu",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.410449,
+          10.0669091
+        ]
+      },
+      "id": "node/8998310240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8998310241",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre Vengoor",
+        "operator": "Department of Health and Family Welfare",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5494889,
+          10.1412957
+        ]
+      },
+      "id": "node/8998310241"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9001039925",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Jacobs Hospital",
+        "operator": "Department ofHealth and Family Welfare",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2555454,
+          9.9364863
+        ]
+      },
+      "id": "node/9001039925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9030302364",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "C H C",
+        "name:en": "Covid Health Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4270432,
+          9.977367
+        ]
+      },
+      "id": "node/9030302364"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9031905366",
+        "addr:postcode": "683574",
+        "addr:street": "Kalady Malayattoor Road, Neeleeswaram, Kerala",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ayurveda",
+        "name": "Government Ayurveda Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4806448,
+          10.1866522
+        ]
+      },
+      "id": "node/9031905366"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9034733206",
+        "addr:city": "Aluva",
+        "addr:postcode": "683110",
+        "addr:street": "Kadungalloor Road",
+        "amenity": "hospital",
+        "healthcare": "clinic",
+        "healthcare:speciality": "homeopathy",
+        "name": "Lakshmi Homeo Clinic",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3330517,
+          10.1143369
+        ]
+      },
+      "id": "node/9034733206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9035525019",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Palliative care"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6275365,
+          10.0189607
+        ]
+      },
+      "id": "node/9035525019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9045554213",
+        "amenity": "hospital",
+        "healthcare": "pharmacy",
+        "name": "Sree Krishna Medicals"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3302021,
+          10.1148171
+        ]
+      },
+      "id": "node/9045554213"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9081387967",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Mattancherry Government Hospital",
+        "name:ml": "മട്ടാഞ്ചേരി ഗവൺമെൻ്റ് ഹോസ്പിറ്റൽ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2598371,
+          9.9597832
+        ]
+      },
+      "id": "node/9081387967"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9103450417",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Homeo Hospital",
+        "survey:date": "2021-09-18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2501271,
+          10.1028148
+        ]
+      },
+      "id": "node/9103450417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9110518687",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "K. Sreedharan Vaithyan Ayurveda Clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4345071,
+          10.1428947
+        ]
+      },
+      "id": "node/9110518687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9137869018",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "St Joseph Hospital Manjummel",
+        "survey:date": "2021-10-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3013527,
+          10.0602094
+        ]
+      },
+      "id": "node/9137869018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9207524882",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre, Kadayirippu",
+        "ref": "1557"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4565847,
+          10.0041894
+        ]
+      },
+      "id": "node/9207524882"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9254189192",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "SRS Eye Hospital,Bappuji Junction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5934267,
+          9.8542413
+        ]
+      },
+      "id": "node/9254189192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9254980827",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre,Mangalathuthazham"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6031446,
+          9.8587378
+        ]
+      },
+      "id": "node/9254980827"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259561133",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Kuthapady",
+        "operator": "National Urban Health Mission",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3139575,
+          9.9835441
+        ]
+      },
+      "id": "node/9259561133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259566864",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Ponnurunni",
+        "operator": "National Urban Health Mission",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.320338,
+          9.979997
+        ]
+      },
+      "id": "node/9259566864"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259597848",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Kaloor",
+        "operator": "National Urban Health Mission",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2883583,
+          9.9935425
+        ]
+      },
+      "id": "node/9259597848"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259608605",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Kennadimukku",
+        "operator": "National Urban Health Mission",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3169704,
+          10.0196448
+        ]
+      },
+      "id": "node/9259608605"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259620499",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban primary Health Centre, Thammanam",
+        "operator": "National Urban Health Mission",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3065874,
+          9.989758
+        ]
+      },
+      "id": "node/9259620499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259649772",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Cenre, Pandikudy",
+        "operator": "National Urban Health Centre",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2494468,
+          9.9509907
+        ]
+      },
+      "id": "node/9259649772"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259654101",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Chambakkara",
+        "operator": "National Urban Health Centre",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3287701,
+          9.954131
+        ]
+      },
+      "id": "node/9259654101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259711761",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Moolamkuzhi",
+        "operator": "National Urban Health Mission",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2549759,
+          9.9360022
+        ]
+      },
+      "id": "node/9259711761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259808085",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Medical College, Ernakulam",
+        "name:ml": "സർക്കാർ മെഡിക്കൽ കോളേജ്, എറണാകുളം",
+        "operator": "Urban Primary Health Centre",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3553898,
+          10.0527471
+        ]
+      },
+      "id": "node/9259808085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9259884962",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Mangattumukku",
+        "operator": "National Urban Primary Health Mission",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2547957,
+          9.9538492
+        ]
+      },
+      "id": "node/9259884962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9285014746",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Taluk Hospital",
+        "opening_hours": "09:00",
+        "phone": "+91-4842455950",
+        "survey:date": "2021-11-26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3871471,
+          10.1962148
+        ]
+      },
+      "id": "node/9285014746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9285079717",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Taluk Hospital Subcentre",
+        "survey:date": "2021-11-26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.370421,
+          10.1821376
+        ]
+      },
+      "id": "node/9285079717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9285081538",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Taluk Hospital Subcentre Champannoor",
+        "survey:date": "2021-11-26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3684411,
+          10.1877599
+        ]
+      },
+      "id": "node/9285081538"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9285318217",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Airport hospital",
+        "survey:date": "2021-11-26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3879138,
+          10.159737
+        ]
+      },
+      "id": "node/9285318217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9396171352",
+        "addr:street": "Kuruppampadi",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Mattamana Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5180771,
+          10.112682
+        ]
+      },
+      "id": "node/9396171352"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9401735908",
+        "addr:city": "Thripunithura",
+        "addr:postcode": "682301",
+        "addr:street": "Layam Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Amrutha Ayurveda Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3462484,
+          9.9465204
+        ]
+      },
+      "id": "node/9401735908"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9409091807",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ayush Health Care Center",
+        "operator": "Kothamangalam Municipality",
+        "operator:type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.6140926,
+          10.0488197
+        ]
+      },
+      "id": "node/9409091807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9430090903",
+        "addr:street": "Vattekunnam",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Urban Primary Health Centre, Vattekunnam"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3105798,
+          10.0402557
+        ]
+      },
+      "id": "node/9430090903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9468240758",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health Centre, Koothattukulam",
+        "ref": "1561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5962708,
+          9.8643508
+        ]
+      },
+      "id": "node/9468240758"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9476474956",
+        "addr:street": "Arookutty",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "PHC Arookutty"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.320485,
+          9.8681877
+        ]
+      },
+      "id": "node/9476474956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9483545284",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Homeo Despensory"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3267243,
+          9.8529474
+        ]
+      },
+      "id": "node/9483545284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9546830165",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "granth",
+        "operator": "uddhesh patekar",
+        "operator:type": "public"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2464597,
+          10.063749
+        ]
+      },
+      "id": "node/9546830165"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10075107843",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Govt homeo dispensary",
+        "panchayath": "mulavukad",
+        "ward": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2447972,
+          10.0009723
+        ]
+      },
+      "id": "node/10075107843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10075114319",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary health centre vallarpadam",
+        "panchayath": "mulavukad",
+        "ward": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.245324,
+          10.0007893
+        ]
+      },
+      "id": "node/10075114319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10138431196",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Family Health Centre Aroor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.304603,
+          9.8696981
+        ]
+      },
+      "id": "node/10138431196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10138431987",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "LIFE CARE HOSPITAL CHANDROOR"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3072388,
+          9.855144
+        ]
+      },
+      "id": "node/10138431987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10677799391",
+        "addr:city": "Angamaly",
+        "addr:housenumber": "Joseph Plaza Shopping Complex",
+        "addr:postcode": "683572",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "ESI Dispensary Angamaly",
+        "operator": "Employees' State Insurance",
+        "operator:short": "ESI",
+        "operator:type": "government",
+        "operator:wikidata": "Q3595726"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3883808,
+          10.1909855
+        ]
+      },
+      "id": "node/10677799391"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10700030308",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "GOVT VETERNARY HOSPITAL"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3047634,
+          9.8663127
+        ]
+      },
+      "id": "node/10700030308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10734223232",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "AMJ Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2702904,
+          9.9294302
+        ]
+      },
+      "id": "node/10734223232"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10760691831",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Primary Health Centre, Thammanam"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3067297,
+          9.9896091
+        ]
+      },
+      "id": "node/10760691831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10760973226",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Cochin Corporation Homeo Dispensery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3201955,
+          9.9807774
+        ]
+      },
+      "id": "node/10760973226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10941996393",
+        "amenity": "hospital",
+        "healthcare": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4105859,
+          9.9617178
+        ]
+      },
+      "id": "node/10941996393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10970406426",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Family health centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3900272,
+          10.1033088
+        ]
+      },
+      "id": "node/10970406426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10972467821",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Public Health Centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5198065,
+          9.9090061
+        ]
+      },
+      "id": "node/10972467821"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10972467822",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Community Health center Ramamangalm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.52386,
+          9.9235373
+        ]
+      },
+      "id": "node/10972467822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10972467823",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "St Johns Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.5215966,
+          9.9195789
+        ]
+      },
+      "id": "node/10972467823"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11276902019",
+        "amenity": "hospital",
+        "name": "Renai Medicity",
+        "website": "https://www.renaimedicity.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3035506,
+          10.0079415
+        ]
+      },
+      "id": "node/11276902019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11813203174",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general;internal",
+        "name": "Doctor Peter's Clinic",
+        "operator": "Peter",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3566938,
+          9.962874
+        ]
+      },
+      "id": "node/11813203174"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11843203582",
+        "addr:city": "Aluva",
+        "addr:district": "Ernakulam",
+        "addr:postcode": "683101",
+        "addr:street": "Hill Road",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Dr. Tony Fernandez Eye Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3543799,
+          10.1081984
+        ]
+      },
+      "id": "node/11843203582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12180041418",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Oncology, Renal & Ophthalmology Block, Medical Trust Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2885344,
+          9.9643974
+        ]
+      },
+      "id": "node/12180041418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12404433796",
+        "amenity": "hospital",
+        "branch": "Thevara",
+        "healthcare": "hospital",
+        "name": "Urban Community Health Centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3017447,
+          9.9292264
+        ]
+      },
+      "id": "node/12404433796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12418253836",
+        "addr:city": "Edappally",
+        "addr:district": "Ernakulam",
+        "addr:postcode": "682024",
+        "addr:street": "Changampuzha Park Walkway",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "dermatology",
+        "name": "Skinsecrets"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.303057,
+          10.0169457
+        ]
+      },
+      "id": "node/12418253836"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12574045379",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Public Parking Ground",
+        "operator": "Rajagiri Hospitals",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.390581,
+          10.0878142
+        ]
+      },
+      "id": "node/12574045379"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13344271879",
+        "addr:city": "Kochi",
+        "addr:district": "Ernakulam",
+        "addr:housenumber": "Near Pallithazham Bridge",
+        "addr:postcode": "683520",
+        "addr:street": "Aluva-Parur Road",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Flora Medicare & Dental Implant Center",
+        "opening_hours": "Mo-Su 09:30-21:00",
+        "phone": "+91-9072-303399",
+        "website": "https://www.floramedicare.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2382467,
+          10.1496227
+        ]
+      },
+      "id": "node/13344271879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13371208044",
+        "addr:city": "Kochi",
+        "addr:housenumber": "1561-A",
+        "addr:postcode": "682018",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "oncology",
+        "name": "Lisie Cancer Centre",
+        "opening_hours": "Mo-Sa 07:00-17:00",
+        "operator": "Lisie Hospital",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2886971,
+          9.9891832
+        ]
+      },
+      "id": "node/13371208044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13805468085",
+        "amenity": "hospital",
+        "name": "25th Hour Clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3485135,
+          9.9455961
+        ]
+      },
+      "id": "node/13805468085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/14039123301",
+        "addr:postcode": "682021",
+        "addr:street": "Kollamkudimukal - Kangarapady Rd. Cardinal Quaters",
+        "amenity": "hospital",
+        "check_date": "2026-07-22",
+        "check_date:opening_hours": "2026-07-22",
+        "healthcare": "hospital",
+        "name": "Navadalam Ayurcare - Ayurveda Multi-speciality Hospital",
+        "opening_hours": "Mo-Sa 09:00-20:00; Su 09:00-13:00",
+        "phone": "+91 8075852562"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3420542,
+          10.028484
+        ]
+      },
+      "id": "node/14039123301"
+    }
+  ]
+}

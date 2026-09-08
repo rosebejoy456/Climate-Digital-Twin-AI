@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-09-07T13:43:21Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/254099650",
+        "addr:city": "Cochin",
+        "addr:country": "IN",
+        "addr:district": "Ernakulam",
+        "addr:street": "Nedumbassery",
+        "aerodrome:type": "international",
+        "aeroway": "aerodrome",
+        "alt_name": "Cochin Airport",
+        "contact:phone": "+914842610115",
+        "contact:website": "https://cial.aero",
+        "ele": "9",
+        "iata": "COK",
+        "icao": "VOCI",
+        "internet_access": "wlan",
+        "loc_name": "Nedumbassery Airport",
+        "name": "Cochin International Airport",
+        "name:ar": "مطار كوتشين الدولي",
+        "name:bn": "কোচিন আন্তর্জাতিক বিমানবন্দর",
+        "name:en": "Cochin International Airport",
+        "name:es": "Aeropuerto Internacional de Cochín",
+        "name:fa": "فرودگاه بین‌المللی کوچین",
+        "name:he": "שדה התעופה הבינלאומי קוצ'י",
+        "name:hi": "कोच्चि अंतर्राष्ट्रीय हवाई अड्डा",
+        "name:kn": "ಕೊಚ್ಚಿ ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ",
+        "name:ml": "കൊച്ചി നെടുമ്പാശ്ശേരി അന്താരാഷ്ട്ര വിമാനത്താവളം",
+        "name:pa": "ਕੋਚਿਨ ਅੰਤਰਰਾਸ਼ਟਰੀ ਹਵਾਈ ਅੱਡਾ",
+        "name:ru": "Международный аэропорт Коччи",
+        "name:ta": "கொச்சி பன்னாட்டு வானூர்தி நிலையம்",
+        "name:zh": "科钦国际机场",
+        "operator": "Cochin International Airport Ltd. - CIAL",
+        "ref": "COK",
+        "reg_name": "Kochi Airport",
+        "short_name": "CIAL",
+        "wikidata": "Q592172",
+        "wikipedia": "en:Cochin International Airport",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.4026587,
+          10.1544602
+        ]
+      },
+      "id": "way/254099650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1042092394",
+        "addr:city": "Willingdon Island, Kochi",
+        "aeroway": "aerodrome",
+        "icao": "VOCC",
+        "name": "Kochi Naval Airport",
+        "name:ml": "കൊച്ചി നാവിക വിമാനത്താവളം",
+        "phone": "+914842874789",
+        "source": "ourairports.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2722649,
+          9.9473013
+        ]
+      },
+      "id": "node/1042092394"
+    }
+  ]
+}

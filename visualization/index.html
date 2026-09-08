@@ -1,57 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Digital Twin</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Ernakulam Climate Digital Twin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
 </head>
+
+
 <body>
 
-    <!-- Location panel -->
+    <!-- ================================= -->
+    <!-- Ernakulam Digital Twin Panel -->
+    <!-- ================================= -->
+
     <div id="location-panel">
 
-    <div class="title">📍 Selected Location</div>
+        <!-- Title -->
 
-    <div class="coordinate">
-        Latitude:
-        <span id="lat">--</span>
+        <div class="title">
+            📍 Ernakulam Digital Twin
+        </div>
+
+
+        <!-- Location -->
+
+        <div class="location-name">
+            Ernakulam, Kerala, India
+        </div>
+
+
+        <!-- Coordinates -->
+
+        <div class="coordinate">
+
+            Latitude:
+            <span id="lat">--</span>
+
+        </div>
+
+
+        <div class="coordinate">
+
+            Longitude:
+            <span id="lon">--</span>
+
+        </div>
+
+
+        <div class="country">
+
+            Country:
+            <span id="country">
+                --
+            </span>
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <!-- ================================= -->
+        <!-- Climate State -->
+        <!-- ================================= -->
+
+        <div class="climate-title">
+
+            🌡 Climate State
+
+        </div>
+
+
+        <div class="climate-item">
+
+            Temperature:
+            <span id="temperature">
+                --
+            </span>
+
+        </div>
+
+
+        <div class="climate-item">
+
+            Rainfall:
+            <span id="rainfall">
+                --
+            </span>
+
+        </div>
+
+
+        <div class="climate-item">
+
+            Pressure:
+            <span id="pressure">
+                --
+            </span>
+
+        </div>
+
+
+        <div class="climate-item">
+
+            Land Surface Temperature:
+            <span id="lst">
+                --
+            </span>
+
+        </div>
+
+
+        <div class="climate-item">
+
+            NDVI:
+            <span id="ndvi">
+                --
+            </span>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- Status -->
+        <!-- ================================= -->
+
+        <div class="divider"></div>
+
+
+        <div class="twin-status">
+
+            ● Digital Twin Active
+
+        </div>
+
     </div>
 
-    <div class="coordinate">
-        Longitude:
-        <span id="lon">--</span>
+
+    <!-- ================================= -->
+    <!-- Three.js Application -->
+    <!-- ================================= -->
+<!-- What-If Simulation Panel -->
+<div id="what-if-panel">
+
+    <div class="what-if-title">
+        🔮 What-If Simulation
     </div>
 
-    <div class="country">
-        Country:
-        <span id="country">--</span>
+    <div class="what-if-row">
+        <label for="temperature-change">
+            Temperature change (°C)
+        </label>
+
+        <input
+            id="temperature-change"
+            type="number"
+            value="0"
+            step="0.5"
+        >
     </div>
 
-    <div class="divider"></div>
+    <div class="what-if-row">
+        <label for="rainfall-change">
+            Rainfall change (%)
+        </label>
 
-    <div class="climate-title">
-        🌡 Climate Data
+        <input
+            id="rainfall-change"
+            type="number"
+            value="0"
+            step="5"
+        >
     </div>
 
-    <div class="climate-item">
-        Temperature:
-        <span id="temperature">--</span>
+    <div class="what-if-row">
+        <label for="pressure-change">
+            Pressure change (hPa)
+        </label>
+
+        <input
+            id="pressure-change"
+            type="number"
+            value="0"
+            step="1"
+        >
     </div>
 
-    <div class="climate-item">
-        Rainfall:
-        <span id="rainfall">--</span>
+    <div class="what-if-row">
+        <label for="lst-change">
+            LST change (°C)
+        </label>
+
+        <input
+            id="lst-change"
+            type="number"
+            value="0"
+            step="0.5"
+        >
     </div>
 
-    <div class="climate-item">
-        CO₂:
-        <span id="co2">--</span>
+    <div class="what-if-row">
+        <label for="ndvi-change">
+            NDVI change (%)
+        </label>
+
+        <input
+            id="ndvi-change"
+            type="number"
+            value="0"
+            step="5"
+        >
     </div>
+
+    <button id="run-what-if">
+        Run Simulation
+    </button>
+
+    <div id="what-if-result"></div>
 
 </div>
+    <script
+        type="module"
+        src="./src/main.js"
+    ></script>
 
-    <script type="module" src="./src/main.js"></script>
 
 </body>
+
 </html>
