@@ -16,30 +16,38 @@ export function Header({ activeTab }) {
 
   return (
     <header className="dashboard-header">
-      <div className="header-left">
-        <div className="telemetry-pill">
-          <IconLocation size={15} color="var(--accent-cyan)" />
-          <span>Domain: <strong className="pill-accent">Ernakulam District</strong>, Kerala</span>
+      {/* Single unified pill row — all 5 items share the same gap */}
+      <div className="header-pill-row">
+        {/* Left cluster */}
+        <div className="header-pill-cluster">
+          <div className="telemetry-pill">
+            <IconLocation size={15} color="var(--accent-cyan)" />
+            <span>Domain: <strong className="pill-accent">Ernakulam District</strong>, Kerala</span>
+          </div>
+
+          <div className="telemetry-pill header-pill--mono">
+            <span>9.9816° N, 76.2999° E</span>
+          </div>
         </div>
 
-        <div className="telemetry-pill" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem' }}>
-          <span>9.9816° N, 76.2999° E</span>
-        </div>
-      </div>
+        {/* Spacer pushes right cluster to the end */}
+        <div className="header-pill-spacer" aria-hidden="true" />
 
-      <div className="header-right">
-        <div className="live-indicator">
-          <div className="status-pulse"></div>
-          <span>Digital Twin Engine: <strong>Synchronized</strong></span>
-        </div>
+        {/* Right cluster */}
+        <div className="header-pill-cluster">
+          <div className="telemetry-pill header-pill--engine">
+            <div className="status-pulse" />
+            <span>Digital Twin Engine: <strong className="pill-accent-dim">Synchronized</strong></span>
+          </div>
 
-        <div className="telemetry-pill" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem' }}>
-          <span>{timeString || '12:00:00 UTC'}</span>
-        </div>
+          <div className="telemetry-pill header-pill--mono">
+            <span>{timeString || '12:00:00 UTC'}</span>
+          </div>
 
-        <div className="mode-badge">
-          <IconAI size={13} color="var(--accent-cyan)" />
-          <span>MOCK ADAPTER (SAFE)</span>
+          <div className="telemetry-pill header-pill--mode">
+            <IconAI size={13} color="var(--accent-cyan)" />
+            <span>MOCK ADAPTER (SAFE)</span>
+          </div>
         </div>
       </div>
     </header>

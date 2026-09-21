@@ -204,8 +204,8 @@ export function OverviewPage() {
       </div>
 
       {/* 1. CURRENT CLIMATE STATE - 5 INTERACTIVE METRIC CARDS */}
-      <div style={{ marginBottom: '1.75rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.85rem' }}>
+      <div style={{ marginBottom: '2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
           <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text-dim)' }}>
             CURRENT CLIMATE STATE TELEMETRY (SELECT TO VIEW TRAJECTORY)
           </span>
