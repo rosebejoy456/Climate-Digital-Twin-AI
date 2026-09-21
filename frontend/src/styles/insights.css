@@ -1,0 +1,334 @@
+/*
+ * frontend/src/styles/insights.css
+ *
+ * Scoped styles for Phase 9 Explainability & AI Insights.
+ * Strictly adheres to design tokens defined in variables.css.
+ */
+
+/* ==========================================================================
+   Insights Grid Layout
+   ========================================================================== */
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 960px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Insight Card Foundation
+   ========================================================================== */
+
+.insight-card {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-sm);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.insight-card:hover {
+  border-color: var(--border-medium);
+}
+
+.insight-card.insight-unavailable-card {
+  opacity: 0.75;
+  border-style: dashed;
+}
+
+/* Card Header */
+.insight-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.insight-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.insight-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.insight-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* Badges */
+.insight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--border-radius-xs);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.insight-provenance-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+}
+
+.insight-mock-badge {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   5-Part Explanation Section Architecture (WHAT / WHY / EVIDENCE / PROVENANCE / LIMITATION)
+   ========================================================================== */
+
+.insight-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.insight-section-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.insight-label-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.insight-section-label.what { color: var(--accent-cyan); }
+.insight-label-dot.what-dot { background-color: var(--accent-cyan); }
+
+.insight-section-label.why { color: #818cf8; }
+.insight-label-dot.why-dot { background-color: #818cf8; }
+
+.insight-section-label.evidence { color: #34d399; }
+.insight-label-dot.evidence-dot { background-color: #34d399; }
+
+.insight-section-label.method { color: #38bdf8; }
+.insight-label-dot.method-dot { background-color: #38bdf8; }
+
+.insight-section-label.provenance { color: #fbbf24; }
+.insight-label-dot.provenance-dot { background-color: #fbbf24; }
+
+.insight-section-label.limitation { color: #f87171; }
+.insight-label-dot.limitation-dot { background-color: #f87171; }
+
+.insight-section-text {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.insight-section-text strong {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Supporting Evidence Grid (Key-Value Cards)
+   ========================================================================== */
+
+.insight-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.insight-evidence-card {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.insight-evidence-card:hover {
+  border-color: var(--border-medium);
+}
+
+.insight-evidence-card.evidence-missing {
+  border-style: dashed;
+  border-color: rgba(245, 158, 11, 0.35);
+  background-color: rgba(245, 158, 11, 0.03);
+}
+
+.insight-evidence-card-label {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.insight-evidence-card-val-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.insight-evidence-card-val {
+  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.insight-evidence-card.evidence-missing .insight-evidence-card-val {
+  color: var(--status-warning);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Expandable Traceability Drawer & Source Details
+   ========================================================================== */
+
+.insight-transparency-toggle-wrap {
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.insight-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  transition: color 0.15s ease;
+}
+
+.insight-toggle-btn:hover {
+  color: var(--accent-cyan);
+}
+
+.insight-toggle-btn:focus {
+  outline: 2px solid rgba(6, 182, 212, 0.4);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.insight-toggle-arrow {
+  font-size: 0.5625rem;
+  margin-left: 0.2rem;
+}
+
+.insight-expandable-drawer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xs);
+  animation: insightFadeIn 0.2s ease-in-out;
+}
+
+@keyframes insightFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Traceability Key-Value Rows */
+.insight-traceability-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.insight-traceability-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.insight-traceability-row:last-child {
+  border-bottom: none;
+}
+
+.insight-traceability-key {
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.insight-traceability-val {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-align: right;
+  word-break: break-word;
+}
+
+/* Limitation Box */
+.insight-limitation-box {
+  padding: 0.65rem 0.85rem;
+  background-color: rgba(239, 68, 68, 0.06);
+  border-left: 3px solid var(--status-alert);
+  border-radius: 0 var(--border-radius-xs) var(--border-radius-xs) 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.insight-limitation-box strong {
+  color: #f87171;
+}
+
+/* Card Footer / Disclaimer */
+.insight-card-footer {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.6875rem;
+  color: var(--text-dim);
+  line-height: 1.45;
+}

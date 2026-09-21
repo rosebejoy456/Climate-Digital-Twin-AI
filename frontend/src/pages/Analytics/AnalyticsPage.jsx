@@ -1,21 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { getShapExplanation } from '../../services/explainabilityService';
+import {
+  getShapExplanation,
+  buildShapInsight,
+  buildHorizonInsight,
+  buildObservationInsight,
+  buildScenarioInsight,
+} from '../../services/explainabilityService';
 import { getMultiVariablePrediction } from '../../services/predictionService';
+import { calculateScenario } from '../../services/simulationService';
+import { SIMULATION_BASELINES } from '../../constants/simulationConstants';
 
 import { VERIFIED_OBSERVATION_DATES } from '../../services/mapService';
 import { MetricCard } from '../../components/cards/MetricCard';
 import InsightAlert from '../../components/analytics/InsightAlert';
+import { ClimateInsightCard } from '../../components/insights/ClimateInsightCard';
 import { VARIABLES } from '../../constants/analyticsConstants';
 import '../../styles/analytics.css';
+import '../../styles/insights.css';
 import {
   IconAnalytics,
   IconAI,
   IconInfo,
   IconCheck,
-  IconRainfall,
-  IconTemperature,
-  IconLST,
-  IconNDVI
 } from '../../components/common/Icons';
 
 export function AnalyticsPage() {
@@ -31,7 +37,7 @@ export function AnalyticsPage() {
       try {
         const [shap, multiPred] = await Promise.all([
           getShapExplanation(),
-          getMultiVariablePrediction()
+          getMultiVariablePrediction(),
         ]);
         setShapData(shap);
         setForecast(multiPred);
@@ -47,15 +53,13 @@ export function AnalyticsPage() {
   // Derive simple insight from selected snapshot date using VERIFIED_OBSERVATION_DATES
   useEffect(() => {
     if (!selectedDate) return;
-    const record = VERIFIED_OBSERVATION_DATES.find(d => d.date === selectedDate);
+    const record = VERIFIED_OBSERVATION_DATES.find((d) => d.date === selectedDate);
     if (record && record.rainfall_imd !== null && record.rainfall_imd !== undefined) {
-      // No baseline provided; illustrate value only
-      // varInfo removed – using VARIABLES constant
       setInsight({
         type: 'rainfall',
         value: record.rainfall_imd,
         baseline: null,
-        diffPct: null
+        diffPct: null,
       });
     } else {
       setInsight(null);
@@ -74,6 +78,39 @@ export function AnalyticsPage() {
   // Max absolute contribution for scaling bars
   const maxContribution = Math.max(...(shapData?.features?.map((f) => Math.abs(f.contribution)) || [5]));
 
+  // Selected date observation record
+  const selectedRecord = VERIFIED_OBSERVATION_DATES.find((d) => d.date === selectedDate) || null;
+
+  // Map active variable to selected record property
+  const getObservedValForActiveVar = () => {
+    if (!selectedRecord) return null;
+    if (activeVar === 'rainfall') return selectedRecord.rainfall_imd;
+    if (activeVar === 'maxTemp') return selectedRecord.max_temp;
+    if (activeVar === 'lst') return selectedRecord.lst;
+    if (activeVar === 'ndvi') return selectedRecord.ndvi;
+    return null;
+  };
+
+  const activeVarInfo = VARIABLES[activeVar] || VARIABLES.rainfall;
+  const currentObsVal = getObservedValForActiveVar();
+  const sourceText = selectedRecord?.sourceAttribution?.[activeVar] || activeVarInfo.source || 'IMD 0.25° Gridded Daily Sum';
+
+  // Construct structured insights using explainability foundation
+  const shapInsight = buildShapInsight(shapData);
+  const horizonInsight = buildHorizonInsight(forecast, activeVar, activeVarInfo.unit);
+  const observationInsight = buildObservationInsight(
+    activeVarInfo.name,
+    currentObsVal,
+    activeVar === 'rainfall' ? 14.8 : activeVar === 'maxTemp' ? 31.5 : activeVar === 'lst' ? 32.0 : 0.68,
+    activeVarInfo.unit,
+    selectedDate || '2026-07-16',
+    sourceText
+  );
+
+  // Construct baseline reference scenario insight
+  const sampleScenarioResult = calculateScenario(SIMULATION_BASELINES[0], 2.0, 25.0);
+  const scenarioInsight = buildScenarioInsight(sampleScenarioResult);
+
   return (
     <div>
       {/* Page Heading */}
@@ -90,8 +127,19 @@ export function AnalyticsPage() {
       {/* Date Selector */}
       <div className="date-selector" style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
         <label htmlFor="obs-date" style={{ marginRight: '0.5rem', color: 'var(--text-secondary)' }}>Snapshot Date:</label>
-        <select id="obs-date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} style={{ backgroundColor: 'var(--bg-surface-elevated)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)', padding: '0.3rem 0.5rem', borderRadius: '4px' }}>
-          {VERIFIED_OBSERVATION_DATES.map(d => (
+        <select
+          id="obs-date"
+          value={selectedDate}
+          onChange={(e) => setSelectedDate(e.target.value)}
+          style={{
+            backgroundColor: 'var(--bg-surface-elevated)',
+            border: '1px solid var(--border-subtle)',
+            color: 'var(--text-primary)',
+            padding: '0.3rem 0.5rem',
+            borderRadius: '4px',
+          }}
+        >
+          {VERIFIED_OBSERVATION_DATES.map((d) => (
             <option key={d.date} value={d.date}>{d.label}</option>
           ))}
         </select>
@@ -150,7 +198,7 @@ export function AnalyticsPage() {
       </div>
 
       {/* 2. SHAP EXPLAINABLE AI SECTION */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1.75fr 1fr', gap: '1.5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1.75fr 1fr', gap: '1.5rem', marginBottom: '1.75rem' }}>
         {/* SHAP Feature Contribution Chart */}
         <div className="card-panel">
           <div className="card-panel-header">
@@ -186,7 +234,7 @@ export function AnalyticsPage() {
               borderRadius: 'var(--border-radius-sm)',
               border: '1px solid var(--border-subtle)',
               marginBottom: '1.25rem',
-              fontSize: '0.8125rem'
+              fontSize: '0.8125rem',
             }}
           >
             <div>
@@ -237,7 +285,7 @@ export function AnalyticsPage() {
                           backgroundColor: barColor,
                           borderRadius: '0 3px 3px 0',
                           opacity: 0.85,
-                          transition: 'width 0.4s ease'
+                          transition: 'width 0.4s ease',
                         }}
                       ></div>
                     ) : (
@@ -250,7 +298,7 @@ export function AnalyticsPage() {
                           backgroundColor: barColor,
                           borderRadius: '3px 0 0 3px',
                           opacity: 0.85,
-                          transition: 'width 0.4s ease'
+                          transition: 'width 0.4s ease',
                         }}
                       ></div>
                     )}
@@ -349,6 +397,48 @@ export function AnalyticsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* 3. EXPLAINABLE CLIMATE INSIGHTS SECTION */}
+      <div className="card-panel">
+        <div className="card-panel-header">
+          <div className="card-title-group">
+            <h2 className="card-title">
+              <IconAI size={18} color="var(--accent-cyan)" />
+              Explainable Climate Insights
+            </h2>
+            <p className="card-subtitle">
+              Structured 5-part transparency breakdowns across AI attributions, forecasts, observations, and scenario sensitivities
+            </p>
+          </div>
+        </div>
+
+        {/* 2-Column Responsive Insights Grid */}
+        <div className="insights-grid">
+          {/* Card 1: SHAP Model Feature Attribution */}
+          <ClimateInsightCard
+            insight={shapInsight}
+            defaultExpanded={false}
+          />
+
+          {/* Card 2: 5-Day Horizon Trajectory Trend */}
+          <ClimateInsightCard
+            insight={horizonInsight}
+            defaultExpanded={false}
+          />
+
+          {/* Card 3: Observation Status / Departure */}
+          <ClimateInsightCard
+            insight={observationInsight}
+            defaultExpanded={false}
+          />
+
+          {/* Card 4: Scenario Sensitivity Derivation */}
+          <ClimateInsightCard
+            insight={scenarioInsight}
+            defaultExpanded={false}
+          />
         </div>
       </div>
     </div>
