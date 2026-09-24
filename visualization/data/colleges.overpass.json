@@ -1,0 +1,4640 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-31T22:37:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1111438308,
+  "lat": 10.0094539,
+  "lon": 76.4526745,
+  "tags": {
+    "addr:city": "Kadayirup",
+    "addr:postcode": "682311",
+    "addr:street": "Kolenchery road passing through kadayiruppu",
+    "amenity": "college",
+    "name": "Sree Narayana Gurukulam College of Engineering",
+    "phone": "+914842597800",
+    "website": "https://sngce.ac.in/"
+  }
+},
+{
+  "type": "node",
+  "id": 1474158702,
+  "lat": 10.0340430,
+  "lon": 76.2916963,
+  "tags": {
+    "amenity": "college",
+    "name": "Amrita School Of Dentistry"
+  }
+},
+{
+  "type": "node",
+  "id": 3687089344,
+  "lat": 10.1757448,
+  "lon": 76.3768720,
+  "tags": {
+    "amenity": "college",
+    "name": "Morning Star Home science College",
+    "wikidata": "Q48725351",
+    "wikipedia": "en:Morning Star Home Science College"
+  }
+},
+{
+  "type": "node",
+  "id": 4548818890,
+  "lat": 10.0545628,
+  "lon": 76.3276553,
+  "tags": {
+    "addr:street": "HMT Road",
+    "amenity": "college",
+    "name": "Government ITI",
+    "name:en": "Government ITI"
+  }
+},
+{
+  "type": "node",
+  "id": 4609248659,
+  "lat": 10.0178805,
+  "lon": 76.3017645,
+  "tags": {
+    "addr:city": "Edappally",
+    "addr:postcode": "682024",
+    "addr:street": "Changampuzha Samadhi Road",
+    "amenity": "university",
+    "name": "MG University Regional Center",
+    "operator": "MG University"
+  }
+},
+{
+  "type": "node",
+  "id": 4617810493,
+  "lat": 10.0566410,
+  "lon": 76.3228765,
+  "tags": {
+    "amenity": "college",
+    "name": "National Institute of Technical Teachers Training and Research Extension Centre",
+    "name:en": "National Institute of Technical Teachers Training and Research Extension Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 4624014955,
+  "lat": 10.0557716,
+  "lon": 76.3247132,
+  "tags": {
+    "amenity": "college",
+    "name": "കളമശേരി പോളിടെക്നിക് കോളജ്",
+    "name:en": "Polytechnic College Kalamaserry"
+  }
+},
+{
+  "type": "node",
+  "id": 4685828571,
+  "lat": 10.2535914,
+  "lon": 76.3662622,
+  "tags": {
+    "amenity": "college",
+    "name": "Seminary",
+    "name:ml": "സെമിനാരി"
+  }
+},
+{
+  "type": "node",
+  "id": 4690945414,
+  "lat": 10.1911084,
+  "lon": 76.3872703,
+  "tags": {
+    "amenity": "college",
+    "name": "St. Annes College"
+  }
+},
+{
+  "type": "node",
+  "id": 4707065381,
+  "lat": 10.1307166,
+  "lon": 76.3010741,
+  "tags": {
+    "addr:place": "kottapuram",
+    "amenity": "college",
+    "fixme": "position",
+    "name": "Wisdom College"
+  }
+},
+{
+  "type": "node",
+  "id": 4708739566,
+  "lat": 10.1508070,
+  "lon": 76.2262830,
+  "tags": {
+    "amenity": "college",
+    "name": "Lakshmi College",
+    "wikidata": "Q14957016",
+    "wikipedia": "en:Lakshmi College"
+  }
+},
+{
+  "type": "node",
+  "id": 6043571358,
+  "lat": 10.0825101,
+  "lon": 76.3746238,
+  "tags": {
+    "amenity": "college",
+    "name": "Bharata Mata College of Commerce and Arts"
+  }
+},
+{
+  "type": "node",
+  "id": 6043571457,
+  "lat": 10.0835916,
+  "lon": 76.3738855,
+  "tags": {
+    "amenity": "college",
+    "name": "Bharata Mata School of Legal Studies"
+  }
+},
+{
+  "type": "node",
+  "id": 6951034373,
+  "lat": 10.0556022,
+  "lon": 76.6193442,
+  "tags": {
+    "amenity": "college",
+    "name": "MA College Indoor Stadium"
+  }
+},
+{
+  "type": "node",
+  "id": 7034921394,
+  "lat": 10.2326130,
+  "lon": 76.2769161,
+  "tags": {
+    "amenity": "college",
+    "name": "Mechanical expo ground Mystrix 2020"
+  }
+},
+{
+  "type": "node",
+  "id": 7451053092,
+  "lat": 10.0146428,
+  "lon": 76.6030187,
+  "tags": {
+    "amenity": "college",
+    "name": "Yeldo Mar Baselios College"
+  }
+},
+{
+  "type": "node",
+  "id": 7451053097,
+  "lat": 10.0143814,
+  "lon": 76.6035850,
+  "tags": {
+    "amenity": "college",
+    "name": "College 1"
+  }
+},
+{
+  "type": "node",
+  "id": 7451053102,
+  "lat": 10.0144058,
+  "lon": 76.6039637,
+  "tags": {
+    "amenity": "college",
+    "name": "Yeldo Mar Baselios College"
+  }
+},
+{
+  "type": "node",
+  "id": 7463873975,
+  "lat": 10.0563974,
+  "lon": 76.6711095,
+  "tags": {
+    "amenity": "college",
+    "name": "Mar Baselios Institute Of Technology And Science,Nellimattom,Kothamangalam"
+  }
+},
+{
+  "type": "node",
+  "id": 7470219659,
+  "lat": 10.1160891,
+  "lon": 76.4748226,
+  "tags": {
+    "amenity": "college",
+    "name": "Premier College"
+  }
+},
+{
+  "type": "node",
+  "id": 7472717776,
+  "lat": 10.1189517,
+  "lon": 76.4897455,
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "node",
+  "id": 7476509024,
+  "lat": 10.1032696,
+  "lon": 76.5102815,
+  "tags": {
+    "addr:city": "KURUPPAMPADY",
+    "addr:postcode": "683545",
+    "addr:street": "PEECHINAMUGAL ROAD",
+    "amenity": "college",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Baptist Bible College"
+  }
+},
+{
+  "type": "node",
+  "id": 7499146596,
+  "lat": 10.2405964,
+  "lon": 76.2619404,
+  "tags": {
+    "addr:city": "Mala",
+    "amenity": "college",
+    "internet_access": "yes",
+    "name": "st josephs colledge"
+  }
+},
+{
+  "type": "node",
+  "id": 7502418543,
+  "lat": 10.0569167,
+  "lon": 76.6711376,
+  "tags": {
+    "amenity": "college",
+    "name": "Mar Baselios Institute Of Technology And Science Engineering College"
+  }
+},
+{
+  "type": "node",
+  "id": 7511083846,
+  "lat": 10.2672035,
+  "lon": 76.1426528,
+  "tags": {
+    "amenity": "college",
+    "name": "Asmabi college",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "node",
+  "id": 7747080008,
+  "lat": 10.1754583,
+  "lon": 76.2667669,
+  "tags": {
+    "amenity": "college",
+    "name": "College Of Applied Science"
+  }
+},
+{
+  "type": "node",
+  "id": 8273082632,
+  "lat": 10.1048821,
+  "lon": 76.6428510,
+  "tags": {
+    "amenity": "college",
+    "name": "Govt. Polytechnic College,  Kothamangalam"
+  }
+},
+{
+  "type": "node",
+  "id": 8401204835,
+  "lat": 10.0413419,
+  "lon": 76.5857023,
+  "tags": {
+    "amenity": "college",
+    "name": "Fathimabe she campus."
+  }
+},
+{
+  "type": "node",
+  "id": 8882584617,
+  "lat": 10.2684241,
+  "lon": 76.1420495,
+  "tags": {
+    "amenity": "college",
+    "name": "MES Asmabi College Ground",
+    "survey:date": "2021-07-01"
+  }
+},
+{
+  "type": "node",
+  "id": 9141358317,
+  "lat": 10.1397125,
+  "lon": 76.2504062,
+  "tags": {
+    "amenity": "college",
+    "name": "Carmelaram priory",
+    "survey:date": "2021-10-03"
+  }
+},
+{
+  "type": "node",
+  "id": 9148112318,
+  "lat": 10.0421612,
+  "lon": 76.3281330,
+  "tags": {
+    "amenity": "college",
+    "check_date": "2024-07-15",
+    "name": "Cusat"
+  }
+},
+{
+  "type": "node",
+  "id": 9195160517,
+  "lat": 10.0329836,
+  "lon": 76.2932623,
+  "tags": {
+    "addr:city": "Ernakulam",
+    "addr:postcode": "682041",
+    "addr:state": "Kerala",
+    "addr:street": "Ponekkara",
+    "alt_name": "Amrita Hospital, Kochi",
+    "amenity": "university",
+    "contact:phone": "+91 484 285 1234",
+    "emergency": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Amrita Vishwa Vidyapeetham, Ponekkara Healthcare Campus",
+    "operator": "Amrita Vishwa Vidyapeetham",
+    "operator:type": "private",
+    "survey:date": "2021-10-23",
+    "website": "https://amrita.edu/campus/kochi"
+  }
+},
+{
+  "type": "node",
+  "id": 9263322517,
+  "lat": 10.0297286,
+  "lon": 76.5934732,
+  "tags": {
+    "amenity": "college",
+    "name": "Ilahia",
+    "survey:date": "2021-11-18"
+  }
+},
+{
+  "type": "node",
+  "id": 9285085118,
+  "lat": 10.1872948,
+  "lon": 76.3836241,
+  "tags": {
+    "amenity": "college",
+    "name": "Nirmal Jyothi College",
+    "office": "educational_institution",
+    "phone": "+91-8589008705",
+    "survey:date": "2021-11-26"
+  }
+},
+{
+  "type": "node",
+  "id": 9295202218,
+  "lat": 10.1394134,
+  "lon": 76.2325449,
+  "tags": {
+    "amenity": "college",
+    "name": "Kesari Arts And Science College"
+  }
+},
+{
+  "type": "node",
+  "id": 9388068926,
+  "lat": 10.0858402,
+  "lon": 76.4979962,
+  "tags": {
+    "addr:street": "Pulluvazhi",
+    "amenity": "college",
+    "name": "Sanjoe Nursing College"
+  }
+},
+{
+  "type": "node",
+  "id": 10031259021,
+  "lat": 10.0413740,
+  "lon": 76.5062736,
+  "tags": {
+    "amenity": "college",
+    "name": "Cet college",
+    "survey:date": "2022-09-17"
+  }
+},
+{
+  "type": "node",
+  "id": 10760629040,
+  "lat": 10.0000540,
+  "lon": 76.3119839,
+  "tags": {
+    "amenity": "college",
+    "name": "Westford Institute of Film Technology"
+  }
+},
+{
+  "type": "node",
+  "id": 10763343609,
+  "lat": 10.0018115,
+  "lon": 76.2820481,
+  "tags": {
+    "amenity": "college",
+    "name": "De Paul Institute of Management Development"
+  }
+},
+{
+  "type": "node",
+  "id": 12543505852,
+  "lat": 10.2696662,
+  "lon": 76.4002024,
+  "tags": {
+    "amenity": "college",
+    "email": "sset@scmsgroup.org",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "SCMS COLLEGE OF ENGINEERING AND TECHNOLOGY",
+    "opening_hours": "Mo-Sa 08:00-17:00",
+    "operator": "Scms group of instituitions",
+    "operator:type": "private",
+    "website": "https://scmsgroup.org/sset/"
+  }
+},
+{
+  "type": "node",
+  "id": 12620037801,
+  "lat": 10.0566153,
+  "lon": 76.6710441,
+  "tags": {
+    "amenity": "college",
+    "name": "MBITS"
+  }
+},
+{
+  "type": "node",
+  "id": 13241273801,
+  "lat": 10.0551129,
+  "lon": 76.3170670,
+  "tags": {
+    "addr:street": "Karipai Road",
+    "amenity": "college",
+    "internet_access": "wlan",
+    "name": "Assumption Block, Rajagiri College of Social Sciences"
+  }
+},
+{
+  "type": "way",
+  "id": 186050867,
+  "bounds": {
+    "minlat": 10.2659896,
+    "minlon": 76.1419594,
+    "maxlat": 10.2677648,
+    "maxlon": 76.1434420
+  },
+  "nodes": [
+    1967479908,
+    1967479909,
+    1967479912,
+    9066277570,
+    9066277569,
+    9066277568,
+    9066277567,
+    1967479910,
+    1967479911,
+    9066239235,
+    1967479908
+  ],
+  "geometry": [
+    { "lat": 10.2674604, "lon": 76.1420218 },
+    { "lat": 10.2677648, "lon": 76.1429950 },
+    { "lat": 10.2664672, "lon": 76.1434420 },
+    { "lat": 10.2663634, "lon": 76.1431191 },
+    { "lat": 10.2663376, "lon": 76.1431287 },
+    { "lat": 10.2662790, "lon": 76.1429916 },
+    { "lat": 10.2662204, "lon": 76.1430129 },
+    { "lat": 10.2659896, "lon": 76.1425068 },
+    { "lat": 10.2673116, "lon": 76.1419660 },
+    { "lat": 10.2673875, "lon": 76.1419594 },
+    { "lat": 10.2674604, "lon": 76.1420218 }
+  ],
+  "tags": {
+    "addr:postcode": "680671",
+    "addr:street": "P.Vemballur",
+    "amenity": "college",
+    "name": "M.E.S. Asmabi College",
+    "wikidata": "Q48725297",
+    "wikipedia": "en:MES Asmabi College"
+  }
+},
+{
+  "type": "way",
+  "id": 221605348,
+  "bounds": {
+    "minlat": 10.1675932,
+    "minlon": 76.4364896,
+    "maxlat": 10.1742607,
+    "maxlon": 76.4409879
+  },
+  "nodes": [
+    2306394373,
+    4820503869,
+    2306394374,
+    2306394375,
+    5580873117,
+    5580873118,
+    5580873116,
+    5800885425,
+    2306394376,
+    5580873566,
+    5580873567,
+    7464653601,
+    5580873568,
+    8027269355,
+    7463225110,
+    5580873569,
+    2306394373
+  ],
+  "geometry": [
+    { "lat": 10.1738618, "lon": 76.4364896 },
+    { "lat": 10.1684259, "lon": 76.4377338 },
+    { "lat": 10.1675932, "lon": 76.4384000 },
+    { "lat": 10.1682377, "lon": 76.4399085 },
+    { "lat": 10.1684527, "lon": 76.4408547 },
+    { "lat": 10.1693926, "lon": 76.4408298 },
+    { "lat": 10.1703409, "lon": 76.4409626 },
+    { "lat": 10.1711508, "lon": 76.4409879 },
+    { "lat": 10.1723047, "lon": 76.4409590 },
+    { "lat": 10.1742607, "lon": 76.4406005 },
+    { "lat": 10.1739543, "lon": 76.4386056 },
+    { "lat": 10.1739710, "lon": 76.4383936 },
+    { "lat": 10.1739460, "lon": 76.4378944 },
+    { "lat": 10.1739598, "lon": 76.4374387 },
+    { "lat": 10.1739465, "lon": 76.4370799 },
+    { "lat": 10.1739308, "lon": 76.4368682 },
+    { "lat": 10.1738618, "lon": 76.4364896 }
+  ],
+  "tags": {
+    "amenity": "university",
+    "name": "Sree Sankaracharya University of Sanskrit",
+    "name:hi": "श्री शङ्कराचार्य संस्कृत सर्वकलाशाला",
+    "name:ml": "ശ്രീ ശങ്കരാചാര്യർ സംസ്കൃത സർവകലാശാല, കാലടി",
+    "website": "https://ssus.ac.in/",
+    "wikidata": "Q7585673",
+    "wikimedia_commons": "Category:Sree Sankaracharya University of Sanskrit",
+    "wikipedia": "en:Sree Sankaracharya University of Sanskrit"
+  }
+},
+{
+  "type": "way",
+  "id": 253212720,
+  "bounds": {
+    "minlat": 10.1775763,
+    "minlon": 76.4298441,
+    "maxlat": 10.1792659,
+    "maxlon": 76.4318254
+  },
+  "nodes": [
+    2591734326,
+    2591734327,
+    2591734328,
+    2591734329,
+    2591734326
+  ],
+  "geometry": [
+    { "lat": 10.1785601, "lon": 76.4298441 },
+    { "lat": 10.1792659, "lon": 76.4316698 },
+    { "lat": 10.1775763, "lon": 76.4318254 },
+    { "lat": 10.1776080, "lon": 76.4298566 },
+    { "lat": 10.1785601, "lon": 76.4298441 }
+  ],
+  "tags": {
+    "addr:city": "Ernakulam",
+    "addr:housename": "Adi Shankara Institute of Engineering and Technology",
+    "addr:housenumber": "Vidya Bharathi Nagar",
+    "addr:postcode": "683574",
+    "addr:street": "College Road, Mattoor, Kalady",
+    "amenity": "college",
+    "email": "info@adishankara.ac.in",
+    "name": "Adi Shankara Institute of Engineering and Technology",
+    "name:ml": "ആദി ശങ്കര ഇൻസ്റ്റിറ്റ്യൂട്ട് ഓഫ് എഞ്ചിനീയറിങ്ങ് ആൻഡ് ടെക്നോളജി",
+    "website": "https://www.adishankara.ac.in/",
+    "wikidata": "Q20573551",
+    "wikimedia_commons": "Category:Adi Shankara Institute of Engineering Technology",
+    "wikipedia": "en:Adi Shankara Institute of Engineering Technology"
+  }
+},
+{
+  "type": "way",
+  "id": 253213056,
+  "bounds": {
+    "minlat": 10.1785601,
+    "minlon": 76.4290084,
+    "maxlat": 10.1809224,
+    "maxlon": 76.4316698
+  },
+  "nodes": [
+    4820486230,
+    9427452404,
+    9427452403,
+    4820486229,
+    2591734327,
+    2591734326,
+    4820486230
+  ],
+  "geometry": [
+    { "lat": 10.1796602, "lon": 76.4291966 },
+    { "lat": 10.1800883, "lon": 76.4290731 },
+    { "lat": 10.1808762, "lon": 76.4290084 },
+    { "lat": 10.1809224, "lon": 76.4303511 },
+    { "lat": 10.1792659, "lon": 76.4316698 },
+    { "lat": 10.1785601, "lon": 76.4298441 },
+    { "lat": 10.1796602, "lon": 76.4291966 }
+  ],
+  "tags": {
+    "addr:city": "Ernakulam",
+    "addr:housename": "Sree Sankara College",
+    "addr:postcode": "683574",
+    "addr:street": "College Road, Mattoor, Kalady",
+    "amenity": "college",
+    "name": "Sree Sankara College",
+    "name:etymology:wikidata": "Q180967",
+    "wikidata": "Q7585670",
+    "wikimedia_commons": "Category:Sree Sankara College",
+    "wikipedia": "en:Sree Sankara College"
+  }
+},
+{
+  "type": "way",
+  "id": 254123686,
+  "bounds": {
+    "minlat": 10.1593069,
+    "minlon": 76.4005752,
+    "maxlat": 10.1601915,
+    "maxlon": 76.4019030
+  },
+  "nodes": [
+    2599418373,
+    2599418372,
+    2599246913,
+    2599418371,
+    2599246850,
+    2599246866,
+    2599418373
+  ],
+  "geometry": [
+    { "lat": 10.1593386, "lon": 76.4019030 },
+    { "lat": 10.1593069, "lon": 76.4008303 },
+    { "lat": 10.1593681, "lon": 76.4006477 },
+    { "lat": 10.1594205, "lon": 76.4006130 },
+    { "lat": 10.1601414, "lon": 76.4005752 },
+    { "lat": 10.1601915, "lon": 76.4018976 },
+    { "lat": 10.1593386, "lon": 76.4019030 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "CIAL Academy",
+    "website": "http://www.ciasl.in/"
+  }
+},
+{
+  "type": "way",
+  "id": 310668205,
+  "bounds": {
+    "minlat": 10.0521894,
+    "minlon": 76.3786303,
+    "maxlat": 10.0548304,
+    "maxlon": 76.3814301
+  },
+  "nodes": [
+    3161246946,
+    9242905423,
+    3161246947,
+    9242895501,
+    3161246948,
+    3161246949,
+    3161246950,
+    3161246951,
+    3161246952,
+    3161246953,
+    3161246954,
+    3161246955,
+    3161246956,
+    3161246957,
+    3161246958,
+    3161246959,
+    9242961597,
+    3161246946
+  ],
+  "geometry": [
+    { "lat": 10.0547670, "lon": 76.3792629 },
+    { "lat": 10.0545942, "lon": 76.3791034 },
+    { "lat": 10.0541599, "lon": 76.3786303 },
+    { "lat": 10.0534843, "lon": 76.3786472 },
+    { "lat": 10.0531718, "lon": 76.3786621 },
+    { "lat": 10.0528655, "lon": 76.3789839 },
+    { "lat": 10.0521894, "lon": 76.3789947 },
+    { "lat": 10.0522316, "lon": 76.3797135 },
+    { "lat": 10.0528338, "lon": 76.3797135 },
+    { "lat": 10.0528443, "lon": 76.3799817 },
+    { "lat": 10.0522528, "lon": 76.3805074 },
+    { "lat": 10.0524640, "lon": 76.3807649 },
+    { "lat": 10.0522422, "lon": 76.3809366 },
+    { "lat": 10.0527070, "lon": 76.3814301 },
+    { "lat": 10.0535416, "lon": 76.3806362 },
+    { "lat": 10.0548304, "lon": 76.3805074 },
+    { "lat": 10.0547952, "lon": 76.3798170 },
+    { "lat": 10.0547670, "lon": 76.3792629 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "KMEA Engineering College",
+    "operator": "KMEA"
+  }
+},
+{
+  "type": "way",
+  "id": 314628127,
+  "bounds": {
+    "minlat": 10.0688877,
+    "minlon": 76.3124623,
+    "maxlat": 10.0727804,
+    "maxlon": 76.3152337
+  },
+  "nodes": [
+    3206724538,
+    3206724556,
+    3206724560,
+    3206724544,
+    3206724529,
+    3206724514,
+    5701103984,
+    3206724538
+  ],
+  "geometry": [
+    { "lat": 10.0706546, "lon": 76.3124623 },
+    { "lat": 10.0724830, "lon": 76.3132566 },
+    { "lat": 10.0727804, "lon": 76.3143417 },
+    { "lat": 10.0714885, "lon": 76.3152337 },
+    { "lat": 10.0700467, "lon": 76.3151471 },
+    { "lat": 10.0692537, "lon": 76.3137447 },
+    { "lat": 10.0688877, "lon": 76.3128202 },
+    { "lat": 10.0706546, "lon": 76.3124623 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Centre for Biopolymer Science & Technology"
+  }
+},
+{
+  "type": "way",
+  "id": 363472309,
+  "bounds": {
+    "minlat": 10.1510301,
+    "minlon": 76.2231180,
+    "maxlat": 10.1511807,
+    "maxlon": 76.2233710
+  },
+  "nodes": [
+    3676359535,
+    3676359524,
+    3676359525,
+    3676359528,
+    3676359538,
+    3676359535
+  ],
+  "geometry": [
+    { "lat": 10.1511566, "lon": 76.2231180 },
+    { "lat": 10.1510301, "lon": 76.2231311 },
+    { "lat": 10.1510495, "lon": 76.2233238 },
+    { "lat": 10.1510542, "lon": 76.2233710 },
+    { "lat": 10.1511807, "lon": 76.2233580 },
+    { "lat": 10.1511566, "lon": 76.2231180 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Mar Gregorios Abdul Jaleel Arts and Science College"
+  }
+},
+{
+  "type": "way",
+  "id": 364682221,
+  "bounds": {
+    "minlat": 10.2232556,
+    "minlon": 76.2716784,
+    "maxlat": 10.2262961,
+    "maxlon": 76.2754432
+  },
+  "nodes": [
+    3687305571,
+    3687305570,
+    7510350865,
+    3687305561,
+    3687305557,
+    3687305555,
+    3687305533,
+    3687305548,
+    3687305550,
+    3687305549,
+    3687305537,
+    3687305523,
+    3687305522,
+    3687305543,
+    3687305536,
+    3687305516,
+    3687305514,
+    3687305475,
+    3687305447,
+    3687305442,
+    3687305440,
+    3687305444,
+    3687305439,
+    3687305441,
+    3687305446,
+    3687305470,
+    3687305485,
+    3687305489,
+    3687305495,
+    3687305501,
+    3687305559,
+    3687305571
+  ],
+  "geometry": [
+    { "lat": 10.2262961, "lon": 76.2721848 },
+    { "lat": 10.2262177, "lon": 76.2725893 },
+    { "lat": 10.2260176, "lon": 76.2725849 },
+    { "lat": 10.2256378, "lon": 76.2725766 },
+    { "lat": 10.2251206, "lon": 76.2725129 },
+    { "lat": 10.2250266, "lon": 76.2724874 },
+    { "lat": 10.2247884, "lon": 76.2729237 },
+    { "lat": 10.2249075, "lon": 76.2730384 },
+    { "lat": 10.2249419, "lon": 76.2731626 },
+    { "lat": 10.2249263, "lon": 76.2732359 },
+    { "lat": 10.2248166, "lon": 76.2735417 },
+    { "lat": 10.2246630, "lon": 76.2735671 },
+    { "lat": 10.2246567, "lon": 76.2741245 },
+    { "lat": 10.2248699, "lon": 76.2743188 },
+    { "lat": 10.2248134, "lon": 76.2746278 },
+    { "lat": 10.2245627, "lon": 76.2747647 },
+    { "lat": 10.2245465, "lon": 76.2754250 },
+    { "lat": 10.2240298, "lon": 76.2753954 },
+    { "lat": 10.2234812, "lon": 76.2754432 },
+    { "lat": 10.2233214, "lon": 76.2748858 },
+    { "lat": 10.2232650, "lon": 76.2745036 },
+    { "lat": 10.2234092, "lon": 76.2742456 },
+    { "lat": 10.2232556, "lon": 76.2735225 },
+    { "lat": 10.2232775, "lon": 76.2730034 },
+    { "lat": 10.2234374, "lon": 76.2729429 },
+    { "lat": 10.2239828, "lon": 76.2730193 },
+    { "lat": 10.2241708, "lon": 76.2725288 },
+    { "lat": 10.2242085, "lon": 76.2721370 },
+    { "lat": 10.2243504, "lon": 76.2717335 },
+    { "lat": 10.2244279, "lon": 76.2716784 },
+    { "lat": 10.2252867, "lon": 76.2720096 },
+    { "lat": 10.2262961, "lon": 76.2721848 }
+  ],
+  "tags": {
+    "alt_name": "Mala Educational Trust's School of Engineering",
+    "amenity": "college",
+    "name": "MET's School of Engineering",
+    "short_name": "METS",
+    "website": "https://metsengg.ac.in/",
+    "wikidata": "Q16895071",
+    "wikipedia": "en:MET's School of Engineering"
+  }
+},
+{
+  "type": "way",
+  "id": 381172791,
+  "bounds": {
+    "minlat": 10.2986265,
+    "minlon": 76.3234404,
+    "maxlat": 10.3032789,
+    "maxlon": 76.3267529
+  },
+  "nodes": [
+    3844137629,
+    3844137630,
+    3844137631,
+    3844137632,
+    12358938137,
+    12358938138,
+    12358938139,
+    12358938140,
+    12358938141,
+    7492666531,
+    3844137629
+  ],
+  "geometry": [
+    { "lat": 10.3022339, "lon": 76.3241058 },
+    { "lat": 10.3032789, "lon": 76.3261497 },
+    { "lat": 10.3017853, "lon": 76.3263750 },
+    { "lat": 10.2986265, "lon": 76.3267529 },
+    { "lat": 10.3005266, "lon": 76.3242209 },
+    { "lat": 10.3016403, "lon": 76.3238722 },
+    { "lat": 10.3016561, "lon": 76.3235852 },
+    { "lat": 10.3017722, "lon": 76.3235852 },
+    { "lat": 10.3018224, "lon": 76.3234404 },
+    { "lat": 10.3018989, "lon": 76.3235208 },
+    { "lat": 10.3022339, "lon": 76.3241058 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Sacred Heart Womens College"
+  }
+},
+{
+  "type": "way",
+  "id": 381274131,
+  "bounds": {
+    "minlat": 10.0471009,
+    "minlon": 76.3299448,
+    "maxlat": 10.0504570,
+    "maxlon": 76.3326878
+  },
+  "nodes": [
+    3845025679,
+    3845025680,
+    3845025681,
+    3845025682,
+    11308821122,
+    3845025679
+  ],
+  "geometry": [
+    { "lat": 10.0478307, "lon": 76.3299448 },
+    { "lat": 10.0471009, "lon": 76.3316237 },
+    { "lat": 10.0492194, "lon": 76.3326878 },
+    { "lat": 10.0504570, "lon": 76.3308508 },
+    { "lat": 10.0496159, "lon": 76.3305607 },
+    { "lat": 10.0478307, "lon": 76.3299448 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "email": "principal_soe@cusat.ac.in",
+    "internet_access": "yes",
+    "name": "School of Engineering CUSAT",
+    "phone": "0484-2556187",
+    "website": "https://soe.cusat.ac.in/",
+    "wikidata": "Q7432438",
+    "wikipedia": "en:School of Engineering, CUSAT"
+  }
+},
+{
+  "type": "way",
+  "id": 381274149,
+  "bounds": {
+    "minlat": 10.0404677,
+    "minlon": 76.3287523,
+    "maxlat": 10.0416228,
+    "maxlon": 76.3309236
+  },
+  "nodes": [
+    3845025888,
+    3845025889,
+    3845025890,
+    3845025891,
+    3845025892,
+    3845025893,
+    3845025888
+  ],
+  "geometry": [
+    { "lat": 10.0416100, "lon": 76.3290272 },
+    { "lat": 10.0407222, "lon": 76.3287523 },
+    { "lat": 10.0404677, "lon": 76.3291032 },
+    { "lat": 10.0405772, "lon": 76.3309236 },
+    { "lat": 10.0416228, "lon": 76.3303914 },
+    { "lat": 10.0416021, "lon": 76.3292900 },
+    { "lat": 10.0416100, "lon": 76.3290272 }
+  ],
+  "tags": {
+    "alt_name": "KMSME",
+    "amenity": "college",
+    "name": "Kunjali Marrakar School of Marine Engineering",
+    "name:en": "Kunjali Marrakar School of Marine Engineering",
+    "name:etymology:wikidata": "Q6444593",
+    "name:ml": "കുഞ്ഞാലി മരയ്ക്കാർ സ്കൂൾ ഓഫ് മറൈൻ എഞ്ചിനീയറിംഗ്",
+    "operator": "CUSAT",
+    "operator:type": "public/government",
+    "operator:wikipedia": "en:Cochin University of Science and Technology",
+    "website": "https://kmsme.cusat.ac.in/",
+    "wikidata": "Q6444814",
+    "wikipedia": "en:Kunjali Marakkar School of Marine Engineering"
+  }
+},
+{
+  "type": "way",
+  "id": 437152263,
+  "bounds": {
+    "minlat": 10.1403718,
+    "minlon": 76.2706209,
+    "maxlat": 10.1407328,
+    "maxlon": 76.2711164
+  },
+  "nodes": [
+    4349760582,
+    4349760585,
+    4349760573,
+    4349760571,
+    4349760582
+  ],
+  "geometry": [
+    { "lat": 10.1406540, "lon": 76.2706209 },
+    { "lat": 10.1407328, "lon": 76.2710647 },
+    { "lat": 10.1404506, "lon": 76.2711164 },
+    { "lat": 10.1403718, "lon": 76.2706726 },
+    { "lat": 10.1406540, "lon": 76.2706209 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Holy Matha College"
+  }
+},
+{
+  "type": "way",
+  "id": 437152264,
+  "bounds": {
+    "minlat": 10.1408290,
+    "minlon": 76.2713344,
+    "maxlat": 10.1422891,
+    "maxlon": 76.2728204
+  },
+  "nodes": [
+    4349760623,
+    4349760620,
+    8879306498,
+    4349760606,
+    10941368424,
+    4349760588,
+    4349760595,
+    4349760609,
+    4349760611,
+    4349760615,
+    4349760622,
+    4349760623
+  ],
+  "geometry": [
+    { "lat": 10.1422891, "lon": 76.2716401 },
+    { "lat": 10.1420145, "lon": 76.2721739 },
+    { "lat": 10.1418006, "lon": 76.2724053 },
+    { "lat": 10.1415683, "lon": 76.2726567 },
+    { "lat": 10.1411802, "lon": 76.2728204 },
+    { "lat": 10.1408290, "lon": 76.2716562 },
+    { "lat": 10.1410033, "lon": 76.2715946 },
+    { "lat": 10.1416713, "lon": 76.2713585 },
+    { "lat": 10.1418086, "lon": 76.2713505 },
+    { "lat": 10.1419406, "lon": 76.2713344 },
+    { "lat": 10.1421465, "lon": 76.2714336 },
+    { "lat": 10.1422891, "lon": 76.2716401 }
+  ],
+  "tags": {
+    "addr:country": "IN",
+    "addr:district": "Ernakulam",
+    "addr:place": "Manakkapadi,",
+    "addr:postcode": "683511",
+    "amenity": "college",
+    "email": "hmmctgroup@gmail.com",
+    "name": "Matha College of Technology",
+    "phone": "+91-484-2670212"
+  }
+},
+{
+  "type": "way",
+  "id": 437152266,
+  "bounds": {
+    "minlat": 10.1427710,
+    "minlon": 76.2676812,
+    "maxlat": 10.1436172,
+    "maxlon": 76.2691350
+  },
+  "nodes": [
+    4349760652,
+    4349760642,
+    4349760646,
+    4349760645,
+    4349760668,
+    4349760671,
+    4349760669,
+    4349760667,
+    4349760661,
+    4349760657,
+    4349760652
+  ],
+  "geometry": [
+    { "lat": 10.1430508, "lon": 76.2677375 },
+    { "lat": 10.1427710, "lon": 76.2678448 },
+    { "lat": 10.1428422, "lon": 76.2684430 },
+    { "lat": 10.1428119, "lon": 76.2688533 },
+    { "lat": 10.1435366, "lon": 76.2691350 },
+    { "lat": 10.1436172, "lon": 76.2690894 },
+    { "lat": 10.1435446, "lon": 76.2686012 },
+    { "lat": 10.1435340, "lon": 76.2683732 },
+    { "lat": 10.1433809, "lon": 76.2678797 },
+    { "lat": 10.1433043, "lon": 76.2676812 },
+    { "lat": 10.1430508, "lon": 76.2677375 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Sngist Arts And Science College"
+  }
+},
+{
+  "type": "way",
+  "id": 437152267,
+  "bounds": {
+    "minlat": 10.1473069,
+    "minlon": 76.2646142,
+    "maxlat": 10.1498943,
+    "maxlon": 76.2670475
+  },
+  "nodes": [
+    4349760912,
+    4349760911,
+    4349760896,
+    4349760866,
+    4349760835,
+    4349760836,
+    4349760824,
+    4349760827,
+    4349760826,
+    4349760837,
+    4349760855,
+    4349760905,
+    4349760900,
+    4349760928,
+    4349760932,
+    4349760936,
+    4349760947,
+    4349760966,
+    4349760970,
+    4349760954,
+    4349760962,
+    4349760961,
+    4349760959,
+    4349760958,
+    4349760925,
+    4349760921,
+    4349760912
+  ],
+  "geometry": [
+    { "lat": 10.1485980, "lon": 76.2646429 },
+    { "lat": 10.1486183, "lon": 76.2646142 },
+    { "lat": 10.1485419, "lon": 76.2646241 },
+    { "lat": 10.1480323, "lon": 76.2646731 },
+    { "lat": 10.1477267, "lon": 76.2647127 },
+    { "lat": 10.1477347, "lon": 76.2648441 },
+    { "lat": 10.1473069, "lon": 76.2649219 },
+    { "lat": 10.1474574, "lon": 76.2656649 },
+    { "lat": 10.1474363, "lon": 76.2659975 },
+    { "lat": 10.1477426, "lon": 76.2659760 },
+    { "lat": 10.1479406, "lon": 76.2668665 },
+    { "lat": 10.1485452, "lon": 76.2668128 },
+    { "lat": 10.1484871, "lon": 76.2661047 },
+    { "lat": 10.1489571, "lon": 76.2660886 },
+    { "lat": 10.1490574, "lon": 76.2666492 },
+    { "lat": 10.1491604, "lon": 76.2666787 },
+    { "lat": 10.1493558, "lon": 76.2665419 },
+    { "lat": 10.1498139, "lon": 76.2670475 },
+    { "lat": 10.1498943, "lon": 76.2669657 },
+    { "lat": 10.1495221, "lon": 76.2664910 },
+    { "lat": 10.1497122, "lon": 76.2662871 },
+    { "lat": 10.1496937, "lon": 76.2660645 },
+    { "lat": 10.1496092, "lon": 76.2657453 },
+    { "lat": 10.1495960, "lon": 76.2655602 },
+    { "lat": 10.1488858, "lon": 76.2656702 },
+    { "lat": 10.1486904, "lon": 76.2656219 },
+    { "lat": 10.1485980, "lon": 76.2646429 }
+  ],
+  "tags": {
+    "addr:city": "Manjaly",
+    "addr:country": "IN",
+    "addr:district": "Ernakulam",
+    "addr:place": "Thekkethazham",
+    "addr:postcode": "683520",
+    "addr:state": "Kerala",
+    "alt_name": "SNGIST",
+    "amenity": "college",
+    "email": "sngist@sngist.org",
+    "name": "Sree Narayana Guru Institute of Science & Technology",
+    "name:etymology:wikidata": "Q1260858",
+    "operator": "Gurudeva Trust",
+    "phone": "+91-484-2445252, +91-484-2440220, +91-484-2887000",
+    "website": "http://sngist.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 454722364,
+  "bounds": {
+    "minlat": 10.1515317,
+    "minlon": 76.2867118,
+    "maxlat": 10.1526375,
+    "maxlon": 76.2883810
+  },
+  "nodes": [
+    4512539102,
+    4512539103,
+    4512539105,
+    8667080505,
+    8667080506,
+    4512539107,
+    6894748037,
+    8667080508,
+    8667080509,
+    4512539109,
+    8667080507,
+    4512539110,
+    4512539111,
+    4512539102
+  ],
+  "geometry": [
+    { "lat": 10.1526375, "lon": 76.2870168 },
+    { "lat": 10.1524884, "lon": 76.2874206 },
+    { "lat": 10.1526087, "lon": 76.2874665 },
+    { "lat": 10.1525023, "lon": 76.2877548 },
+    { "lat": 10.1525966, "lon": 76.2877908 },
+    { "lat": 10.1523785, "lon": 76.2883810 },
+    { "lat": 10.1520101, "lon": 76.2882405 },
+    { "lat": 10.1519524, "lon": 76.2882185 },
+    { "lat": 10.1519018, "lon": 76.2882406 },
+    { "lat": 10.1515317, "lon": 76.2880869 },
+    { "lat": 10.1516611, "lon": 76.2877654 },
+    { "lat": 10.1516671, "lon": 76.2871715 },
+    { "lat": 10.1518368, "lon": 76.2867118 },
+    { "lat": 10.1526375, "lon": 76.2870168 }
+  ],
+  "tags": {
+    "addr:city": "ernakulam",
+    "addr:postcode": "682011",
+    "addr:street": "kunnukara",
+    "amenity": "college",
+    "name": "M E S College of Engineering & Technology",
+    "operator": "private",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 467595494,
+  "bounds": {
+    "minlat": 10.1229937,
+    "minlon": 76.3332935,
+    "maxlat": 10.1278204,
+    "maxlon": 76.3365071
+  },
+  "nodes": [
+    4621975734,
+    4621975749,
+    4621975748,
+    4621975747,
+    4621975746,
+    4621975745,
+    4621975744,
+    4621975743,
+    4621975742,
+    4621975741,
+    4621975740,
+    4621975739,
+    4621975738,
+    4621975737,
+    4621975736,
+    4621975735,
+    4621975734
+  ],
+  "geometry": [
+    { "lat": 10.1277537, "lon": 76.3333163 },
+    { "lat": 10.1278204, "lon": 76.3344861 },
+    { "lat": 10.1275881, "lon": 76.3360203 },
+    { "lat": 10.1265953, "lon": 76.3363368 },
+    { "lat": 10.1239231, "lon": 76.3365071 },
+    { "lat": 10.1231970, "lon": 76.3364910 },
+    { "lat": 10.1229937, "lon": 76.3357588 },
+    { "lat": 10.1230472, "lon": 76.3354701 },
+    { "lat": 10.1238050, "lon": 76.3350396 },
+    { "lat": 10.1242248, "lon": 76.3347003 },
+    { "lat": 10.1247978, "lon": 76.3340029 },
+    { "lat": 10.1253100, "lon": 76.3334450 },
+    { "lat": 10.1254381, "lon": 76.3332935 },
+    { "lat": 10.1261299, "lon": 76.3333458 },
+    { "lat": 10.1268705, "lon": 76.3333297 },
+    { "lat": 10.1274224, "lon": 76.3333310 },
+    { "lat": 10.1277537, "lon": 76.3333163 }
+  ],
+  "tags": {
+    "alt_name": "UC College",
+    "amenity": "college",
+    "name": "Union Christian College (UCC)",
+    "name:ml": "യൂനിയൻ ക്രിസ്ത്യൻ കോളേജ്, ആലുവ",
+    "website": "https://uccollege.edu.in/",
+    "wikidata": "Q7885497",
+    "wikimedia_commons": "Category:Union Christian College, Aluva",
+    "wikipedia": "en:Union Christian College, Aluva"
+  }
+},
+{
+  "type": "way",
+  "id": 467595495,
+  "bounds": {
+    "minlat": 10.1244016,
+    "minlon": 76.3379312,
+    "maxlat": 10.1271582,
+    "maxlon": 76.3404672
+  },
+  "nodes": [
+    4621975756,
+    4621975755,
+    4621975754,
+    4621975753,
+    4621975752,
+    4621975751,
+    8223337137,
+    4621975750,
+    4621975756
+  ],
+  "geometry": [
+    { "lat": 10.1265984, "lon": 76.3379312 },
+    { "lat": 10.1271582, "lon": 76.3388860 },
+    { "lat": 10.1265245, "lon": 76.3398194 },
+    { "lat": 10.1259251, "lon": 76.3404672 },
+    { "lat": 10.1250274, "lon": 76.3397188 },
+    { "lat": 10.1244016, "lon": 76.3387720 },
+    { "lat": 10.1251711, "lon": 76.3381152 },
+    { "lat": 10.1252280, "lon": 76.3380666 },
+    { "lat": 10.1265984, "lon": 76.3379312 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "St. Joseph Pontifical Seminary"
+  }
+},
+{
+  "type": "way",
+  "id": 467799327,
+  "bounds": {
+    "minlat": 10.0563117,
+    "minlon": 76.3233919,
+    "maxlat": 10.0576876,
+    "maxlon": 76.3248712
+  },
+  "nodes": [
+    4624014965,
+    4624014964,
+    4624014963,
+    4624014962,
+    4624014961,
+    4624014960,
+    4624014959,
+    4624014958,
+    4624014957,
+    4624014956,
+    4624014965
+  ],
+  "geometry": [
+    { "lat": 10.0576876, "lon": 76.3244849 },
+    { "lat": 10.0574750, "lon": 76.3248712 },
+    { "lat": 10.0572202, "lon": 76.3247545 },
+    { "lat": 10.0571370, "lon": 76.3246432 },
+    { "lat": 10.0567580, "lon": 76.3244179 },
+    { "lat": 10.0563117, "lon": 76.3241416 },
+    { "lat": 10.0567870, "lon": 76.3233919 },
+    { "lat": 10.0570300, "lon": 76.3236749 },
+    { "lat": 10.0573166, "lon": 76.3240678 },
+    { "lat": 10.0575278, "lon": 76.3243616 },
+    { "lat": 10.0576876, "lon": 76.3244849 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Women's Polytechnic College",
+    "name:en": "Women's Polytechnic College"
+  }
+},
+{
+  "type": "way",
+  "id": 468370525,
+  "bounds": {
+    "minlat": 10.0542282,
+    "minlon": 76.3476966,
+    "maxlat": 10.0556026,
+    "maxlon": 76.3490197
+  },
+  "nodes": [
+    4629037607,
+    4629037608,
+    4629037609,
+    4629037610,
+    4629037611,
+    4629037612,
+    4629037613,
+    4629037614,
+    4629037615,
+    4629037616,
+    4629037617,
+    4629037618,
+    4629037607
+  ],
+  "geometry": [
+    { "lat": 10.0542282, "lon": 76.3480702 },
+    { "lat": 10.0543655, "lon": 76.3478556 },
+    { "lat": 10.0546613, "lon": 76.3481346 },
+    { "lat": 10.0551828, "lon": 76.3476966 },
+    { "lat": 10.0552846, "lon": 76.3479200 },
+    { "lat": 10.0554641, "lon": 76.3483330 },
+    { "lat": 10.0556026, "lon": 76.3487173 },
+    { "lat": 10.0553466, "lon": 76.3489111 },
+    { "lat": 10.0553955, "lon": 76.3490197 },
+    { "lat": 10.0549993, "lon": 76.3489714 },
+    { "lat": 10.0548831, "lon": 76.3488051 },
+    { "lat": 10.0544923, "lon": 76.3483599 },
+    { "lat": 10.0542282, "lon": 76.3480702 }
+  ],
+  "tags": {
+    "addr:city": "Ernakulam",
+    "amenity": "college",
+    "name": "Xavier Institute of Management & Entreprenuership"
+  }
+},
+{
+  "type": "way",
+  "id": 472588064,
+  "bounds": {
+    "minlat": 10.1807653,
+    "minlon": 76.1815211,
+    "maxlat": 10.1824317,
+    "maxlon": 76.1836213
+  },
+  "nodes": [
+    4667903618,
+    4667903617,
+    8429423122,
+    4667903616,
+    4667903615,
+    8429423132,
+    4667903614,
+    4667903613,
+    8429423123,
+    8429423124,
+    4667903612,
+    4667903611,
+    7122945131,
+    7122945130,
+    4667903610,
+    4667903609,
+    4667903608,
+    4667903607,
+    4667903606,
+    4667903605,
+    4667903604,
+    4667903603,
+    7122984945,
+    4667903602,
+    4667903601,
+    4667903600,
+    7122984944,
+    4667903599,
+    4667903618
+  ],
+  "geometry": [
+    { "lat": 10.1807653, "lon": 76.1822319 },
+    { "lat": 10.1811613, "lon": 76.1823338 },
+    { "lat": 10.1814193, "lon": 76.1823738 },
+    { "lat": 10.1814795, "lon": 76.1820228 },
+    { "lat": 10.1815395, "lon": 76.1818184 },
+    { "lat": 10.1815919, "lon": 76.1817354 },
+    { "lat": 10.1816330, "lon": 76.1816705 },
+    { "lat": 10.1817286, "lon": 76.1815211 },
+    { "lat": 10.1819477, "lon": 76.1815965 },
+    { "lat": 10.1820547, "lon": 76.1816238 },
+    { "lat": 10.1821777, "lon": 76.1817853 },
+    { "lat": 10.1823876, "lon": 76.1819731 },
+    { "lat": 10.1824317, "lon": 76.1823169 },
+    { "lat": 10.1823433, "lon": 76.1825167 },
+    { "lat": 10.1823600, "lon": 76.1825821 },
+    { "lat": 10.1823252, "lon": 76.1826453 },
+    { "lat": 10.1823448, "lon": 76.1831211 },
+    { "lat": 10.1818904, "lon": 76.1832084 },
+    { "lat": 10.1819674, "lon": 76.1835205 },
+    { "lat": 10.1818212, "lon": 76.1835283 },
+    { "lat": 10.1816275, "lon": 76.1835404 },
+    { "lat": 10.1812498, "lon": 76.1835745 },
+    { "lat": 10.1811648, "lon": 76.1835794 },
+    { "lat": 10.1810210, "lon": 76.1835879 },
+    { "lat": 10.1809986, "lon": 76.1836213 },
+    { "lat": 10.1809730, "lon": 76.1834475 },
+    { "lat": 10.1809075, "lon": 76.1830382 },
+    { "lat": 10.1808419, "lon": 76.1826289 },
+    { "lat": 10.1807653, "lon": 76.1822319 }
+  ],
+  "tags": {
+    "addr:street": "maliankara",
+    "alt_name": "SNMIMT",
+    "amenity": "college",
+    "name": "SNM Institute of Management and Technology"
+  }
+},
+{
+  "type": "way",
+  "id": 472588067,
+  "bounds": {
+    "minlat": 10.1794416,
+    "minlon": 76.1821597,
+    "maxlat": 10.1810782,
+    "maxlon": 76.1840985
+  },
+  "nodes": [
+    4667903635,
+    4667903634,
+    4667903633,
+    7122984941,
+    4667903632,
+    4667903631,
+    4667903630,
+    7122984942,
+    4667903629,
+    4667903628,
+    7122984943,
+    4667903627,
+    4667903626,
+    4667903625,
+    4667903624,
+    4667903623,
+    4667903622,
+    4667903621,
+    7122984956,
+    4667903620,
+    4667903619,
+    4667903635
+  ],
+  "geometry": [
+    { "lat": 10.1810782, "lon": 76.1840424 },
+    { "lat": 10.1807429, "lon": 76.1840706 },
+    { "lat": 10.1802466, "lon": 76.1840985 },
+    { "lat": 10.1802319, "lon": 76.1838828 },
+    { "lat": 10.1799429, "lon": 76.1838922 },
+    { "lat": 10.1798199, "lon": 76.1839017 },
+    { "lat": 10.1796798, "lon": 76.1831087 },
+    { "lat": 10.1795527, "lon": 76.1831293 },
+    { "lat": 10.1794809, "lon": 76.1827626 },
+    { "lat": 10.1794416, "lon": 76.1824136 },
+    { "lat": 10.1794466, "lon": 76.1822767 },
+    { "lat": 10.1794763, "lon": 76.1821597 },
+    { "lat": 10.1797839, "lon": 76.1821670 },
+    { "lat": 10.1801957, "lon": 76.1821781 },
+    { "lat": 10.1805265, "lon": 76.1821764 },
+    { "lat": 10.1805956, "lon": 76.1821774 },
+    { "lat": 10.1806514, "lon": 76.1821851 },
+    { "lat": 10.1806747, "lon": 76.1821929 },
+    { "lat": 10.1808391, "lon": 76.1830885 },
+    { "lat": 10.1808485, "lon": 76.1831398 },
+    { "lat": 10.1809831, "lon": 76.1838473 },
+    { "lat": 10.1810782, "lon": 76.1840424 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Sree Narayana Mangalam College"
+  }
+},
+{
+  "type": "way",
+  "id": 473082442,
+  "bounds": {
+    "minlat": 10.2684923,
+    "minlon": 76.3978231,
+    "maxlat": 10.2714984,
+    "maxlon": 76.4020087
+  },
+  "nodes": [
+    4672553077,
+    12526500263,
+    12526500262,
+    4672553076,
+    4672553075,
+    4672553074,
+    8883173371,
+    4672553073,
+    4672553072,
+    4672553071,
+    4672553070,
+    4672553069,
+    4672553068,
+    4672553067,
+    4672553066,
+    4672553065,
+    4672553064,
+    4672553063,
+    4672553062,
+    12543505878,
+    4672553061,
+    4672553060,
+    12544135109,
+    4672553059,
+    12544135110,
+    4672553058,
+    4672553077
+  ],
+  "geometry": [
+    { "lat": 10.2685240, "lon": 76.4000735 },
+    { "lat": 10.2685172, "lon": 76.4001684 },
+    { "lat": 10.2685014, "lon": 76.4003865 },
+    { "lat": 10.2684923, "lon": 76.4005134 },
+    { "lat": 10.2686269, "lon": 76.4008433 },
+    { "lat": 10.2687951, "lon": 76.4013032 },
+    { "lat": 10.2688298, "lon": 76.4013737 },
+    { "lat": 10.2688855, "lon": 76.4015125 },
+    { "lat": 10.2692498, "lon": 76.4015433 },
+    { "lat": 10.2700455, "lon": 76.4016367 },
+    { "lat": 10.2707630, "lon": 76.4018750 },
+    { "lat": 10.2712318, "lon": 76.4020087 },
+    { "lat": 10.2714984, "lon": 76.4009841 },
+    { "lat": 10.2710444, "lon": 76.3997449 },
+    { "lat": 10.2711606, "lon": 76.3991763 },
+    { "lat": 10.2708284, "lon": 76.3988735 },
+    { "lat": 10.2702685, "lon": 76.3985178 },
+    { "lat": 10.2697380, "lon": 76.3982174 },
+    { "lat": 10.2691996, "lon": 76.3978776 },
+    { "lat": 10.2690156, "lon": 76.3978231 },
+    { "lat": 10.2689078, "lon": 76.3979578 },
+    { "lat": 10.2688175, "lon": 76.3981429 },
+    { "lat": 10.2686593, "lon": 76.3990837 },
+    { "lat": 10.2686322, "lon": 76.3992447 },
+    { "lat": 10.2685137, "lon": 76.3998078 },
+    { "lat": 10.2685108, "lon": 76.3998214 },
+    { "lat": 10.2685240, "lon": 76.4000735 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "email": "ssset@scmsgroup.org",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "SCMS School of Engineering and Technology (SSET)",
+    "operator": "SCMS Group of Instituitions",
+    "operator:type": "private",
+    "website": "https://www.scmsgroup.org"
+  }
+},
+{
+  "type": "way",
+  "id": 475140687,
+  "bounds": {
+    "minlat": 10.0487164,
+    "minlon": 76.3278337,
+    "maxlat": 10.0521181,
+    "maxlon": 76.3307297
+  },
+  "nodes": [
+    3845025683,
+    4689372420,
+    4689372419,
+    4689372418,
+    4689372417,
+    4689372416,
+    4689372415,
+    4689372414,
+    4689372413,
+    4689372412,
+    7469326582,
+    4689372411,
+    9206574259,
+    3845025683
+  ],
+  "geometry": [
+    { "lat": 10.0508194, "lon": 76.3307297 },
+    { "lat": 10.0504542, "lon": 76.3306822 },
+    { "lat": 10.0494453, "lon": 76.3302585 },
+    { "lat": 10.0492288, "lon": 76.3288208 },
+    { "lat": 10.0487164, "lon": 76.3279410 },
+    { "lat": 10.0500898, "lon": 76.3278337 },
+    { "lat": 10.0505757, "lon": 76.3281181 },
+    { "lat": 10.0511779, "lon": 76.3288423 },
+    { "lat": 10.0521181, "lon": 76.3293975 },
+    { "lat": 10.0520758, "lon": 76.3297462 },
+    { "lat": 10.0518970, "lon": 76.3300239 },
+    { "lat": 10.0515996, "lon": 76.3302588 },
+    { "lat": 10.0514388, "lon": 76.3303650 },
+    { "lat": 10.0508194, "lon": 76.3307297 }
+  ],
+  "tags": {
+    "alt_name": "AISAT",
+    "amenity": "college",
+    "name": "Albertian Institute of Science and Technology",
+    "operator": "The Archdiocese of Verapoly",
+    "website": "https://aisat.ac.in/"
+  }
+},
+{
+  "type": "way",
+  "id": 475140702,
+  "bounds": {
+    "minlat": 10.0389007,
+    "minlon": 76.3231875,
+    "maxlat": 10.0505123,
+    "maxlon": 76.3331204
+  },
+  "nodes": [
+    3845066397,
+    4689372572,
+    4689372571,
+    4689372570,
+    4689372569,
+    9956050051,
+    4689372568,
+    7469326515,
+    4689372567,
+    4689372566,
+    4689372565,
+    4689372564,
+    4689372563,
+    4689372562,
+    4689372561,
+    4689372560,
+    4689372559,
+    4689372558,
+    4689372557,
+    4689372556,
+    4689372555,
+    4689372554,
+    4689372553,
+    4689372552,
+    4689372551,
+    4689372550,
+    13038985835,
+    4689372549,
+    4689372548,
+    4689372547,
+    4689372546,
+    4689372545,
+    4689372544,
+    4689372542,
+    4689372541,
+    4689372540,
+    4689372539,
+    4689372538,
+    4689372537,
+    4689372536,
+    4689372535,
+    4689372534,
+    11328303806,
+    5883559869,
+    7424274612,
+    3845025861,
+    9952486770,
+    11328316976,
+    4689372532,
+    4689372531,
+    4689372530,
+    4689372529,
+    4689372528,
+    3845066397
+  ],
+  "geometry": [
+    { "lat": 10.0459524, "lon": 76.3231875 },
+    { "lat": 10.0444681, "lon": 76.3233753 },
+    { "lat": 10.0422021, "lon": 76.3233002 },
+    { "lat": 10.0417319, "lon": 76.3243355 },
+    { "lat": 10.0429838, "lon": 76.3255854 },
+    { "lat": 10.0431059, "lon": 76.3257855 },
+    { "lat": 10.0431687, "lon": 76.3261573 },
+    { "lat": 10.0431710, "lon": 76.3263952 },
+    { "lat": 10.0430884, "lon": 76.3265988 },
+    { "lat": 10.0422760, "lon": 76.3271948 },
+    { "lat": 10.0420700, "lon": 76.3272162 },
+    { "lat": 10.0417742, "lon": 76.3268568 },
+    { "lat": 10.0407455, "lon": 76.3263503 },
+    { "lat": 10.0394817, "lon": 76.3261594 },
+    { "lat": 10.0389007, "lon": 76.3285734 },
+    { "lat": 10.0401156, "lon": 76.3289758 },
+    { "lat": 10.0403005, "lon": 76.3300647 },
+    { "lat": 10.0394394, "lon": 76.3301720 },
+    { "lat": 10.0392176, "lon": 76.3308157 },
+    { "lat": 10.0400152, "lon": 76.3321569 },
+    { "lat": 10.0404853, "lon": 76.3329883 },
+    { "lat": 10.0418851, "lon": 76.3329079 },
+    { "lat": 10.0432180, "lon": 76.3331204 },
+    { "lat": 10.0438765, "lon": 76.3327201 },
+    { "lat": 10.0441142, "lon": 76.3321300 },
+    { "lat": 10.0443783, "lon": 76.3318296 },
+    { "lat": 10.0442920, "lon": 76.3315424 },
+    { "lat": 10.0440720, "lon": 76.3308104 },
+    { "lat": 10.0437233, "lon": 76.3295551 },
+    { "lat": 10.0439188, "lon": 76.3291903 },
+    { "lat": 10.0445157, "lon": 76.3288765 },
+    { "lat": 10.0453001, "lon": 76.3290589 },
+    { "lat": 10.0459287, "lon": 76.3303222 },
+    { "lat": 10.0457174, "lon": 76.3308399 },
+    { "lat": 10.0458706, "lon": 76.3311550 },
+    { "lat": 10.0463248, "lon": 76.3313173 },
+    { "lat": 10.0469996, "lon": 76.3316231 },
+    { "lat": 10.0475821, "lon": 76.3319335 },
+    { "lat": 10.0492486, "lon": 76.3327167 },
+    { "lat": 10.0501082, "lon": 76.3313099 },
+    { "lat": 10.0505123, "lon": 76.3308164 },
+    { "lat": 10.0477181, "lon": 76.3298937 },
+    { "lat": 10.0468953, "lon": 76.3295086 },
+    { "lat": 10.0468486, "lon": 76.3294867 },
+    { "lat": 10.0463608, "lon": 76.3290755 },
+    { "lat": 10.0464356, "lon": 76.3268235 },
+    { "lat": 10.0469068, "lon": 76.3268420 },
+    { "lat": 10.0476706, "lon": 76.3269099 },
+    { "lat": 10.0476225, "lon": 76.3255457 },
+    { "lat": 10.0466115, "lon": 76.3254949 },
+    { "lat": 10.0463843, "lon": 76.3252078 },
+    { "lat": 10.0464029, "lon": 76.3245776 },
+    { "lat": 10.0460542, "lon": 76.3239392 },
+    { "lat": 10.0459524, "lon": 76.3231875 }
+  ],
+  "tags": {
+    "alt_name": "CUSAT",
+    "amenity": "university",
+    "contact:facebook": "officialcusat",
+    "internet_access": "yes",
+    "name": "Cochin University of Science and Technology",
+    "name:en": "Cochin University of Science and Technology (CUSAT)",
+    "name:ml": "കൊച്ചി യൂണിവേഴ്‌സിറ്റി ഓഫ് സയൻസ് ആൻഡ് ടെക്‌നോളജി (കുസാറ്റ്)",
+    "name:ta": "கொச்சின் அறிவியல் மற்றும் தொழில்நுட்பப் பல்கலைக்கழகம்",
+    "website": "https://cusat.ac.in",
+    "wikidata": "Q3530803",
+    "wikipedia": "en:Cochin University of Science and Technology"
+  }
+},
+{
+  "type": "way",
+  "id": 599123890,
+  "bounds": {
+    "minlat": 10.0361953,
+    "minlon": 76.2882205,
+    "maxlat": 10.0372486,
+    "maxlon": 76.2895558
+  },
+  "nodes": [
+    5701079189,
+    5701079190,
+    5701079191,
+    5701079192,
+    5701079189
+  ],
+  "geometry": [
+    { "lat": 10.0369648, "lon": 76.2882205 },
+    { "lat": 10.0372486, "lon": 76.2894116 },
+    { "lat": 10.0362999, "lon": 76.2895558 },
+    { "lat": 10.0361953, "lon": 76.2883836 },
+    { "lat": 10.0369648, "lon": 76.2882205 }
+  ],
+  "tags": {
+    "addr:city": "Kochi",
+    "addr:district": "Ernakulam",
+    "addr:street": "Ponekkara",
+    "amenity": "college",
+    "name": "Amrita School Of Pharmacy",
+    "website": "https://www.amrita.edu/school/pharmacy/"
+  }
+},
+{
+  "type": "way",
+  "id": 619366341,
+  "bounds": {
+    "minlat": 10.1014752,
+    "minlon": 76.3955310,
+    "maxlat": 10.1017904,
+    "maxlon": 76.3957436
+  },
+  "nodes": [
+    5853060750,
+    5853060751,
+    5853060752,
+    5853060753,
+    5853060750
+  ],
+  "geometry": [
+    { "lat": 10.1017904, "lon": 76.3956127 },
+    { "lat": 10.1017531, "lon": 76.3957436 },
+    { "lat": 10.1014752, "lon": 76.3956619 },
+    { "lat": 10.1015125, "lon": 76.3955310 },
+    { "lat": 10.1017904, "lon": 76.3956127 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Don Bosco College Of Philosophy"
+  }
+},
+{
+  "type": "way",
+  "id": 652927160,
+  "bounds": {
+    "minlat": 10.1557111,
+    "minlon": 76.3523774,
+    "maxlat": 10.1569612,
+    "maxlon": 76.3537185
+  },
+  "nodes": [
+    6119856931,
+    6119856930,
+    6119856929,
+    6119856928,
+    6119856927,
+    6119856926,
+    6119856925,
+    6119856924,
+    6119856923,
+    6119856922,
+    6119856921,
+    6119856920,
+    3676244627,
+    6119856919,
+    6119856918,
+    6119856917,
+    6119856931
+  ],
+  "geometry": [
+    { "lat": 10.1560293, "lon": 76.3537185 },
+    { "lat": 10.1563210, "lon": 76.3535683 },
+    { "lat": 10.1567593, "lon": 76.3533765 },
+    { "lat": 10.1569256, "lon": 76.3533068 },
+    { "lat": 10.1569612, "lon": 76.3524900 },
+    { "lat": 10.1569428, "lon": 76.3523774 },
+    { "lat": 10.1565388, "lon": 76.3523881 },
+    { "lat": 10.1559606, "lon": 76.3524015 },
+    { "lat": 10.1557586, "lon": 76.3524203 },
+    { "lat": 10.1557111, "lon": 76.3524257 },
+    { "lat": 10.1557164, "lon": 76.3528562 },
+    { "lat": 10.1557309, "lon": 76.3530064 },
+    { "lat": 10.1558141, "lon": 76.3532504 },
+    { "lat": 10.1558867, "lon": 76.3534610 },
+    { "lat": 10.1559197, "lon": 76.3535468 },
+    { "lat": 10.1559989, "lon": 76.3536541 },
+    { "lat": 10.1560293, "lon": 76.3537185 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Kerala Judicial Academy"
+  }
+},
+{
+  "type": "way",
+  "id": 728326176,
+  "bounds": {
+    "minlat": 10.0543199,
+    "minlon": 76.6701517,
+    "maxlat": 10.0572800,
+    "maxlon": 76.6718891
+  },
+  "nodes": [
+    6825172791,
+    6825172792,
+    6825172793,
+    9459534993,
+    9459534990,
+    9459534991,
+    6825172795,
+    9459534989,
+    9459534988,
+    9459534987,
+    9459534986,
+    9459534985,
+    9459534984,
+    9459534980,
+    6825172796,
+    9459534982,
+    9459534992,
+    9459534983,
+    6825172797,
+    6825172791
+  ],
+  "geometry": [
+    { "lat": 10.0572800, "lon": 76.6706745 },
+    { "lat": 10.0558369, "lon": 76.6701517 },
+    { "lat": 10.0550041, "lon": 76.6702406 },
+    { "lat": 10.0550790, "lon": 76.6709408 },
+    { "lat": 10.0543199, "lon": 76.6709529 },
+    { "lat": 10.0543204, "lon": 76.6717132 },
+    { "lat": 10.0552252, "lon": 76.6716161 },
+    { "lat": 10.0552128, "lon": 76.6711383 },
+    { "lat": 10.0554539, "lon": 76.6710991 },
+    { "lat": 10.0555192, "lon": 76.6712044 },
+    { "lat": 10.0557898, "lon": 76.6710858 },
+    { "lat": 10.0558988, "lon": 76.6714543 },
+    { "lat": 10.0560606, "lon": 76.6714269 },
+    { "lat": 10.0559879, "lon": 76.6717136 },
+    { "lat": 10.0562123, "lon": 76.6718656 },
+    { "lat": 10.0563163, "lon": 76.6717129 },
+    { "lat": 10.0567781, "lon": 76.6718364 },
+    { "lat": 10.0569721, "lon": 76.6718891 },
+    { "lat": 10.0572577, "lon": 76.6713752 },
+    { "lat": 10.0572800, "lon": 76.6706745 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Mar Baselios Institute of Technology"
+  }
+},
+{
+  "type": "way",
+  "id": 742476782,
+  "bounds": {
+    "minlat": 10.0535410,
+    "minlon": 76.6181008,
+    "maxlat": 10.0545049,
+    "maxlon": 76.6188598
+  },
+  "nodes": [
+    6951079788,
+    6951079789,
+    6951079790,
+    6951079791,
+    6951079792,
+    6996017562,
+    6951079793,
+    6951079794,
+    6951079795,
+    6951079788
+  ],
+  "geometry": [
+    { "lat": 10.0544574, "lon": 76.6184441 },
+    { "lat": 10.0545049, "lon": 76.6185702 },
+    { "lat": 10.0543623, "lon": 76.6188598 },
+    { "lat": 10.0542250, "lon": 76.6188491 },
+    { "lat": 10.0535700, "lon": 76.6185192 },
+    { "lat": 10.0535624, "lon": 76.6184868 },
+    { "lat": 10.0535410, "lon": 76.6183958 },
+    { "lat": 10.0537074, "lon": 76.6181008 },
+    { "lat": 10.0538394, "lon": 76.6181008 },
+    { "lat": 10.0544574, "lon": 76.6184441 }
+  ],
+  "tags": {
+    "addr:city": "Kothamangalam",
+    "addr:postcode": "686666",
+    "addr:street": "ma college road",
+    "amenity": "college",
+    "internet_access": "yes",
+    "name": "MA College Ground"
+  }
+},
+{
+  "type": "way",
+  "id": 743542534,
+  "bounds": {
+    "minlat": 10.0502615,
+    "minlon": 76.2164639,
+    "maxlat": 10.0507803,
+    "maxlon": 76.2170056
+  },
+  "nodes": [
+    6959333995,
+    6959333996,
+    6959333997,
+    6959333998,
+    7085908619,
+    6959333995
+  ],
+  "geometry": [
+    { "lat": 10.0506647, "lon": 76.2164639 },
+    { "lat": 10.0507803, "lon": 76.2168937 },
+    { "lat": 10.0503772, "lon": 76.2170056 },
+    { "lat": 10.0502615, "lon": 76.2165758 },
+    { "lat": 10.0504631, "lon": 76.2165199 },
+    { "lat": 10.0506647, "lon": 76.2164639 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Govt. Institute of Fashion Design"
+  }
+},
+{
+  "type": "way",
+  "id": 743544827,
+  "bounds": {
+    "minlat": 10.2949021,
+    "minlon": 76.1976081,
+    "maxlat": 10.2959210,
+    "maxlon": 76.1984571
+  },
+  "nodes": [
+    6959356002,
+    6959356003,
+    6959356004,
+    7074215261,
+    6959356005,
+    6959356002
+  ],
+  "geometry": [
+    { "lat": 10.2957558, "lon": 76.1976081 },
+    { "lat": 10.2959210, "lon": 76.1982239 },
+    { "lat": 10.2950719, "lon": 76.1984571 },
+    { "lat": 10.2949115, "lon": 76.1978016 },
+    { "lat": 10.2949021, "lon": 76.1977714 },
+    { "lat": 10.2957558, "lon": 76.1976081 }
+  ],
+  "tags": {
+    "addr:city": "vellangallur",
+    "addr:postcode": "680662",
+    "addr:street": "aripalam paingode road",
+    "amenity": "college",
+    "internet_access": "wlan",
+    "internet_access:fee": "yes",
+    "name": "universal collage ground",
+    "operator": "collage ground",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 755590334,
+  "bounds": {
+    "minlat": 10.0712679,
+    "minlon": 76.2113443,
+    "maxlat": 10.0715238,
+    "maxlon": 76.2115939
+  },
+  "nodes": [
+    7057650783,
+    7057650784,
+    7085910138,
+    7057668485,
+    7057668486,
+    7057650783
+  ],
+  "geometry": [
+    { "lat": 10.0715238, "lon": 76.2115474 },
+    { "lat": 10.0712912, "lon": 76.2115939 },
+    { "lat": 10.0712807, "lon": 76.2114980 },
+    { "lat": 10.0712679, "lon": 76.2113810 },
+    { "lat": 10.0715092, "lon": 76.2113443 },
+    { "lat": 10.0715238, "lon": 76.2115474 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Prayaga Collage",
+    "wikidata": "Q18344228",
+    "wikipedia": "en:Prayaga College"
+  }
+},
+{
+  "type": "way",
+  "id": 759128257,
+  "bounds": {
+    "minlat": 10.1204483,
+    "minlon": 76.2003284,
+    "maxlat": 10.1211049,
+    "maxlon": 76.2012602
+  },
+  "nodes": [
+    7090453693,
+    7090453695,
+    7090453696,
+    7090453697,
+    7090453700,
+    7090453702,
+    7090453707,
+    7090453693
+  ],
+  "geometry": [
+    { "lat": 10.1209368, "lon": 76.2004306 },
+    { "lat": 10.1206990, "lon": 76.2004878 },
+    { "lat": 10.1206619, "lon": 76.2003284 },
+    { "lat": 10.1204483, "lon": 76.2003799 },
+    { "lat": 10.1206537, "lon": 76.2012602 },
+    { "lat": 10.1211049, "lon": 76.2011517 },
+    { "lat": 10.1209537, "lon": 76.2005033 },
+    { "lat": 10.1209368, "lon": 76.2004306 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Rural Academy for Management Studies",
+    "phone": "+91-484 241 7444",
+    "short_name": "RAMS",
+    "website": "http://www.rams.ac.in"
+  }
+},
+{
+  "type": "way",
+  "id": 793701184,
+  "bounds": {
+    "minlat": 10.0523907,
+    "minlon": 76.3142492,
+    "maxlat": 10.0534074,
+    "maxlon": 76.3154159
+  },
+  "nodes": [
+    7424274595,
+    7424274594,
+    7424274593,
+    7424274592,
+    12625112984,
+    12625112985,
+    12625112969,
+    12625112968,
+    12625112966,
+    12625112964,
+    7424274595
+  ],
+  "geometry": [
+    { "lat": 10.0523907, "lon": 76.3147533 },
+    { "lat": 10.0528188, "lon": 76.3142492 },
+    { "lat": 10.0534074, "lon": 76.3149921 },
+    { "lat": 10.0530259, "lon": 76.3154159 },
+    { "lat": 10.0528765, "lon": 76.3152526 },
+    { "lat": 10.0527789, "lon": 76.3151494 },
+    { "lat": 10.0527031, "lon": 76.3150762 },
+    { "lat": 10.0526775, "lon": 76.3150525 },
+    { "lat": 10.0525849, "lon": 76.3149558 },
+    { "lat": 10.0525640, "lon": 76.3149341 },
+    { "lat": 10.0523907, "lon": 76.3147533 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Rajagiri College of Social Sciences",
+    "name:ml": "രാജഗിരി കോളേജ് ഓഫ് സോഷ്യൽ സയൻസസ്",
+    "wikidata": "Q13114341",
+    "wikipedia": "en:Rajagiri College of Social Sciences"
+  }
+},
+{
+  "type": "way",
+  "id": 796401810,
+  "bounds": {
+    "minlat": 10.1042187,
+    "minlon": 76.6403906,
+    "maxlat": 10.1059492,
+    "maxlon": 76.6438638
+  },
+  "nodes": [
+    7448284509,
+    7448284510,
+    7448284511,
+    7448284512,
+    8273078336,
+    7448284513,
+    8273078337,
+    7448284514,
+    8273078331,
+    7448284515,
+    7448284516,
+    7448284509
+  ],
+  "geometry": [
+    { "lat": 10.1042187, "lon": 76.6427235 },
+    { "lat": 10.1044557, "lon": 76.6406060 },
+    { "lat": 10.1055480, "lon": 76.6403906 },
+    { "lat": 10.1059492, "lon": 76.6414446 },
+    { "lat": 10.1055379, "lon": 76.6416461 },
+    { "lat": 10.1057463, "lon": 76.6430397 },
+    { "lat": 10.1054092, "lon": 76.6432852 },
+    { "lat": 10.1054609, "lon": 76.6437025 },
+    { "lat": 10.1051961, "lon": 76.6438638 },
+    { "lat": 10.1050672, "lon": 76.6436110 },
+    { "lat": 10.1043135, "lon": 76.6434277 },
+    { "lat": 10.1042187, "lon": 76.6427235 }
+  ],
+  "tags": {
+    "addr:city": "Kothamangalam",
+    "addr:housenumber": "Chelad",
+    "addr:postcode": "686681",
+    "addr:street": "Chelad Malipara Road",
+    "amenity": "college",
+    "name": "Govt. Polytechnic College, Kothamangalam"
+  }
+},
+{
+  "type": "way",
+  "id": 798607771,
+  "bounds": {
+    "minlat": 10.0506173,
+    "minlon": 76.3272205,
+    "maxlat": 10.0537789,
+    "maxlon": 76.3294632
+  },
+  "nodes": [
+    7469189275,
+    7469189276,
+    7469189277,
+    7469189278,
+    7469189279,
+    7469189280,
+    995700039,
+    7469189281,
+    7469189282,
+    7469189283,
+    7469189284,
+    7469223785,
+    7469223786,
+    7469223787,
+    7469223788,
+    7469223789,
+    7469223790,
+    7469223791,
+    7469223792,
+    7469223793,
+    8812434971,
+    8812434972,
+    8812434969,
+    8812434970,
+    8812434968,
+    8812434967,
+    8812434966,
+    8812434965,
+    7469189275
+  ],
+  "geometry": [
+    { "lat": 10.0517600, "lon": 76.3288503 },
+    { "lat": 10.0520147, "lon": 76.3290382 },
+    { "lat": 10.0521896, "lon": 76.3294593 },
+    { "lat": 10.0523421, "lon": 76.3294632 },
+    { "lat": 10.0525851, "lon": 76.3294632 },
+    { "lat": 10.0528070, "lon": 76.3293237 },
+    { "lat": 10.0528830, "lon": 76.3292805 },
+    { "lat": 10.0530711, "lon": 76.3291735 },
+    { "lat": 10.0533774, "lon": 76.3291091 },
+    { "lat": 10.0535887, "lon": 76.3292379 },
+    { "lat": 10.0537260, "lon": 76.3290662 },
+    { "lat": 10.0537789, "lon": 76.3286907 },
+    { "lat": 10.0537789, "lon": 76.3284010 },
+    { "lat": 10.0536627, "lon": 76.3282294 },
+    { "lat": 10.0533457, "lon": 76.3282186 },
+    { "lat": 10.0531239, "lon": 76.3280979 },
+    { "lat": 10.0530657, "lon": 76.3279209 },
+    { "lat": 10.0528387, "lon": 76.3278351 },
+    { "lat": 10.0524742, "lon": 76.3278753 },
+    { "lat": 10.0522101, "lon": 76.3279075 },
+    { "lat": 10.0519660, "lon": 76.3277158 },
+    { "lat": 10.0518433, "lon": 76.3274749 },
+    { "lat": 10.0515540, "lon": 76.3272930 },
+    { "lat": 10.0509402, "lon": 76.3272205 },
+    { "lat": 10.0507996, "lon": 76.3272758 },
+    { "lat": 10.0506173, "lon": 76.3277444 },
+    { "lat": 10.0506713, "lon": 76.3281582 },
+    { "lat": 10.0510978, "lon": 76.3286309 },
+    { "lat": 10.0517600, "lon": 76.3288503 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "St. Paul's College",
+    "website": "https://stpauls.ac.in/",
+    "wikidata": "Q48725327",
+    "wikipedia": "en:St. Paul's College, Kalamassery"
+  }
+},
+{
+  "type": "way",
+  "id": 798622893,
+  "bounds": {
+    "minlat": 10.0472940,
+    "minlon": 76.3190672,
+    "maxlat": 10.0494354,
+    "maxlon": 76.3199226
+  },
+  "nodes": [
+    7469340168,
+    7469340169,
+    7469340170,
+    7469340171,
+    7469340172,
+    7469340173,
+    7469340174,
+    7469340175,
+    7469340176,
+    7469340177,
+    7469340168
+  ],
+  "geometry": [
+    { "lat": 10.0491652, "lon": 76.3191201 },
+    { "lat": 10.0493395, "lon": 76.3191294 },
+    { "lat": 10.0494160, "lon": 76.3192524 },
+    { "lat": 10.0494354, "lon": 76.3196054 },
+    { "lat": 10.0473113, "lon": 76.3199226 },
+    { "lat": 10.0472940, "lon": 76.3195875 },
+    { "lat": 10.0475805, "lon": 76.3194023 },
+    { "lat": 10.0476890, "lon": 76.3192656 },
+    { "lat": 10.0479148, "lon": 76.3191201 },
+    { "lat": 10.0482795, "lon": 76.3190672 },
+    { "lat": 10.0491652, "lon": 76.3191201 }
+  ],
+  "tags": {
+    "addr:city": "South Kalamassery",
+    "addr:postcode": "682033",
+    "addr:street": "Salem - Kochi - Kanyakumari Highway",
+    "amenity": "college",
+    "name": "Little Flower Engineering Institute",
+    "name:etymology:wikidata": "Q181715",
+    "website": "https://littleflower.ac.in/"
+  }
+},
+{
+  "type": "way",
+  "id": 798640520,
+  "bounds": {
+    "minlat": 10.0721723,
+    "minlon": 76.6032293,
+    "maxlat": 10.0738474,
+    "maxlon": 76.6053456
+  },
+  "nodes": [
+    7469551433,
+    7469551434,
+    7469551435,
+    7469551436,
+    7469551437,
+    7488078873,
+    7488078872,
+    7469551438,
+    11732872254,
+    7488078870,
+    10773891409,
+    11732872252,
+    7488078871,
+    7469551433
+  ],
+  "geometry": [
+    { "lat": 10.0727527, "lon": 76.6033442 },
+    { "lat": 10.0723205, "lon": 76.6045843 },
+    { "lat": 10.0721723, "lon": 76.6051954 },
+    { "lat": 10.0726582, "lon": 76.6053456 },
+    { "lat": 10.0730490, "lon": 76.6053456 },
+    { "lat": 10.0736331, "lon": 76.6051644 },
+    { "lat": 10.0738474, "lon": 76.6048020 },
+    { "lat": 10.0737348, "lon": 76.6037711 },
+    { "lat": 10.0736912, "lon": 76.6036963 },
+    { "lat": 10.0734124, "lon": 76.6035497 },
+    { "lat": 10.0732492, "lon": 76.6034260 },
+    { "lat": 10.0730904, "lon": 76.6033316 },
+    { "lat": 10.0729613, "lon": 76.6032293 },
+    { "lat": 10.0727527, "lon": 76.6033442 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "DENTAL COLLEGE COMPOUND"
+  }
+},
+{
+  "type": "way",
+  "id": 798646655,
+  "bounds": {
+    "minlat": 10.0549324,
+    "minlon": 76.3225653,
+    "maxlat": 10.0577915,
+    "maxlon": 76.3273962
+  },
+  "nodes": [
+    7469595216,
+    7469595217,
+    7469595218,
+    7469595219,
+    7469595220,
+    7469595221,
+    7469595222,
+    7469595223,
+    7469595224,
+    7469595225,
+    7469595226,
+    7469595227,
+    7469595228,
+    7469595229,
+    7502978166,
+    7469595230,
+    7469595231,
+    7469595232,
+    7469595233,
+    7469595234,
+    7469595235,
+    7469595216
+  ],
+  "geometry": [
+    { "lat": 10.0577019, "lon": 76.3254810 },
+    { "lat": 10.0576263, "lon": 76.3253794 },
+    { "lat": 10.0577915, "lon": 76.3250405 },
+    { "lat": 10.0575504, "lon": 76.3249076 },
+    { "lat": 10.0571840, "lon": 76.3248007 },
+    { "lat": 10.0571108, "lon": 76.3246749 },
+    { "lat": 10.0563284, "lon": 76.3242118 },
+    { "lat": 10.0567337, "lon": 76.3233371 },
+    { "lat": 10.0559231, "lon": 76.3225653 },
+    { "lat": 10.0555628, "lon": 76.3231828 },
+    { "lat": 10.0551688, "lon": 76.3239831 },
+    { "lat": 10.0551125, "lon": 76.3243605 },
+    { "lat": 10.0555966, "lon": 76.3247149 },
+    { "lat": 10.0555392, "lon": 76.3249521 },
+    { "lat": 10.0551830, "lon": 76.3256533 },
+    { "lat": 10.0549324, "lon": 76.3263786 },
+    { "lat": 10.0565536, "lon": 76.3273962 },
+    { "lat": 10.0571221, "lon": 76.3272590 },
+    { "lat": 10.0573304, "lon": 76.3271218 },
+    { "lat": 10.0577019, "lon": 76.3262185 },
+    { "lat": 10.0575555, "lon": 76.3258297 },
+    { "lat": 10.0577019, "lon": 76.3254810 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Government Polytechnic College Kalamassery",
+    "name:ml": "ഗവൺമെന്റ് പോളിടെക്‌നിക് കോളേജ് കളമശ്ശേരി",
+    "operator": "State Board Of Technical Education",
+    "operator:type": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 798646657,
+  "bounds": {
+    "minlat": 10.0541495,
+    "minlon": 76.3262841,
+    "maxlat": 10.0562067,
+    "maxlon": 76.3281638
+  },
+  "nodes": [
+    7469595241,
+    7469595242,
+    8812429136,
+    8812429137,
+    8812429138,
+    7469595243,
+    8812429124,
+    8812429123,
+    7469595244,
+    8812420989,
+    8812420988,
+    7469595245,
+    7469595246,
+    8812420987,
+    7469595247,
+    7469595248,
+    7469595249,
+    7469595250,
+    7469595241
+  ],
+  "geometry": [
+    { "lat": 10.0555774, "lon": 76.3279418 },
+    { "lat": 10.0556257, "lon": 76.3276879 },
+    { "lat": 10.0559067, "lon": 76.3276535 },
+    { "lat": 10.0559998, "lon": 76.3276092 },
+    { "lat": 10.0562067, "lon": 76.3272495 },
+    { "lat": 10.0559214, "lon": 76.3270367 },
+    { "lat": 10.0556066, "lon": 76.3268590 },
+    { "lat": 10.0551022, "lon": 76.3265802 },
+    { "lat": 10.0546793, "lon": 76.3263455 },
+    { "lat": 10.0544424, "lon": 76.3262841 },
+    { "lat": 10.0542426, "lon": 76.3268907 },
+    { "lat": 10.0541884, "lon": 76.3275303 },
+    { "lat": 10.0541506, "lon": 76.3279801 },
+    { "lat": 10.0541500, "lon": 76.3280576 },
+    { "lat": 10.0541495, "lon": 76.3281351 },
+    { "lat": 10.0548524, "lon": 76.3281623 },
+    { "lat": 10.0550892, "lon": 76.3281638 },
+    { "lat": 10.0553525, "lon": 76.3281545 },
+    { "lat": 10.0555774, "lon": 76.3279418 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Government ITI Kalamassery",
+    "name:ml": "ഗവൺമെന്റ് ഐ.ടി.ഐ കളമശ്ശേരി"
+  }
+},
+{
+  "type": "way",
+  "id": 798646658,
+  "bounds": {
+    "minlat": 10.0554766,
+    "minlon": 76.3272443,
+    "maxlat": 10.0565392,
+    "maxlon": 76.3281742
+  },
+  "nodes": [
+    7469595251,
+    7469595252,
+    8812429134,
+    8812429133,
+    7469595253,
+    7469595254,
+    7469595255,
+    7469595256,
+    7469595257,
+    7469595258,
+    8812429135,
+    7469595251
+  ],
+  "geometry": [
+    { "lat": 10.0562947, "lon": 76.3277292 },
+    { "lat": 10.0565392, "lon": 76.3274406 },
+    { "lat": 10.0562485, "lon": 76.3272443 },
+    { "lat": 10.0560247, "lon": 76.3276294 },
+    { "lat": 10.0559449, "lon": 76.3276753 },
+    { "lat": 10.0556417, "lon": 76.3277008 },
+    { "lat": 10.0556162, "lon": 76.3279615 },
+    { "lat": 10.0554766, "lon": 76.3280993 },
+    { "lat": 10.0556162, "lon": 76.3281742 },
+    { "lat": 10.0559613, "lon": 76.3279812 },
+    { "lat": 10.0561280, "lon": 76.3278552 },
+    { "lat": 10.0562947, "lon": 76.3277292 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Government ITI for Women"
+  }
+},
+{
+  "type": "way",
+  "id": 798703081,
+  "bounds": {
+    "minlat": 10.1111184,
+    "minlon": 76.3583559,
+    "maxlat": 10.1136315,
+    "maxlon": 76.3597762
+  },
+  "nodes": [
+    7469925571,
+    7469925573,
+    7469925574,
+    7469925575,
+    7469925576,
+    7469925577,
+    7469925578,
+    7469925579,
+    7469925580,
+    7469925581,
+    7469925582,
+    7469925583,
+    7469925584,
+    7469943585,
+    7469925571
+  ],
+  "geometry": [
+    { "lat": 10.1111184, "lon": 76.3586797 },
+    { "lat": 10.1118753, "lon": 76.3592019 },
+    { "lat": 10.1122004, "lon": 76.3593346 },
+    { "lat": 10.1126591, "lon": 76.3595432 },
+    { "lat": 10.1131522, "lon": 76.3597762 },
+    { "lat": 10.1136315, "lon": 76.3586425 },
+    { "lat": 10.1133747, "lon": 76.3585695 },
+    { "lat": 10.1129878, "lon": 76.3585764 },
+    { "lat": 10.1127516, "lon": 76.3585834 },
+    { "lat": 10.1125941, "lon": 76.3586390 },
+    { "lat": 10.1125359, "lon": 76.3588790 },
+    { "lat": 10.1121935, "lon": 76.3587955 },
+    { "lat": 10.1121935, "lon": 76.3586286 },
+    { "lat": 10.1116382, "lon": 76.3583559 },
+    { "lat": 10.1111184, "lon": 76.3586797 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "St. Xavier's College for Women, Aluva"
+  }
+},
+{
+  "type": "way",
+  "id": 798747875,
+  "bounds": {
+    "minlat": 10.0262104,
+    "minlon": 76.5671354,
+    "maxlat": 10.0270661,
+    "maxlon": 76.5679723
+  },
+  "nodes": [
+    7470249945,
+    7470249946,
+    7470249947,
+    7470249948,
+    7470249949,
+    7470249950,
+    7470249951,
+    7470249952,
+    7470249953,
+    7470249945
+  ],
+  "geometry": [
+    { "lat": 10.0262104, "lon": 76.5676504 },
+    { "lat": 10.0264111, "lon": 76.5671354 },
+    { "lat": 10.0265801, "lon": 76.5671837 },
+    { "lat": 10.0265696, "lon": 76.5672320 },
+    { "lat": 10.0268865, "lon": 76.5673875 },
+    { "lat": 10.0269129, "lon": 76.5673339 },
+    { "lat": 10.0270503, "lon": 76.5674144 },
+    { "lat": 10.0270661, "lon": 76.5674787 },
+    { "lat": 10.0268548, "lon": 76.5679723 },
+    { "lat": 10.0262104, "lon": 76.5676504 }
+  ],
+  "tags": {
+    "addr:city": "East Paipra Road, Muvattupuzha, Ernakulam Dist,, Pezhakkappilly, Kerala",
+    "addr:postcode": "686673",
+    "addr:street": "Paipra Pezhakkapilly-Mulavoor Road",
+    "amenity": "college",
+    "description": "Private ITI",
+    "name": "Ilahia Polytechnic",
+    "operator": "Ilahia Trust",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 798770270,
+  "bounds": {
+    "minlat": 10.0587434,
+    "minlon": 76.3589884,
+    "maxlat": 10.0605231,
+    "maxlon": 76.3614611
+  },
+  "nodes": [
+    7470410407,
+    7470410408,
+    7470410409,
+    7470410410,
+    7925541633,
+    7925541634,
+    7470410411,
+    7470410412,
+    7470410413,
+    7470410414,
+    7470410415,
+    7470410407
+  ],
+  "geometry": [
+    { "lat": 10.0587434, "lon": 76.3609967 },
+    { "lat": 10.0591307, "lon": 76.3602771 },
+    { "lat": 10.0588217, "lon": 76.3601181 },
+    { "lat": 10.0591389, "lon": 76.3590512 },
+    { "lat": 10.0598760, "lon": 76.3590132 },
+    { "lat": 10.0601090, "lon": 76.3590012 },
+    { "lat": 10.0603583, "lon": 76.3589884 },
+    { "lat": 10.0605231, "lon": 76.3593608 },
+    { "lat": 10.0604160, "lon": 76.3594445 },
+    { "lat": 10.0603007, "lon": 76.3600930 },
+    { "lat": 10.0595138, "lon": 76.3614611 },
+    { "lat": 10.0587434, "lon": 76.3609967 }
+  ],
+  "tags": {
+    "alt_name": "NUALS",
+    "amenity": "university",
+    "name": "The National University of Advanced Legal Studies",
+    "name:ml": "നാഷണൽ യൂണിവേഴ്സിറ്റി ഓഫ് അഡ്വാൻസ്ഡ് ലീഗൽ സ്റ്റഡീസ്",
+    "website": "https://nuals.ac.in",
+    "wikidata": "Q6979223",
+    "wikipedia": "en:National University of Advanced Legal Studies"
+  }
+},
+{
+  "type": "way",
+  "id": 798778767,
+  "bounds": {
+    "minlat": 10.0727900,
+    "minlon": 76.3701486,
+    "maxlat": 10.0732181,
+    "maxlon": 76.3706532
+  },
+  "nodes": [
+    7470462425,
+    7470462426,
+    7470462427,
+    7470462428,
+    7470462429,
+    7470462425
+  ],
+  "geometry": [
+    { "lat": 10.0731642, "lon": 76.3701486 },
+    { "lat": 10.0727900, "lon": 76.3702361 },
+    { "lat": 10.0728142, "lon": 76.3703674 },
+    { "lat": 10.0728290, "lon": 76.3706532 },
+    { "lat": 10.0732181, "lon": 76.3705848 },
+    { "lat": 10.0731642, "lon": 76.3701486 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Al Jamiathul Kauzariyya Arabic College"
+  }
+},
+{
+  "type": "way",
+  "id": 798832794,
+  "bounds": {
+    "minlat": 10.1185841,
+    "minlon": 76.4897352,
+    "maxlat": 10.1187286,
+    "maxlon": 76.4900138
+  },
+  "nodes": [
+    7471027414,
+    7471027415,
+    7471027416,
+    7471027417,
+    7471027414
+  ],
+  "geometry": [
+    { "lat": 10.1187271, "lon": 76.4897352 },
+    { "lat": 10.1185870, "lon": 76.4897442 },
+    { "lat": 10.1185841, "lon": 76.4900138 },
+    { "lat": 10.1187286, "lon": 76.4900138 },
+    { "lat": 10.1187271, "lon": 76.4897352 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 799055657,
+  "bounds": {
+    "minlat": 10.0157500,
+    "minlon": 76.7253173,
+    "maxlat": 10.0167363,
+    "maxlon": 76.7261915
+  },
+  "nodes": [
+    7473131513,
+    7473131514,
+    7473131515,
+    7473131516,
+    7473131517,
+    7473131518,
+    7473131519,
+    7473131520,
+    7473131521,
+    7473131522,
+    7473131523,
+    7473131524,
+    7473131525,
+    7473131526,
+    7473131527,
+    7473131528,
+    7473131529,
+    7473131530,
+    7473131531,
+    7473131532,
+    7473131533,
+    7473131534,
+    7473131535,
+    7473131513
+  ],
+  "geometry": [
+    { "lat": 10.0167363, "lon": 76.7255509 },
+    { "lat": 10.0166248, "lon": 76.7254978 },
+    { "lat": 10.0165133, "lon": 76.7254482 },
+    { "lat": 10.0163983, "lon": 76.7254093 },
+    { "lat": 10.0162414, "lon": 76.7253491 },
+    { "lat": 10.0160393, "lon": 76.7253173 },
+    { "lat": 10.0159347, "lon": 76.7253350 },
+    { "lat": 10.0158336, "lon": 76.7254164 },
+    { "lat": 10.0157918, "lon": 76.7255367 },
+    { "lat": 10.0157500, "lon": 76.7256854 },
+    { "lat": 10.0157605, "lon": 76.7258057 },
+    { "lat": 10.0158929, "lon": 76.7258800 },
+    { "lat": 10.0159521, "lon": 76.7259508 },
+    { "lat": 10.0160219, "lon": 76.7260074 },
+    { "lat": 10.0160985, "lon": 76.7260570 },
+    { "lat": 10.0162414, "lon": 76.7261101 },
+    { "lat": 10.0163181, "lon": 76.7261490 },
+    { "lat": 10.0164192, "lon": 76.7261773 },
+    { "lat": 10.0164958, "lon": 76.7261915 },
+    { "lat": 10.0165725, "lon": 76.7261596 },
+    { "lat": 10.0166387, "lon": 76.7260640 },
+    { "lat": 10.0166736, "lon": 76.7258977 },
+    { "lat": 10.0167050, "lon": 76.7256889 },
+    { "lat": 10.0167363, "lon": 76.7255509 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 799108527,
+  "bounds": {
+    "minlat": 10.0997903,
+    "minlon": 76.5092938,
+    "maxlat": 10.1003715,
+    "maxlon": 76.5097853
+  },
+  "nodes": [
+    7473573453,
+    7473573454,
+    7473573455,
+    7473573456,
+    7473573453
+  ],
+  "geometry": [
+    { "lat": 10.1003715, "lon": 76.5094965 },
+    { "lat": 10.1002593, "lon": 76.5097853 },
+    { "lat": 10.0997903, "lon": 76.5095776 },
+    { "lat": 10.0999100, "lon": 76.5092938 },
+    { "lat": 10.1003715, "lon": 76.5094965 }
+  ],
+  "tags": {
+    "addr:city": "KURUPPAMPADY",
+    "addr:postcode": "683545",
+    "addr:street": "PEECHINAMUGAL ROAD",
+    "amenity": "college",
+    "internet_access": "no",
+    "name": "Faith Baptist Bible College Ground",
+    "operator": "FAIYH BAPTIST BIBLE COLLEGE",
+    "operator:type": "university"
+  }
+},
+{
+  "type": "way",
+  "id": 800016866,
+  "bounds": {
+    "minlat": 10.1940475,
+    "minlon": 76.2519596,
+    "maxlat": 10.1947046,
+    "maxlon": 76.2528888
+  },
+  "nodes": [
+    7481820372,
+    7481820373,
+    7481820374,
+    7481820375,
+    7481820376,
+    7481820377,
+    7481820378,
+    7481820379,
+    7481820380,
+    7481820372
+  ],
+  "geometry": [
+    { "lat": 10.1947046, "lon": 76.2520227 },
+    { "lat": 10.1945270, "lon": 76.2528663 },
+    { "lat": 10.1943095, "lon": 76.2528550 },
+    { "lat": 10.1943028, "lon": 76.2528888 },
+    { "lat": 10.1942096, "lon": 76.2528866 },
+    { "lat": 10.1942052, "lon": 76.2528437 },
+    { "lat": 10.1940475, "lon": 76.2528347 },
+    { "lat": 10.1940964, "lon": 76.2519596 },
+    { "lat": 10.1943894, "lon": 76.2519686 },
+    { "lat": 10.1947046, "lon": 76.2520227 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 800253376,
+  "bounds": {
+    "minlat": 10.0462293,
+    "minlon": 76.5175476,
+    "maxlat": 10.0463984,
+    "maxlon": 76.5181055
+  },
+  "nodes": [
+    7484081906,
+    7484081907,
+    7484081908,
+    7484081909,
+    7484081906
+  ],
+  "geometry": [
+    { "lat": 10.0463508, "lon": 76.5175476 },
+    { "lat": 10.0462293, "lon": 76.5175636 },
+    { "lat": 10.0462505, "lon": 76.5181055 },
+    { "lat": 10.0463984, "lon": 76.5180840 },
+    { "lat": 10.0463508, "lon": 76.5175476 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Christ Knowledge City"
+  }
+},
+{
+  "type": "way",
+  "id": 800370533,
+  "bounds": {
+    "minlat": 10.0558556,
+    "minlon": 76.6703937,
+    "maxlat": 10.0573676,
+    "maxlon": 76.6716771
+  },
+  "nodes": [
+    7485246628,
+    7485246629,
+    7485246630,
+    7485246631,
+    7485246628
+  ],
+  "geometry": [
+    { "lat": 10.0571197, "lon": 76.6716771 },
+    { "lat": 10.0558556, "lon": 76.6710176 },
+    { "lat": 10.0564216, "lon": 76.6703937 },
+    { "lat": 10.0573676, "lon": 76.6708747 },
+    { "lat": 10.0571197, "lon": 76.6716771 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Mar Baselios Institute of Technology and Science"
+  }
+},
+{
+  "type": "way",
+  "id": 802107953,
+  "bounds": {
+    "minlat": 10.0301874,
+    "minlon": 76.3339518,
+    "maxlat": 10.0313495,
+    "maxlon": 76.3347967
+  },
+  "nodes": [
+    7502754515,
+    7502754516,
+    7502754517,
+    7502754518,
+    7502754519,
+    7502754520,
+    7502754521,
+    7502754522,
+    7502754523,
+    7502754515
+  ],
+  "geometry": [
+    { "lat": 10.0313495, "lon": 76.3343435 },
+    { "lat": 10.0313231, "lon": 76.3341745 },
+    { "lat": 10.0310378, "lon": 76.3339518 },
+    { "lat": 10.0306153, "lon": 76.3339760 },
+    { "lat": 10.0303300, "lon": 76.3340779 },
+    { "lat": 10.0301874, "lon": 76.3341584 },
+    { "lat": 10.0303591, "lon": 76.3347967 },
+    { "lat": 10.0306337, "lon": 76.3346975 },
+    { "lat": 10.0307817, "lon": 76.3346546 },
+    { "lat": 10.0313495, "lon": 76.3343435 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Bharatmata College Thrikkakara"
+  }
+},
+{
+  "type": "way",
+  "id": 802877042,
+  "bounds": {
+    "minlat": 10.2233538,
+    "minlon": 76.2747562,
+    "maxlat": 10.2235333,
+    "maxlon": 76.2750512
+  },
+  "nodes": [
+    7510223494,
+    7510223495,
+    7510223496,
+    7510223497,
+    7510223494
+  ],
+  "geometry": [
+    { "lat": 10.2235333, "lon": 76.2749949 },
+    { "lat": 10.2235280, "lon": 76.2747562 },
+    { "lat": 10.2233538, "lon": 76.2747749 },
+    { "lat": 10.2233960, "lon": 76.2750512 },
+    { "lat": 10.2235333, "lon": 76.2749949 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "basketball court"
+  }
+},
+{
+  "type": "way",
+  "id": 803822578,
+  "bounds": {
+    "minlat": 10.2318594,
+    "minlon": 76.2792069,
+    "maxlat": 10.2325088,
+    "maxlon": 76.2804997
+  },
+  "nodes": [
+    7519045580,
+    7519045581,
+    7519045582,
+    7519045583,
+    7519045584,
+    7519066885,
+    7519066886,
+    7519066887,
+    7519045580
+  ],
+  "geometry": [
+    { "lat": 10.2324401, "lon": 76.2792123 },
+    { "lat": 10.2321656, "lon": 76.2792069 },
+    { "lat": 10.2321603, "lon": 76.2793839 },
+    { "lat": 10.2319228, "lon": 76.2793839 },
+    { "lat": 10.2318594, "lon": 76.2804997 },
+    { "lat": 10.2321023, "lon": 76.2804783 },
+    { "lat": 10.2321128, "lon": 76.2801993 },
+    { "lat": 10.2325088, "lon": 76.2801564 },
+    { "lat": 10.2324401, "lon": 76.2792123 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 804299345,
+  "bounds": {
+    "minlat": 10.0363454,
+    "minlon": 76.2883047,
+    "maxlat": 10.0369199,
+    "maxlon": 76.2885501
+  },
+  "nodes": [
+    7523096547,
+    7523096548,
+    7523096549,
+    7523096550,
+    7523096551,
+    7523096552,
+    7523096553,
+    7523096554,
+    7523096547
+  ],
+  "geometry": [
+    { "lat": 10.0369027, "lon": 76.2883047 },
+    { "lat": 10.0369199, "lon": 76.2884214 },
+    { "lat": 10.0366875, "lon": 76.2884844 },
+    { "lat": 10.0366967, "lon": 76.2885260 },
+    { "lat": 10.0365792, "lon": 76.2885501 },
+    { "lat": 10.0365699, "lon": 76.2885032 },
+    { "lat": 10.0364109, "lon": 76.2884771 },
+    { "lat": 10.0363454, "lon": 76.2884308 },
+    { "lat": 10.0369027, "lon": 76.2883047 }
+  ],
+  "tags": {
+    "amenity": "university",
+    "name": "Amrita School of Business"
+  }
+},
+{
+  "type": "way",
+  "id": 823479907,
+  "bounds": {
+    "minlat": 10.0509522,
+    "minlon": 76.6163862,
+    "maxlat": 10.0571274,
+    "maxlon": 76.6233089
+  },
+  "nodes": [
+    7688033228,
+    7688033229,
+    7688033230,
+    7688033231,
+    7688033232,
+    7688033233,
+    7688033234,
+    7688033235,
+    7688033228
+  ],
+  "geometry": [
+    { "lat": 10.0509522, "lon": 76.6195715 },
+    { "lat": 10.0523601, "lon": 76.6176320 },
+    { "lat": 10.0543953, "lon": 76.6163862 },
+    { "lat": 10.0571274, "lon": 76.6164711 },
+    { "lat": 10.0565280, "lon": 76.6199396 },
+    { "lat": 10.0562910, "lon": 76.6225444 },
+    { "lat": 10.0534892, "lon": 76.6233089 },
+    { "lat": 10.0520395, "lon": 76.6229125 },
+    { "lat": 10.0509522, "lon": 76.6195715 }
+  ],
+  "tags": {
+    "addr:city": "Kothamangalam",
+    "alt_name": "MACE",
+    "amenity": "college",
+    "name": "Mar Athanasius College of Engineering",
+    "name:ml": "മാർ അത്തനേഷ്യസ് കോളേജ് ഓഫ് എഞ്ചിനീയറിംഗ്",
+    "website": "https://www.mace.ac.in/",
+    "wikidata": "Q6754373",
+    "wikipedia": "en:Mar Athanasius College of Engineering"
+  }
+},
+{
+  "type": "way",
+  "id": 835663119,
+  "bounds": {
+    "minlat": 10.0726410,
+    "minlon": 76.5373546,
+    "maxlat": 10.0752185,
+    "maxlon": 76.5394038
+  },
+  "nodes": [
+    7800051015,
+    7800051016,
+    7800051017,
+    7800051018,
+    7800051019,
+    7800051020,
+    7800051021,
+    7800051022,
+    7800051023,
+    7800051024,
+    7800051025,
+    7800051026,
+    7800051027,
+    7800051028,
+    7800051029,
+    7800051030,
+    7800051031,
+    7800051032,
+    7800051033,
+    7800051034,
+    7800051015
+  ],
+  "geometry": [
+    { "lat": 10.0743893, "lon": 76.5379393 },
+    { "lat": 10.0744632, "lon": 76.5376496 },
+    { "lat": 10.0742097, "lon": 76.5373546 },
+    { "lat": 10.0739615, "lon": 76.5373546 },
+    { "lat": 10.0736974, "lon": 76.5376443 },
+    { "lat": 10.0733382, "lon": 76.5379661 },
+    { "lat": 10.0728470, "lon": 76.5383738 },
+    { "lat": 10.0726410, "lon": 76.5385616 },
+    { "lat": 10.0727044, "lon": 76.5388781 },
+    { "lat": 10.0729843, "lon": 76.5391409 },
+    { "lat": 10.0735284, "lon": 76.5392858 },
+    { "lat": 10.0738558, "lon": 76.5392482 },
+    { "lat": 10.0740460, "lon": 76.5388942 },
+    { "lat": 10.0740935, "lon": 76.5394038 },
+    { "lat": 10.0743365, "lon": 76.5394038 },
+    { "lat": 10.0747379, "lon": 76.5389585 },
+    { "lat": 10.0749967, "lon": 76.5386474 },
+    { "lat": 10.0752185, "lon": 76.5384918 },
+    { "lat": 10.0750653, "lon": 76.5381807 },
+    { "lat": 10.0746481, "lon": 76.5379822 },
+    { "lat": 10.0743893, "lon": 76.5379393 }
+  ],
+  "tags": {
+    "addr:city": "Perumbavoor Ernakulam",
+    "addr:postcode": "683541",
+    "addr:street": "Methala",
+    "amenity": "college",
+    "name": "Islamic Learning Mission College of Engineering",
+    "phone": "+914842597900",
+    "website": "https://ilmengineeringcollege.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 848226400,
+  "bounds": {
+    "minlat": 10.0283615,
+    "minlon": 76.2307853,
+    "maxlat": 10.0286698,
+    "maxlon": 76.2312570
+  },
+  "nodes": [
+    7914872337,
+    9481574676,
+    7914872338,
+    7914872339,
+    7914872340,
+    7914872337
+  ],
+  "geometry": [
+    { "lat": 10.0286511, "lon": 76.2307853 },
+    { "lat": 10.0286698, "lon": 76.2312270 },
+    { "lat": 10.0284878, "lon": 76.2312470 },
+    { "lat": 10.0283759, "lon": 76.2312570 },
+    { "lat": 10.0283615, "lon": 76.2307997 },
+    { "lat": 10.0286511, "lon": 76.2307853 }
+  ],
+  "tags": {
+    "addr:city": "Elamkunnapuzha,Vypeen,Ernakulam",
+    "addr:postcode": "682503",
+    "addr:street": "Elamkunnapuzha, Vypin",
+    "amenity": "college",
+    "government": "government",
+    "name": "Vypin Government Arts and Science College",
+    "operator": "Goverment"
+  }
+},
+{
+  "type": "way",
+  "id": 865857088,
+  "bounds": {
+    "minlat": 10.0266834,
+    "minlon": 76.5959373,
+    "maxlat": 10.0303454,
+    "maxlon": 76.5991023
+  },
+  "nodes": [
+    8070789759,
+    8070789760,
+    8070789761,
+    8070789762,
+    8070789763,
+    8070789764,
+    8070789765,
+    8070789766,
+    8070789767,
+    8070789768,
+    8070789769,
+    8070789770,
+    8070789771,
+    8070789772,
+    8070789773,
+    8070789774,
+    8070789775,
+    8070789776,
+    8070789777,
+    8070789778,
+    8070789779,
+    8070789780,
+    8070789781,
+    8070789782,
+    8070789783,
+    8070789784,
+    8070789785,
+    8070789786,
+    8070789787,
+    8070789788,
+    8070789789,
+    8070789790,
+    8070789791,
+    8070789792,
+    8070789793,
+    8070789794,
+    8070789759
+  ],
+  "geometry": [
+    { "lat": 10.0285124, "lon": 76.5959856 },
+    { "lat": 10.0288241, "lon": 76.5959695 },
+    { "lat": 10.0289508, "lon": 76.5960124 },
+    { "lat": 10.0292731, "lon": 76.5959749 },
+    { "lat": 10.0296164, "lon": 76.5959373 },
+    { "lat": 10.0303454, "lon": 76.5962699 },
+    { "lat": 10.0302714, "lon": 76.5964898 },
+    { "lat": 10.0301605, "lon": 76.5966025 },
+    { "lat": 10.0299439, "lon": 76.5970424 },
+    { "lat": 10.0297009, "lon": 76.5969083 },
+    { "lat": 10.0296059, "lon": 76.5971497 },
+    { "lat": 10.0298858, "lon": 76.5973696 },
+    { "lat": 10.0292414, "lon": 76.5980777 },
+    { "lat": 10.0291617, "lon": 76.5980511 },
+    { "lat": 10.0290882, "lon": 76.5983084 },
+    { "lat": 10.0291674, "lon": 76.5983245 },
+    { "lat": 10.0289878, "lon": 76.5987536 },
+    { "lat": 10.0279631, "lon": 76.5989635 },
+    { "lat": 10.0276883, "lon": 76.5990218 },
+    { "lat": 10.0275615, "lon": 76.5989253 },
+    { "lat": 10.0274823, "lon": 76.5990218 },
+    { "lat": 10.0274136, "lon": 76.5990165 },
+    { "lat": 10.0272552, "lon": 76.5991023 },
+    { "lat": 10.0268431, "lon": 76.5988234 },
+    { "lat": 10.0266834, "lon": 76.5986068 },
+    { "lat": 10.0270333, "lon": 76.5982762 },
+    { "lat": 10.0272771, "lon": 76.5981301 },
+    { "lat": 10.0275034, "lon": 76.5980402 },
+    { "lat": 10.0277412, "lon": 76.5979490 },
+    { "lat": 10.0277570, "lon": 76.5976968 },
+    { "lat": 10.0277200, "lon": 76.5971926 },
+    { "lat": 10.0275808, "lon": 76.5967122 },
+    { "lat": 10.0276249, "lon": 76.5965703 },
+    { "lat": 10.0279102, "lon": 76.5965167 },
+    { "lat": 10.0280898, "lon": 76.5964147 },
+    { "lat": 10.0281690, "lon": 76.5960929 },
+    { "lat": 10.0285124, "lon": 76.5959856 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 865857101,
+  "bounds": {
+    "minlat": 10.0250588,
+    "minlon": 76.5673695,
+    "maxlat": 10.0260539,
+    "maxlon": 76.5685280
+  },
+  "nodes": [
+    8070789882,
+    8070789883,
+    8070789884,
+    8070789885,
+    8070789886,
+    8070789887,
+    8070789888,
+    8070789889,
+    8070789890,
+    8070789891,
+    8070789892,
+    8070789893,
+    8070789894,
+    8070789895,
+    8070789896,
+    8070789897,
+    8070789898,
+    8070789899,
+    8070789900,
+    8070789882
+  ],
+  "geometry": [
+    { "lat": 10.0251862, "lon": 76.5679056 },
+    { "lat": 10.0252044, "lon": 76.5681768 },
+    { "lat": 10.0253136, "lon": 76.5682507 },
+    { "lat": 10.0253258, "lon": 76.5684294 },
+    { "lat": 10.0253561, "lon": 76.5685280 },
+    { "lat": 10.0255321, "lon": 76.5684417 },
+    { "lat": 10.0255928, "lon": 76.5683740 },
+    { "lat": 10.0257384, "lon": 76.5682569 },
+    { "lat": 10.0259690, "lon": 76.5679673 },
+    { "lat": 10.0260539, "lon": 76.5678748 },
+    { "lat": 10.0259204, "lon": 76.5677208 },
+    { "lat": 10.0258294, "lon": 76.5676407 },
+    { "lat": 10.0257202, "lon": 76.5676099 },
+    { "lat": 10.0256110, "lon": 76.5673695 },
+    { "lat": 10.0253682, "lon": 76.5675051 },
+    { "lat": 10.0251559, "lon": 76.5676222 },
+    { "lat": 10.0251862, "lon": 76.5676961 },
+    { "lat": 10.0250588, "lon": 76.5677393 },
+    { "lat": 10.0251377, "lon": 76.5678194 },
+    { "lat": 10.0251862, "lon": 76.5679056 }
+  ],
+  "tags": {
+    "addr:street": "Paipra Pezhakkapilly-Mulavoor Road",
+    "amenity": "college",
+    "description": "degree courses",
+    "name": "ilahia college of arts and science",
+    "operator": "ILAHIA trust",
+    "operator:type": "management",
+    "website": "https://collegedunia.com/college/1950-ilahia-college-of-arts-and-science-muvattupuzha"
+  }
+},
+{
+  "type": "way",
+  "id": 890026191,
+  "bounds": {
+    "minlat": 10.1043548,
+    "minlon": 76.6404771,
+    "maxlat": 10.1058621,
+    "maxlon": 76.6422634
+  },
+  "nodes": [
+    8273078338,
+    8273078339,
+    8273078340,
+    8273078341,
+    8273078342,
+    8273078343,
+    8273078344,
+    8273078345,
+    8273078338
+  ],
+  "geometry": [
+    { "lat": 10.1055004, "lon": 76.6404771 },
+    { "lat": 10.1045508, "lon": 76.6406609 },
+    { "lat": 10.1043548, "lon": 76.6422634 },
+    { "lat": 10.1049929, "lon": 76.6422021 },
+    { "lat": 10.1049779, "lon": 76.6419827 },
+    { "lat": 10.1054853, "lon": 76.6418959 },
+    { "lat": 10.1054652, "lon": 76.6416050 },
+    { "lat": 10.1058621, "lon": 76.6414315 },
+    { "lat": 10.1055004, "lon": 76.6404771 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Mini Staduim Chelad"
+  }
+},
+{
+  "type": "way",
+  "id": 890967992,
+  "bounds": {
+    "minlat": 10.2449787,
+    "minlon": 76.3714889,
+    "maxlat": 10.2477049,
+    "maxlon": 76.3738564
+  },
+  "nodes": [
+    8280808858,
+    8280808859,
+    8280808860,
+    8280808862,
+    8280808863,
+    8280808864,
+    8280808865,
+    8280808866,
+    8280808867,
+    8280808868,
+    8280808869,
+    8303383718,
+    8280808870,
+    8280808871,
+    8280808873,
+    8280808874,
+    8280808875,
+    8280808876,
+    8280808877,
+    8280808878,
+    8280808879,
+    8280808880,
+    8280808858
+  ],
+  "geometry": [
+    { "lat": 10.2461251, "lon": 76.3714889 },
+    { "lat": 10.2464802, "lon": 76.3716499 },
+    { "lat": 10.2467732, "lon": 76.3717437 },
+    { "lat": 10.2470556, "lon": 76.3718107 },
+    { "lat": 10.2471559, "lon": 76.3717571 },
+    { "lat": 10.2473881, "lon": 76.3716123 },
+    { "lat": 10.2475993, "lon": 76.3716498 },
+    { "lat": 10.2477049, "lon": 76.3717786 },
+    { "lat": 10.2476046, "lon": 76.3723740 },
+    { "lat": 10.2476943, "lon": 76.3728890 },
+    { "lat": 10.2470714, "lon": 76.3734898 },
+    { "lat": 10.2464423, "lon": 76.3737568 },
+    { "lat": 10.2461544, "lon": 76.3738564 },
+    { "lat": 10.2458149, "lon": 76.3735971 },
+    { "lat": 10.2449787, "lon": 76.3731220 },
+    { "lat": 10.2451250, "lon": 76.3726669 },
+    { "lat": 10.2462172, "lon": 76.3730338 },
+    { "lat": 10.2462449, "lon": 76.3725357 },
+    { "lat": 10.2465578, "lon": 76.3725323 },
+    { "lat": 10.2465340, "lon": 76.3717919 },
+    { "lat": 10.2463413, "lon": 76.3717035 },
+    { "lat": 10.2461040, "lon": 76.3716089 },
+    { "lat": 10.2461251, "lon": 76.3714889 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Naipunnya Institute of Management and Information Technology Pongam"
+  }
+},
+{
+  "type": "way",
+  "id": 890995572,
+  "bounds": {
+    "minlat": 10.2636341,
+    "minlon": 76.3596543,
+    "maxlat": 10.2657187,
+    "maxlon": 76.3613852
+  },
+  "nodes": [
+    8281135713,
+    8281135714,
+    8281222474,
+    8281135715,
+    8281135716,
+    8281219517,
+    8281222473,
+    8281219518,
+    8281222476,
+    8281219519,
+    8281222475,
+    8281135713
+  ],
+  "geometry": [
+    { "lat": 10.2657187, "lon": 76.3603061 },
+    { "lat": 10.2653799, "lon": 76.3613852 },
+    { "lat": 10.2644740, "lon": 76.3610942 },
+    { "lat": 10.2636341, "lon": 76.3607790 },
+    { "lat": 10.2636759, "lon": 76.3606441 },
+    { "lat": 10.2641932, "lon": 76.3597536 },
+    { "lat": 10.2642486, "lon": 76.3596543 },
+    { "lat": 10.2644677, "lon": 76.3597053 },
+    { "lat": 10.2649111, "lon": 76.3598206 },
+    { "lat": 10.2653228, "lon": 76.3599601 },
+    { "lat": 10.2655841, "lon": 76.3601210 },
+    { "lat": 10.2657187, "lon": 76.3603061 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Government Polytechnic College Koratty"
+  }
+},
+{
+  "type": "way",
+  "id": 906931957,
+  "bounds": {
+    "minlat": 10.0663223,
+    "minlon": 76.3262596,
+    "maxlat": 10.0683144,
+    "maxlon": 76.3287472
+  },
+  "nodes": [
+    8421576818,
+    2610509879,
+    2610509880,
+    8421576811,
+    8421576812,
+    8421576813,
+    8421576814,
+    8421576815,
+    8421576816,
+    8421576817,
+    8421576818
+  ],
+  "geometry": [
+    { "lat": 10.0672788, "lon": 76.3265383 },
+    { "lat": 10.0670139, "lon": 76.3262596 },
+    { "lat": 10.0667062, "lon": 76.3270427 },
+    { "lat": 10.0663223, "lon": 76.3277851 },
+    { "lat": 10.0675963, "lon": 76.3287472 },
+    { "lat": 10.0678509, "lon": 76.3283126 },
+    { "lat": 10.0679143, "lon": 76.3279746 },
+    { "lat": 10.0681269, "lon": 76.3279921 },
+    { "lat": 10.0683144, "lon": 76.3272330 },
+    { "lat": 10.0679922, "lon": 76.3270801 },
+    { "lat": 10.0672788, "lon": 76.3265383 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "SCMS Cochin"
+  }
+},
+{
+  "type": "way",
+  "id": 935403602,
+  "bounds": {
+    "minlat": 10.1487391,
+    "minlon": 76.2889117,
+    "maxlat": 10.1493795,
+    "maxlon": 76.2900114
+  },
+  "nodes": [
+    8668407772,
+    8668407773,
+    8668407774,
+    8668407775,
+    8668407776,
+    8668407777,
+    8668407772
+  ],
+  "geometry": [
+    { "lat": 10.1490758, "lon": 76.2889117 },
+    { "lat": 10.1487391, "lon": 76.2892847 },
+    { "lat": 10.1489260, "lon": 76.2900114 },
+    { "lat": 10.1491683, "lon": 76.2899470 },
+    { "lat": 10.1493795, "lon": 76.2894085 },
+    { "lat": 10.1492105, "lon": 76.2890372 },
+    { "lat": 10.1490758, "lon": 76.2889117 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "M E S T O Abdulla Memorial College",
+    "operator": "private",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 957454675,
+  "bounds": {
+    "minlat": 10.0858836,
+    "minlon": 76.4814715,
+    "maxlat": 10.0863786,
+    "maxlon": 76.4829573
+  },
+  "nodes": [
+    8859484131,
+    8859484132,
+    8859484133,
+    8859484134,
+    8859484131
+  ],
+  "geometry": [
+    { "lat": 10.0863744, "lon": 76.4814715 },
+    { "lat": 10.0859661, "lon": 76.4814796 },
+    { "lat": 10.0858836, "lon": 76.4829467 },
+    { "lat": 10.0863786, "lon": 76.4829573 },
+    { "lat": 10.0863744, "lon": 76.4814715 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "St Marys College Of  Commerce And Management Studies"
+  }
+},
+{
+  "type": "way",
+  "id": 958767205,
+  "bounds": {
+    "minlat": 10.1528815,
+    "minlon": 76.2404449,
+    "maxlat": 10.1531138,
+    "maxlon": 76.2405951
+  },
+  "nodes": [
+    8871279224,
+    8871279225,
+    8871279226,
+    8871279227,
+    8871279224
+  ],
+  "geometry": [
+    { "lat": 10.1531085, "lon": 76.2404503 },
+    { "lat": 10.1531138, "lon": 76.2405897 },
+    { "lat": 10.1528867, "lon": 76.2405951 },
+    { "lat": 10.1528815, "lon": 76.2404449 },
+    { "lat": 10.1531085, "lon": 76.2404503 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Margregorius College Ground",
+    "operator": "college",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 959793044,
+  "bounds": {
+    "minlat": 10.1256709,
+    "minlon": 76.2211263,
+    "maxlat": 10.1264092,
+    "maxlon": 76.2218542
+  },
+  "nodes": [
+    8880377747,
+    8880377748,
+    8880377749,
+    8880377750,
+    8880377747
+  ],
+  "geometry": [
+    { "lat": 10.1262030, "lon": 76.2211263 },
+    { "lat": 10.1264092, "lon": 76.2216291 },
+    { "lat": 10.1258771, "lon": 76.2218542 },
+    { "lat": 10.1256709, "lon": 76.2213514 },
+    { "lat": 10.1262030, "lon": 76.2211263 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 965422583,
+  "bounds": {
+    "minlat": 10.1548460,
+    "minlon": 76.5394954,
+    "maxlat": 10.1563531,
+    "maxlon": 76.5410050
+  },
+  "nodes": [
+    8931098870,
+    8931098871,
+    8931098872,
+    8931098873,
+    8931098874,
+    8931098875,
+    8931098876,
+    8931098870
+  ],
+  "geometry": [
+    { "lat": 10.1557561, "lon": 76.5408959 },
+    { "lat": 10.1548460, "lon": 76.5410050 },
+    { "lat": 10.1548618, "lon": 76.5399482 },
+    { "lat": 10.1553027, "lon": 76.5395539 },
+    { "lat": 10.1558123, "lon": 76.5394954 },
+    { "lat": 10.1563531, "lon": 76.5395259 },
+    { "lat": 10.1563463, "lon": 76.5404833 },
+    { "lat": 10.1557561, "lon": 76.5408959 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Rajagiri Viswajyothi College of Arts & Applied Sciences"
+  }
+},
+{
+  "type": "way",
+  "id": 965429327,
+  "bounds": {
+    "minlat": 10.1222323,
+    "minlon": 76.5569761,
+    "maxlat": 10.1225091,
+    "maxlon": 76.5573428
+  },
+  "nodes": [
+    8931160094,
+    8931160095,
+    8931160096,
+    8931160097,
+    8931160098,
+    8931160094
+  ],
+  "geometry": [
+    { "lat": 10.1225091, "lon": 76.5573381 },
+    { "lat": 10.1222399, "lon": 76.5573428 },
+    { "lat": 10.1222323, "lon": 76.5569761 },
+    { "lat": 10.1224371, "lon": 76.5569923 },
+    { "lat": 10.1225084, "lon": 76.5571232 },
+    { "lat": 10.1225091, "lon": 76.5573381 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Government Industrial Training Institute Vengoor"
+  }
+},
+{
+  "type": "way",
+  "id": 966221427,
+  "bounds": {
+    "minlat": 10.0237496,
+    "minlon": 76.5555283,
+    "maxlat": 10.0242685,
+    "maxlon": 76.5562135
+  },
+  "nodes": [
+    8939194715,
+    8939194716,
+    8939203117,
+    8939203118,
+    8939194715
+  ],
+  "geometry": [
+    { "lat": 10.0241831, "lon": 76.5555283 },
+    { "lat": 10.0242685, "lon": 76.5556228 },
+    { "lat": 10.0237911, "lon": 76.5562135 },
+    { "lat": 10.0237496, "lon": 76.5560208 },
+    { "lat": 10.0241831, "lon": 76.5555283 }
+  ],
+  "tags": {
+    "addr:city": "Pezhakkapilly",
+    "addr:postcode": "683541",
+    "addr:street": "Pallichira road , Pezhakkapilly",
+    "amenity": "college",
+    "name": "Arafa College of Arts and Science",
+    "operator": "Trust",
+    "operator:type": "management",
+    "website": "https://www.arafacollege.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 979466950,
+  "bounds": {
+    "minlat": 10.1940202,
+    "minlon": 76.2512310,
+    "maxlat": 10.1956386,
+    "maxlon": 76.2533915
+  },
+  "nodes": [
+    9061583056,
+    9061583057,
+    9061583058,
+    9061583059,
+    9061583060,
+    9061583061,
+    9061583056
+  ],
+  "geometry": [
+    { "lat": 10.1956386, "lon": 76.2517471 },
+    { "lat": 10.1954260, "lon": 76.2532414 },
+    { "lat": 10.1940911, "lon": 76.2533915 },
+    { "lat": 10.1940202, "lon": 76.2515550 },
+    { "lat": 10.1947468, "lon": 76.2512310 },
+    { "lat": 10.1955973, "lon": 76.2514710 },
+    { "lat": 10.1956386, "lon": 76.2517471 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Presentation College Ground"
+  }
+},
+{
+  "type": "way",
+  "id": 982787062,
+  "bounds": {
+    "minlat": 10.0400711,
+    "minlon": 76.5064570,
+    "maxlat": 10.0414493,
+    "maxlon": 76.5084820
+  },
+  "nodes": [
+    9087911615,
+    9087911616,
+    9087911617,
+    9087911618,
+    9087911619,
+    9087911620,
+    9087911621,
+    9087911622,
+    9087911623,
+    9087911624,
+    9087911625,
+    9087911626,
+    9087911627,
+    9087911628,
+    9087911629,
+    9087911630,
+    9087911631,
+    9087911615
+  ],
+  "geometry": [
+    { "lat": 10.0414493, "lon": 76.5083755 },
+    { "lat": 10.0413864, "lon": 76.5080190 },
+    { "lat": 10.0411715, "lon": 76.5072659 },
+    { "lat": 10.0411663, "lon": 76.5070557 },
+    { "lat": 10.0410143, "lon": 76.5069679 },
+    { "lat": 10.0409986, "lon": 76.5065794 },
+    { "lat": 10.0408493, "lon": 76.5064890 },
+    { "lat": 10.0406711, "lon": 76.5064570 },
+    { "lat": 10.0404274, "lon": 76.5066832 },
+    { "lat": 10.0402702, "lon": 76.5069333 },
+    { "lat": 10.0400711, "lon": 76.5072872 },
+    { "lat": 10.0401182, "lon": 76.5074123 },
+    { "lat": 10.0402990, "lon": 76.5074256 },
+    { "lat": 10.0403357, "lon": 76.5075028 },
+    { "lat": 10.0407628, "lon": 76.5076358 },
+    { "lat": 10.0411139, "lon": 76.5083995 },
+    { "lat": 10.0413969, "lon": 76.5084820 },
+    { "lat": 10.0414493, "lon": 76.5083755 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 983803053,
+  "bounds": {
+    "minlat": 10.2991617,
+    "minlon": 76.4302272,
+    "maxlat": 10.3008602,
+    "maxlon": 76.4365177
+  },
+  "nodes": [
+    9096871671,
+    9096871672,
+    9096871673,
+    9096871674,
+    9096871675,
+    9096871676,
+    9096871677,
+    9096871678,
+    9096871679,
+    9096871680,
+    9096871681,
+    9096871682,
+    9096871683,
+    9096871684,
+    9096871685,
+    9096871687,
+    9096871686,
+    9096871688,
+    9096871689,
+    9096871671
+  ],
+  "geometry": [
+    { "lat": 10.3008602, "lon": 76.4307422 },
+    { "lat": 10.3005984, "lon": 76.4307250 },
+    { "lat": 10.3006322, "lon": 76.4302615 },
+    { "lat": 10.3001846, "lon": 76.4302272 },
+    { "lat": 10.3000073, "lon": 76.4307937 },
+    { "lat": 10.2997877, "lon": 76.4313087 },
+    { "lat": 10.2995671, "lon": 76.4316963 },
+    { "lat": 10.2994108, "lon": 76.4320783 },
+    { "lat": 10.2992588, "lon": 76.4324001 },
+    { "lat": 10.2992251, "lon": 76.4328550 },
+    { "lat": 10.2992166, "lon": 76.4332885 },
+    { "lat": 10.2991955, "lon": 76.4340095 },
+    { "lat": 10.2991828, "lon": 76.4347133 },
+    { "lat": 10.2991617, "lon": 76.4356402 },
+    { "lat": 10.2991659, "lon": 76.4362410 },
+    { "lat": 10.2992035, "lon": 76.4365177 },
+    { "lat": 10.2999962, "lon": 76.4362425 },
+    { "lat": 10.3001199, "lon": 76.4349472 },
+    { "lat": 10.3008067, "lon": 76.4346042 },
+    { "lat": 10.3008602, "lon": 76.4307422 }
+  ],
+  "tags": {
+    "addr:city": "pariyaram",
+    "addr:housenumber": "Ward no.8",
+    "addr:street": "Chalakudy - Anamala Road",
+    "amenity": "university",
+    "name": "kerala vetinary and animal sciences University"
+  }
+},
+{
+  "type": "way",
+  "id": 983805015,
+  "bounds": {
+    "minlat": 10.2992462,
+    "minlon": 76.4363011,
+    "maxlat": 10.3002110,
+    "maxlon": 76.4376036
+  },
+  "nodes": [
+    9096837180,
+    9096837181,
+    9096837182,
+    9096837184,
+    9096837183,
+    9096837186,
+    9096837187,
+    9096837185,
+    9096837188,
+    9096837180
+  ],
+  "geometry": [
+    { "lat": 10.3000062, "lon": 76.4363011 },
+    { "lat": 10.2992462, "lon": 76.4365758 },
+    { "lat": 10.2992884, "lon": 76.4368161 },
+    { "lat": 10.2993370, "lon": 76.4369792 },
+    { "lat": 10.2994235, "lon": 76.4371380 },
+    { "lat": 10.2995058, "lon": 76.4372764 },
+    { "lat": 10.2995745, "lon": 76.4374400 },
+    { "lat": 10.2996220, "lon": 76.4376036 },
+    { "lat": 10.3002110, "lon": 76.4375124 },
+    { "lat": 10.3000062, "lon": 76.4363011 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 983825184,
+  "bounds": {
+    "minlat": 10.0563567,
+    "minlon": 76.2710393,
+    "maxlat": 10.0567453,
+    "maxlon": 76.2718099
+  },
+  "nodes": [
+    9097056690,
+    9097056691,
+    9097056692,
+    9097056693,
+    9097056694,
+    9097056690
+  ],
+  "geometry": [
+    { "lat": 10.0567269, "lon": 76.2716277 },
+    { "lat": 10.0566809, "lon": 76.2710580 },
+    { "lat": 10.0563567, "lon": 76.2710393 },
+    { "lat": 10.0564556, "lon": 76.2718099 },
+    { "lat": 10.0567453, "lon": 76.2717818 },
+    { "lat": 10.0567269, "lon": 76.2716277 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 1026274468,
+  "bounds": {
+    "minlat": 10.0271897,
+    "minlon": 76.3276663,
+    "maxlat": 10.0296176,
+    "maxlon": 76.3292339
+  },
+  "nodes": [
+    9462079264,
+    9462079265,
+    12629993788,
+    9462079266,
+    9462079267,
+    9462079268,
+    9462079269,
+    9462079270,
+    9462079271,
+    9462079272,
+    9462079273,
+    6310243373,
+    9462079276,
+    9462079284,
+    9462079285,
+    9462079274,
+    9462079275,
+    9462079264
+  ],
+  "geometry": [
+    { "lat": 10.0275992, "lon": 76.3290701 },
+    { "lat": 10.0278420, "lon": 76.3292262 },
+    { "lat": 10.0280119, "lon": 76.3292339 },
+    { "lat": 10.0284778, "lon": 76.3292028 },
+    { "lat": 10.0288516, "lon": 76.3290650 },
+    { "lat": 10.0293957, "lon": 76.3290865 },
+    { "lat": 10.0296176, "lon": 76.3286788 },
+    { "lat": 10.0295172, "lon": 76.3282282 },
+    { "lat": 10.0294961, "lon": 76.3280994 },
+    { "lat": 10.0292056, "lon": 76.3281209 },
+    { "lat": 10.0291316, "lon": 76.3277668 },
+    { "lat": 10.0283909, "lon": 76.3277353 },
+    { "lat": 10.0275678, "lon": 76.3276663 },
+    { "lat": 10.0272535, "lon": 76.3281727 },
+    { "lat": 10.0271897, "lon": 76.3285384 },
+    { "lat": 10.0272246, "lon": 76.3288505 },
+    { "lat": 10.0272880, "lon": 76.3288934 },
+    { "lat": 10.0275992, "lon": 76.3290701 }
+  ],
+  "tags": {
+    "addr:city": "Thrikkakara",
+    "addr:postcode": "682021",
+    "alt_name": "Model Engineering College;MEC Thrikkakara;",
+    "amenity": "college",
+    "contact:facebook": "modelengineeringcollege",
+    "email": "principal@mec.ac.in",
+    "internet_access": "yes",
+    "name": "Govt. Model Engineering College",
+    "name:ml": "മോഡൽ എഞ്ചിനീയറിങ് കോളേജ്",
+    "operator": "IHRD (Govt. of Kerala)",
+    "operator:type": "public/government",
+    "short_name": "MEC",
+    "website": "https://www.mec.ac.in/",
+    "wikidata": "Q6888240",
+    "wikimedia_commons": "Category:Model Engineering College",
+    "wikipedia": "en:Model Engineering College"
+  }
+},
+{
+  "type": "way",
+  "id": 1026337752,
+  "bounds": {
+    "minlat": 10.0140949,
+    "minlon": 76.6018515,
+    "maxlat": 10.0148091,
+    "maxlon": 76.6026314
+  },
+  "nodes": [
+    9462615574,
+    9462615575,
+    9462615576,
+    9462615577,
+    9462615578,
+    9462615574
+  ],
+  "geometry": [
+    { "lat": 10.0144774, "lon": 76.6018515 },
+    { "lat": 10.0148091, "lon": 76.6020760 },
+    { "lat": 10.0145611, "lon": 76.6025039 },
+    { "lat": 10.0144505, "lon": 76.6026314 },
+    { "lat": 10.0140949, "lon": 76.6024038 },
+    { "lat": 10.0144774, "lon": 76.6018515 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 1065038927,
+  "bounds": {
+    "minlat": 10.1052796,
+    "minlon": 76.4103037,
+    "maxlat": 10.1084694,
+    "maxlon": 76.4139166
+  },
+  "nodes": [
+    9780874794,
+    9780874793,
+    9780874792,
+    9780874791,
+    9780874790,
+    9780874789,
+    9780874788,
+    9780874787,
+    9780874786,
+    9780874785,
+    9780874784,
+    9780874783,
+    9780874782,
+    9780874781,
+    9780874780,
+    9780874779,
+    9780874778,
+    9780874777,
+    9780874776,
+    9780874775,
+    9780874794
+  ],
+  "geometry": [
+    { "lat": 10.1074528, "lon": 76.4103574 },
+    { "lat": 10.1068640, "lon": 76.4103037 },
+    { "lat": 10.1064230, "lon": 76.4103681 },
+    { "lat": 10.1059751, "lon": 76.4107258 },
+    { "lat": 10.1052796, "lon": 76.4108455 },
+    { "lat": 10.1053615, "lon": 76.4139086 },
+    { "lat": 10.1060533, "lon": 76.4139166 },
+    { "lat": 10.1061352, "lon": 76.4138067 },
+    { "lat": 10.1063834, "lon": 76.4137986 },
+    { "lat": 10.1063675, "lon": 76.4136645 },
+    { "lat": 10.1063860, "lon": 76.4133427 },
+    { "lat": 10.1066263, "lon": 76.4130744 },
+    { "lat": 10.1067980, "lon": 76.4129940 },
+    { "lat": 10.1071201, "lon": 76.4125219 },
+    { "lat": 10.1073789, "lon": 76.4125004 },
+    { "lat": 10.1084219, "lon": 76.4126265 },
+    { "lat": 10.1084694, "lon": 76.4125286 },
+    { "lat": 10.1083599, "lon": 76.4120471 },
+    { "lat": 10.1080588, "lon": 76.4109555 },
+    { "lat": 10.1079017, "lon": 76.4106148 },
+    { "lat": 10.1074528, "lon": 76.4103574 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "MES College",
+    "wikidata": "Q6715452"
+  }
+},
+{
+  "type": "way",
+  "id": 1068277564,
+  "bounds": {
+    "minlat": 10.2301428,
+    "minlon": 76.4075704,
+    "maxlat": 10.2327156,
+    "maxlon": 76.4102273
+  },
+  "nodes": [
+    9806876733,
+    9806876734,
+    9806876735,
+    9806876736,
+    9806876737,
+    9806876738,
+    9806876739,
+    9806876740,
+    9806876741,
+    9806876742,
+    9806876743,
+    9806876744,
+    9806876745,
+    9806876746,
+    9806876747,
+    9806876748,
+    9806876749,
+    9806876750,
+    9806876751,
+    9806876752,
+    9806876733
+  ],
+  "geometry": [
+    { "lat": 10.2303869, "lon": 76.4075704 },
+    { "lat": 10.2303146, "lon": 76.4081813 },
+    { "lat": 10.2301654, "lon": 76.4089575 },
+    { "lat": 10.2301428, "lon": 76.4092009 },
+    { "lat": 10.2304095, "lon": 76.4092698 },
+    { "lat": 10.2303914, "lon": 76.4093892 },
+    { "lat": 10.2306310, "lon": 76.4094444 },
+    { "lat": 10.2304474, "lon": 76.4100645 },
+    { "lat": 10.2310367, "lon": 76.4102273 },
+    { "lat": 10.2312954, "lon": 76.4092377 },
+    { "lat": 10.2326659, "lon": 76.4095270 },
+    { "lat": 10.2327156, "lon": 76.4084247 },
+    { "lat": 10.2324625, "lon": 76.4081997 },
+    { "lat": 10.2319789, "lon": 76.4080251 },
+    { "lat": 10.2318597, "lon": 76.4080035 },
+    { "lat": 10.2316952, "lon": 76.4080114 },
+    { "lat": 10.2316527, "lon": 76.4080605 },
+    { "lat": 10.2315269, "lon": 76.4080448 },
+    { "lat": 10.2310346, "lon": 76.4077534 },
+    { "lat": 10.2309518, "lon": 76.4077263 },
+    { "lat": 10.2303869, "lon": 76.4075704 }
+  ],
+  "tags": {
+    "addr:city": "Angamaly",
+    "addr:postcode": "683577",
+    "alt_name": "FISAT",
+    "amenity": "college",
+    "name": "Federal Institute of Science and Technology",
+    "operator": "Federal Bank Officers' Association Educational Society",
+    "operator:type": "private",
+    "website": "https://www.fisat.ac.in/",
+    "wikidata": "Q5440259",
+    "wikipedia": "en:Federal Institute of Science and Technology"
+  }
+},
+{
+  "type": "way",
+  "id": 1074762828,
+  "bounds": {
+    "minlat": 10.0179912,
+    "minlon": 76.3701328,
+    "maxlat": 10.0185567,
+    "maxlon": 76.3710662
+  },
+  "nodes": [
+    9857779366,
+    9857779367,
+    9857779368,
+    9857779369,
+    9857779370,
+    9857779371,
+    9857779372,
+    9857779373,
+    9857779374,
+    9857779375,
+    9857779376,
+    9857779366
+  ],
+  "geometry": [
+    { "lat": 10.0185070, "lon": 76.3709259 },
+    { "lat": 10.0185494, "lon": 76.3707856 },
+    { "lat": 10.0185567, "lon": 76.3706435 },
+    { "lat": 10.0182418, "lon": 76.3702712 },
+    { "lat": 10.0180962, "lon": 76.3701328 },
+    { "lat": 10.0180391, "lon": 76.3701366 },
+    { "lat": 10.0180060, "lon": 76.3704994 },
+    { "lat": 10.0179912, "lon": 76.3708698 },
+    { "lat": 10.0182196, "lon": 76.3709035 },
+    { "lat": 10.0183099, "lon": 76.3709353 },
+    { "lat": 10.0183707, "lon": 76.3710662 },
+    { "lat": 10.0185070, "lon": 76.3709259 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Kochi Bussiness School"
+  }
+},
+{
+  "type": "way",
+  "id": 1181285936,
+  "bounds": {
+    "minlat": 10.1012457,
+    "minlon": 76.3954703,
+    "maxlat": 10.1019693,
+    "maxlon": 76.3961894
+  },
+  "nodes": [
+    10970406419,
+    10970406420,
+    10970406421,
+    10970406422,
+    10970406419
+  ],
+  "geometry": [
+    { "lat": 10.1019693, "lon": 76.3956372 },
+    { "lat": 10.1018115, "lon": 76.3961894 },
+    { "lat": 10.1012457, "lon": 76.3960227 },
+    { "lat": 10.1014034, "lon": 76.3954703 },
+    { "lat": 10.1019693, "lon": 76.3956372 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Don Bosco College Of Philosophy"
+  }
+},
+{
+  "type": "way",
+  "id": 1221907180,
+  "bounds": {
+    "minlat": 10.1179710,
+    "minlon": 76.5862191,
+    "maxlat": 10.1191587,
+    "maxlon": 76.5874718
+  },
+  "nodes": [
+    11332201761,
+    11332201762,
+    11332201763,
+    11332201764,
+    11332201765,
+    11332201766,
+    11332201767,
+    11332201768,
+    11332332069,
+    11332332070,
+    11332332071,
+    11332331913,
+    11332201761
+  ],
+  "geometry": [
+    { "lat": 10.1180530, "lon": 76.5863487 },
+    { "lat": 10.1181077, "lon": 76.5862191 },
+    { "lat": 10.1191587, "lon": 76.5866475 },
+    { "lat": 10.1190219, "lon": 76.5873421 },
+    { "lat": 10.1190150, "lon": 76.5873861 },
+    { "lat": 10.1188258, "lon": 76.5873468 },
+    { "lat": 10.1185021, "lon": 76.5873329 },
+    { "lat": 10.1183950, "lon": 76.5874510 },
+    { "lat": 10.1181875, "lon": 76.5874718 },
+    { "lat": 10.1179710, "lon": 76.5874348 },
+    { "lat": 10.1180120, "lon": 76.5869091 },
+    { "lat": 10.1180391, "lon": 76.5865385 },
+    { "lat": 10.1180530, "lon": 76.5863487 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "email": "mareliascollege@gmail.com",
+    "image": "https://www.mecollege.ac.in/images/about-us/home_image.jpg",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "mobile": "+918606842600",
+    "opening_hours": "Mo-Fr 08:00-16:30",
+    "website": "https://mecollege.ac.in/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1221907623,
+  "bounds": {
+    "minlat": 10.1179710,
+    "minlon": 76.5865385,
+    "maxlat": 10.1188967,
+    "maxlon": 76.5874718
+  },
+  "nodes": [
+    11332331913,
+    11332332070,
+    11332332069,
+    11332201768,
+    11332201767,
+    11332201766,
+    11332331914,
+    11332331913
+  ],
+  "geometry": [
+    { "lat": 10.1180391, "lon": 76.5865385 },
+    { "lat": 10.1179710, "lon": 76.5874348 },
+    { "lat": 10.1181875, "lon": 76.5874718 },
+    { "lat": 10.1183950, "lon": 76.5874510 },
+    { "lat": 10.1185021, "lon": 76.5873329 },
+    { "lat": 10.1188258, "lon": 76.5873468 },
+    { "lat": 10.1188967, "lon": 76.5868329 },
+    { "lat": 10.1180391, "lon": 76.5865385 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 1256938781,
+  "bounds": {
+    "minlat": 10.0454880,
+    "minlon": 76.2946092,
+    "maxlat": 10.0466901,
+    "maxlon": 76.2964582
+  },
+  "nodes": [
+    11685296121,
+    11685296122,
+    11685296123,
+    11685296124,
+    11685296125,
+    11685296126,
+    11685296127,
+    11685296128,
+    11685296129,
+    11685296130,
+    11685296131,
+    11685296132,
+    11685296133,
+    11685296134,
+    11685296135,
+    11685296136,
+    11685296137,
+    11685296121
+  ],
+  "geometry": [
+    { "lat": 10.0457967, "lon": 76.2964582 },
+    { "lat": 10.0463241, "lon": 76.2963184 },
+    { "lat": 10.0466901, "lon": 76.2961866 },
+    { "lat": 10.0464732, "lon": 76.2956556 },
+    { "lat": 10.0464519, "lon": 76.2955257 },
+    { "lat": 10.0465100, "lon": 76.2953802 },
+    { "lat": 10.0465759, "lon": 76.2952976 },
+    { "lat": 10.0466204, "lon": 76.2951579 },
+    { "lat": 10.0466185, "lon": 76.2949770 },
+    { "lat": 10.0465236, "lon": 76.2946092 },
+    { "lat": 10.0459173, "lon": 76.2947470 },
+    { "lat": 10.0459250, "lon": 76.2951360 },
+    { "lat": 10.0458890, "lon": 76.2952665 },
+    { "lat": 10.0457322, "lon": 76.2952639 },
+    { "lat": 10.0454880, "lon": 76.2953527 },
+    { "lat": 10.0455060, "lon": 76.2955224 },
+    { "lat": 10.0456474, "lon": 76.2960288 },
+    { "lat": 10.0457967, "lon": 76.2964582 }
+  ],
+  "tags": {
+    "addr:city": "Brahmastanam, Edapally North",
+    "addr:district": "Ernakulam",
+    "addr:postcode": "682024",
+    "addr:street": "Kunnumpuram",
+    "amenity": "university",
+    "description": "Amrita Vishwa Vidyapeetham is a multi-campus, multi-disciplinary, research-intensive, private deemed university in India. This Kochi campus with area of 150-acre located in Ponekkara, houses schools of Medicine, Health sciences, Business and Commerce.",
+    "education": "university",
+    "internet_access": "wlan",
+    "name": "Amrita Vishwa Vidyapeetham",
+    "operator": "Mata Amritanandamayi math",
+    "website": "https://www.amrita.edu/campus/kochi",
+    "wikidata": "Q4748684",
+    "wikipedia": "en:Amrita Vishwa Vidyapeetham"
+  }
+},
+{
+  "type": "way",
+  "id": 1335988055,
+  "bounds": {
+    "minlat": 10.2879595,
+    "minlon": 76.3446271,
+    "maxlat": 10.2900127,
+    "maxlon": 76.3467193
+  },
+  "nodes": [
+    12358401301,
+    12358401300,
+    12358401299,
+    12358401298,
+    12358401297,
+    12358401296,
+    12358401295,
+    12358401294,
+    12358401301
+  ],
+  "geometry": [
+    { "lat": 10.2879595, "lon": 76.3446861 },
+    { "lat": 10.2881232, "lon": 76.3453460 },
+    { "lat": 10.2883132, "lon": 76.3457483 },
+    { "lat": 10.2886563, "lon": 76.3461614 },
+    { "lat": 10.2895588, "lon": 76.3467193 },
+    { "lat": 10.2897752, "lon": 76.3455176 },
+    { "lat": 10.2900127, "lon": 76.3447130 },
+    { "lat": 10.2895272, "lon": 76.3446271 },
+    { "lat": 10.2879595, "lon": 76.3446861 }
+  ],
+  "tags": {
+    "amenity": "college"
+  }
+},
+{
+  "type": "way",
+  "id": 1335988063,
+  "bounds": {
+    "minlat": 10.2936071,
+    "minlon": 76.3299528,
+    "maxlat": 10.2951061,
+    "maxlon": 76.3313797
+  },
+  "nodes": [
+    8838193632,
+    12358401336,
+    12358401335,
+    12358401334,
+    12358401333,
+    6257137194,
+    8838193632
+  ],
+  "geometry": [
+    { "lat": 10.2951061, "lon": 76.3305268 },
+    { "lat": 10.2947287, "lon": 76.3308889 },
+    { "lat": 10.2944648, "lon": 76.3310122 },
+    { "lat": 10.2940927, "lon": 76.3313797 },
+    { "lat": 10.2936071, "lon": 76.3308111 },
+    { "lat": 10.2945783, "lon": 76.3299528 },
+    { "lat": 10.2951061, "lon": 76.3305268 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Southern College"
+  }
+},
+{
+  "type": "way",
+  "id": 1336085102,
+  "bounds": {
+    "minlat": 10.2995370,
+    "minlon": 76.3351133,
+    "maxlat": 10.2997903,
+    "maxlon": 76.3359100
+  },
+  "nodes": [
+    12358980671,
+    12358980670,
+    12358980669,
+    12358980668,
+    12358980671
+  ],
+  "geometry": [
+    { "lat": 10.2995370, "lon": 76.3351133 },
+    { "lat": 10.2995423, "lon": 76.3359019 },
+    { "lat": 10.2997903, "lon": 76.3359100 },
+    { "lat": 10.2997877, "lon": 76.3351294 },
+    { "lat": 10.2995370, "lon": 76.3351133 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "name": "Nirmala College"
+  }
+},
+{
+  "type": "way",
+  "id": 1353686552,
+  "bounds": {
+    "minlat": 10.2659533,
+    "minlon": 76.4021114,
+    "maxlat": 10.2669737,
+    "maxlon": 76.4029325
+  },
+  "nodes": [
+    12526541041,
+    12526541042,
+    12526541043,
+    12526541044,
+    12526541045,
+    12526541046,
+    12526541047,
+    12526541048,
+    12526541041
+  ],
+  "geometry": [
+    { "lat": 10.2669423, "lon": 76.4021256 },
+    { "lat": 10.2661901, "lon": 76.4021114 },
+    { "lat": 10.2660160, "lon": 76.4024264 },
+    { "lat": 10.2659533, "lon": 76.4029042 },
+    { "lat": 10.2663886, "lon": 76.4029325 },
+    { "lat": 10.2664304, "lon": 76.4026494 },
+    { "lat": 10.2669563, "lon": 76.4026919 },
+    { "lat": 10.2669737, "lon": 76.4021185 },
+    { "lat": 10.2669423, "lon": 76.4021256 }
+  ],
+  "tags": {
+    "amenity": "college",
+    "internet_access": "yes"
+  }
+}
+
+  ]
+}

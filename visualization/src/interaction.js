@@ -10,6 +10,78 @@ import {
     getClimateData
 } from "./climate.js";
 
+let ernakulamFeaturePromise = null;
+
+function pointInRing(longitude, latitude, ring) {
+    let inside = false;
+
+    for (let index = 0, previous = ring.length - 1; index < ring.length; previous = index++) {
+        const [currentLongitude, currentLatitude] = ring[index];
+        const [previousLongitude, previousLatitude] = ring[previous];
+        const crossesLatitude =
+            (currentLatitude > latitude) !== (previousLatitude > latitude);
+
+        if (
+            crossesLatitude &&
+            longitude <
+                ((previousLongitude - currentLongitude) *
+                    (latitude - currentLatitude)) /
+                    (previousLatitude - currentLatitude) +
+                    currentLongitude
+        ) {
+            inside = !inside;
+        }
+    }
+
+    return inside;
+}
+
+function pointInGeometry(longitude, latitude, geometry) {
+    const polygons =
+        geometry.type === "Polygon"
+            ? [geometry.coordinates]
+            : geometry.type === "MultiPolygon"
+                ? geometry.coordinates
+                : [];
+
+    return polygons.some((polygon) =>
+        pointInRing(longitude, latitude, polygon[0]) &&
+        !polygon.slice(1).some((hole) => pointInRing(longitude, latitude, hole))
+    );
+}
+
+async function getErnakulamFeature() {
+    if (!ernakulamFeaturePromise) {
+        ernakulamFeaturePromise = fetch("./data/district.geojson")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Could not load district boundary: ${response.status}`);
+                }
+
+                return response.json();
+            })
+            .then((data) =>
+                data.features.find(
+                    (feature) =>
+                        feature.properties?.DISTRICT?.toLowerCase() === "ernakulam"
+                )
+            );
+    }
+
+    return ernakulamFeaturePromise;
+}
+
+function isNearErnakulam(latitude, longitude) {
+    // This fallback keeps the interaction usable while the detailed boundary
+    // loads and provides a forgiving click target around the district.
+    return (
+        latitude >= 9.75 &&
+        latitude <= 10.35 &&
+        longitude >= 76.05 &&
+        longitude <= 76.80
+    );
+}
+
 
 export function setupInteraction(
     camera,
@@ -117,6 +189,28 @@ export function setupInteraction(
                     longitude.toFixed(4) + "°";
             }
 
+            // Resolve the local-terrain action before any climate API call.
+            // A failed remote API must never prevent the Digital Twin view
+            // from opening.
+            const ernakulamFeature = await getErnakulamFeature();
+            const isInsideDistrict =
+                ernakulamFeature &&
+                pointInGeometry(
+                    longitude,
+                    latitude,
+                    ernakulamFeature.geometry
+                );
+
+            if (isInsideDistrict || isNearErnakulam(latitude, longitude)) {
+                window.dispatchEvent(
+                    new CustomEvent("ernakulam-selected", {
+                        detail: { latitude, longitude }
+                    })
+                );
+
+                return;
+            }
+
 
             // Find country
             const countryFeature =
@@ -156,7 +250,6 @@ export function setupInteraction(
                 );
 
             }
-
 
             // Reset climate dashboard
             setClimateValue(

@@ -216,3 +216,36 @@ canvas {
     margin-bottom: 2px;
     font-size: 11px;
 }
+
+#terrain-toolbar {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: #f5fbff;
+    background: rgba(5, 24, 38, 0.88);
+    border: 1px solid rgba(115, 220, 255, 0.55);
+    border-radius: 10px;
+    font: 13px Arial, sans-serif;
+    backdrop-filter: blur(8px);
+}
+
+#terrain-toolbar span {
+    color: #b8d4e5;
+    font-size: 12px;
+}
+
+#return-to-globe {
+    padding: 6px 9px;
+    border: 0;
+    border-radius: 5px;
+    color: #06202d;
+    background: #76d8ff;
+    cursor: pointer;
+    font-weight: bold;
+}

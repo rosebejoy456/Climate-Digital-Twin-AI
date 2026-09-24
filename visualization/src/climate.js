@@ -5,8 +5,11 @@
  * Ernakulam climate prediction backend.
  */
 
+// During local development, Vite forwards /api requests to the configured
+// backend. This avoids browser-to-ngrok CORS preflight failures. A deployed
+// site can set VITE_CLIMATE_API_URL to its own same-origin API path.
 const API_BASE_URL =
-    "https://hunting-decal-pulmonary.ngrok-free.dev";
+    import.meta.env.VITE_CLIMATE_API_URL || "/api";
 
 
 /**

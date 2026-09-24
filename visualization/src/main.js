@@ -5,6 +5,7 @@ import { addCountryBoundaries } from "./countries.js";
 import { setupInteraction } from "./interaction.js";
 import { addErnakulamBoundary } from "./ernakulam.js";
 import { addTerrain } from "./terrain.js";
+import { addTerrainInfrastructure } from "./terrainInfrastructure.js";
 import { addRoads } from "./roads.js";
 import { addWaterways } from "./waterways.js";
 import {
@@ -13,12 +14,17 @@ import {
     addAirports
 } from "./landmarks.js";
 import { runWhatIfSimulation } from "./climate.js";
+import { addBuildings } from "./buildings.js";
 
 // ======================
 // Scene
 // ======================
 
 const scene = new THREE.Scene();
+
+let ernakulamBuildings = null;
+
+
 
 // ======================
 // Camera
@@ -186,6 +192,7 @@ addErnakulamBoundary(
     "./data/district.geojson"
 );
 let terrainMesh = null;
+let terrainInfrastructure = null;
 
 addTerrain(
     scene,
@@ -196,6 +203,25 @@ addTerrain(
 
     if (terrainMesh) {
         terrainMesh.visible = false;
+        addBuildings(
+            scene,
+            terrainMesh
+        ).then((group) => {
+
+            ernakulamBuildings = group;
+
+            console.log(
+                "Ernakulam OSM building layer ready."
+            );
+
+        });
+        addTerrainInfrastructure(
+            scene,
+            terrainMesh
+        ).then((infrastructure) => {
+            terrainInfrastructure = infrastructure;
+            terrainInfrastructure.visible = terrainViewActive;
+        });
     }
 
 });
@@ -419,6 +445,83 @@ controls.zoomSpeed = 0.8;
 
 // No automatic rotation
 controls.autoRotate = false;
+
+const terrainToolbar =
+    document.getElementById("terrain-toolbar");
+
+const returnToGlobeButton =
+    document.getElementById("return-to-globe");
+
+let terrainViewActive = false;
+
+function showTerrainView() {
+    if (!terrainMesh) {
+        console.warn("Terrain is still loading. Please try the click again.");
+        return;
+    }
+
+    terrainViewActive = true;
+
+    // The globe-specific layers use spherical coordinates. Hide them before
+    // presenting the local, flat terrain coordinate system.
+    earth.visible = false;
+    earthGrid.visible = false;
+    nightLights.visible = false;
+    clouds.visible = false;
+    atmosphere.visible = false;
+    sunMesh.visible = false;
+    moon.visible = false;
+
+    terrainMesh.visible = true;
+    if (ernakulamBuildings) {
+        ernakulamBuildings.visible = true;
+    }
+
+    if (terrainInfrastructure) {
+        terrainInfrastructure.visible = true;
+    }
+
+    camera.position.set(0, 1.45, 1.35);
+    controls.target.set(0, 0.05, 0);
+    controls.minDistance = 0.55;
+    controls.maxDistance = 3;
+    controls.update();
+
+    terrainToolbar.hidden = false;
+}
+
+function showGlobeView() {
+    terrainViewActive = false;
+
+    earth.visible = true;
+    earthGrid.visible = true;
+    nightLights.visible = true;
+    clouds.visible = true;
+    atmosphere.visible = true;
+    sunMesh.visible = true;
+    moon.visible = true;
+
+    if (terrainMesh) {
+        terrainMesh.visible = false;
+    }
+    if (ernakulamBuildings) {
+        ernakulamBuildings.visible = false;
+    }
+
+    if (terrainInfrastructure) {
+        terrainInfrastructure.visible = false;
+    }
+
+    camera.position.set(0, 0, 3);
+    controls.target.set(0, 0, 0);
+    controls.minDistance = 1.15;
+    controls.maxDistance = 5;
+    controls.update();
+
+    terrainToolbar.hidden = true;
+}
+
+returnToGlobeButton.addEventListener("click", showGlobeView);
 // ==========================================
 // Globe → Ernakulam Digital Twin
 // ==========================================
@@ -431,32 +534,7 @@ window.addEventListener(
             "Opening Ernakulam 3D Digital Twin..."
         );
 
-        // Hide the global globe layers
-        earth.visible = false;
-        earthGrid.visible = false;
-        nightLights.visible = false;
-        clouds.visible = false;
-        atmosphere.visible = false;
-
-        // Show Ernakulam terrain
-        if (terrainMesh) {
-            terrainMesh.visible = true;
-        }
-
-        // Position camera for terrain view
-        camera.position.set(
-            0,
-            2.2,
-            2.4
-        );
-
-        controls.target.set(
-            0,
-            0.2,
-            0
-        );
-
-        controls.update();
+        showTerrainView();
 
         console.log(
             "Ernakulam 3D Digital Twin activated."
@@ -464,65 +542,6 @@ window.addEventListener(
 
     }
 );
-
-// ======================
-// Ernakulam Initial Focus
-// ======================
-
-// Ernakulam approximate center
-const ernakulamLatitude = 10.0;
-const ernakulamLongitude = 76.3;
-
-const lat =
-    THREE.MathUtils.degToRad(
-        ernakulamLatitude
-    );
-
-const lon =
-    THREE.MathUtils.degToRad(
-        ernakulamLongitude
-    );
-
-// IMPORTANT:
-// This coordinate system matches
-// the GeoJSON boundary system.
-
-// X = longitude
-const ernakulamX =
-    Math.cos(lat) *
-    Math.cos(lon);
-
-// Y = latitude
-const ernakulamY =
-    Math.sin(lat);
-
-// Z = longitude
-const ernakulamZ =
-    -Math.cos(lat) *
-    Math.sin(lon);
-
-// Camera distance
-// ============================================
-// Ernakulam 3D Terrain Camera
-// ============================================
-
-// Position camera above the district terrain
-camera.position.set(
-    0,
-    2.2,
-    2.4
-);
-
-// Look toward the center of the terrain
-controls.target.set(
-    0,
-    0.2,
-    0
-);
-
-
-
-controls.update();
 
 // ======================
 // Animation

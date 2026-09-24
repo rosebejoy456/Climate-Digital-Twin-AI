@@ -158,6 +158,22 @@ export async function addTerrain(parent, terrainPath) {
         terrain.name =
             "Ernakulam 3D Terrain";
 
+        // Keep the geographic transform with the mesh so infrastructure
+        // overlays can be placed on the same elevation model.
+        terrain.userData.terrain = {
+            rows,
+            cols,
+            elevations,
+            minElevation,
+            heightScale,
+            width,
+            depth,
+            minLatitude: terrainData.min_latitude,
+            maxLatitude: terrainData.max_latitude,
+            minLongitude: terrainData.min_longitude,
+            maxLongitude: terrainData.max_longitude
+        };
+
 
         terrain.receiveShadow = true;
 
