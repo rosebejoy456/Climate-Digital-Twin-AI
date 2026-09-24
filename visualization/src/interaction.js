@@ -192,14 +192,24 @@ export function setupInteraction(
             // Resolve the local-terrain action before any climate API call.
             // A failed remote API must never prevent the Digital Twin view
             // from opening.
-            const ernakulamFeature = await getErnakulamFeature();
-            const isInsideDistrict =
-                ernakulamFeature &&
-                pointInGeometry(
-                    longitude,
-                    latitude,
-                    ernakulamFeature.geometry
+            let ernakulamFeature = null;
+
+            try {
+                ernakulamFeature = await getErnakulamFeature();
+            } catch (error) {
+                console.warn(
+                    "Could not load district.geojson. Using coordinate fallback.",
+                    error
                 );
+            }
+
+            const isInsideDistrict =
+            ernakulamFeature &&
+            pointInGeometry(
+                longitude,
+                latitude,
+                ernakulamFeature.geometry
+    );
 
             if (isInsideDistrict || isNearErnakulam(latitude, longitude)) {
                 window.dispatchEvent(
