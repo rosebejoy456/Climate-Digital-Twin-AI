@@ -160,7 +160,7 @@ export function ReportsPage() {
   );
 
   return (
-    <div style={{ padding: '1.5rem', backgroundColor: 'var(--bg-dark)', minHeight: '100vh', color: 'var(--text-primary)' }}>
+    <div>
       {/* Header */}
       <div className="page-header" style={{ marginBottom: '2rem' }}>
         <h1 className="page-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-cyan)' }}>
@@ -172,34 +172,63 @@ export function ReportsPage() {
       </div>
 
       {/* Date Range Selector */}
-      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-        <label>
-          Start Date:{' '}
-          <input type="date" value={startDate} max={endDate} onChange={(e) => setStartDate(e.target.value)} style={{ marginLeft: '0.5rem' }} />
+      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '1.5rem', backgroundColor: 'var(--bg-surface)', padding: '0.85rem 1.15rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
+        <label style={{ fontSize: '0.8125rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center' }}>
+          Start Date:
+          <input
+            type="date"
+            value={startDate}
+            max={endDate}
+            onChange={(e) => setStartDate(e.target.value)}
+            style={{
+              marginLeft: '0.5rem',
+              backgroundColor: 'var(--bg-surface-elevated)',
+              border: '1px solid var(--border-medium)',
+              borderRadius: 'var(--border-radius-xs)',
+              color: 'var(--text-primary)',
+              padding: '0.35rem 0.6rem',
+              fontFamily: 'var(--font-sans)',
+              fontSize: '0.8125rem'
+            }}
+          />
         </label>
-        <label>
-          End Date:{' '}
-          <input type="date" value={endDate} min={startDate} max={defaultEnd} onChange={(e) => setEndDate(e.target.value)} style={{ marginLeft: '0.5rem' }} />
+        <label style={{ fontSize: '0.8125rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center' }}>
+          End Date:
+          <input
+            type="date"
+            value={endDate}
+            min={startDate}
+            max={defaultEnd}
+            onChange={(e) => setEndDate(e.target.value)}
+            style={{
+              marginLeft: '0.5rem',
+              backgroundColor: 'var(--bg-surface-elevated)',
+              border: '1px solid var(--border-medium)',
+              borderRadius: 'var(--border-radius-xs)',
+              color: 'var(--text-primary)',
+              padding: '0.35rem 0.6rem',
+              fontFamily: 'var(--font-sans)',
+              fontSize: '0.8125rem'
+            }}
+          />
         </label>
         {unavailable && (
-          <span style={{ color: 'var(--status-warning)', fontWeight: 600 }}>
+          <span style={{ color: 'var(--status-warning)', fontSize: '0.8125rem', fontWeight: 600 }}>
             Data unavailable for selected dates.
           </span>
         )}
         {dataSourceNotice && (
-          <span style={{ color: 'var(--text-muted)' }}>{dataSourceNotice}</span>
+          <span style={{ color: 'var(--text-muted)', fontSize: '0.8125rem' }}>{dataSourceNotice}</span>
         )}
         <button
           onClick={handleGenerateBrief}
           disabled={isGeneratingBrief || unavailable}
+          className="telemetry-refresh-btn"
           style={{
             marginLeft: 'auto',
-            backgroundColor: 'var(--accent-cyan-soft)',
-            border: '1px solid rgba(6,182,212,0.4)',
-            color: '#f8fafc',
-            padding: '0.45rem 1rem',
-            fontWeight: 600,
-            cursor: isGeneratingBrief ? 'wait' : 'pointer',
+            padding: '0.5rem 1.15rem',
+            fontSize: '0.8125rem',
+            fontWeight: 600
           }}
         >
           {isGeneratingBrief ? 'Generating Brief...' : 'Generate Climate Brief'}
@@ -227,35 +256,37 @@ export function ReportsPage() {
 
       {/* Model Forecast Section */}
       {multiForecast && (
-        <div className="card-panel" style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(8px)', padding: '1rem', borderRadius: '8px', marginBottom: '2rem' }}>
-          <h2 style={{ color: 'var(--accent-magenta)', marginBottom: '0.5rem' }}>Model Forecast</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Model output — not observed telemetry.</p>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
-            <thead>
-              <tr style={{ borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-muted)' }}>
-                <th style={{ padding: '0.5rem', textAlign: 'left' }}>Variable</th>
-                <th style={{ padding: '0.5rem', textAlign: 'left' }}>Prediction</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.entries(multiForecast).map(([varName, val], idx) => (
-                <tr key={idx} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
-                  <td style={{ padding: '0.4rem' }}>{varName}</td>
-                  <td style={{ padding: '0.4rem' }}>{typeof val === 'object' ? `${val.value ?? '--'} ${val.unit ?? ''}` : val}</td>
+        <div className="card-panel" style={{ padding: '1.25rem', borderRadius: 'var(--border-radius-md)', marginBottom: '2rem' }}>
+          <h2 style={{ color: 'var(--accent-magenta)', marginBottom: '0.35rem', fontSize: '1.1rem' }}>Model Forecast</h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.8125rem', marginBottom: '1rem' }}>Model output — not observed telemetry.</p>
+          <div className="sim-table-wrapper" tabIndex="0" role="region" aria-label="Model Forecast Table">
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-muted)', backgroundColor: 'var(--bg-surface-elevated)' }}>
+                  <th style={{ padding: '0.65rem 1rem', textAlign: 'left' }}>Variable</th>
+                  <th style={{ padding: '0.65rem 1rem', textAlign: 'left' }}>Prediction</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {Object.entries(multiForecast).map(([varName, val], idx) => (
+                  <tr key={idx} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                    <td style={{ padding: '0.6rem 1rem' }}>{varName}</td>
+                    <td style={{ padding: '0.6rem 1rem', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>{typeof val === 'object' ? `${val.value ?? '--'} ${val.unit ?? ''}` : val}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
       {/* Insights Panel */}
       {insights.length > 0 && (
-        <div style={{ background: 'rgba(255,255,255,0.04)', padding: '1rem', borderLeft: `4px solid var(--accent-cyan)`, marginBottom: '2rem' }}>
-          <h3 style={{ marginBottom: '0.5rem', color: 'var(--accent-cyan)' }}>Key Insights</h3>
-          <ul style={{ margin: 0, paddingLeft: '1.2rem', color: 'var(--text-primary)' }}>
+        <div style={{ background: 'var(--bg-surface)', padding: '1.25rem', borderLeft: `4px solid var(--accent-cyan)`, borderRadius: '0 var(--border-radius-sm) var(--border-radius-sm) 0', borderTop: '1px solid var(--border-subtle)', borderRight: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)', marginBottom: '2rem' }}>
+          <h3 style={{ marginBottom: '0.65rem', color: 'var(--accent-cyan)', fontSize: '0.95rem' }}>Key Insights</h3>
+          <ul style={{ margin: 0, paddingLeft: '1.2rem', color: 'var(--text-primary)', fontSize: '0.845rem', lineHeight: 1.6 }}>
             {insights.map((txt, i) => (
-              <li key={i}>{txt}</li>
+              <li key={i} style={{ marginBottom: '0.35rem' }}>{txt}</li>
             ))}
           </ul>
         </div>
@@ -263,41 +294,48 @@ export function ReportsPage() {
 
       {/* Scientific Data Table */}
       {historical && historical.length > 0 && (
-        <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8rem' }}>
-            <thead>
-              <tr style={{ borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-muted)' }}>
-                <th style={{ padding: '0.5rem' }}>Date</th>
-                <th style={{ padding: '0.5rem' }}>Rainfall (mm)</th>
-                <th style={{ padding: '0.5rem' }}>Max Temp (°C)</th>
-                <th style={{ padding: '0.5rem' }}>Min Temp (°C)</th>
-                <th style={{ padding: '0.5rem' }}>LST (°C)</th>
-                <th style={{ padding: '0.5rem' }}>SST (°C)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {historical.map((rec, idx) => (
-                <tr key={idx} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
-                  <td style={{ padding: '0.4rem' }}>{rec.date}</td>
-                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.rainfall?.value ?? '--'}</td>
-                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.maxTemp?.value ?? '--'}</td>
-                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.minTemp?.value ?? '--'}</td>
-                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.lst?.value ?? '--'}</td>
-                  <td style={{ padding: '0.4rem' }}>{rec.metrics?.sst?.value ?? '--'}</td>
+        <div style={{ marginBottom: '2rem' }}>
+          <h3 style={{ marginBottom: '0.75rem', fontSize: '1rem', color: 'var(--text-primary)' }}>Verified Observations History</h3>
+          <div className="sim-table-wrapper" tabIndex="0" role="region" aria-label="Scientific Observation Table">
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8125rem' }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid var(--border-medium)', color: 'var(--text-secondary)', backgroundColor: 'var(--bg-surface-elevated)' }}>
+                  <th style={{ padding: '0.65rem 0.85rem', textAlign: 'left' }}>Date</th>
+                  <th style={{ padding: '0.65rem 0.85rem', textAlign: 'left' }}>Rainfall (mm)</th>
+                  <th style={{ padding: '0.65rem 0.85rem', textAlign: 'left' }}>Max Temp (°C)</th>
+                  <th style={{ padding: '0.65rem 0.85rem', textAlign: 'left' }}>Min Temp (°C)</th>
+                  <th style={{ padding: '0.65rem 0.85rem', textAlign: 'left' }}>LST (°C)</th>
+                  <th style={{ padding: '0.65rem 0.85rem', textAlign: 'left' }}>SST (°C)</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {historical.map((rec, idx) => (
+                  <tr key={idx} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                    <td style={{ padding: '0.55rem 0.85rem', fontFamily: 'var(--font-mono)' }}>{rec.date}</td>
+                    <td style={{ padding: '0.55rem 0.85rem', fontFamily: 'var(--font-mono)' }}>{rec.metrics?.rainfall?.value ?? '--'}</td>
+                    <td style={{ padding: '0.55rem 0.85rem', fontFamily: 'var(--font-mono)' }}>{rec.metrics?.maxTemp?.value ?? '--'}</td>
+                    <td style={{ padding: '0.55rem 0.85rem', fontFamily: 'var(--font-mono)' }}>{rec.metrics?.minTemp?.value ?? '--'}</td>
+                    <td style={{ padding: '0.55rem 0.85rem', fontFamily: 'var(--font-mono)' }}>{rec.metrics?.lst?.value ?? '--'}</td>
+                    <td style={{ padding: '0.55rem 0.85rem', fontFamily: 'var(--font-mono)' }}>{rec.metrics?.sst?.value ?? '--'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
       {/* Disclosure Panel */}
       <div style={{ marginBottom: '2rem' }}>
-        <button onClick={() => setShowDisclosure(!showDisclosure)} style={{ background: 'none', border: 'none', color: 'var(--accent-cyan)', cursor: 'pointer', fontSize: '0.9rem' }}>
+        <button
+          onClick={() => setShowDisclosure(!showDisclosure)}
+          className="tab-btn"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8125rem' }}
+        >
           {showDisclosure ? 'Hide' : 'Show'} Data Provenance & Disclosure
         </button>
         {showDisclosure && (
-          <div style={{ marginTop: '0.5rem', padding: '0.75rem', background: 'rgba(255,255,255,0.04)', borderRadius: '4px', color: 'var(--text-muted)' }}>
+          <div style={{ marginTop: '0.75rem', padding: '0.85rem 1rem', background: 'var(--bg-surface)', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)', color: 'var(--text-muted)', fontSize: '0.8125rem', lineHeight: 1.6 }}>
             <p>• Verified observations are district‑level where available.</p>
             <p>• Satellite‑derived variables (LST, SST) may be unavailable on cloudy days – shown as ‘—’.</p>
             <p>• Model forecasts are predictions, not observed telemetry.</p>
@@ -313,38 +351,39 @@ export function ReportsPage() {
           style={{
             position: 'fixed',
             inset: 0,
-            backgroundColor: 'rgba(0,0,0,0.6)',
+            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+            backdropFilter: 'blur(8px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 1000,
+            padding: '1.5rem'
           }}
         >
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
               background: 'var(--bg-surface)',
-              padding: '1.5rem',
-              maxWidth: '90%',
-              maxHeight: '80%',
+              padding: '1.75rem',
+              width: '100%',
+              maxWidth: '640px',
+              maxHeight: '85vh',
               overflowY: 'auto',
-              borderRadius: '8px',
+              borderRadius: 'var(--border-radius-md)',
               boxShadow: 'var(--shadow-lg)',
+              border: '1px solid var(--border-medium)',
               color: 'var(--text-primary)',
             }}
           >
-            <h2 style={{ marginTop: 0, color: 'var(--accent-cyan)' }}>Climate Brief</h2>
-            <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>{briefText}</pre>
+            <h2 style={{ marginTop: 0, color: 'var(--accent-cyan)', fontSize: '1.25rem', marginBottom: '1rem' }}>Climate Intelligence Brief</h2>
+            <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'var(--font-mono)', fontSize: '0.8125rem', backgroundColor: 'var(--bg-surface-elevated)', padding: '1rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{briefText}</pre>
             <button
               onClick={() => setShowBrief(false)}
+              className="telemetry-refresh-btn"
               style={{
-                marginTop: '1rem',
-                backgroundColor: 'var(--accent-cyan-soft)',
-                border: '1px solid rgba(6,182,212,0.4)',
-                color: '#f8fafc',
-                padding: '0.4rem 0.8rem',
-                fontWeight: 600,
-                cursor: 'pointer',
+                marginTop: '1.25rem',
+                padding: '0.5rem 1.25rem',
+                fontSize: '0.8125rem'
               }}
             >
               Close

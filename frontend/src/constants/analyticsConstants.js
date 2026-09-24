@@ -16,7 +16,7 @@ export const VARIABLES = {
     unit: '°C',
     color: '#f59e0b',
     icon: IconTemperature,
-    source: 'MODIS LST (Daily)',
+    source: 'IMD / ERA5',
   },
   lst: {
     name: 'Land Surface Temp',

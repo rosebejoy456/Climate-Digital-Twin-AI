@@ -167,6 +167,7 @@ export const VERIFIED_OBSERVATION_DATES = [
     surface_pressure: null,
     sourceAttribution: {
       rainfall: 'Digital Twin State Manager baseline (42.5 mm)',
+      maxTemp: 'Digital Twin State Manager baseline (IMD / ERA5)',
       lst: 'Digital Twin LST baseline (34.0 °C)',
       ndvi: 'Not monitored in current state snapshot',
       pressure: 'Not monitored in current state snapshot'
@@ -185,6 +186,7 @@ export const VERIFIED_OBSERVATION_DATES = [
     surface_pressure: 1000.7,
     sourceAttribution: {
       rainfall: 'IMD 0.25° Gridded Daily Sum (0.0 mm)',
+      maxTemp: 'IMD / ERA5 (30.36 °C)',
       lst: 'NASA MODIS MOD11A2 (26.74 °C)',
       ndvi: 'NASA MODIS MOD13Q1 (0.700)',
       pressure: 'ECMWF ERA5 (1000.7 hPa)'
@@ -203,6 +205,7 @@ export const VERIFIED_OBSERVATION_DATES = [
     surface_pressure: 999.5,
     sourceAttribution: {
       rainfall: 'IMD 0.25° Gridded Daily Sum (28.4 mm)',
+      maxTemp: 'IMD / ERA5 (28.49 °C)',
       lst: 'Cloud-obscured (MODIS thermal IR pass unavailable)',
       ndvi: 'Cloud-obscured (MODIS optical pass unavailable)',
       pressure: 'ECMWF ERA5 (999.5 hPa)'
@@ -221,6 +224,7 @@ export const VERIFIED_OBSERVATION_DATES = [
     surface_pressure: 1000.5,
     sourceAttribution: {
       rainfall: 'IMD 0.25° Gridded Daily Sum (118.16 mm)',
+      maxTemp: 'IMD / ERA5 (29.05 °C)',
       lst: 'Cloud-obscured (MODIS thermal IR pass unavailable)',
       ndvi: 'Cloud-obscured (MODIS optical pass unavailable)',
       pressure: 'ECMWF ERA5 (1000.5 hPa)'
@@ -239,6 +243,7 @@ export const VERIFIED_OBSERVATION_DATES = [
     surface_pressure: 999.06,
     sourceAttribution: {
       rainfall: 'IMD 0.25° Gauge Daily Sum (185.42 mm)',
+      maxTemp: 'IMD / ERA5 (26.74 °C)',
       lst: 'Cloud-obscured (Severe storm attenuation)',
       ndvi: 'Cloud-obscured (Optical reflectance unavailable)',
       pressure: 'ECMWF ERA5 Depression trough (999.06 hPa)'
@@ -257,6 +262,7 @@ export const VERIFIED_OBSERVATION_DATES = [
     surface_pressure: 999.9,
     sourceAttribution: {
       rainfall: 'IMD 0.25° Gridded (1.66 mm)',
+      maxTemp: 'IMD / ERA5 (31.26 °C)',
       lst: 'NASA MODIS LST (30.03 °C)',
       ndvi: 'NASA MODIS NDVI (0.720)',
       pressure: 'ECMWF ERA5 (999.9 hPa)'

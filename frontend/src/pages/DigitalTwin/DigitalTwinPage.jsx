@@ -553,7 +553,7 @@ export function DigitalTwinPage() {
       </div>
 
       {/* Two-Column Layout: Left Telemetry Grid & Right Twin Inspector */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: '1.5rem', alignItems: 'start' }}>
+      <div className="dt-two-col-layout">
         
         {/* Left Column: Multi-Variable Telemetry Panel */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>

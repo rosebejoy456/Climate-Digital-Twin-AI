@@ -916,3 +916,16 @@
   color: var(--accent-cyan);
 }
 
+/* Perturbation Grid */
+.sim-perturbation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .sim-perturbation-grid {
+    grid-template-columns: 1fr;
+  }
+}

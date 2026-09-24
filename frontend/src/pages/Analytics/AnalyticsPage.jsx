@@ -16,7 +16,6 @@ import InsightAlert from '../../components/analytics/InsightAlert';
 import { ClimateInsightCard } from '../../components/insights/ClimateInsightCard';
 import { VARIABLES } from '../../constants/analyticsConstants';
 import '../../styles/analytics.css';
-import '../../styles/insights.css';
 import {
   IconAnalytics,
   IconAI,
@@ -198,7 +197,7 @@ export function AnalyticsPage() {
       </div>
 
       {/* 2. SHAP EXPLAINABLE AI SECTION */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1.75fr 1fr', gap: '1.5rem', marginBottom: '1.75rem' }}>
+      <div className="analytics-shap-grid">
         {/* SHAP Feature Contribution Chart */}
         <div className="card-panel">
           <div className="card-panel-header">
@@ -224,19 +223,7 @@ export function AnalyticsPage() {
           </div>
 
           {/* Base Value vs Output Value Callout */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              padding: '0.75rem 1rem',
-              backgroundColor: 'var(--bg-surface-elevated)',
-              borderRadius: 'var(--border-radius-sm)',
-              border: '1px solid var(--border-subtle)',
-              marginBottom: '1.25rem',
-              fontSize: '0.8125rem',
-            }}
-          >
+          <div className="analytics-callout-row">
             <div>
               <span style={{ color: 'var(--text-muted)' }}>Dataset Base Expectation (E[f(x)]): </span>
               <strong style={{ color: 'var(--text-primary)' }}>{shapData?.baseValue} mm</strong>
@@ -259,7 +246,7 @@ export function AnalyticsPage() {
               const barColor = isPositive ? 'var(--status-normal)' : 'var(--accent-magenta)';
 
               return (
-                <div key={idx} style={{ display: 'grid', gridTemplateColumns: '210px 1fr 90px', alignItems: 'center', gap: '1rem', fontSize: '0.8125rem' }}>
+                <div key={idx} className="shap-bar-row">
                   {/* Feature Name */}
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.75rem' }}>

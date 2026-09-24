@@ -113,9 +113,9 @@ export function MetricCard({
 
       {/* Source Footer */}
       {source && (
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem', marginTop: '0.35rem', fontSize: '0.6875rem', color: 'var(--text-dim)' }}>
-          <span>Telemetry Source</span>
-          <span style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>{source}</span>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem', marginTop: '0.35rem', fontSize: '0.6875rem', color: 'var(--text-dim)', gap: '0.5rem' }}>
+          <span style={{ whiteSpace: 'nowrap' }}>Telemetry Source</span>
+          <span style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '65%', textAlign: 'right' }} title={source}>{source}</span>
         </div>
       )}
     </div>

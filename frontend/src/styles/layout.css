@@ -429,6 +429,14 @@
   margin-bottom: 1.75rem;
 }
 
+/* Digital Twin Two-Column Telemetry & Inspector Layout */
+.dt-two-col-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
 .overview-projection-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -549,6 +557,9 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .overview-forecast-grid {
+    grid-template-columns: 1fr;
+  }
+  .dt-two-col-layout {
     grid-template-columns: 1fr;
   }
   .overview-projection-stats {
