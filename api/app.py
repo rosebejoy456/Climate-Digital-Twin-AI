@@ -17,9 +17,7 @@ from engine.state_manager import StateManager, ClimateState
 # CONFIGURATION
 # ============================================================
 
-TEST_FILE = Path(
-    "data/processed/Climate_Ernakulam_Test.csv"
-)
+TEST_FILE = Path("data/processed/Climate_Ernakulam_Features_2015_2025.csv")
 
 MODEL_DIR = Path(
     "models/multiple_xgboost"
