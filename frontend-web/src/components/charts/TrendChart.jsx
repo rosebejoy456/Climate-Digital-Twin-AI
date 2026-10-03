@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { formatNumber } from '../../utils/formatters';
 
 export function TrendChart({
   data = [],
@@ -178,7 +179,7 @@ export function TrendChart({
             {points[hoveredPoint].date || 'Record'}
           </div>
           <div style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text-primary)', marginTop: '0.1rem' }}>
-            {points[hoveredPoint].value ?? '--'} <span style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text-secondary)' }}>{unit}</span>
+            {formatNumber(points[hoveredPoint].value)} <span style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text-secondary)' }}>{unit}</span>
           </div>
         </div>
       )}

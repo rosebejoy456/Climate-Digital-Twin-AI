@@ -2,6 +2,7 @@ import React from 'react';
 import { StatusBadge } from '../common/StatusBadge';
 import { Sparkline } from '../charts/Sparkline';
 import { IconTrendUp, IconTrendDown } from '../common/Icons';
+import { formatNumber } from '../../utils/formatters';
 
 export function MetricCard({
   title,
@@ -75,7 +76,7 @@ export function MetricCard({
         <div>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem' }}>
             <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-              {value ?? '--'}
+              {typeof value === 'number' ? formatNumber(value) : (value ?? '--')}
             </span>
             {unit && (
               <span style={{ fontSize: '0.845rem', color: 'var(--text-muted)', fontWeight: 500 }}>

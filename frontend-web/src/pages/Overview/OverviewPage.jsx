@@ -3,7 +3,7 @@ import { MetricCard } from '../../components/cards/MetricCard';
 import { TrendChart } from '../../components/charts/TrendChart';
 import { getCurrentClimate, getHistoricalClimate } from '../../services/climateService';
 import { getPredictions } from '../../services/predictionService';
-import { formatDate } from '../../utils/formatters';
+import { formatDate, formatNumber } from '../../utils/formatters';
 import {
   IconDashboard,
   IconRainfall,
@@ -327,7 +327,7 @@ export function OverviewPage() {
                   Projected Accumulation
                 </div>
                 <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--accent-cyan)', letterSpacing: '-0.03em', lineHeight: 1.1, marginTop: '0.2rem' }}>
-                  {prediction?.predictedValue ?? '--'}{' '}
+                  {formatNumber(prediction?.predictedValue)}{' '}
                   <span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 500 }}>mm</span>
                 </div>
                 <div style={{ fontSize: '0.6875rem', color: 'var(--text-dim)', marginTop: '0.25rem' }}>Next-day quantitative estimate</div>

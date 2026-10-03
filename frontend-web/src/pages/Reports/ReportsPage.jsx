@@ -4,6 +4,7 @@ import { MetricCard } from '../../components/cards/MetricCard';
 import { TrendChart } from '../../components/charts/TrendChart';
 import { getHistoricalClimate, getCurrentClimate } from '../../services/climateService';
 import { getPredictions, getMultiVariablePrediction } from '../../services/predictionService';
+import { formatNumber } from '../../utils/formatters';
 
 // Utility to format dates as YYYY-MM-DD for input value
 const formatDate = (date) => date.toISOString().split('T')[0];
@@ -127,7 +128,7 @@ export function ReportsPage() {
         lines.push(`Min Temp Change: ${(aggregates.endMinTemp - aggregates.startMinTemp).toFixed(1)}°C`);
       }
       if (forecast) {
-        lines.push(`Model Forecast (rainfall): ${forecast?.predictedValue ?? '--'} mm/day`);
+        lines.push(`Model Forecast (rainfall): ${formatNumber(forecast?.predictedValue)} mm/day`);
       }
       if (multiForecast) {
         lines.push('Model Multi‑Variable Forecast:');

@@ -6,6 +6,7 @@ import { VERIFIED_OBSERVATION_DATES } from '../../services/mapService';
 import { MetricCard } from '../../components/cards/MetricCard';
 import InsightAlert from '../../components/analytics/InsightAlert';
 import { VARIABLES } from '../../constants/analyticsConstants';
+import { formatNumber } from '../../utils/formatters';
 import '../../styles/analytics.css';
 import {
   IconAnalytics,
@@ -219,7 +220,7 @@ export function AnalyticsPage() {
                       {feat.name}
                     </span>
                     <span style={{ fontSize: '0.6875rem', color: 'var(--text-dim)' }}>
-                      sample value: {feat.value}
+                      sample value: {formatNumber(feat.value)}
                     </span>
                   </div>
 
@@ -274,8 +275,8 @@ export function AnalyticsPage() {
             <InsightAlert
               message={
                 insight.baseline !== null && insight.diffPct !== null
-                  ? `Rainfall ${insight.value} mm vs 7‑day baseline ${insight.baseline} mm (${insight.diffPct}% change)`
-                  : `Rainfall ${insight.value} mm (no baseline available)`
+                  ? `Rainfall ${formatNumber(insight.value)} mm vs 7‑day baseline ${formatNumber(insight.baseline)} mm (${formatNumber(insight.diffPct)}% change)`
+                  : `Rainfall ${formatNumber(insight.value)} mm (no baseline available)`
               }
               type="info"
               disclaimer="Illustrative screening indicator; not a formal flood forecast."
