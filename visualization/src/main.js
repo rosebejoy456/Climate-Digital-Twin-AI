@@ -8,6 +8,7 @@ import { addTerrain } from "./terrain.js";
 import { addTerrainInfrastructure } from "./terrainInfrastructure.js";
 import { addRoads } from "./roads.js";
 import { addWaterways } from "./waterways.js";
+import { createRealErnakulamMap } from "./climate-map.js";
 import {
     addHospitals,
     addRailwayStations,
@@ -1107,4 +1108,7 @@ if (runWhatIfButton) {
             </div>
         `;
     });
+
 }
+    createRealErnakulamMap();
+

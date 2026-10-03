@@ -271,7 +271,6 @@ canvas {
     cursor: pointer;
     font-weight: bold;
 }
-
 #terrain-controls,
 #feature-inspector {
     position: fixed;
@@ -424,4 +423,13 @@ canvas {
         bottom: 94px;
         max-height: calc(100vh - 125px);
     }
+}
+
+#real-ernakulam-map {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    z-index: 10;
+    border-radius: 12px;
+    overflow: hidden;
 }
