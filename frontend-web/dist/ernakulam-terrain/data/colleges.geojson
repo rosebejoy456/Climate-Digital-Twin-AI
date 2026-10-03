@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "source": "Derived from the project's OpenStreetMap-derived hospitals dataset",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Mar Baselios Dental College, Thankalam", "amenity": "college" },
+      "geometry": { "type": "Point", "coordinates": [76.6045268, 10.0734498] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mar Baselios College Of Nursing", "amenity": "college" },
+      "geometry": { "type": "Point", "coordinates": [76.6017423, 10.0727802] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Government Medical College, Ernakulam", "amenity": "college" },
+      "geometry": { "type": "Point", "coordinates": [76.3553898, 10.0527471] }
+    }
+  ]
+}

@@ -1,0 +1,2062 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-09-22T08:45:51Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133758037",
+        "addr:street": "Rajagiri College Road",
+        "alt_name": "Rajagiri College of Engineering",
+        "amenity": "college",
+        "capacity": "2000",
+        "check_date": "2026-05-21",
+        "contact:facebook": "https://www.facebook.com/rajagiriengg/",
+        "contact:instagram": "rajagiriengg",
+        "contact:phone": "+91 484 2660999",
+        "contact:website": "http://www.rajagiritech.ac.in/",
+        "email": "office@rajagiritech.edu.in",
+        "internet_access": "wlan",
+        "name": "Rajagiri School of Engineering & Technology",
+        "school:gender": "mixed",
+        "short_name": "RSET",
+        "website": "https://www.rajagiritech.ac.in",
+        "wikidata": "Q7285616",
+        "wikimedia_commons": "Category:Rajagiri School of Engineering and Technology",
+        "wikipedia": "en:Rajagiri School of Engineering & Technology (Autonomous)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.355245,
+              9.9942389
+            ],
+            [
+              76.3551009,
+              9.99373
+            ],
+            [
+              76.3552296,
+              9.9932491
+            ],
+            [
+              76.3554514,
+              9.9932388
+            ],
+            [
+              76.3554555,
+              9.9928902
+            ],
+            [
+              76.3557596,
+              9.9927303
+            ],
+            [
+              76.3567333,
+              9.991978
+            ],
+            [
+              76.3579219,
+              9.9919157
+            ],
+            [
+              76.3587313,
+              9.9917838
+            ],
+            [
+              76.360324,
+              9.991243
+            ],
+            [
+              76.3604775,
+              9.9917675
+            ],
+            [
+              76.3607746,
+              9.9927825
+            ],
+            [
+              76.3608302,
+              9.9930493
+            ],
+            [
+              76.3606247,
+              9.9931837
+            ],
+            [
+              76.3604997,
+              9.9936737
+            ],
+            [
+              76.3604839,
+              9.9940799
+            ],
+            [
+              76.3604082,
+              9.994593
+            ],
+            [
+              76.3603081,
+              9.9947455
+            ],
+            [
+              76.3601454,
+              9.9948376
+            ],
+            [
+              76.3599684,
+              9.9949318
+            ],
+            [
+              76.3598042,
+              9.9948569
+            ],
+            [
+              76.358967,
+              9.9944991
+            ],
+            [
+              76.3580948,
+              9.9941156
+            ],
+            [
+              76.3572973,
+              9.9940702
+            ],
+            [
+              76.3572156,
+              9.9940683
+            ],
+            [
+              76.3565162,
+              9.9940542
+            ],
+            [
+              76.3561977,
+              9.9940639
+            ],
+            [
+              76.3555437,
+              9.994166
+            ],
+            [
+              76.355245,
+              9.9942389
+            ]
+          ]
+        ]
+      },
+      "id": "way/133758037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230640999",
+        "addr:housename": "Cochin College",
+        "addr:postcode": "682002",
+        "addr:street": "Cochin College Road",
+        "amenity": "college",
+        "designation": "College",
+        "name": "Cochin College",
+        "wikidata": "Q5139306",
+        "wikipedia": "en:The Cochin College"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2512037,
+              9.9495363
+            ],
+            [
+              76.251397,
+              9.94855
+            ],
+            [
+              76.2514418,
+              9.9485537
+            ],
+            [
+              76.2514982,
+              9.9481125
+            ],
+            [
+              76.2518093,
+              9.9480544
+            ],
+            [
+              76.2523833,
+              9.9480676
+            ],
+            [
+              76.2533918,
+              9.9481891
+            ],
+            [
+              76.2533623,
+              9.9494017
+            ],
+            [
+              76.2522834,
+              9.9493857
+            ],
+            [
+              76.2522364,
+              9.9496181
+            ],
+            [
+              76.2512037,
+              9.9495363
+            ]
+          ]
+        ]
+      },
+      "id": "way/230640999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234860229",
+        "addr:city": "Ernakulam",
+        "addr:postcode": "682018",
+        "amenity": "college",
+        "email": "mail@alberts.edu.in",
+        "name": "St. Albert's College",
+        "phone": "+91-484-2394225",
+        "website": "https://www.alberts.edu.in/",
+        "wikidata": "Q7586753",
+        "wikimedia_commons": "Category:St. Albert's College",
+        "wikipedia": "en:St. Albert's College"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2781568,
+              9.9864953
+            ],
+            [
+              76.2781501,
+              9.9853489
+            ],
+            [
+              76.279086,
+              9.9853933
+            ],
+            [
+              76.2790361,
+              9.9861059
+            ],
+            [
+              76.2791325,
+              9.9861095
+            ],
+            [
+              76.2791525,
+              9.9861772
+            ],
+            [
+              76.2793435,
+              9.9861847
+            ],
+            [
+              76.2792825,
+              9.9866557
+            ],
+            [
+              76.2787422,
+              9.9865988
+            ],
+            [
+              76.2781568,
+              9.9864953
+            ]
+          ]
+        ]
+      },
+      "id": "way/234860229"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/264720319",
+        "addr:city": "Ernakulam",
+        "addr:street": "Park Avenue",
+        "amenity": "college",
+        "landuse": "education",
+        "name": "Maharaja's College",
+        "name:ml": "മഹാരാജാസ് കോളേജ്",
+        "operator": "Government of Kerala",
+        "phone": "+91 484 235 2838",
+        "website": "https://www.maharajas.ac.in/",
+        "wikidata": "Q6733207",
+        "wikimedia_commons": "Category:Maharaja's College",
+        "wikipedia": "en:Maharaja's College, Ernakulam"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2802418,
+              9.9713484
+            ],
+            [
+              76.2805299,
+              9.9705151
+            ],
+            [
+              76.2807617,
+              9.9698446
+            ],
+            [
+              76.2819886,
+              9.969867
+            ],
+            [
+              76.2820147,
+              9.9693491
+            ],
+            [
+              76.2824833,
+              9.9693781
+            ],
+            [
+              76.2824477,
+              9.9697394
+            ],
+            [
+              76.2826251,
+              9.9697446
+            ],
+            [
+              76.2826034,
+              9.9698795
+            ],
+            [
+              76.2829804,
+              9.9699174
+            ],
+            [
+              76.2828624,
+              9.9710176
+            ],
+            [
+              76.2827796,
+              9.9717617
+            ],
+            [
+              76.2815573,
+              9.971564
+            ],
+            [
+              76.2802418,
+              9.9713484
+            ]
+          ]
+        ]
+      },
+      "id": "way/264720319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/381274131",
+        "amenity": "college",
+        "email": "principal_soe@cusat.ac.in",
+        "internet_access": "yes",
+        "name": "School of Engineering CUSAT",
+        "phone": "0484-2556187",
+        "website": "https://soe.cusat.ac.in/",
+        "wikidata": "Q7432438",
+        "wikipedia": "en:School of Engineering, CUSAT"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3299448,
+              10.0478307
+            ],
+            [
+              76.3316237,
+              10.0471009
+            ],
+            [
+              76.3323849,
+              10.0487278
+            ],
+            [
+              76.3326854,
+              10.0491878
+            ],
+            [
+              76.3308508,
+              10.050457
+            ],
+            [
+              76.3305607,
+              10.0496159
+            ],
+            [
+              76.3299448,
+              10.0478307
+            ]
+          ]
+        ]
+      },
+      "id": "way/381274131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/381274149",
+        "alt_name": "KMSME",
+        "amenity": "college",
+        "name": "Kunjali Marrakar School of Marine Engineering",
+        "name:en": "Kunjali Marrakar School of Marine Engineering",
+        "name:etymology:wikidata": "Q6444593",
+        "name:ml": "കുഞ്ഞാലി മരയ്ക്കാർ സ്കൂൾ ഓഫ് മറൈൻ എഞ്ചിനീയറിംഗ്",
+        "operator": "CUSAT",
+        "operator:type": "public/government",
+        "operator:wikipedia": "en:Cochin University of Science and Technology",
+        "website": "https://kmsme.cusat.ac.in/",
+        "wikidata": "Q6444814",
+        "wikipedia": "en:Kunjali Marakkar School of Marine Engineering"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3290272,
+              10.04161
+            ],
+            [
+              76.3287523,
+              10.0407222
+            ],
+            [
+              76.3291032,
+              10.0404677
+            ],
+            [
+              76.3309236,
+              10.0405772
+            ],
+            [
+              76.3303914,
+              10.0416228
+            ],
+            [
+              76.32929,
+              10.0416021
+            ],
+            [
+              76.3290272,
+              10.04161
+            ]
+          ]
+        ]
+      },
+      "id": "way/381274149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/408147490",
+        "amenity": "college",
+        "name": "School of Nursing",
+        "operator": "Cochin Port Trust",
+        "operator:type": "public"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2675319,
+              9.9613981
+            ],
+            [
+              76.2676518,
+              9.9610243
+            ],
+            [
+              76.2677498,
+              9.9610547
+            ],
+            [
+              76.2676299,
+              9.9614286
+            ],
+            [
+              76.2675319,
+              9.9613981
+            ]
+          ]
+        ]
+      },
+      "id": "way/408147490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/475140687",
+        "alt_name": "AISAT",
+        "amenity": "college",
+        "name": "Albertian Institute of Science and Technology",
+        "operator": "The Archdiocese of Verapoly",
+        "website": "https://aisat.ac.in/"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3307297,
+              10.0508194
+            ],
+            [
+              76.330365,
+              10.0514388
+            ],
+            [
+              76.3302588,
+              10.0515996
+            ],
+            [
+              76.3300239,
+              10.051897
+            ],
+            [
+              76.3297462,
+              10.0520758
+            ],
+            [
+              76.3293975,
+              10.0521181
+            ],
+            [
+              76.3288423,
+              10.0511779
+            ],
+            [
+              76.3281181,
+              10.0505757
+            ],
+            [
+              76.3278337,
+              10.0500898
+            ],
+            [
+              76.327941,
+              10.0487164
+            ],
+            [
+              76.3288208,
+              10.0492288
+            ],
+            [
+              76.3303212,
+              10.0494469
+            ],
+            [
+              76.3306822,
+              10.0504542
+            ],
+            [
+              76.3307297,
+              10.0508194
+            ]
+          ]
+        ]
+      },
+      "id": "way/475140687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/475774063",
+        "amenity": "college",
+        "name": "RLV College of Music and Fine Arts",
+        "wikidata": "Q7276958",
+        "wikipedia": "en:RLV College of Music and Fine Arts"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3445433,
+              9.942528
+            ],
+            [
+              76.3447344,
+              9.9419331
+            ],
+            [
+              76.3448363,
+              9.9417931
+            ],
+            [
+              76.3453138,
+              9.9419226
+            ],
+            [
+              76.34528,
+              9.942018
+            ],
+            [
+              76.345048,
+              9.942672
+            ],
+            [
+              76.3445433,
+              9.942528
+            ]
+          ]
+        ]
+      },
+      "id": "way/475774063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/478895542",
+        "addr:city": "Ernakulam",
+        "addr:postcode": "682011",
+        "addr:street": "Park Avenue",
+        "amenity": "college",
+        "name": "Saint Teresa's College",
+        "name:ml": "സെന്റ്. തെരേസാസ് കോളേജ്",
+        "phone": "+91-484 235 1870",
+        "website": "https://teresas.ac.in/",
+        "wikidata": "Q7591817",
+        "wikipedia": "en:St. Teresa's College"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2784025,
+              9.9760312
+            ],
+            [
+              76.2785206,
+              9.9756381
+            ],
+            [
+              76.2786724,
+              9.9750084
+            ],
+            [
+              76.2787863,
+              9.975036
+            ],
+            [
+              76.2789824,
+              9.9750973
+            ],
+            [
+              76.2795058,
+              9.9752558
+            ],
+            [
+              76.2792943,
+              9.9758844
+            ],
+            [
+              76.2791664,
+              9.97624
+            ],
+            [
+              76.2784025,
+              9.9760312
+            ]
+          ]
+        ]
+      },
+      "id": "way/478895542"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/599123890",
+        "addr:city": "Kochi",
+        "addr:district": "Ernakulam",
+        "addr:street": "Ponekkara",
+        "amenity": "college",
+        "name": "Amrita School Of Pharmacy",
+        "website": "https://www.amrita.edu/school/pharmacy/"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2882205,
+              10.0369648
+            ],
+            [
+              76.2883836,
+              10.0361953
+            ],
+            [
+              76.2895558,
+              10.0362999
+            ],
+            [
+              76.2894116,
+              10.0372486
+            ],
+            [
+              76.2882205,
+              10.0369648
+            ]
+          ]
+        ]
+      },
+      "id": "way/599123890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/624639854",
+        "alt_name": "Thevara College;SH Thevara",
+        "amenity": "college",
+        "check_date": "2025-09-08",
+        "name": "Sacred Heart College",
+        "phone": "+91 484 287 0504",
+        "short_name": "SH College",
+        "wikidata": "Q7397182",
+        "wikimedia_commons": "Category:Sacred Heart College, Thevara",
+        "wikipedia": "en:Sacred Heart College, Thevara"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2951247,
+              9.9397597
+            ],
+            [
+              76.295794,
+              9.9380312
+            ],
+            [
+              76.2966519,
+              9.9383829
+            ],
+            [
+              76.2963588,
+              9.9391199
+            ],
+            [
+              76.2961811,
+              9.9395665
+            ],
+            [
+              76.2959821,
+              9.9400626
+            ],
+            [
+              76.2951247,
+              9.9397597
+            ]
+          ]
+        ]
+      },
+      "id": "way/624639854"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/700179731",
+        "amenity": "college"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2880279,
+              9.9121703
+            ],
+            [
+              76.2880246,
+              9.9121478
+            ],
+            [
+              76.2880596,
+              9.9119757
+            ],
+            [
+              76.2880984,
+              9.911578
+            ],
+            [
+              76.288176,
+              9.9112682
+            ],
+            [
+              76.2882187,
+              9.9110617
+            ],
+            [
+              76.2882886,
+              9.9109623
+            ],
+            [
+              76.2884245,
+              9.9109623
+            ],
+            [
+              76.2886458,
+              9.9109547
+            ],
+            [
+              76.2887079,
+              9.9110044
+            ],
+            [
+              76.2886613,
+              9.9113256
+            ],
+            [
+              76.2885953,
+              9.9116812
+            ],
+            [
+              76.2885138,
+              9.9120063
+            ],
+            [
+              76.2885021,
+              9.9123275
+            ],
+            [
+              76.2880751,
+              9.9122472
+            ],
+            [
+              76.2880324,
+              9.9121975
+            ],
+            [
+              76.2880279,
+              9.9121703
+            ]
+          ]
+        ]
+      },
+      "id": "way/700179731"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/755937122",
+        "addr:city": "Ernakulam",
+        "addr:postcode": "682011",
+        "alt_name": "Ernakulam Law College;Maharajas Law College;",
+        "alt_name:ml": "മഹാരാജാസ് ഗവണ്മെന്റ് ലോ കോളേജ്, എറണാകുളം",
+        "amenity": "college",
+        "name": "Government Law College, Ernakulam",
+        "name:ml": "ഗവൺമെന്റ് ലോ കോളേജ്, എറണാകുളം",
+        "operator": "Govt. of Kerala",
+        "operator:type": "government",
+        "phone": "+91-484 235 2020",
+        "website": "http://glcekm.com/",
+        "wikidata": "Q5588949",
+        "wikimedia_commons": "Category:Government Law College, Ernakulam",
+        "wikipedia": "en:Government Law College, Ernakulam"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2792181,
+              9.9742486
+            ],
+            [
+              76.2793491,
+              9.9741869
+            ],
+            [
+              76.2794921,
+              9.9741622
+            ],
+            [
+              76.2796367,
+              9.9741761
+            ],
+            [
+              76.2797721,
+              9.9742278
+            ],
+            [
+              76.2798884,
+              9.9743134
+            ],
+            [
+              76.2799772,
+              9.9744266
+            ],
+            [
+              76.2800318,
+              9.9745591
+            ],
+            [
+              76.2800464,
+              9.9747355
+            ],
+            [
+              76.280001,
+              9.9749068
+            ],
+            [
+              76.2799006,
+              9.9750536
+            ],
+            [
+              76.2797566,
+              9.9751595
+            ],
+            [
+              76.2795851,
+              9.9752125
+            ],
+            [
+              76.2794055,
+              9.9752068
+            ],
+            [
+              76.2792379,
+              9.9751428
+            ],
+            [
+              76.2791012,
+              9.9750279
+            ],
+            [
+              76.2790108,
+              9.9748749
+            ],
+            [
+              76.2789768,
+              9.9747011
+            ],
+            [
+              76.279003,
+              9.974526
+            ],
+            [
+              76.2790866,
+              9.9743693
+            ],
+            [
+              76.2792181,
+              9.9742486
+            ]
+          ]
+        ]
+      },
+      "id": "way/755937122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/798622893",
+        "addr:city": "South Kalamassery",
+        "addr:postcode": "682033",
+        "addr:street": "Salem - Kochi - Kanyakumari Highway",
+        "amenity": "college",
+        "name": "Little Flower Engineering Institute",
+        "name:etymology:wikidata": "Q181715",
+        "website": "https://littleflower.ac.in/"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3191201,
+              10.0491652
+            ],
+            [
+              76.3190672,
+              10.0482795
+            ],
+            [
+              76.3191201,
+              10.0479148
+            ],
+            [
+              76.3192656,
+              10.047689
+            ],
+            [
+              76.3194023,
+              10.0475805
+            ],
+            [
+              76.3195875,
+              10.047294
+            ],
+            [
+              76.3199226,
+              10.0473113
+            ],
+            [
+              76.3196054,
+              10.0494354
+            ],
+            [
+              76.3192524,
+              10.049416
+            ],
+            [
+              76.3191294,
+              10.0493395
+            ],
+            [
+              76.3191201,
+              10.0491652
+            ]
+          ]
+        ]
+      },
+      "id": "way/798622893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/802107953",
+        "amenity": "college",
+        "name": "Bharatmata College Thrikkakara"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3343435,
+              10.0313495
+            ],
+            [
+              76.3341745,
+              10.0313231
+            ],
+            [
+              76.3339518,
+              10.0310378
+            ],
+            [
+              76.333976,
+              10.0306153
+            ],
+            [
+              76.3340779,
+              10.03033
+            ],
+            [
+              76.3341584,
+              10.0301874
+            ],
+            [
+              76.3347967,
+              10.0303591
+            ],
+            [
+              76.3346975,
+              10.0306337
+            ],
+            [
+              76.3346546,
+              10.0307817
+            ],
+            [
+              76.3343435,
+              10.0313495
+            ]
+          ]
+        ]
+      },
+      "id": "way/802107953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/837975317",
+        "addr:city": "Chottanikkara",
+        "addr:postcode": "682312",
+        "addr:street": "Homeo College Road",
+        "amenity": "college",
+        "name": "Dr Padiar Memorial Homeopathic Medical College"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.390018,
+              9.936737
+            ],
+            [
+              76.3899616,
+              9.9364386
+            ],
+            [
+              76.3900709,
+              9.935666
+            ],
+            [
+              76.3901208,
+              9.9356706
+            ],
+            [
+              76.3908359,
+              9.9357151
+            ],
+            [
+              76.3907765,
+              9.9365786
+            ],
+            [
+              76.390018,
+              9.936737
+            ]
+          ]
+        ]
+      },
+      "id": "way/837975317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/988682747",
+        "amenity": "college",
+        "name": "Bhavans College of Arts"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.344987,
+              9.9978321
+            ],
+            [
+              76.3450744,
+              9.9975938
+            ],
+            [
+              76.3451094,
+              9.9975157
+            ],
+            [
+              76.3452008,
+              9.9974641
+            ],
+            [
+              76.3456982,
+              9.9977897
+            ],
+            [
+              76.345557,
+              9.9979857
+            ],
+            [
+              76.3451994,
+              9.9980095
+            ],
+            [
+              76.344987,
+              9.9978321
+            ]
+          ]
+        ]
+      },
+      "id": "way/988682747"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1006903027",
+        "amenity": "college",
+        "name": "Nair Service Society Women's College"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3420264,
+              9.9489317
+            ],
+            [
+              76.3423957,
+              9.9482102
+            ],
+            [
+              76.3426627,
+              9.9482955
+            ],
+            [
+              76.3428588,
+              9.9484059
+            ],
+            [
+              76.3430923,
+              9.9484979
+            ],
+            [
+              76.3433071,
+              9.9486175
+            ],
+            [
+              76.3435145,
+              9.9487118
+            ],
+            [
+              76.343211,
+              9.9490213
+            ],
+            [
+              76.3428895,
+              9.9489434
+            ],
+            [
+              76.3428818,
+              9.948889
+            ],
+            [
+              76.3425398,
+              9.9488819
+            ],
+            [
+              76.3425329,
+              9.94895
+            ],
+            [
+              76.342263,
+              9.9489319
+            ],
+            [
+              76.3422584,
+              9.9489739
+            ],
+            [
+              76.3421316,
+              9.9489671
+            ],
+            [
+              76.3421324,
+              9.9489418
+            ],
+            [
+              76.3420264,
+              9.9489317
+            ]
+          ]
+        ]
+      },
+      "id": "way/1006903027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1016527507",
+        "amenity": "college",
+        "name": "Government Ayurveda College , Tripunithura"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3580016,
+              9.9249219
+            ],
+            [
+              76.3583654,
+              9.9241585
+            ],
+            [
+              76.3592512,
+              9.9244467
+            ],
+            [
+              76.3588953,
+              9.9251089
+            ],
+            [
+              76.3580016,
+              9.9249219
+            ]
+          ]
+        ]
+      },
+      "id": "way/1016527507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1016527804",
+        "amenity": "college",
+        "name": "Department of DRAVYAGUNAVIJNANAM"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3584666,
+              9.927096
+            ],
+            [
+              76.3584995,
+              9.9270013
+            ],
+            [
+              76.3585932,
+              9.9270169
+            ],
+            [
+              76.3585506,
+              9.9271308
+            ],
+            [
+              76.3584666,
+              9.927096
+            ]
+          ]
+        ]
+      },
+      "id": "way/1016527804"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1017117147",
+        "amenity": "college",
+        "name": "medical college of nursing"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.353769,
+              9.9599908
+            ],
+            [
+              76.3539176,
+              9.9591743
+            ],
+            [
+              76.3543154,
+              9.9592196
+            ],
+            [
+              76.3546452,
+              9.9596502
+            ],
+            [
+              76.3550396,
+              9.9598262
+            ],
+            [
+              76.3544872,
+              9.9597952
+            ],
+            [
+              76.3542227,
+              9.9600653
+            ],
+            [
+              76.353769,
+              9.9599908
+            ]
+          ]
+        ]
+      },
+      "id": "way/1017117147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1019348183",
+        "addr:city": "Thrippunithura",
+        "addr:postcode": "682301",
+        "addr:street": "Hill Palace Road",
+        "amenity": "college",
+        "check_date": "2026-06-06",
+        "name": "Muthoot Management Academy"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3512772,
+              9.9473299
+            ],
+            [
+              76.3511376,
+              9.9472133
+            ],
+            [
+              76.3512165,
+              9.9468217
+            ],
+            [
+              76.3516626,
+              9.9471072
+            ],
+            [
+              76.3515381,
+              9.947436
+            ],
+            [
+              76.3512772,
+              9.9473299
+            ]
+          ]
+        ]
+      },
+      "id": "way/1019348183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1019350027",
+        "addr:city": "THrippunithura",
+        "addr:postcode": "682301",
+        "addr:street": "Sanskrit College Road",
+        "amenity": "college",
+        "name": "Chinmaya College Of Arts Commerce And Science"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3450325,
+              9.947604
+            ],
+            [
+              76.3451588,
+              9.9471348
+            ],
+            [
+              76.3457686,
+              9.9472664
+            ],
+            [
+              76.3455413,
+              9.9477906
+            ],
+            [
+              76.3450325,
+              9.947604
+            ]
+          ]
+        ]
+      },
+      "id": "way/1019350027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1026274468",
+        "addr:city": "Thrikkakara",
+        "addr:postcode": "682021",
+        "alt_name": "Model Engineering College;MEC Thrikkakara;",
+        "amenity": "college",
+        "contact:facebook": "modelengineeringcollege",
+        "email": "principal@mec.ac.in",
+        "internet_access": "yes",
+        "name": "Government Model Engineering College",
+        "name:ml": "മോഡൽ എഞ്ചിനീയറിങ് കോളേജ്",
+        "operator": "IHRD (Govt. of Kerala)",
+        "operator:type": "public/government",
+        "short_name": "MEC",
+        "website": "https://www.mec.ac.in/",
+        "wikidata": "Q6888240",
+        "wikimedia_commons": "Category:Model Engineering College",
+        "wikipedia": "en:Model Engineering College"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3290701,
+              10.0275992
+            ],
+            [
+              76.3292262,
+              10.027842
+            ],
+            [
+              76.3292339,
+              10.0280119
+            ],
+            [
+              76.3292028,
+              10.0284778
+            ],
+            [
+              76.329065,
+              10.0288516
+            ],
+            [
+              76.3290865,
+              10.0293957
+            ],
+            [
+              76.3286788,
+              10.0296176
+            ],
+            [
+              76.3282282,
+              10.0295172
+            ],
+            [
+              76.3280994,
+              10.0294961
+            ],
+            [
+              76.3281209,
+              10.0292056
+            ],
+            [
+              76.3277668,
+              10.0291316
+            ],
+            [
+              76.3277353,
+              10.0283909
+            ],
+            [
+              76.3276663,
+              10.0275678
+            ],
+            [
+              76.3281727,
+              10.0272535
+            ],
+            [
+              76.3285384,
+              10.0271897
+            ],
+            [
+              76.3288505,
+              10.0272246
+            ],
+            [
+              76.3288934,
+              10.027288
+            ],
+            [
+              76.3290701,
+              10.0275992
+            ]
+          ]
+        ]
+      },
+      "id": "way/1026274468"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1074762828",
+        "amenity": "college",
+        "name": "Kochi Bussiness School"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3709259,
+              10.018507
+            ],
+            [
+              76.3707856,
+              10.0185494
+            ],
+            [
+              76.3706435,
+              10.0185567
+            ],
+            [
+              76.3702712,
+              10.0182418
+            ],
+            [
+              76.3701328,
+              10.0180962
+            ],
+            [
+              76.3701366,
+              10.0180391
+            ],
+            [
+              76.3704994,
+              10.018006
+            ],
+            [
+              76.3708698,
+              10.0179912
+            ],
+            [
+              76.3709035,
+              10.0182196
+            ],
+            [
+              76.3709353,
+              10.0183099
+            ],
+            [
+              76.3710662,
+              10.0183707
+            ],
+            [
+              76.3709259,
+              10.018507
+            ]
+          ]
+        ]
+      },
+      "id": "way/1074762828"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1299266077",
+        "amenity": "college",
+        "name": "cifnet ground"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2829813,
+              9.9656808
+            ],
+            [
+              76.2828364,
+              9.9655673
+            ],
+            [
+              76.2829198,
+              9.9652939
+            ],
+            [
+              76.2830153,
+              9.9653166
+            ],
+            [
+              76.2829681,
+              9.9655068
+            ],
+            [
+              76.2830801,
+              9.9654452
+            ],
+            [
+              76.2831547,
+              9.9655565
+            ],
+            [
+              76.2829813,
+              9.9656808
+            ]
+          ]
+        ]
+      },
+      "id": "way/1299266077"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1308404776",
+        "amenity": "college",
+        "barrier": "wall",
+        "isced:level": "5",
+        "landuse": "education",
+        "name": "Marine Engineering Training Institute",
+        "operator": "Cochin Shipyard",
+        "operator:type": "public",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2998295,
+              9.9582695
+            ],
+            [
+              76.299223,
+              9.9581471
+            ],
+            [
+              76.2987947,
+              9.958089
+            ],
+            [
+              76.2989325,
+              9.9571212
+            ],
+            [
+              76.299807,
+              9.9572986
+            ],
+            [
+              76.3000944,
+              9.9573569
+            ],
+            [
+              76.2998479,
+              9.9582062
+            ],
+            [
+              76.2998295,
+              9.9582695
+            ]
+          ]
+        ]
+      },
+      "id": "way/1308404776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1474158702",
+        "amenity": "college",
+        "name": "Amrita School Of Dentistry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2916963,
+          10.034043
+        ]
+      },
+      "id": "node/1474158702"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1874208536",
+        "amenity": "college",
+        "name": "National Institute of Fisheries Post Harvest Technology and Training",
+        "name:hi": "राष्ट्रीय मात्स्यिकी पोस्ट हार्वेस्ट प्रोध्योगिकी और प्रशिक्षण संस्थान"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2843942,
+          9.9619127
+        ]
+      },
+      "id": "node/1874208536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2567483964",
+        "amenity": "college",
+        "name": "Amity Global Business School"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2870141,
+          9.9789762
+        ]
+      },
+      "id": "node/2567483964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2923293749",
+        "amenity": "college",
+        "name": "Government Ayurveda College"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3584488,
+          9.9248816
+        ]
+      },
+      "id": "node/2923293749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5225998807",
+        "addr:street": "Market Road",
+        "amenity": "college",
+        "name": "St. Thomas College"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2773548,
+          9.9841683
+        ]
+      },
+      "id": "node/5225998807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5952861066",
+        "amenity": "college",
+        "name": "INS Venduruthy Parade Ground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2801157,
+          9.9535473
+        ]
+      },
+      "id": "node/5952861066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5952861067",
+        "amenity": "college",
+        "name": "Naval Institute Of Aeronautical Technology"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2772387,
+          9.956221
+        ]
+      },
+      "id": "node/5952861067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6180350126",
+        "amenity": "college",
+        "name": "BHavan's Royal Institue of Management"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3706502,
+          9.9525512
+        ]
+      },
+      "id": "node/6180350126"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7111563652",
+        "amenity": "college",
+        "name": "St Teresa's College Science Block"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2818908,
+          9.9752718
+        ]
+      },
+      "id": "node/7111563652"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7503498152",
+        "amenity": "college",
+        "name": "Bhavana college of commerce"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3455834,
+          9.9978806
+        ]
+      },
+      "id": "node/7503498152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9148112318",
+        "amenity": "college",
+        "check_date": "2024-07-15",
+        "name": "Cusat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.328133,
+          10.0421612
+        ]
+      },
+      "id": "node/9148112318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9381632099",
+        "amenity": "college",
+        "name": "Vishyadeepam College"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3462192,
+          9.9452977
+        ]
+      },
+      "id": "node/9381632099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9381677936",
+        "addr:city": "Tripunithara",
+        "addr:housenumber": "Ammankovil",
+        "addr:street": "Ettumanoor - Ernakulam Road",
+        "amenity": "college",
+        "name": "Si-Met College Of Nursing,Palluruthy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3519967,
+          9.9363251
+        ]
+      },
+      "id": "node/9381677936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9401748385",
+        "addr:city": "Thrippunithura",
+        "addr:postcode": "682301",
+        "addr:street": "Vaikom Road",
+        "amenity": "college",
+        "name": "53. Mahatma Gandhi University College of Teacher Education"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.360353,
+          9.9235932
+        ]
+      },
+      "id": "node/9401748385"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10760629040",
+        "amenity": "college",
+        "name": "Westford Institute of Film Technology"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3119839,
+          10.000054
+        ]
+      },
+      "id": "node/10760629040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10763343609",
+        "amenity": "college",
+        "name": "De Paul Institute of Management Development"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2820481,
+          10.0018115
+        ]
+      },
+      "id": "node/10763343609"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11306855733",
+        "amenity": "college",
+        "name": "School for Naval Airmen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2763657,
+          9.9374905
+        ]
+      },
+      "id": "node/11306855733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11668416765",
+        "amenity": "college",
+        "faculty": "physics",
+        "name": "Department of Physics"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2817573,
+          9.9707747
+        ]
+      },
+      "id": "node/11668416765"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12847953996",
+        "amenity": "college",
+        "name": "SRBS Gujarathi College"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.2560413,
+          9.960101
+        ]
+      },
+      "id": "node/12847953996"
+    }
+  ]
+}
