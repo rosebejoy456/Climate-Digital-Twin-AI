@@ -73,6 +73,7 @@ export function AnalyticsPage() {
 
   // Max absolute contribution for scaling bars
   const maxContribution = Math.max(...(shapData?.features?.map((f) => Math.abs(f.contribution)) || [5]));
+  const netAttribution = (shapData?.predictionValue ?? 0) - (shapData?.baseValue ?? 0);
 
   return (
     <div>
@@ -103,10 +104,10 @@ export function AnalyticsPage() {
           <div className="card-title-group">
             <h2 className="card-title">
               <IconAI size={18} color="var(--accent-cyan)" />
-              5-Day Multi-Variable Climate Horizon
+              Next-Day Multi-Variable Climate Prediction
             </h2>
             <p className="card-subtitle">
-              Coupled time-series projection derived from meteorological lag features
+              XGBoost inference using the latest verified Ernakulam climate record
             </p>
           </div>
 
@@ -199,7 +200,7 @@ export function AnalyticsPage() {
               <strong style={{ color: 'var(--accent-cyan)', fontSize: '1rem' }}>{shapData?.predictionValue} mm</strong>
             </div>
             <span style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem', backgroundColor: 'rgba(6, 182, 212, 0.12)', color: 'var(--accent-cyan)', borderRadius: '4px', fontWeight: 600 }}>
-              Net Attribution: +6.2 mm
+              Net Attribution: {netAttribution >= 0 ? '+' : ''}{netAttribution.toFixed(2)} mm
             </span>
           </div>
 

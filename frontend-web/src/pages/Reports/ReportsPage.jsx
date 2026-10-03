@@ -9,8 +9,8 @@ import { getPredictions, getMultiVariablePrediction } from '../../services/predi
 const formatDate = (date) => date.toISOString().split('T')[0];
 
 export function ReportsPage() {
-  // Date range state – default to last 7 days
-  const today = new Date();
+  // The verified dataset currently ends on this observation date.
+  const today = new Date('2025-12-18T00:00:00');
   const defaultEnd = formatDate(today);
   const defaultStart = formatDate(new Date(today.getTime() - 6 * 24 * 60 * 60 * 1000));
 
@@ -73,21 +73,19 @@ export function ReportsPage() {
   // Derive metric aggregates from historical data (if available)
   const aggregates = React.useMemo(() => {
     if (!historical || historical.length === 0) return null;
-    const sum = (field) => historical.reduce((a, b) => a + (b.metrics?.[field]?.value || 0), 0);
+    const sum = (field) => historical.reduce((a, b) => a + (Number(b[field]) || 0), 0);
     const avg = (field) => sum(field) / historical.length;
     const first = historical[0];
     const last = historical[historical.length - 1];
     return {
       avgRainfall: avg('rainfall'),
       totalRainfall: sum('rainfall'),
-      startMaxTemp: first.metrics?.maxTemp?.value,
-      endMaxTemp: last.metrics?.maxTemp?.value,
-      startMinTemp: first.metrics?.minTemp?.value,
-      endMinTemp: last.metrics?.minTemp?.value,
-      startLST: first.metrics?.lst?.value,
-      endLST: last.metrics?.lst?.value,
-      startSST: first.metrics?.sst?.value,
-      endSST: last.metrics?.sst?.value,
+      startMaxTemp: first.maxTemp,
+      endMaxTemp: last.maxTemp,
+      startMinTemp: first.minTemp,
+      endMinTemp: last.minTemp,
+      startLST: first.lst,
+      endLST: last.lst,
     };
   }, [historical]);
 
@@ -129,11 +127,11 @@ export function ReportsPage() {
         lines.push(`Min Temp Change: ${(aggregates.endMinTemp - aggregates.startMinTemp).toFixed(1)}°C`);
       }
       if (forecast) {
-        lines.push(`Model Forecast (rainfall): ${forecast?.value ?? '--'} mm/day`);
+        lines.push(`Model Forecast (rainfall): ${forecast?.predictedValue ?? '--'} mm/day`);
       }
       if (multiForecast) {
         lines.push('Model Multi‑Variable Forecast:');
-        Object.entries(multiForecast).forEach(([k, v]) => {
+        Object.entries(multiForecast[0] || {}).forEach(([k, v]) => {
           lines.push(`  ${k}: ${v?.value ?? v} ${v?.unit ?? ''}`);
         });
       }
@@ -214,7 +212,6 @@ export function ReportsPage() {
           {renderMetricCard('Max Temp', aggregates.endMaxTemp, '°C', ((aggregates.endMaxTemp - aggregates.startMaxTemp) / (aggregates.startMaxTemp || 1)) * 100)}
           {renderMetricCard('Min Temp', aggregates.endMinTemp, '°C', ((aggregates.endMinTemp - aggregates.startMinTemp) / (aggregates.startMinTemp || 1)) * 100)}
           {renderMetricCard('LST', aggregates.endLST, '°C', ((aggregates.endLST - aggregates.startLST) / (aggregates.startLST || 1)) * 100)}
-          {renderMetricCard('SST', aggregates.endSST, '°C', ((aggregates.endSST - aggregates.startSST) / (aggregates.startSST || 1)) * 100)}
         </div>
       )}
 
@@ -301,7 +298,7 @@ export function ReportsPage() {
             <p>• Verified observations are district‑level where available.</p>
             <p>• Satellite‑derived variables (LST, SST) may be unavailable on cloudy days – shown as ‘—’.</p>
             <p>• Model forecasts are predictions, not observed telemetry.</p>
-            <p>• If the backend is unreachable, data shown may come from a development mock dataset – not verified observations.</p>
+            <p>• If the backend is unreachable, the dashboard reports an error rather than substituting a fallback dataset.</p>
           </div>
         )}
       </div>
@@ -355,4 +352,3 @@ export function ReportsPage() {
     </div>
   );
 }
-

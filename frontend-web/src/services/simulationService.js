@@ -1,5 +1,4 @@
-import { API_CONFIG, apiClient } from './api';
-import { mockDefaultScenario } from '../mock/simulationData';
+import { apiClient } from './api';
 
 /**
  * WHAT-IF SIMULATION SERVICE
@@ -7,40 +6,40 @@ import { mockDefaultScenario } from '../mock/simulationData';
  */
 
 export async function runWhatIfSimulation(params = { tempIncrease: 2.0, rainfallChangePercent: 25.0 }) {
-  if (API_CONFIG.USE_MOCK) {
-    // Calculates custom scenario deltas locally in mock mode
-    const base = mockDefaultScenario.baselineState;
-    const tempInc = Number(params.tempIncrease) || 0;
-    const rainPct = Number(params.rainfallChangePercent) || 0;
-
-    const simulated = {
-      ...mockDefaultScenario,
-      parameters: params,
-      scenarioState: {
-        rainfall: Number((base.rainfall * (1 + rainPct / 100)).toFixed(1)),
-        maxTemp: Number((base.maxTemp + tempInc).toFixed(1)),
-        minTemp: Number((base.minTemp + tempInc).toFixed(1)),
-        lst: Number((base.lst + tempInc).toFixed(1)),
-        sst: base.sst
-      },
-      calculatedDeltas: {
-        rainfallDelta: `${rainPct >= 0 ? '+' : ''}${rainPct}% (${(base.rainfall * (rainPct / 100)).toFixed(1)} mm)`,
-        tempDelta: `${tempInc >= 0 ? '+' : ''}${tempInc.toFixed(1)} °C`,
-        lstDelta: `${tempInc >= 0 ? '+' : ''}${tempInc.toFixed(1)} °C`
-      }
-    };
-    return Promise.resolve(simulated);
-  }
-
-  try {
-    return await apiClient('/simulation/run', {
-      method: 'POST',
-      body: JSON.stringify(params)
-    });
-  } catch (error) {
-    console.warn('[simulationService] Falling back to mock simulation response');
-    return mockDefaultScenario;
-  }
+  const data = await apiClient('/simulation/what-if', {
+    method: 'POST',
+    body: JSON.stringify({
+      temperature_change_c: Number(params.tempIncrease) || 0,
+      rainfall_change_percent: Number(params.rainfallChangePercent) || 0,
+      pressure_change_hpa: Number(params.pressureChange) || 0,
+      lst_change_c: Number(params.lstChange ?? params.tempIncrease) || 0,
+      ndvi_change_percent: Number(params.ndviChange) || 0
+    })
+  });
+  const signed = (value, unit) => `${value >= 0 ? '+' : ''}${value.toFixed(unit === '%' ? 1 : 2)}${unit}`;
+  return {
+    baselineState: {
+      rainfall: data.baseline.rainfall_mm,
+      maxTemp: data.baseline.temperature_celsius,
+      lst: data.baseline.lst_celsius,
+      ndvi: data.baseline.ndvi,
+      pressure: data.baseline.pressure_hpa
+    },
+    scenarioState: {
+      rainfall: data.scenario.rainfall_mm,
+      maxTemp: data.scenario.temperature_celsius,
+      lst: data.scenario.lst_celsius,
+      ndvi: data.scenario.ndvi,
+      pressure: data.scenario.pressure_hpa
+    },
+    calculatedDeltas: {
+      rainfallDelta: signed(data.impact.rainfall_mm, ' mm'),
+      tempDelta: signed(data.impact.temperature_celsius, ' °C'),
+      lstDelta: signed(data.impact.lst_celsius, ' °C')
+    },
+    impactAssessment: { impactSummary: data.interpretation, note: data.note },
+    date: data.date
+  };
 }
 
 export async function getScenarioComparison() {
@@ -48,17 +47,6 @@ export async function getScenarioComparison() {
 }
 
 export async function getImpactCalculation(scenarioData) {
-  if (API_CONFIG.USE_MOCK) {
-    return Promise.resolve(mockDefaultScenario.impactAssessment);
-  }
-
-  try {
-    return await apiClient('/simulation/impact', {
-      method: 'POST',
-      body: JSON.stringify(scenarioData)
-    });
-  } catch (error) {
-    console.warn('[simulationService] Falling back to mock impact assessment');
-    return mockDefaultScenario.impactAssessment;
-  }
+  const result = await runWhatIfSimulation(scenarioData);
+  return result.impactAssessment;
 }

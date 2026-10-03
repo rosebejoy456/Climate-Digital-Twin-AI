@@ -10,7 +10,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from xgboost import XGBRegressor
 
-from engine.state_manager import StateManager, ClimateState
 
 
 # ============================================================
@@ -62,19 +61,6 @@ app.add_middleware(
 # ============================================================
 # STATE MANAGER
 # ============================================================
-
-sample_state = ClimateState(
-    timestamp=datetime.now(),
-    rainfall=42.5,
-    max_temp=32,
-    min_temp=25,
-    lst=34,
-    sst=29
-)
-
-manager = StateManager()
-manager.update_state(sample_state)
-
 
 # ============================================================
 # LOAD XGBOOST MODELS
@@ -333,36 +319,47 @@ def home():
 
 @app.get("/state/current")
 def get_current_state():
+    if not TEST_FILE.exists():
+        raise HTTPException(status_code=404, detail="Processed Ernakulam climate dataset not found.")
 
-    current = manager.get_current_state()
-
-    if current is None:
-
-        return {
-            "message":
-                "No climate data available."
-        }
-
+    row = pd.read_csv(TEST_FILE).iloc[-1]
     return {
-
-        "timestamp":
-            current.timestamp.isoformat(),
-
-        "rainfall":
-            current.rainfall,
-
-        "max_temp":
-            current.max_temp,
-
-        "min_temp":
-            current.min_temp,
-
-        "lst":
-            current.lst,
-
-        "sst":
-            current.sst
+        "timestamp": f"{row['date']}T00:00:00",
+        "rainfall": _number(row.get("imd_rainfall_mm")),
+        "max_temp": _number(row.get("IMD_MaxTemp_C")),
+        "min_temp": _number(row.get("IMD_MinTemp_C")),
+        "lst": _number(row.get("LST_Celsius")),
+        "ndvi": _number(row.get("NDVI")),
+        "surface_pressure": _number(row.get("surface_pressure"), 0.01),
+        "source": "Ernakulam processed climate dataset (2015–2025)"
     }
+
+
+def _number(value, factor=1.0):
+    return None if pd.isna(value) else round(float(value) * factor, 4)
+
+
+@app.get("/state/history")
+def get_state_history(days: int = 7):
+    """Return observed Ernakulam daily records, never generated placeholder data."""
+    if not TEST_FILE.exists():
+        raise HTTPException(status_code=404, detail="Processed Ernakulam climate dataset not found.")
+    if not 1 <= days <= 4018:
+        raise HTTPException(status_code=422, detail="days must be between 1 and 4018.")
+
+    frame = pd.read_csv(TEST_FILE).tail(days)
+    return [
+        {
+            "timestamp": f"{row.date}T00:00:00",
+            "rainfall": _number(row.imd_rainfall_mm),
+            "maxTemp": _number(row.IMD_MaxTemp_C),
+            "minTemp": _number(row.IMD_MinTemp_C),
+            "lst": _number(row.LST_Celsius),
+            "ndvi": _number(row.NDVI),
+            "pressure": _number(row.surface_pressure, 0.01),
+        }
+        for row in frame.itertuples(index=False)
+    ]
 
 
 # ============================================================

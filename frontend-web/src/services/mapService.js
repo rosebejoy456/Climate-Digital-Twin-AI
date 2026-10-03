@@ -155,21 +155,21 @@ export const WEATHER_STATIONS = [
 // Verified District Observations directly from repository dataset (Climate_Ernakulam_2015_2025.csv & current state)
 export const VERIFIED_OBSERVATION_DATES = [
   {
-    date: '2026-07-16',
-    label: 'July 16, 2026 — Digital Twin Live Snapshot',
-    badge: 'Digital Twin Snapshot',
-    rainfall_imd: 42.5,
+    date: '2025-12-18',
+    label: 'Dec 18, 2025 — Latest Processed Observation',
+    badge: 'Verified Ground Truth',
+    rainfall_imd: 0.877,
     rainfall_chirps: null,
-    max_temp: 32.0,
-    min_temp: 25.0,
-    lst: 34.0,
-    ndvi: null,
-    surface_pressure: null,
+    max_temp: 30.389,
+    min_temp: 20.3822,
+    lst: 26.8146,
+    ndvi: 0.703,
+    surface_pressure: 1001.5294,
     sourceAttribution: {
-      rainfall: 'Digital Twin State Manager baseline (42.5 mm)',
-      lst: 'Digital Twin LST baseline (34.0 °C)',
-      ndvi: 'Not monitored in current state snapshot',
-      pressure: 'Not monitored in current state snapshot'
+      rainfall: 'IMD 0.25° Gridded Daily Sum (0.877 mm)',
+      lst: 'NASA MODIS MOD11A2 (26.8146 °C)',
+      ndvi: 'NASA MODIS MOD13Q1 (0.703)',
+      pressure: 'ECMWF ERA5 (1001.5294 hPa)'
     }
   },
   {
@@ -353,34 +353,34 @@ export const MAP_LAYERS = [
 
 /**
  * Fetch map climate state for a specific date.
- * If backend is live and date is 2026-07-16, attempts to query FastAPI /state/current.
+ * If backend is live and the latest processed date is selected, queries FastAPI /state/current.
  * Otherwise uses verified historical repository records.
  */
-export async function getMapClimateState(dateStr = '2026-07-16') {
+export async function getMapClimateState(dateStr = '2025-12-18') {
   await new Promise((resolve) => setTimeout(resolve, 150));
 
   let matchedRecord = VERIFIED_OBSERVATION_DATES.find((d) => d.date === dateStr);
 
-  if (!API_CONFIG.USE_MOCK && dateStr === '2026-07-16') {
+  if (!API_CONFIG.USE_MOCK && dateStr === '2025-12-18') {
     try {
       const liveData = await getCurrentClimate();
       if (liveData && liveData.metrics) {
         return {
-          date: dateStr,
+          date: liveData.timestamp?.slice(0, 10) || dateStr,
           label: 'FastAPI Live State — ' + dateStr,
           badge: 'Live Backend Node',
-          rainfall_imd: liveData.metrics.rainfall?.value ?? 42.5,
+          rainfall_imd: liveData.metrics.rainfall?.value ?? null,
           rainfall_chirps: null,
-          max_temp: liveData.metrics.maxTemp?.value ?? 32.0,
-          min_temp: liveData.metrics.minTemp?.value ?? 25.0,
-          lst: liveData.metrics.lst?.value ?? 34.0,
-          ndvi: null,
-          surface_pressure: null,
+          max_temp: liveData.metrics.maxTemp?.value ?? null,
+          min_temp: liveData.metrics.minTemp?.value ?? null,
+          lst: liveData.metrics.lst?.value ?? null,
+          ndvi: liveData.metrics.ndvi?.value ?? null,
+          surface_pressure: liveData.metrics.surfacePressure?.value ?? null,
           sourceAttribution: {
-            rainfall: 'FastAPI /state/current (IMD baseline)',
-            lst: 'FastAPI /state/current (MODIS baseline)',
-            ndvi: 'Not monitored in current state snapshot',
-            pressure: 'Not monitored in current state snapshot'
+            rainfall: 'FastAPI /state/current (IMD processed observation)',
+            lst: 'FastAPI /state/current (MODIS processed observation)',
+            ndvi: 'FastAPI /state/current (MODIS processed observation)',
+            pressure: 'FastAPI /state/current (ERA5 processed observation)'
           },
           taluks: TALUK_PROFILES,
           stations: WEATHER_STATIONS,

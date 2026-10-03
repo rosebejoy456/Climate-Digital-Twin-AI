@@ -1,5 +1,4 @@
-import { API_CONFIG, apiClient } from './api';
-import { mockRainfallPrediction, mockMultiVariableForecast } from '../mock/predictionData';
+import { apiClient } from './api';
 
 /**
  * AI PREDICTION SERVICE
@@ -7,27 +6,24 @@ import { mockRainfallPrediction, mockMultiVariableForecast } from '../mock/predi
  */
 
 export async function getPredictions(target = 'rainfall') {
-  if (API_CONFIG.USE_MOCK) {
-    return Promise.resolve(mockRainfallPrediction);
-  }
-
-  try {
-    return await apiClient(`/predict/${target}`);
-  } catch (error) {
-    console.warn('[predictionService] Falling back to mock prediction data');
-    return mockRainfallPrediction;
-  }
+  if (target !== 'rainfall') throw new Error(`Unsupported prediction target: ${target}`);
+  const data = await apiClient('/prediction/rainfall');
+  return {
+    model: data.model,
+    targetDate: data.date,
+    predictedValue: data.predicted_rainfall_mm,
+    riskCategory: data.predicted_rainfall_mm >= 35 ? 'Heavy rainfall' : data.predicted_rainfall_mm >= 15 ? 'Moderate rainfall' : 'Light rainfall'
+  };
 }
 
 export async function getMultiVariablePrediction() {
-  if (API_CONFIG.USE_MOCK) {
-    return Promise.resolve(mockMultiVariableForecast);
-  }
-
-  try {
-    return await apiClient('/predict/multivariable');
-  } catch (error) {
-    console.warn('[predictionService] Falling back to mock multivariable prediction');
-    return mockMultiVariableForecast;
-  }
+  const data = await apiClient('/prediction/multiple');
+  return [{
+    date: data.date,
+    rainfall: data.predictions.rainfall_mm,
+    temperature: data.predictions.temperature_celsius,
+    pressure: data.predictions.pressure_hpa,
+    lst: data.predictions.lst_celsius,
+    ndvi: data.predictions.ndvi
+  }];
 }

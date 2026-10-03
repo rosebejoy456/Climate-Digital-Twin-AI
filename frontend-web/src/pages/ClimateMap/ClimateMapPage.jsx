@@ -28,7 +28,7 @@ export function ClimateMapPage() {
   const [selectedTalukKey, setSelectedTalukKey] = useState('Kochi');
   const [selectedStationId, setSelectedStationId] = useState(null);
   const [showStations, setShowStations] = useState(true);
-  const [selectedDate, setSelectedDate] = useState('2026-07-16');
+  const [selectedDate, setSelectedDate] = useState('2025-12-18');
 
   // Async Fetch Lifecycle States
   const [mapData, setMapData] = useState(null);

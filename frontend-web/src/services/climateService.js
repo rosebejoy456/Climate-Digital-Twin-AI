@@ -1,5 +1,4 @@
-import { API_CONFIG, apiClient } from './api';
-import { mockCurrentClimate, mockHistoricalClimate } from '../mock/climateData';
+import { apiClient } from './api';
 
 /**
  * CLIMATE DATA SERVICE
@@ -7,41 +6,22 @@ import { mockCurrentClimate, mockHistoricalClimate } from '../mock/climateData';
  */
 
 export async function getCurrentClimate() {
-  if (API_CONFIG.USE_MOCK) {
-    // Return mock data for UI development
-    return Promise.resolve(mockCurrentClimate);
-  }
-
-  try {
-    // Connects to FastAPI endpoint GET /state/current
-    const data = await apiClient('/state/current');
-    return {
-      region: "Ernakulam District, Kerala",
-      timestamp: data.timestamp,
-      metrics: {
-        rainfall: { value: data.rainfall, unit: "mm/day" },
-        maxTemp: { value: data.max_temp, unit: "°C" },
-        minTemp: { value: data.min_temp, unit: "°C" },
-        lst: { value: data.lst, unit: "°C" },
-        sst: { value: data.sst, unit: "°C" }
-      },
-      isMock: false
-    };
-  } catch (error) {
-    console.warn('[climateService] Falling back to mock current climate data');
-    return mockCurrentClimate;
-  }
+  const data = await apiClient('/state/current');
+  return {
+    region: 'Ernakulam District, Kerala',
+    timestamp: data.timestamp,
+    metrics: {
+      rainfall: { value: data.rainfall, unit: 'mm/day', source: 'IMD gridded rainfall' },
+      maxTemp: { value: data.max_temp, unit: '°C', source: 'IMD maximum temperature' },
+      minTemp: { value: data.min_temp, unit: '°C', source: 'IMD minimum temperature' },
+      lst: { value: data.lst, unit: '°C', source: 'MODIS LST' },
+      ndvi: { value: data.ndvi, unit: 'Index', source: 'MODIS NDVI' },
+      surfacePressure: { value: data.surface_pressure, unit: 'hPa', source: 'ERA5 reanalysis' }
+    },
+    source: data.source
+  };
 }
 
 export async function getHistoricalClimate(days = 7) {
-  if (API_CONFIG.USE_MOCK) {
-    return Promise.resolve(mockHistoricalClimate);
-  }
-
-  try {
-    return await apiClient(`/state/history?days=${days}`);
-  } catch (error) {
-    console.warn('[climateService] Falling back to mock historical climate data');
-    return mockHistoricalClimate;
-  }
+  return apiClient(`/state/history?days=${days}`);
 }

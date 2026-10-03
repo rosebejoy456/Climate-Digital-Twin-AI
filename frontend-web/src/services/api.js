@@ -1,14 +1,13 @@
 /**
  * CENTRAL API CONFIGURATION & HTTP CLIENT
  * 
- * Provides unified request handling and seamless switching between
- * mock data and real FastAPI endpoints.
+ * Provides unified request handling for the local FastAPI backend.
  */
 
 // Base configuration for backend connection
 export const API_CONFIG = {
-  BASE_URL: import.meta.env.VITE_API_URL || 'http://localhost:8000',
-  USE_MOCK: true, // Toggle when backend endpoints are ready
+  BASE_URL: import.meta.env.VITE_API_URL || '/api',
+  USE_MOCK: false,
   TIMEOUT_MS: 10000
 };
 
