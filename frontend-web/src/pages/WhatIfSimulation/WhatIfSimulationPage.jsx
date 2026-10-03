@@ -11,6 +11,8 @@ import {
   IconActivity
 } from '../../components/common/Icons';
 
+const formatValue = (value, digits = 2) => Number.isFinite(value) ? value.toFixed(digits) : '—';
+
 export function WhatIfSimulationPage() {
   const [tempIncrease, setTempIncrease] = useState(2.0);
   const [rainfallChange, setRainfallChange] = useState(25.0);
@@ -73,7 +75,7 @@ export function WhatIfSimulationPage() {
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 2fr', gap: '1.5rem', alignItems: 'start' }}>
+      <div className="what-if-layout">
         {/* Left Column: Scenario Builder */}
         <div className="card-panel" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           <div className="card-panel-header" style={{ marginBottom: '0.5rem' }}>
@@ -205,7 +207,7 @@ export function WhatIfSimulationPage() {
         </div>
 
         {/* Right Column: Comparison & Impact Assessment */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+        <div className="what-if-results-column">
           {/* Baseline vs Scenario Cards */}
           <div className="card-panel">
             <div className="card-panel-header">
@@ -221,19 +223,19 @@ export function WhatIfSimulationPage() {
               </span>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+            <div className="what-if-comparison-grid">
               {/* Rainfall Comparison */}
-              <div style={{ backgroundColor: 'var(--bg-surface-elevated)', padding: '1.15rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
+              <div className="what-if-comparison-card" style={{ backgroundColor: 'var(--bg-surface-elevated)', padding: '1.15rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>
                   <IconRainfall size={14} color="#06b6d4" />
                   DAILY RAINFALL
                 </div>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginTop: '0.5rem' }}>
                   <span style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                    {sim?.rainfall} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>mm</span>
+                    {formatValue(sim?.rainfall)} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>mm</span>
                   </span>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textDecoration: 'line-through' }}>
-                    {base?.rainfall} mm
+                    {formatValue(base?.rainfall)} mm
                   </span>
                 </div>
                 <div style={{ marginTop: '0.4rem', display: 'inline-flex', padding: '0.2rem 0.5rem', backgroundColor: 'rgba(6, 182, 212, 0.12)', color: '#38bdf8', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 700 }}>
@@ -242,17 +244,17 @@ export function WhatIfSimulationPage() {
               </div>
 
               {/* Temperature Comparison */}
-              <div style={{ backgroundColor: 'var(--bg-surface-elevated)', padding: '1.15rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
+              <div className="what-if-comparison-card" style={{ backgroundColor: 'var(--bg-surface-elevated)', padding: '1.15rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>
                   <IconTemperature size={14} color="#f59e0b" />
                   MAX TEMPERATURE
                 </div>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginTop: '0.5rem' }}>
                   <span style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                    {sim?.maxTemp} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>°C</span>
+                    {formatValue(sim?.maxTemp)} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>°C</span>
                   </span>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textDecoration: 'line-through' }}>
-                    {base?.maxTemp} °C
+                    {formatValue(base?.maxTemp)} °C
                   </span>
                 </div>
                 <div style={{ marginTop: '0.4rem', display: 'inline-flex', padding: '0.2rem 0.5rem', backgroundColor: 'rgba(245, 158, 11, 0.12)', color: '#fbbf24', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 700 }}>
@@ -261,17 +263,17 @@ export function WhatIfSimulationPage() {
               </div>
 
               {/* LST Comparison */}
-              <div style={{ backgroundColor: 'var(--bg-surface-elevated)', padding: '1.15rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
+              <div className="what-if-comparison-card" style={{ backgroundColor: 'var(--bg-surface-elevated)', padding: '1.15rem', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>
                   <IconLST size={14} color="#f43f5e" />
                   SURFACE TEMP (LST)
                 </div>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginTop: '0.5rem' }}>
                   <span style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                    {sim?.lst} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>°C</span>
+                    {formatValue(sim?.lst)} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>°C</span>
                   </span>
                   <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textDecoration: 'line-through' }}>
-                    {base?.lst} °C
+                    {formatValue(base?.lst)} °C
                   </span>
                 </div>
                 <div style={{ marginTop: '0.4rem', display: 'inline-flex', padding: '0.2rem 0.5rem', backgroundColor: 'rgba(244, 63, 94, 0.12)', color: '#fb7185', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 700 }}>
@@ -293,7 +295,7 @@ export function WhatIfSimulationPage() {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.25rem' }}>
+            <div className="what-if-impact-grid">
               {/* Heat Stress Panel */}
               <div style={{ padding: '1rem', backgroundColor: 'var(--bg-surface-elevated)', borderRadius: 'var(--border-radius-sm)', border: '1px solid var(--border-subtle)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem' }}>
