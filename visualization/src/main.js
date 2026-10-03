@@ -480,6 +480,9 @@ controls.autoRotate = false;
 const terrainToolbar =
     document.getElementById("terrain-toolbar");
 
+const openErnakulamTerrainButton =
+    document.getElementById("open-ernakulam-terrain");
+
 const returnToGlobeButton =
     document.getElementById("return-to-globe");
 
@@ -679,6 +682,7 @@ function showTerrainView() {
     controls.update();
 
     terrainToolbar.hidden = false;
+    openErnakulamTerrainButton.hidden = true;
     terrainControls.hidden = true;
     toggleTerrainControlsButton.setAttribute("aria-expanded", "false");
     updateRiskVisualization();
@@ -716,6 +720,7 @@ function showGlobeView() {
     controls.update();
 
     terrainToolbar.hidden = true;
+    openErnakulamTerrainButton.hidden = false;
     terrainControls.hidden = true;
     featureInspector.hidden = true;
     clearSelectedReference();
@@ -771,6 +776,7 @@ renderer.domElement.addEventListener("click", (event) => {
 });
 
 returnToGlobeButton.addEventListener("click", showGlobeView);
+openErnakulamTerrainButton.addEventListener("click", showTerrainView);
 // ==========================================
 // Globe → Ernakulam Digital Twin
 // ==========================================
