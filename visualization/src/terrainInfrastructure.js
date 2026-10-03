@@ -49,38 +49,8 @@ function withinTerrain(coordinate, terrain) {
     );
 }
 
-function createLine(coordinates, terrain, material, lift) {
-    const points = coordinates
-        .filter((coordinate) => withinTerrain(coordinate, terrain))
-        .map(([longitude, latitude]) => {
-            const point = project(longitude, latitude, terrain);
-            point.y += lift;
-            return point;
-        });
-
-    return points.length > 1
-        ? new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), material)
-        : null;
-}
-
-async function fetchGeoJson(path) {
-    const response = await fetch(path);
-
-    if (!response.ok) {
-        throw new Error(`Could not load ${path}: ${response.status}`);
-    }
-
-    return response.json();
-}
-
 function addLineFeatures(group, geojson, terrain, color, lift) {
-    const material = new THREE.LineBasicMaterial({
-        color,
-        transparent: true,
-        opacity: 0.88,
-        depthTest: false,
-        depthWrite: false
-    });
+    const positions = [];
 
     for (const feature of geojson.features) {
         const geometry = feature.geometry;
@@ -94,10 +64,45 @@ function addLineFeatures(group, geojson, terrain, color, lift) {
                     : [];
 
         for (const coordinates of lines) {
-            const line = createLine(coordinates, terrain, material, lift);
-            if (line) group.add(line);
+            const points = coordinates
+        .filter((coordinate) => withinTerrain(coordinate, terrain))
+        .map(([longitude, latitude]) => {
+            const point = project(longitude, latitude, terrain);
+            point.y += lift;
+            return point;
+        });
+
+            for (let index = 1; index < points.length; index++) {
+                positions.push(
+                    points[index - 1].x, points[index - 1].y, points[index - 1].z,
+                    points[index].x, points[index].y, points[index].z
+                );
+            }
         }
     }
+
+    if (!positions.length) return;
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
+    const material = new THREE.LineBasicMaterial({
+        color,
+        transparent: true,
+        opacity: 0.88,
+        depthTest: false,
+        depthWrite: false
+    });
+    group.add(new THREE.LineSegments(geometry, material));
+}
+
+async function fetchGeoJson(path) {
+    const response = await fetch(path);
+
+    if (!response.ok) {
+        throw new Error(`Could not load ${path}: ${response.status}`);
+    }
+
+    return response.json();
 }
 
 function featureCoordinate(feature) {
@@ -140,7 +145,10 @@ function addFacilityMarkers(group, geojson, terrain, color, type) {
         marker.position.set(position.x, position.y + height / 2, position.z);
         marker.userData = {
             type,
-            name: feature.properties?.name || type
+            name: feature.properties?.name || type,
+            reference: feature.properties?.["@id"] || feature.id || null,
+            latitude: coordinate[1],
+            longitude: coordinate[0]
         };
         group.add(marker);
     }
@@ -152,6 +160,19 @@ export async function addTerrainInfrastructure(parent, terrain) {
     const group = new THREE.Group();
     group.name = "Ernakulam Terrain Infrastructure";
     group.visible = false;
+    group.userData.layers = {
+        roads: new THREE.Group(),
+        waterways: new THREE.Group(),
+        hospitals: new THREE.Group(),
+        stations: new THREE.Group(),
+        airports: new THREE.Group(),
+        colleges: new THREE.Group()
+    };
+
+    for (const [name, layer] of Object.entries(group.userData.layers)) {
+        layer.name = `Terrain ${name}`;
+        group.add(layer);
+    }
 
     try {
         const [roads, waterways, hospitals, stations, airports, colleges] = await Promise.all([
@@ -163,12 +184,12 @@ export async function addTerrainInfrastructure(parent, terrain) {
             fetchGeoJson("./data/colleges.geojson")
         ]);
 
-        addLineFeatures(group, roads, terrain, 0xffc857, 0.014);
-        addLineFeatures(group, waterways, terrain, 0x35b9ff, 0.02);
-        addFacilityMarkers(group, hospitals, terrain, 0xff4e6a, "Hospital");
-        addFacilityMarkers(group, stations, terrain, 0xffe564, "Railway station");
-        addFacilityMarkers(group, airports, terrain, 0x5dffad, "Airport");
-        addFacilityMarkers(group, colleges, terrain, 0xa78bfa, "College");
+        addLineFeatures(group.userData.layers.roads, roads, terrain, 0xffc857, 0.014);
+        addLineFeatures(group.userData.layers.waterways, waterways, terrain, 0x35b9ff, 0.02);
+        addFacilityMarkers(group.userData.layers.hospitals, hospitals, terrain, 0xff4e6a, "Hospital");
+        addFacilityMarkers(group.userData.layers.stations, stations, terrain, 0xffe564, "Railway station");
+        addFacilityMarkers(group.userData.layers.airports, airports, terrain, 0x5dffad, "Airport");
+        addFacilityMarkers(group.userData.layers.colleges, colleges, terrain, 0xa78bfa, "College");
         parent.add(group);
     } catch (error) {
         console.error("Failed to load terrain infrastructure:", error);

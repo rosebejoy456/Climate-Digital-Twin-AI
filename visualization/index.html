@@ -152,10 +152,48 @@
     </div>
 
     <div id="terrain-toolbar" hidden>
-        <strong>Ernakulam Terrain View</strong>
-        <span>Roads · waterways · healthcare · rail · airport</span>
+        <div class="terrain-toolbar-heading">
+            <strong>Ernakulam Terrain View</strong>
+            <span id="terrain-mode-label">Normal infrastructure</span>
+        </div>
+        <div class="terrain-buttons" aria-label="Camera presets">
+            <button type="button" data-camera-view="overview">Overview</button>
+            <button type="button" data-camera-view="city">Kochi city</button>
+            <button type="button" data-camera-view="airport">Airport</button>
+            <button type="button" data-camera-view="hills">Eastern hills</button>
+        </div>
+        <button id="toggle-terrain-controls" type="button" aria-expanded="false">Layers &amp; risk</button>
         <button id="return-to-globe" type="button">Return to globe</button>
     </div>
+
+    <aside id="terrain-controls" hidden>
+        <strong>Terrain layers</strong>
+        <label><input type="checkbox" data-layer="buildings" checked> Buildings</label>
+        <label><input type="checkbox" data-layer="roads" checked> Roads</label>
+        <label><input type="checkbox" data-layer="waterways" checked> Waterways</label>
+        <label><input type="checkbox" data-layer="hospitals" checked> Healthcare</label>
+        <label><input type="checkbox" data-layer="stations" checked> Rail stations</label>
+        <label><input type="checkbox" data-layer="airports" checked> Airports</label>
+        <label><input type="checkbox" data-layer="colleges" checked> Colleges</label>
+        <div class="control-divider"></div>
+        <strong>Risk mode</strong>
+        <select id="risk-mode">
+            <option value="normal">Normal</option>
+            <option value="heat">Heat stress</option>
+            <option value="flood">Flood risk</option>
+            <option value="vegetation">Vegetation health</option>
+            <option value="what-if">What-If impact</option>
+        </select>
+        <label class="timeline-label" for="scenario-progress">Scenario progression <span id="scenario-progress-value">100%</span></label>
+        <input id="scenario-progress" type="range" min="0" max="100" value="100">
+    </aside>
+
+    <aside id="feature-inspector" hidden>
+        <button id="close-inspector" type="button" aria-label="Close inspector">×</button>
+        <strong id="feature-title">Feature</strong>
+        <span id="feature-type"></span>
+        <p id="feature-details"></p>
+    </aside>
 
 
     <!-- ================================= -->

@@ -1,0 +1,72 @@
+/* Analytics page specific styles */
+
+/* Page header */
+.page-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.page-description {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Date selector */
+.date-selector label {
+  font-weight: 500;
+}
+
+/* Metric cards grid – responsive */
+.metric-cards-grid {
+  display: grid;
+  gap: 1rem;
+  /* Desktop: 5 columns for each day */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Card panel header layout */
+.card-panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Tab buttons */
+.tab-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-sm);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--bg-surface-elevated);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .metric-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+  }
+}

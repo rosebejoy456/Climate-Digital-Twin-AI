@@ -23,6 +23,14 @@ import { addBuildings } from "./buildings.js";
 const scene = new THREE.Scene();
 
 let ernakulamBuildings = null;
+let terrainMesh = null;
+let terrainInfrastructure = null;
+let floodOverlay = null;
+let terrainViewActive = false;
+let activeRiskMode = "normal";
+let scenarioProgress = 1;
+let latestScenarioImpact = null;
+let selectedReferenceLabel = null;
 
 
 
@@ -53,7 +61,7 @@ renderer.setSize(
 );
 
 renderer.setPixelRatio(
-    window.devicePixelRatio
+    Math.min(window.devicePixelRatio, 1.75)
 );
 
 renderer.outputColorSpace =
@@ -191,9 +199,6 @@ addErnakulamBoundary(
     earth,
     "./data/district.geojson"
 );
-let terrainMesh = null;
-let terrainInfrastructure = null;
-
 addTerrain(
     scene,
     "./data/terrain.json"
@@ -203,12 +208,35 @@ addTerrain(
 
     if (terrainMesh) {
         terrainMesh.visible = false;
+        terrainMesh.userData.baseColor =
+            terrainMesh.material.color.clone();
+
+        floodOverlay = new THREE.Mesh(
+            new THREE.PlaneGeometry(2.4, 1.0),
+            new THREE.MeshBasicMaterial({
+                color: 0x1f9fff,
+                transparent: true,
+                opacity: 0,
+                depthWrite: false,
+                side: THREE.DoubleSide
+            })
+        );
+        floodOverlay.rotation.x = -Math.PI / 2;
+        floodOverlay.position.y = 0.018;
+        floodOverlay.visible = false;
+        floodOverlay.name = "Flood exposure overlay";
+        scene.add(floodOverlay);
         addBuildings(
             scene,
             terrainMesh
         ).then((group) => {
 
             ernakulamBuildings = group;
+
+            if (ernakulamBuildings) {
+                ernakulamBuildings.visible = terrainViewActive &&
+                    terrainControls.querySelector('[data-layer="buildings"]').checked;
+            }
 
             console.log(
                 "Ernakulam OSM building layer ready."
@@ -221,6 +249,9 @@ addTerrain(
         ).then((infrastructure) => {
             terrainInfrastructure = infrastructure;
             terrainInfrastructure.visible = terrainViewActive;
+            terrainControls.querySelectorAll("input[data-layer]").forEach((input) => {
+                setLayerVisibility(input.dataset.layer, input.checked);
+            });
         });
     }
 
@@ -452,7 +483,164 @@ const terrainToolbar =
 const returnToGlobeButton =
     document.getElementById("return-to-globe");
 
-let terrainViewActive = false;
+const toggleTerrainControlsButton =
+    document.getElementById("toggle-terrain-controls");
+
+const terrainControls = document.getElementById("terrain-controls");
+const terrainModeLabel = document.getElementById("terrain-mode-label");
+const riskModeSelect = document.getElementById("risk-mode");
+const scenarioProgressInput = document.getElementById("scenario-progress");
+const scenarioProgressValue = document.getElementById("scenario-progress-value");
+const featureInspector = document.getElementById("feature-inspector");
+const featureTitle = document.getElementById("feature-title");
+const featureType = document.getElementById("feature-type");
+const featureDetails = document.getElementById("feature-details");
+const closeInspectorButton = document.getElementById("close-inspector");
+
+const cameraViews = {
+    overview: [[0, 1.45, 1.35], [0, 0.05, 0]],
+    city: [[-0.15, 0.52, 0.48], [-0.22, 0.02, -0.12]],
+    airport: [[-0.24, 0.45, 0.76], [-0.25, 0.02, 0.03]],
+    hills: [[0.7, 0.65, 0.55], [0.65, 0.07, 0.08]]
+};
+
+function flyTo(viewName) {
+    const view = cameraViews[viewName];
+    if (!view) return;
+
+    const startPosition = camera.position.clone();
+    const startTarget = controls.target.clone();
+    const endPosition = new THREE.Vector3(...view[0]);
+    const endTarget = new THREE.Vector3(...view[1]);
+    const startedAt = performance.now();
+
+    function updateCamera(now) {
+        const progress = Math.min((now - startedAt) / 700, 1);
+        const eased = progress * (2 - progress);
+        camera.position.lerpVectors(startPosition, endPosition, eased);
+        controls.target.lerpVectors(startTarget, endTarget, eased);
+        controls.update();
+        if (progress < 1) requestAnimationFrame(updateCamera);
+    }
+
+    requestAnimationFrame(updateCamera);
+}
+
+function getRiskValues() {
+    const base = { heat: 2, rainfall: 50, ndvi: -0.2 };
+
+    if (activeRiskMode === "what-if" && latestScenarioImpact) {
+        base.heat = latestScenarioImpact.temperature_celsius || 0;
+        base.rainfall = latestScenarioImpact.rainfall_mm || 0;
+        base.ndvi = latestScenarioImpact.ndvi || 0;
+    }
+
+    return {
+        heat: base.heat * scenarioProgress,
+        rainfall: base.rainfall * scenarioProgress,
+        ndvi: base.ndvi * scenarioProgress
+    };
+}
+
+function updateRiskVisualization() {
+    if (!terrainMesh) return;
+
+    const values = getRiskValues();
+    const color = terrainMesh.userData.baseColor.clone();
+    let label = "Normal infrastructure";
+
+    if (activeRiskMode === "heat") {
+        color.lerp(new THREE.Color(0xe85d3f), Math.min(Math.abs(values.heat) / 4, 1));
+        label = `Heat stress · +${values.heat.toFixed(1)} °C`;
+    } else if (activeRiskMode === "flood") {
+        color.lerp(new THREE.Color(0x1d6fa5), Math.min(values.rainfall / 100, 0.75));
+        label = `Flood exposure · +${values.rainfall.toFixed(0)} mm`;
+    } else if (activeRiskMode === "vegetation") {
+        color.lerp(new THREE.Color(0x8b653d), Math.min(Math.abs(values.ndvi) / 0.35, 1));
+        label = `Vegetation health · ${values.ndvi.toFixed(2)} NDVI`;
+    } else if (activeRiskMode === "what-if") {
+        const severity = Math.max(Math.abs(values.heat) / 4, values.rainfall / 100, Math.abs(values.ndvi) / 0.35);
+        color.lerp(new THREE.Color(0xa64d3c), Math.min(severity, 0.8));
+        label = latestScenarioImpact
+            ? `What-If impact · +${values.heat.toFixed(1)} °C, ${values.rainfall.toFixed(0)} mm`
+            : "What-If impact · run a simulation first";
+    }
+
+    terrainMesh.material.color.copy(color);
+    terrainModeLabel.textContent = label;
+
+    if (floodOverlay) {
+        const showFlood = activeRiskMode === "flood" || activeRiskMode === "what-if";
+        floodOverlay.visible = terrainViewActive && showFlood;
+        floodOverlay.material.opacity = showFlood
+            ? Math.min(0.38, Math.max(0.05, values.rainfall / 300))
+            : 0;
+    }
+}
+
+function setLayerVisibility(name, visible) {
+    if (name === "buildings" && ernakulamBuildings) {
+        ernakulamBuildings.visible = visible && terrainViewActive;
+        return;
+    }
+
+    const layer = terrainInfrastructure?.userData.layers?.[name];
+    if (layer) layer.visible = visible;
+}
+
+function showFeatureDetails(data, worldPosition) {
+    featureTitle.textContent = data.name || "Unnamed feature";
+    featureType.textContent = data.type || "Infrastructure";
+    const coordinates = Number.isFinite(data.latitude) && Number.isFinite(data.longitude)
+        ? `Coordinates: ${data.latitude.toFixed(4)}°, ${data.longitude.toFixed(4)}°`
+        : "Location data unavailable";
+    const height = data.height ? `<br>Estimated height: ${(data.height / 0.00045).toFixed(0)} m` : "";
+    const reference = data.reference
+        ? `<br>OpenStreetMap reference: ${data.reference}`
+        : "";
+    featureDetails.innerHTML = `${coordinates}${height}${reference}`;
+    featureInspector.hidden = false;
+
+    if (selectedReferenceLabel) {
+        scene.remove(selectedReferenceLabel);
+        selectedReferenceLabel.material.map.dispose();
+        selectedReferenceLabel.material.dispose();
+    }
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 1024;
+    canvas.height = 128;
+    const context = canvas.getContext("2d");
+    context.font = "bold 42px Arial";
+    context.textAlign = "center";
+    context.textBaseline = "middle";
+    context.strokeStyle = "rgba(0, 0, 0, 0.9)";
+    context.lineWidth = 8;
+    context.strokeText(data.name || "Feature", 512, 64);
+    context.fillStyle = "#ffffff";
+    context.fillText(data.name || "Feature", 512, 64);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    const sprite = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: texture,
+        transparent: true,
+        depthTest: false
+    }));
+    sprite.position.copy(worldPosition).add(new THREE.Vector3(0, 0.08, 0));
+    sprite.scale.set(0.33, 0.041, 1);
+    sprite.renderOrder = 100;
+    selectedReferenceLabel = sprite;
+    scene.add(selectedReferenceLabel);
+}
+
+function clearSelectedReference() {
+    if (!selectedReferenceLabel) return;
+
+    scene.remove(selectedReferenceLabel);
+    selectedReferenceLabel.material.map.dispose();
+    selectedReferenceLabel.material.dispose();
+    selectedReferenceLabel = null;
+}
 
 function showTerrainView() {
     if (!terrainMesh) {
@@ -473,6 +661,9 @@ function showTerrainView() {
     moon.visible = false;
 
     terrainMesh.visible = true;
+    if (floodOverlay) {
+        floodOverlay.visible = activeRiskMode === "flood" || activeRiskMode === "what-if";
+    }
     if (ernakulamBuildings) {
         ernakulamBuildings.visible = true;
     }
@@ -488,6 +679,9 @@ function showTerrainView() {
     controls.update();
 
     terrainToolbar.hidden = false;
+    terrainControls.hidden = true;
+    toggleTerrainControlsButton.setAttribute("aria-expanded", "false");
+    updateRiskVisualization();
 }
 
 function showGlobeView() {
@@ -504,6 +698,9 @@ function showGlobeView() {
     if (terrainMesh) {
         terrainMesh.visible = false;
     }
+    if (floodOverlay) {
+        floodOverlay.visible = false;
+    }
     if (ernakulamBuildings) {
         ernakulamBuildings.visible = false;
     }
@@ -519,7 +716,59 @@ function showGlobeView() {
     controls.update();
 
     terrainToolbar.hidden = true;
+    terrainControls.hidden = true;
+    featureInspector.hidden = true;
+    clearSelectedReference();
 }
+
+terrainControls.querySelectorAll("input[data-layer]").forEach((input) => {
+    input.addEventListener("change", () => {
+        setLayerVisibility(input.dataset.layer, input.checked);
+    });
+});
+
+toggleTerrainControlsButton.addEventListener("click", () => {
+    const isOpening = terrainControls.hidden;
+    terrainControls.hidden = !isOpening;
+    toggleTerrainControlsButton.setAttribute("aria-expanded", String(isOpening));
+});
+
+document.querySelectorAll("[data-camera-view]").forEach((button) => {
+    button.addEventListener("click", () => flyTo(button.dataset.cameraView));
+});
+
+riskModeSelect.addEventListener("change", () => {
+    activeRiskMode = riskModeSelect.value;
+    updateRiskVisualization();
+});
+
+scenarioProgressInput.addEventListener("input", () => {
+    scenarioProgress = Number(scenarioProgressInput.value) / 100;
+    scenarioProgressValue.textContent = `${scenarioProgressInput.value}%`;
+    updateRiskVisualization();
+});
+
+closeInspectorButton.addEventListener("click", () => {
+    featureInspector.hidden = true;
+    clearSelectedReference();
+});
+
+renderer.domElement.addEventListener("click", (event) => {
+    if (!terrainViewActive) return;
+
+    const bounds = renderer.domElement.getBoundingClientRect();
+    const pointer = new THREE.Vector2(
+        ((event.clientX - bounds.left) / bounds.width) * 2 - 1,
+        -((event.clientY - bounds.top) / bounds.height) * 2 + 1
+    );
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(pointer, camera);
+    const selectable = [ernakulamBuildings, terrainInfrastructure].filter(Boolean);
+    const hit = raycaster.intersectObjects(selectable, true)
+        .find((intersection) => intersection.object.userData?.type);
+
+    if (hit) showFeatureDetails(hit.object.userData, hit.point);
+});
 
 returnToGlobeButton.addEventListener("click", showGlobeView);
 // ==========================================
@@ -740,6 +989,12 @@ if (runWhatIfButton) {
 
             return;
         }
+
+        // Turn the numerical API response into a spatial terrain overlay.
+        latestScenarioImpact = result.impact;
+        activeRiskMode = "what-if";
+        riskModeSelect.value = activeRiskMode;
+        updateRiskVisualization();
 
 
         // Display results

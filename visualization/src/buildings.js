@@ -1,11 +1,57 @@
 import * as THREE from "three";
+import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 
 
 // ============================================================
 // Building appearance
 // ============================================================
 
-const BUILDING_COLOR = 0x444444;
+const BUILDING_COLOR = 0x59636d;
+
+function getBuildingStyle(properties = {}) {
+    const category =
+        properties.amenity === "hospital" ? "Healthcare" :
+        /college|university|school/i.test(
+            `${properties.amenity || ""} ${properties.building || ""} ${properties.name || ""}`
+        ) ? "Education" :
+        properties.building === "commercial" ? "Commercial" :
+        "Building";
+
+    return {
+        category,
+        color:
+            category === "Healthcare" ? 0xd85b68 :
+            category === "Education" ? 0x8e7dff :
+            category === "Commercial" ? 0xd7a54a :
+            BUILDING_COLOR
+    };
+}
+
+function getBuildingHeight(properties = {}) {
+    const metres = Number.parseFloat(properties.height);
+    const levels = Number.parseFloat(properties["building:levels"]);
+
+    // Terrain units are intentionally compressed for the district overview.
+    if (Number.isFinite(metres)) {
+        return THREE.MathUtils.clamp(metres * 0.00045, 0.0025, 0.045);
+    }
+
+    if (Number.isFinite(levels)) {
+        return THREE.MathUtils.clamp(levels * 0.003, 0.0025, 0.045);
+    }
+
+    return 0.0025;
+}
+
+function createBuildingMaterial(color) {
+    return new THREE.MeshStandardMaterial({
+        color,
+        roughness: 0.85,
+        metalness: 0.0,
+        emissive: 0x000000,
+        emissiveIntensity: 0
+    });
+}
 
 // ============================================================
 // Convert latitude / longitude to terrain X / Z
@@ -135,7 +181,9 @@ function getTerrainElevation(
 function createBuilding(
     ring,
     group,
-    terrain
+    terrain,
+    properties = {},
+    batches
 ) {
     if (!ring || ring.length < 3) {
         return;
@@ -202,7 +250,7 @@ function createBuilding(
      * look like giant towers compared with the terrain.
      */
 
-    const buildingHeight = 0.0025;
+    const buildingHeight = getBuildingHeight(properties);
 
     const geometry =
         new THREE.ExtrudeGeometry(
@@ -258,28 +306,39 @@ function createBuilding(
         );
 
 
-    // ========================================================
-    // Building material
-    // ========================================================
+    const style = getBuildingStyle(properties);
+    const data = {
+        type: style.category,
+        name: properties.name || style.category,
+        reference: properties["@id"] || null,
+        height: buildingHeight,
+        latitude: centerLat,
+        longitude: centerLon
+    };
 
-    const material =
-        new THREE.MeshStandardMaterial({
+    // The source contains more than 17,000 footprints. Merge most unnamed
+    // buildings by category, while retaining a bounded set of named meshes for
+    // click-to-inspect. This cuts the terrain view from thousands of draw calls
+    // to a few hundred without discarding the real footprints.
+    geometry.translate(0, terrainY, 0);
 
-            color:
-                BUILDING_COLOR,
+    const interactive = Boolean(properties.name) && batches.interactiveCount < 600;
 
-            roughness:
-                0.85,
+    if (!interactive) {
+        if (!batches.byCategory.has(style.category)) {
+            batches.byCategory.set(style.category, {
+                color: style.color,
+                geometries: []
+            });
+        }
 
-            metalness:
-                0.0,
+        batches.byCategory.get(style.category).geometries.push(geometry);
+        return;
+    }
 
-            emissive:
-                0x000000,
+    batches.interactiveCount++;
 
-            emissiveIntensity:
-                0
-        });
+    const material = createBuildingMaterial(style.color);
 
 
     // ========================================================
@@ -300,19 +359,14 @@ function createBuilding(
      * elevation.
      */
 
-    building.position.set(
-        0,
-        terrainY,
-        0
-    );
-
-
     building.castShadow =
         true;
 
 
     building.receiveShadow =
         true;
+
+    building.userData = data;
 
 
     group.add(
@@ -369,6 +423,11 @@ export async function addBuildings(
         const group =
             new THREE.Group();
 
+        const batches = {
+            byCategory: new Map(),
+            interactiveCount: 0
+        };
+
 
         group.name =
             "ErnakulamBuildings";
@@ -420,7 +479,9 @@ export async function addBuildings(
                 createBuilding(
                     geometry.coordinates[0],
                     group,
-                    terrainInfo
+                    terrainInfo,
+                    feature.properties,
+                    batches
                 );
             }
 
@@ -442,10 +503,33 @@ export async function addBuildings(
                     createBuilding(
                         polygon[0],
                         group,
-                        terrainInfo
+                        terrainInfo,
+                        feature.properties,
+                        batches
                     );
                 }
             }
+        }
+
+        for (const [category, batch] of batches.byCategory) {
+            const geometry = mergeGeometries(batch.geometries, false);
+
+            // The input geometries are no longer needed after the merge.
+            batch.geometries.forEach((item) => item.dispose());
+
+            if (!geometry) continue;
+
+            const mesh = new THREE.Mesh(
+                geometry,
+                createBuildingMaterial(batch.color)
+            );
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+            mesh.userData = {
+                type: category,
+                name: `${category} footprint layer`
+            };
+            group.add(mesh);
         }
 
 
@@ -464,7 +548,7 @@ export async function addBuildings(
 
 
         console.log(
-            `Loaded ${group.children.length} OSM buildings.`
+            `Loaded ${group.children.length} building render batches (${batches.interactiveCount} inspectable named buildings).`
         );
 
 
