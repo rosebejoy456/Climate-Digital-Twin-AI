@@ -67,7 +67,7 @@ export function ClimateMapPage() {
           <div className="card-panel-header">
             <div className="card-title-group">
               <h2 className="card-title"><IconMap size={18} color="var(--accent-cyan)" />District reference observation</h2>
-              <p className="card-subtitle">{mapData?.date || selectedDate} · Ernakulam District</p>
+              <p className="card-subtitle">Ernakulam District</p>
             </div>
           </div>
 

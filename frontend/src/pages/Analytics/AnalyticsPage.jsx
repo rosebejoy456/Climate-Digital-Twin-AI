@@ -89,9 +89,9 @@ export function AnalyticsPage() {
         </p>
       </div>
 
-      {/* Date Selector */}
+      {/* Snapshot selector: labels intentionally omit record dates. */}
       <div className="date-selector" style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
-        <label htmlFor="obs-date" style={{ marginRight: '0.5rem', color: 'var(--text-secondary)' }}>Snapshot Date:</label>
+        <label htmlFor="obs-date" style={{ marginRight: '0.5rem', color: 'var(--text-secondary)' }}>Observation:</label>
         <select id="obs-date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} style={{ backgroundColor: 'var(--bg-surface-elevated)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)', padding: '0.3rem 0.5rem', borderRadius: '4px' }}>
           {VERIFIED_OBSERVATION_DATES.map(d => (
             <option key={d.date} value={d.date}>{d.label}</option>

@@ -174,7 +174,7 @@ export const VERIFIED_OBSERVATION_DATES = [
   },
   {
     date: '2025-12-19',
-    label: 'Dec 19, 2025 — Winter Clear Sky Baseline',
+    label: 'Winter Clear Sky Baseline',
     badge: 'Verified Ground Truth',
     rainfall_imd: 0.0,
     rainfall_chirps: 0.67,
@@ -192,7 +192,7 @@ export const VERIFIED_OBSERVATION_DATES = [
   },
   {
     date: '2025-08-15',
-    label: 'Aug 15, 2025 — Active Monsoon Day',
+    label: 'Active Monsoon Day',
     badge: 'Verified Ground Truth',
     rainfall_imd: 28.4,
     rainfall_chirps: 3.13,
@@ -210,7 +210,7 @@ export const VERIFIED_OBSERVATION_DATES = [
   },
   {
     date: '2024-07-30',
-    label: 'Jul 30, 2024 — High Monsoon Precipitation',
+    label: 'High Monsoon Precipitation',
     badge: 'Verified Ground Truth',
     rainfall_imd: 118.16,
     rainfall_chirps: 26.9,
@@ -228,7 +228,7 @@ export const VERIFIED_OBSERVATION_DATES = [
   },
   {
     date: '2018-08-16',
-    label: 'Aug 16, 2018 — Historical Flood Peak',
+    label: 'Historical Flood Peak',
     badge: 'Historical Extreme Episode',
     rainfall_imd: 185.42,
     rainfall_chirps: 47.52,
@@ -246,7 +246,7 @@ export const VERIFIED_OBSERVATION_DATES = [
   },
   {
     date: '2015-01-01',
-    label: 'Jan 01, 2015 — Post-Monsoon Clear Day',
+    label: 'Post-Monsoon Clear Day',
     badge: 'Verified Ground Truth',
     rainfall_imd: 1.66,
     rainfall_chirps: 2.42,
