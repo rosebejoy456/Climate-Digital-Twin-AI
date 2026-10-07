@@ -156,7 +156,7 @@ export const WEATHER_STATIONS = [
 export const VERIFIED_OBSERVATION_DATES = [
   {
     date: '2025-12-18',
-    label: 'Dec 18, 2025 — Latest Processed Observation',
+    label: 'Latest Processed Observation',
     badge: 'Verified Ground Truth',
     rainfall_imd: 0.877,
     rainfall_chirps: null,

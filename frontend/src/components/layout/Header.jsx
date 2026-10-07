@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { IconLocation, IconAI } from '../common/Icons';
+import { IconLocation } from '../common/Icons';
 
 export function Header({ activeTab }) {
   const [timeString, setTimeString] = useState('');
@@ -37,10 +37,6 @@ export function Header({ activeTab }) {
           <span>{timeString || '12:00:00 UTC'}</span>
         </div>
 
-        <div className="mode-badge">
-          <IconAI size={13} color="var(--accent-cyan)" />
-          <span>MOCK ADAPTER (SAFE)</span>
-        </div>
       </div>
     </header>
   );

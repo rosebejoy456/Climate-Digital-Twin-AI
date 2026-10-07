@@ -4,8 +4,7 @@ import {
   IconMap,
   IconGlobe,
   IconAnalytics,
-  IconSimulation,
-  IconReports
+  IconSimulation
 } from '../common/Icons';
 
 export const NAVIGATION_ITEMS = [
@@ -13,8 +12,7 @@ export const NAVIGATION_ITEMS = [
   { id: 'climate-map', label: 'Climate Map', icon: IconMap, section: 'Spatial' },
   { id: 'digital-twin', label: 'Digital Twin 3D', icon: IconGlobe, section: 'Spatial' },
   { id: 'analytics', label: 'Analytics & Forecast', icon: IconAnalytics, section: 'Intelligence' },
-  { id: 'what-if', label: 'What-If Simulation', icon: IconSimulation, section: 'Intelligence' },
-  { id: 'reports', label: 'Reports & Data', icon: IconReports, section: 'System' }
+  { id: 'what-if', label: 'What-If Simulation', icon: IconSimulation, section: 'Intelligence' }
 ];
 
 export function Sidebar({ activeTab, onTabChange }) {

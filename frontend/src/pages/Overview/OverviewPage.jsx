@@ -391,7 +391,7 @@ export function OverviewPage() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.55rem', borderBottom: '1px solid var(--border-subtle)' }}>
               <span style={{ color: 'var(--text-secondary)' }}>AI Model:</span>
-              <strong style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)' }}>XGBoost + LSTM (Hybrid)</strong>
+              <strong style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)' }}>XGBoost</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.55rem', borderBottom: '1px solid var(--border-subtle)' }}>
               <span style={{ color: 'var(--text-secondary)' }}>Prediction Status:</span>
